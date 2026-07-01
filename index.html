@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>역도 기록 — Weightlifting Log</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="header__brand">
+        <h1>역도 기록</h1>
+        <p class="subtitle">메인 리프트 중심 · TM % 자동 계산</p>
+      </div>
+      <nav class="tabs" role="tablist">
+        <button class="tab active" data-tab="log" role="tab">오늘 기록</button>
+        <button class="tab" data-tab="history" role="tab">기록 보기</button>
+        <button class="tab" data-tab="weekly" role="tab">주간 리뷰</button>
+        <button class="tab" data-tab="settings" role="tab">설정</button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- 오늘 기록 -->
+      <section id="panel-log" class="panel active">
+        <div class="card session-meta">
+          <label>
+            날짜
+            <input type="date" id="log-date">
+          </label>
+          <label>
+            컨디션
+            <input type="text" id="log-condition" placeholder="수면 7h, 어깨 양호">
+          </label>
+        </div>
+
+        <form id="entry-form" class="card">
+          <h2>세트 추가</h2>
+          <div class="form-grid">
+            <label>
+              종목
+              <select id="entry-lift" required>
+                <option value="snatch">스내치</option>
+                <option value="cj">클린 &amp; 저크</option>
+                <option value="accessory">보조</option>
+              </select>
+            </label>
+            <label>
+              입력 방식
+              <select id="entry-input-mode">
+                <option value="weight">무게(kg)</option>
+                <option value="percent">%(TM 기준)</option>
+              </select>
+            </label>
+            <label id="weight-field">
+              무게 (kg)
+              <input type="number" id="entry-weight" step="0.5" min="0">
+            </label>
+            <label id="percent-field" class="hidden">
+              % (TM)
+              <input type="number" id="entry-percent" step="0.5" min="0" max="120">
+            </label>
+            <label class="computed">
+              자동 계산
+              <output id="computed-value">—</output>
+            </label>
+            <label>
+              세트
+              <input type="number" id="entry-sets" min="1" value="1" required>
+            </label>
+            <label>
+              반복/세트
+              <input type="number" id="entry-reps" min="1" value="1" required>
+            </label>
+            <label>
+              성공 rep
+              <input type="number" id="entry-success" min="0" required>
+            </label>
+            <label>
+              실패 rep
+              <input type="number" id="entry-fail" min="0" value="0">
+            </label>
+          </div>
+          <label class="full-width">
+            한 줄 메모
+            <input type="text" id="entry-memo" placeholder="2rep째 무릎이 일찍 펴짐">
+          </label>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">세트 추가</button>
+            <button type="button" id="fill-success" class="btn btn-ghost">전부 성공으로</button>
+          </div>
+        </form>
+
+        <div class="card">
+          <div class="card-header">
+            <h2>오늘 세션</h2>
+            <button type="button" id="save-session" class="btn btn-primary">세션 저장</button>
+          </div>
+          <div id="session-preview" class="session-preview empty">아직 추가된 세트가 없습니다.</div>
+        </div>
+      </section>
+
+      <!-- 기록 보기 -->
+      <section id="panel-history" class="panel">
+        <div class="card filters">
+          <label>
+            종목 필터
+            <select id="filter-lift">
+              <option value="all">전체</option>
+              <option value="snatch">스내치</option>
+              <option value="cj">C&J</option>
+              <option value="accessory">보조</option>
+            </select>
+          </label>
+          <button type="button" id="export-json" class="btn btn-ghost">JSON 내보내기</button>
+          <button type="button" id="export-csv" class="btn btn-ghost">CSV 내보내기</button>
+          <label class="btn btn-ghost file-btn">
+            JSON 가져오기
+            <input type="file" id="import-json" accept=".json" hidden>
+          </label>
+        </div>
+        <div id="history-list" class="history-list"></div>
+      </section>
+
+      <!-- 주간 리뷰 -->
+      <section id="panel-weekly" class="panel">
+        <div class="card filters">
+          <label>
+            주 시작일 (월요일 권장)
+            <input type="date" id="week-start">
+          </label>
+          <button type="button" id="prev-week" class="btn btn-ghost">← 이전 주</button>
+          <button type="button" id="next-week" class="btn btn-ghost">다음 주 →</button>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-label">스내치 80%+ reps</span>
+            <span class="stat-value" id="stat-snatch-80">0</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">C&J 80%+ reps</span>
+            <span class="stat-value" id="stat-cj-80">0</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">스내치 최고 %</span>
+            <span class="stat-value" id="stat-snatch-max">—</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">C&J 최고 %</span>
+            <span class="stat-value" id="stat-cj-max">—</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>이번 주 PR / 테스트</h2>
+          <div id="weekly-prs" class="weekly-prs"></div>
+        </div>
+
+        <div class="card">
+          <h2>컨디션 요약</h2>
+          <div id="weekly-conditions" class="weekly-conditions"></div>
+        </div>
+
+        <div class="card">
+          <h2>다음 주 조정 메모</h2>
+          <textarea id="weekly-adjustment" rows="4" placeholder="예: 스내치 80%+ 볼륨 충분 → 다음 주 2.5kg 증량 / C&J 저크 캐치 테크닉 위주"></textarea>
+          <button type="button" id="save-adjustment" class="btn btn-primary">조정 메모 저장</button>
+        </div>
+
+        <div class="card">
+          <h2>권장 가이드</h2>
+          <ul class="guide-list" id="weekly-guide"></ul>
+        </div>
+      </section>
+
+      <!-- 설정 -->
+      <section id="panel-settings" class="panel">
+        <div class="card">
+          <h2>트레이닝 맥스 (TM)</h2>
+          <div class="form-grid">
+            <label>
+              스내치 TM (kg)
+              <input type="number" id="tm-snatch" step="0.5" min="0" value="100">
+            </label>
+            <label>
+              C&J TM (kg)
+              <input type="number" id="tm-cj" step="0.5" min="0" value="120">
+            </label>
+          </div>
+          <button type="button" id="save-tm" class="btn btn-primary">TM 저장</button>
+        </div>
+
+        <div class="card">
+          <h2>데이터 관리</h2>
+          <p class="hint">모든 데이터는 브라우저 localStorage에 저장됩니다.</p>
+          <div class="form-actions">
+            <button type="button" id="load-sample" class="btn btn-ghost">2주 시범 데이터 불러오기</button>
+            <button type="button" id="clear-data" class="btn btn-danger">전체 데이터 삭제</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>기록 가이드</h2>
+          <ul class="guide-list">
+            <li>메인 리프트(스내치, C&J)만 기록해도 충분합니다.</li>
+            <li>무게 또는 % 중 편한 쪽으로 입력 — TM 기준 자동 변환됩니다.</li>
+            <li>실패 rep는 꼭 기록하세요. 다음 주 볼륨 조정의 핵심입니다.</li>
+            <li>매주 일요일 5분 — 주간 리뷰 탭에서 80%+ 볼륨 확인.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

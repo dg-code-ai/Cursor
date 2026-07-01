@@ -1,0 +1,38 @@
+{
+  "tm": { "snatch": 100, "cj": 120 },
+  "weeklyAdjustments": {
+    "2026-06-30": "1주차: 스내치 80%+ 볼륨 양호. C&J 저크 캐치 발 간격 집중. 다음 주 C&J 2.5kg 증량.",
+    "2026-07-07": "2주차: 스내치 PR 87.5kg 성공. C&J 80%+ reps 충분. 다음 주 유지 후 3주차 소폭 증량."
+  },
+  "sessions": [
+    {
+      "date": "2026-07-01",
+      "condition": "수면 7h, 어깨 약간 뻐근",
+      "tmSnapshot": { "snatch": 100, "cj": 120 },
+      "entries": [
+        { "lift": "snatch", "weight": 70, "percent": 70, "sets": 1, "reps": 3, "successReps": 3, "failReps": 0, "memo": "워밍업 — 텐션 좋음" },
+        { "lift": "snatch", "weight": 80, "percent": 80, "sets": 1, "reps": 2, "successReps": 2, "failReps": 0, "memo": "" },
+        { "lift": "snatch", "weight": 85, "percent": 85, "sets": 3, "reps": 2, "successReps": 6, "failReps": 0, "memo": "2rep째 무릎이 일찍 펴짐" },
+        { "lift": "cj", "weight": 90, "percent": 75, "sets": 5, "reps": 1, "successReps": 4, "failReps": 1, "memo": "저크 캐치에서 발 좁음" }
+      ]
+    },
+    {
+      "date": "2026-07-07",
+      "condition": "컨디션 최고",
+      "tmSnapshot": { "snatch": 100, "cj": 120 },
+      "entries": [
+        { "lift": "snatch", "weight": 87.5, "percent": 87.5, "sets": 2, "reps": 1, "successReps": 2, "failReps": 0, "memo": "PR 테스트 — 성공" },
+        { "lift": "cj", "weight": 102, "percent": 85, "sets": 3, "reps": 1, "successReps": 3, "failReps": 0, "memo": "" }
+      ]
+    },
+    {
+      "date": "2026-07-13",
+      "condition": "수면 8h, 컨디션 회복",
+      "tmSnapshot": { "snatch": 100, "cj": 120 },
+      "entries": [
+        { "lift": "snatch", "weight": 87.5, "percent": 87.5, "sets": 2, "reps": 1, "successReps": 2, "failReps": 0, "memo": "" },
+        { "lift": "cj", "weight": 96, "percent": 80, "sets": 4, "reps": 2, "successReps": 8, "failReps": 0, "memo": "" }
+      ]
+    }
+  ]
+}
