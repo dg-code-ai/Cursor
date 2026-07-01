@@ -5,21 +5,27 @@
 
 ## 아이폰만으로 사용하기 (추천)
 
-1. Safari에서 아래 주소 열기  
-   **https://dg-code-ai.github.io/Cursor/**
-2. 공유 버튼 → **홈 화면에 추가** → 이름: `역도 기록`
-3. 홈 화면 아이콘으로 실행
+### 바로 시작 (PC·설정 불필요)
 
-> 처음 한 번만 GitHub Pages 배포가 필요합니다.  
-> 저장소 **Settings → Pages → Build and deployment → Source: GitHub Actions** 로 설정되어 있어야 합니다.
+1. Safari에서 아래 주소 열기  
+   **https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@main/index.html**
+2. 공유 버튼(□↑) → **홈 화면에 추가** → 이름: `역도 기록`
+3. 홈 화면 아이콘으로 실행
 
 ### 사용 순서
 
-1. **설정** 탭 → 스내치/C&J TM 입력 (또는 시범 데이터 불러오기)
-2. **오늘 기록** 탭 → 세트 추가 → 세션 저장
-3. **주간 리뷰** 탭 → 80%+ 볼륨, PR, 다음 주 조정 확인
+1. **설정** 탭 → 스내치/C&J TM 입력 (또는 **2주 시범 데이터 불러오기**)
+2. **오늘 기록** 탭 → 세트 추가 → **세션 저장**
+3. **주간 리뷰** 탭 → 80%+ 볼륨 확인
 
-데이터는 아이폰 Safari에 저장됩니다. **JSON 내보내기**로 백업하세요.
+데이터는 아이폰 Safari에 저장됩니다. 가끔 **기록 보기 → JSON 내보내기**로 백업하세요.
+
+### (선택) GitHub Pages 주소
+
+저장소에서 Pages를 켜면 아래 주소도 사용할 수 있습니다.  
+**https://dg-code-ai.github.io/Cursor/**
+
+Pages 활성화: GitHub → 저장소 **Settings → Pages → Build and deployment → Source: GitHub Actions**
 
 ## PC에서 로컬 실행 (선택)
 
