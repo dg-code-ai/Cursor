@@ -49,7 +49,14 @@ python3 -m http.server 8080
 
 ### 트레이닝 캔버스 / 해부학
 
-로컬에서:
+**아이폰에서 바로 열기 (이 PR 브랜치):**
+
+- 캔버스: https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/canvas.html
+- 해부학: https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/anatomy.html
+
+> `main`에는 아직 없음. `@main/canvas.html` 은 404가 정상.
+
+로컬:
 
 ```bash
 python3 -m http.server 8080
