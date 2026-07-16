@@ -15,63 +15,120 @@
       <div class="header__brand">
         <p class="eyebrow"><a href="anatomy.html">해부학 가이드</a> · <a href="index.html">역도 기록</a></p>
         <h1>트레이닝 캔버스</h1>
-        <p class="subtitle">웨이트 · 러닝 · 목표를 한 화면에서</p>
+        <p class="subtitle">계획은 계획대로 · 결과는 그래프로</p>
       </div>
-      <div class="chip-row" id="type-filters">
-        <button class="chip active" data-type="all">전체</button>
-        <button class="chip" data-type="Pull">Pull</button>
-        <button class="chip" data-type="Push">Push</button>
-        <button class="chip" data-type="Leg">Leg</button>
-        <button class="chip" data-type="Run">러닝</button>
-      </div>
+      <nav class="tabs canvas-tabs" role="tablist">
+        <button class="tab active" data-panel="plan" role="tab">계획</button>
+        <button class="tab" data-panel="results" role="tab">결과</button>
+        <button class="tab" data-panel="profile" role="tab">프로필</button>
+      </nav>
     </header>
 
     <main>
-      <!-- Profile -->
-      <section class="card profile-card" id="profile-card">
-        <div class="profile-grid">
-          <div>
-            <h2>아틀리트 스냅샷</h2>
-            <div class="stat-inline" id="body-stats"></div>
+      <!-- PLAN -->
+      <section id="panel-plan" class="panel active">
+        <div class="card">
+          <h2>이번 주 체크리스트</h2>
+          <p class="hint" id="week-note"></p>
+          <div id="week-checklist" class="week-checklist"></div>
+        </div>
+
+        <div class="card">
+          <h2>주간 골격 (다음 주부터)</h2>
+          <div id="week-skeleton" class="week-skeleton"></div>
+          <ul class="guide-list" id="principles"></ul>
+        </div>
+
+        <div class="split-panels">
+          <div class="card">
+            <h2>스내치 로드맵</h2>
+            <div id="snatch-roadmap" class="roadmap"></div>
           </div>
-          <div>
-            <h2>메인 PR</h2>
-            <div class="stat-inline" id="pr-stats"></div>
+          <div class="card">
+            <h2>러닝 로드맵</h2>
+            <div id="run-roadmap" class="roadmap"></div>
           </div>
         </div>
-        <p class="hint" id="profile-notes"></p>
-      </section>
 
-      <!-- Goals -->
-      <section class="card">
-        <h2>목표 보드</h2>
-        <div class="goals-grid" id="goals-board"></div>
-      </section>
-
-      <!-- Weekend plan -->
-      <section class="card">
-        <h2>이번 주말 러닝</h2>
-        <div id="weekend-plan" class="weekend-plan"></div>
-        <p class="hint" id="run-principle"></p>
-      </section>
-
-      <!-- Trend highlights -->
-      <section class="card">
-        <h2>최근 작업세트 하이라이트</h2>
-        <div id="highlights" class="highlights"></div>
-      </section>
-
-      <!-- Timeline -->
-      <section class="card">
-        <div class="card-header">
-          <h2>세션 타임라인</h2>
-          <span class="hint" id="session-count"></span>
+        <div class="card">
+          <h2>다음 헬스 처방</h2>
+          <p class="hint" id="next-gym-when"></p>
+          <ul class="guide-list" id="next-gym-items"></ul>
         </div>
-        <div id="timeline" class="timeline"></div>
+      </section>
+
+      <!-- RESULTS -->
+      <section id="panel-results" class="panel">
+        <div class="card">
+          <div class="card-header">
+            <h2>한눈에 보는 결과</h2>
+            <div class="chip-row" id="result-filters">
+              <button class="chip active" data-type="all">전체</button>
+              <button class="chip" data-type="Pull">Pull</button>
+              <button class="chip" data-type="Push">Push</button>
+              <button class="chip" data-type="Leg">Leg</button>
+              <button class="chip" data-type="Run">러닝</button>
+            </div>
+          </div>
+          <div class="kpi-row" id="kpi-row"></div>
+        </div>
+
+        <div class="split-panels">
+          <div class="card">
+            <h2>헬스 볼륨 추이</h2>
+            <p class="hint">세션 총 kg (참고) · 막대 색 = 분할</p>
+            <div id="chart-gym-volume" class="chart-box"></div>
+          </div>
+          <div class="card">
+            <h2>러닝 거리 추이</h2>
+            <p class="hint">km · 점선 = 이번 주말 목표(7km)</p>
+            <div id="chart-run-distance" class="chart-box"></div>
+          </div>
+        </div>
+
+        <div class="split-panels">
+          <div class="card">
+            <h2>목표 게이지</h2>
+            <div id="goal-gauges" class="goal-gauges"></div>
+          </div>
+          <div class="card">
+            <h2>핵심 작업세트</h2>
+            <p class="hint">과부하(↑) 표시 · 숫자 나열 대신 카드</p>
+            <div id="highlights" class="highlights highlights--cards"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2>세션 로그</h2>
+            <span class="hint" id="session-count"></span>
+          </div>
+          <div id="timeline" class="timeline"></div>
+        </div>
+      </section>
+
+      <!-- PROFILE -->
+      <section id="panel-profile" class="panel">
+        <div class="card profile-card">
+          <div class="profile-grid">
+            <div>
+              <h2>바디컴포</h2>
+              <div class="stat-inline" id="body-stats"></div>
+              <div id="chart-bodycomp" class="chart-box chart-box--sm"></div>
+            </div>
+            <div>
+              <h2>메인 PR</h2>
+              <div id="chart-prs" class="chart-box"></div>
+              <div class="stat-inline" id="pr-stats"></div>
+            </div>
+          </div>
+          <p class="hint" id="profile-notes"></p>
+        </div>
       </section>
     </main>
   </div>
 
+  <script src="js/charts.js"></script>
   <script src="js/canvas.js"></script>
 </body>
 </html>

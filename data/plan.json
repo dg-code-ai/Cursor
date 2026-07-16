@@ -1,0 +1,65 @@
+{
+  "updated": "2026-07-16",
+  "principles": [
+    "작업세트 과부하 (총 kg보다 끝세트 무게×회수)",
+    "스내치: 리시브 개조 우선 (파워습관 금지)",
+    "러닝: 거리 먼저 → 페이스 나중",
+    "체중 감량은 기대하지 않음 (유지)"
+  ],
+  "weeklySkeleton": [
+    { "day": "월", "focus": "Push", "detail": "벤치 유지 · 어깨/OHP 라이트", "snatch": false },
+    { "day": "화", "focus": "Pull + 스내치 테크", "detail": "테크 15~20분 → 등 (데드 헤비면 등 볼륨↓)", "snatch": true },
+    { "day": "수", "focus": "Leg", "detail": "스쿼트 메인 · 프레스는 본세트 4~5만", "snatch": false },
+    { "day": "목", "focus": "Push 라이트", "detail": "상체 보조 · 피로 관리", "snatch": false },
+    { "day": "금", "focus": "Pull 라이트 + 테크 / 또는 숏런", "detail": "테크 또는 저녁 쉬운 런 20~30분", "snatch": true },
+    { "day": "토", "focus": "롱런", "detail": "거리 빌드업 핵심", "snatch": false },
+    { "day": "일", "focus": "격주 역도 2h / 회복", "detail": "역도 주: 풀세션 · 비역도: 쉬운 런 or 휴식", "snatch": true }
+  ],
+  "snatchRoadmap": [
+    {
+      "phase": 1,
+      "title": "리시브 개조",
+      "window": "지금 ~ 8/15",
+      "target": "행 70×2 깊게 · floor 75~80 · OH squat 70×3",
+      "status": "active"
+    },
+    {
+      "phase": 2,
+      "title": "중량 연결",
+      "window": "8/16 ~ 9/12",
+      "target": "스쿼트 스내치 85 반복 · 90 성공",
+      "status": "upcoming"
+    },
+    {
+      "phase": 3,
+      "title": "피크",
+      "window": "9/13 ~ 9월 말",
+      "target": "95 성공 후 100 시도",
+      "status": "upcoming"
+    }
+  ],
+  "runRoadmap": [
+    { "phase": "거리", "window": "~8월 말", "target": "롱런 8~10km 대화 페이스", "status": "active" },
+    { "phase": "안정", "window": "9~10월", "target": "10km 7'00\"~7'30\" 반복", "status": "upcoming" },
+    { "phase": "페이스", "window": "11~12월", "target": "10km 6'30\" → 6'00\"", "status": "upcoming" }
+  ],
+  "thisWeek": {
+    "label": "이번 주 (전환 주)",
+    "note": "새 주간 골격은 다음 주부터. 이번 주말은 러닝 복귀.",
+    "sessions": [
+      { "date": "2026-07-16", "day": "목", "plan": "Pull (등만, 데드 X)", "done": true },
+      { "date": "2026-07-17", "day": "금", "plan": "5km @ 8'00\"~8'30\"", "done": false },
+      { "date": "2026-07-18", "day": "토", "plan": "7km 재확인 @ 8분대", "done": false },
+      { "date": "2026-07-19", "day": "일", "plan": "역도면 러닝 스킵 / 없으면 쉬운 4km", "done": false }
+    ]
+  },
+  "nextGymPrescription": {
+    "when": "다음 헬스 (Push)",
+    "items": [
+      "벤치: 유지 (145 싱글 도전은 주 1 이내)",
+      "인클라인/플라이: 본세트 3~4",
+      "숄더 프레스·레터럴: 라이트 (스내치 OH 신선도)",
+      "총 세트 욕심보다 작업세트 품질"
+    ]
+  }
+}
