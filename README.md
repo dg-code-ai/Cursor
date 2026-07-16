@@ -49,13 +49,24 @@ python3 -m http.server 8080
 
 ### 트레이닝 캔버스 / 해부학
 
-**아이폰에서 바로 열기 (GitHub Pages — HTML로 렌더링됨):**
+**아이폰에서 여는 방법 (중요)**
 
-- 캔버스: https://dg-code-ai.github.io/Cursor/canvas.html
-- 해부학: https://dg-code-ai.github.io/Cursor/anatomy.html
-- 역도 기록: https://dg-code-ai.github.io/Cursor/
+CDN(jsDelivr) 링크는 HTML을 텍스트로 보여줍니다. 아래 중 하나를 쓰세요.
 
-> jsDelivr/raw는 HTML을 `text/plain`으로 줘서 **소스 텍스트만** 보입니다. Pages 주소를 쓰세요.
+### A) 파일 저장 후 열기 (지금 바로)
+1. 아래 **standalone** 파일 페이지 열기
+2. 오른쪽 `...` 또는 Raw → **공유 → 파일에 저장**
+3. 파일앱에서 해당 `.html` 탭 → Safari로 열기
+
+- 캔버스: https://github.com/dg-code-ai/Cursor/blob/cursor/training-canvas-anatomy-5c6f/canvas-standalone.html
+- 해부학: https://github.com/dg-code-ai/Cursor/blob/cursor/training-canvas-anatomy-5c6f/anatomy-standalone.html
+
+### B) GitHub Pages 켜기 (한 번만, 추천)
+저장소 **Settings → Pages → Source: GitHub Actions** 활성화.
+이후 주소:
+- https://dg-code-ai.github.io/Cursor/canvas.html
+- https://dg-code-ai.github.io/Cursor/anatomy.html
+
 
 로컬:
 
