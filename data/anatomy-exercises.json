@@ -1,0 +1,177 @@
+{
+  "exercises": [
+    {
+      "id": "pullup",
+      "name": "풀 업",
+      "nameEn": "Pull-up",
+      "category": "Pull",
+      "pattern": "수직 당기기 (Vertical Pull)",
+      "primary": ["광배근 (Latissimus dorsi)", "대원근 (Teres major)"],
+      "secondary": ["이두근", "완요골근", "하부/중부 승모", "능형근", "핵심(코어)"],
+      "joints": [
+        { "joint": "어깨", "action": "내전 + 신전 (adduction / extension)" },
+        { "joint": "팔꿈치", "action": "굴곡 (flexion)" },
+        { "joint": "견갑", "action": "하강 + 내전 (depression / retraction)" }
+      ],
+      "why": "체중 상대근력과 견갑 제어의 기준 동작. 스내치 풀의 '위로 치는 힘'과도 연결된다.",
+      "cues": ["가슴을 바 쪽으로", "어깨를 귀에서 멀리 (하강)", "반동 최소화"],
+      "highlight": ["lats", "biceps", "midBack"],
+      "levelNote": "체중 106kg에서 세트당 5~6회 × 6세트는 상급 상대근력."
+    },
+    {
+      "id": "latpulldown",
+      "name": "랫 풀 다운",
+      "nameEn": "Lat Pulldown",
+      "category": "Pull",
+      "pattern": "수직 당기기 (부하 조절형)",
+      "primary": ["광배근", "대원근"],
+      "secondary": ["이두근", "완요골근", "하부 승모"],
+      "joints": [
+        { "joint": "어깨", "action": "내전" },
+        { "joint": "팔꿈치", "action": "굴곡" }
+      ],
+      "why": "풀업 후 같은 패턴에 중량 과부하를 더한다. 뉴트럴 그립은 어깨에 비교적 친절하다.",
+      "cues": ["팔꿈치로 주머니를 찌른다", "상체 과후경 금지", "하단에서 광배 수축 1초"],
+      "highlight": ["lats", "biceps"],
+      "levelNote": "풀업 직후 85×5는 작업 세트 퀄리티가 좋은 중상급~상급."
+    },
+    {
+      "id": "seatedrow",
+      "name": "머신 시티드 로우",
+      "nameEn": "Seated Row",
+      "category": "Pull",
+      "pattern": "수평 당기기 (Horizontal Pull)",
+      "primary": ["광배근", "능형근", "중부 승모근"],
+      "secondary": ["후면 삼각근", "이두근", "척추기립근(등척)"],
+      "joints": [
+        { "joint": "어깨", "action": "수평 신전 / 신전" },
+        { "joint": "견갑", "action": "내전(retraction)" },
+        { "joint": "팔꿈치", "action": "굴곡" }
+      ],
+      "why": "등의 '두께'와 견갑 후인을 담당. 스내치 셋업·오버헤드 안정성의 토대.",
+      "cues": ["갈비뼈 내리기", "어깨가 먼저 말고 견갑이 먼저", "허리로 당기지 않기"],
+      "highlight": ["lats", "midBack", "rearDelt", "biceps"],
+      "levelNote": "편측 50×9(플레이트 100kg+)는 상급 수평 당기기.",
+      "machineNote": "이 헬장은 양쪽에 원판을 꽂는 방식. Rise 숫자는 편측 중량."
+    },
+    {
+      "id": "straightarm",
+      "name": "스트레이트 암 풀 다운",
+      "nameEn": "Straight-Arm Pulldown",
+      "category": "Pull",
+      "pattern": "어깨 신전 고립",
+      "primary": ["광배근 (특히 하부 섬유)"],
+      "secondary": ["대원근", "삼두 장두", "전거근(안정)"],
+      "joints": [
+        { "joint": "어깨", "action": "신전 (팔꿈치 고정)" }
+      ],
+      "why": "팔꿈치 굴곡(이두)을 빼고 광배만 길게 쓴다. 풀업/랫 후 펌핑·연결감용.",
+      "cues": ["팔 거의 편 상태 유지", "손보다 상완을 몸통 쪽으로", "골반 전방경사로 훔치지 않기"],
+      "highlight": ["lats"],
+      "levelNote": "보조 고립. 2~3세트면 충분."
+    },
+    {
+      "id": "rearfiy",
+      "name": "덤벨 리어 플라이",
+      "nameEn": "Rear Delt Fly",
+      "category": "Pull",
+      "pattern": "수평 외전 고립",
+      "primary": ["후면 삼각근"],
+      "secondary": ["중부 승모", "능형근"],
+      "joints": [
+        { "joint": "어깨", "action": "수평 외전" }
+      ],
+      "why": "푸시·벤치에 가려지기 쉬운 후면을 보충. 역도 오버헤드 안정에 간접 도움.",
+      "cues": ["새끼손가락 약간 위", "승모로 으쓱하지 않기", "반동 X"],
+      "highlight": ["rearDelt", "midBack"],
+      "levelNote": "작은 근군. 본세트 3이면 충분. 4세트는 회복 비용↑."
+    },
+    {
+      "id": "ezcurl",
+      "name": "이지 바 컬",
+      "nameEn": "EZ Bar Curl",
+      "category": "Pull",
+      "pattern": "팔꿈치 굴곡 고립",
+      "primary": ["이두근", "상완근"],
+      "secondary": ["완요골근"],
+      "joints": [
+        { "joint": "팔꿈치", "action": "굴곡" }
+      ],
+      "why": "당기기에서 이미 이두가 쓰이므로 마무리는 짧게. 악력·팔꿈치 건강 보조.",
+      "cues": ["팔꿈치 고정", "어깨 전방 이동 금지", "하단에서 이두 스트레치"],
+      "highlight": ["biceps"],
+      "levelNote": "Pull 끝 2~3세트 권장. 오늘은 4세트로 자극은 충분."
+    },
+    {
+      "id": "bench",
+      "name": "벤치 프레스",
+      "nameEn": "Bench Press",
+      "category": "Push",
+      "pattern": "수평 밀기",
+      "primary": ["대흉근", "전면 삼각근", "삼두근"],
+      "secondary": ["전거근", "광배(안정)"],
+      "joints": [
+        { "joint": "어깨", "action": "수평 내전 / 굴곡" },
+        { "joint": "팔꿈치", "action": "신전" }
+      ],
+      "why": "상체 밀기 근력의 메인. 다만 고볼륨·헤비 싱글이 많으면 스내치 어깨 신선도↓.",
+      "cues": ["견갑 고정", "발바닥 압력", "바 경로 약간 아치"],
+      "highlight": ["chest", "frontDelt", "triceps"],
+      "levelNote": "145×1 @106kg ≈ 체중비 1.37 — 중상급~상급."
+    },
+    {
+      "id": "squat",
+      "name": "백 스쿼트",
+      "nameEn": "Back Squat",
+      "category": "Leg",
+      "pattern": "스쿼트 (무릎+힙)",
+      "primary": ["대퇴사두", "대둔근"],
+      "secondary": ["내전근", "척추기립근", "코어", "햄스트링"],
+      "joints": [
+        { "joint": "고관절", "action": "굴곡→신전" },
+        { "joint": "무릎", "action": "굴곡→신전" },
+        { "joint": "발목", "action": "배측굴곡" }
+      ],
+      "why": "스내치 리시브·기립의 힘. 역도 시즌에도 유지해야 하는 하체 메인.",
+      "cues": ["브레이싱", "무릎이 발끝 방향", "깊이 일관"],
+      "highlight": ["quads", "glutes", "core"],
+      "levelNote": "180×1 @106kg ≈ 1.70배 — 상급."
+    },
+    {
+      "id": "deadlift",
+      "name": "데드리프트",
+      "nameEn": "Deadlift",
+      "category": "Pull",
+      "pattern": "힙 힌지",
+      "primary": ["척추기립근", "대둔근", "햄스트링"],
+      "secondary": ["광배", "승모", "전완", "코어"],
+      "joints": [
+        { "joint": "고관절", "action": "신전" },
+        { "joint": "무릎", "action": "신전" },
+        { "joint": "척추", "action": "등척성 중립 유지" }
+      ],
+      "why": "후방사슬·풀 힘. 당신 루틴에선 Pull day 메인. 역도 직전 주엔 세게 안 침.",
+      "cues": ["바가 정강이에 가깝게", "라트로 바를 몸쪽으로", "힙이 먼저 열리지 않게"],
+      "highlight": ["hamstrings", "glutes", "erectors", "lats"],
+      "levelNote": "190 ≈ 체중비 1.79 — 상급. 스내치 풀 여력은 충분."
+    },
+    {
+      "id": "snatch",
+      "name": "스내치 (스쿼트)",
+      "nameEn": "Squat Snatch",
+      "category": "Olympic",
+      "pattern": "풀 + 낮은 오버헤드 리시브",
+      "primary": ["후방사슬", "승모/승모상부", "삼각근", "광배", "대퇴사두·둔근(리시브)"],
+      "secondary": ["코어", "전완", "발목 가동성"],
+      "joints": [
+        { "joint": "고관절/무릎", "action": "폭발 신전 → 깊은 굴곡(리시브)" },
+        { "joint": "어깨", "action": "굴곡 + 외회전 OH" },
+        { "joint": "발목", "action": "배측굴곡 (깊은 앉기)" }
+      ],
+      "why": "3분기 목표. 힘은 이미 있음(파워85). 병목은 깊은 리시브·OH 신뢰.",
+      "cues": ["풀을 길게", "발 밑으로 들어가기", "파워로 높이 받지 말기"],
+      "highlight": ["lats", "glutes", "quads", "shoulders", "midBack"],
+      "levelNote": "파워 85 → 스쿼트 100. Phase1은 리시브 개조."
+    }
+  ]
+}

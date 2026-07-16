@@ -38,11 +38,26 @@ python3 -m http.server 8080
 
 | 경로 | 설명 |
 |---|---|
+| [canvas.html](canvas.html) | **트레이닝 캔버스** — 웨이트·러닝·목표 누적 보드 |
+| [anatomy.html](anatomy.html) | **해부학 가이드** — 동작별 주동근·관절·큐 |
 | [index.html](index.html) | 역도 전용 웹 로거 (localStorage) |
+| [data/sessions/](data/sessions/) | Rise/러닝 시드 기록 (JSON) |
 | [templates/daily-log-template.csv](templates/daily-log-template.csv) | Google Sheets용 CSV 템플릿 |
 | [templates/google-sheets-formulas.md](templates/google-sheets-formulas.md) | 시트 자동 계산 수식 |
 | [docs/method-choice.md](docs/method-choice.md) | 기록 방식 선택 가이드 |
 | [docs/weekly-review-guide.md](docs/weekly-review-guide.md) | 주간 리뷰 체크리스트 |
+
+### 트레이닝 캔버스 / 해부학
+
+로컬에서:
+
+```bash
+python3 -m http.server 8080
+# http://localhost:8080/canvas.html
+# http://localhost:8080/anatomy.html
+```
+
+Rise 기록·러닝 스크린샷이 쌓이면 `data/sessions/gym-log.json`, `run-log.json`에 반영합니다.
 
 ## 기록 형식 (최소)
 

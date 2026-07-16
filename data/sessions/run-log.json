@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "sessions": [
+    {
+      "id": "run-2026-07-04",
+      "date": "2026-07-04",
+      "distanceKm": 7.02,
+      "timeSec": 3309,
+      "pacePerKm": "7'51\"",
+      "source": "RunDay",
+      "coachNote": "7km 이미 가능. 거리 복귀 기준점."
+    },
+    {
+      "id": "run-2026-07-08",
+      "date": "2026-07-08",
+      "distanceKm": 4.03,
+      "timeSec": 1911,
+      "pacePerKm": "7'54\"",
+      "avgHr": 157,
+      "avgCadence": 154,
+      "avgPower": 236,
+      "verticalOscCm": 10.2,
+      "groundContactMs": 320,
+      "coachNote": "단기·고강도 쪽. 케이던스 양호."
+    },
+    {
+      "id": "run-2026-07-09",
+      "date": "2026-07-09",
+      "distanceKm": 4.29,
+      "timeSec": 2405,
+      "pacePerKm": "9'20\"",
+      "avgHr": 140,
+      "avgCadence": 142,
+      "avgPower": 204,
+      "verticalOscCm": 10.2,
+      "groundContactMs": 356,
+      "coachNote": "쉬운 지구력. 케이던스↓ / 접지시간↑."
+    },
+    {
+      "id": "run-2026-07-12",
+      "date": "2026-07-12",
+      "distanceKm": 3.74,
+      "timeSec": 1814,
+      "pacePerKm": "8'05\"",
+      "avgHr": 151,
+      "avgCadence": 155,
+      "avgPower": 231,
+      "verticalOscCm": 10.1,
+      "groundContactMs": 317,
+      "coachNote": "후반 페이스업. 거리 빌드업 전 유지런."
+    },
+    {
+      "id": "run-recent-315",
+      "date": "2026-07-11",
+      "distanceKm": 3.15,
+      "timeSec": 1470,
+      "pacePerKm": "7'47\"",
+      "avgHr": 158,
+      "avgCadence": 154,
+      "verticalOscCm": 10.6,
+      "groundContactMs": 326,
+      "coachNote": "짧은 런, 후반 심박·페이스 상승."
+    }
+  ],
+  "plan": {
+    "thisWeekend": [
+      { "day": "금", "date": "2026-07-17", "target": "5km @ 8'00\"~8'30\"" },
+      { "day": "토", "date": "2026-07-18", "target": "7km @ 8분대 여유 (재확인)" },
+      { "day": "일", "date": "2026-07-19", "target": "역도면 스킵 / 없으면 쉬운 4km" }
+    ],
+    "principle": "거리 먼저 → 페이스 나중. 체중 감량은 기대하지 않음."
+  }
+}

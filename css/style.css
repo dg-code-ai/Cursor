@@ -79,6 +79,27 @@ body {
   color: #fff;
 }
 
+.nav-lab {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.nav-lab a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+}
+
+.nav-lab a:hover {
+  border-color: var(--accent);
+}
+
 .panel {
   display: none;
 }

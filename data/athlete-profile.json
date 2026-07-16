@@ -1,0 +1,41 @@
+{
+  "name": "Athlete",
+  "updated": "2026-07-16",
+  "body": {
+    "weightKg": 106,
+    "skeletalMuscleKg": 50.3,
+    "bodyFatKg": 19.5,
+    "bodyFatPercent": 18.4
+  },
+  "prs": {
+    "benchPress": 145,
+    "squat": 180,
+    "deadlift": 190,
+    "powerSnatch": 85,
+    "cleanAndJerk": 110,
+    "snatchGoal": 100,
+    "tenKBest": { "timeMin": 68, "date": "2026-05" }
+  },
+  "goals": [
+    {
+      "id": "snatch100",
+      "title": "스쿼트 스내치 100kg",
+      "deadline": "2026-09-30",
+      "current": "파워 스내치 85",
+      "phase": 1
+    },
+    {
+      "id": "tenk60",
+      "title": "10km 60분",
+      "deadline": "2026-12-31",
+      "current": "최근 3~4km / 5월 10k 68분",
+      "phase": "distance-build"
+    }
+  ],
+  "notes": {
+    "split": "Leg / Pull / Push",
+    "weightlifting": "격주 일요일 08:00 2시간",
+    "gym": "평일 점심",
+    "injury": "왼발 족저근막염 (경미)"
+  }
+}

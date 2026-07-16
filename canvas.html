@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#0f1419">
+  <title>트레이닝 캔버스 — Training Lab</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/lab.css">
+</head>
+<body>
+  <div class="app lab">
+    <header class="header">
+      <div class="header__brand">
+        <p class="eyebrow"><a href="anatomy.html">해부학 가이드</a> · <a href="index.html">역도 기록</a></p>
+        <h1>트레이닝 캔버스</h1>
+        <p class="subtitle">웨이트 · 러닝 · 목표를 한 화면에서</p>
+      </div>
+      <div class="chip-row" id="type-filters">
+        <button class="chip active" data-type="all">전체</button>
+        <button class="chip" data-type="Pull">Pull</button>
+        <button class="chip" data-type="Push">Push</button>
+        <button class="chip" data-type="Leg">Leg</button>
+        <button class="chip" data-type="Run">러닝</button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Profile -->
+      <section class="card profile-card" id="profile-card">
+        <div class="profile-grid">
+          <div>
+            <h2>아틀리트 스냅샷</h2>
+            <div class="stat-inline" id="body-stats"></div>
+          </div>
+          <div>
+            <h2>메인 PR</h2>
+            <div class="stat-inline" id="pr-stats"></div>
+          </div>
+        </div>
+        <p class="hint" id="profile-notes"></p>
+      </section>
+
+      <!-- Goals -->
+      <section class="card">
+        <h2>목표 보드</h2>
+        <div class="goals-grid" id="goals-board"></div>
+      </section>
+
+      <!-- Weekend plan -->
+      <section class="card">
+        <h2>이번 주말 러닝</h2>
+        <div id="weekend-plan" class="weekend-plan"></div>
+        <p class="hint" id="run-principle"></p>
+      </section>
+
+      <!-- Trend highlights -->
+      <section class="card">
+        <h2>최근 작업세트 하이라이트</h2>
+        <div id="highlights" class="highlights"></div>
+      </section>
+
+      <!-- Timeline -->
+      <section class="card">
+        <div class="card-header">
+          <h2>세션 타임라인</h2>
+          <span class="hint" id="session-count"></span>
+        </div>
+        <div id="timeline" class="timeline"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/canvas.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0f1419">
+  <title>해부학 가이드 — Training Lab</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/lab.css">
+</head>
+<body>
+  <div class="app lab">
+    <header class="header">
+      <div class="header__brand">
+        <p class="eyebrow"><a href="canvas.html">트레이닝 캔버스</a> · <a href="index.html">역도 기록</a></p>
+        <h1>해부학 가이드</h1>
+        <p class="subtitle">동작을 근육·관절·왜 하는지까지 한눈에</p>
+      </div>
+      <div class="chip-row" id="category-filters">
+        <button class="chip active" data-cat="all">전체</button>
+        <button class="chip" data-cat="Pull">Pull</button>
+        <button class="chip" data-cat="Push">Push</button>
+        <button class="chip" data-cat="Leg">Leg</button>
+        <button class="chip" data-cat="Olympic">역도</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="card legend-card">
+        <h2>근육 하이라이트 범례</h2>
+        <div class="legend-grid">
+          <span><i class="swatch swatch-primary"></i> 주동근 (Primary)</span>
+          <span><i class="swatch swatch-secondary"></i> 협응근 (Secondary)</span>
+          <span><i class="swatch swatch-muted"></i> 거의 안 씀</span>
+        </div>
+        <p class="hint">카드의 실루엣은 교육용 단순화입니다. 실제 기시·정지는 해부학 아틀라스와 다를 수 있어요.</p>
+      </section>
+
+      <div id="exercise-grid" class="exercise-grid"></div>
+    </main>
+  </div>
+
+  <template id="exercise-card-tpl">
+    <article class="card exercise-card">
+      <div class="exercise-card__top">
+        <div>
+          <span class="badge-cat"></span>
+          <h2 class="ex-name"></h2>
+          <p class="ex-en"></p>
+          <p class="ex-pattern"></p>
+        </div>
+        <div class="body-map" aria-hidden="true"></div>
+      </div>
+
+      <div class="split-2">
+        <div>
+          <h3>주동근</h3>
+          <ul class="muscle-list primary-list"></ul>
+        </div>
+        <div>
+          <h3>협응근</h3>
+          <ul class="muscle-list secondary-list"></ul>
+        </div>
+      </div>
+
+      <h3>관절 동작</h3>
+      <ul class="joint-list"></ul>
+
+      <div class="callout">
+        <strong>왜 이 동작?</strong>
+        <p class="why-text"></p>
+      </div>
+
+      <h3>큐 (폼)</h3>
+      <ul class="cue-list"></ul>
+
+      <p class="level-note"></p>
+      <p class="machine-note hint"></p>
+    </article>
+  </template>
+
+  <script src="js/body-map.js"></script>
+  <script src="js/anatomy.js"></script>
+</body>
+</html>
