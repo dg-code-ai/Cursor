@@ -266,6 +266,72 @@
   margin-bottom: 0.75rem;
 }
 
+.exercise-card__top--wide {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 720px) {
+  .exercise-card__top--wide {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 1.25rem;
+    align-items: center;
+  }
+}
+
+.meta-row {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 0.85rem;
+}
+
+@media (min-width: 560px) {
+  .meta-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.meta-label {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.2rem;
+}
+
+.ex-plane,
+.ex-chain {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+.body-map--lg {
+  justify-self: center;
+  width: min(100%, 280px);
+}
+
+.body-map--lg .body-map-svg {
+  max-width: 280px;
+}
+
+.callout--exam {
+  background: rgba(34, 197, 94, 0.1);
+  border-color: rgba(34, 197, 94, 0.35);
+}
+
+.oi-list,
+.innervation-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+}
+
+.oi-list li {
+  margin-bottom: 0.45rem;
+}
+
 .ex-name {
   margin: 0.35rem 0 0;
   font-size: 1.25rem;

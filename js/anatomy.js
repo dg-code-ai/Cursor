@@ -5,11 +5,17 @@ async function loadExercises() {
 
 function fillList(ul, items) {
   ul.innerHTML = '';
-  items.forEach((t) => {
+  (items || []).forEach((t) => {
     const li = document.createElement('li');
     li.textContent = t;
     ul.appendChild(li);
   });
+}
+
+function mapModeFor(ex) {
+  if (ex.id === 'bench' || ex.id === 'squat' || ex.id === 'ezcurl') return 'front';
+  if (ex.category === 'Push') return 'front';
+  return 'back';
 }
 
 function renderExercises(exercises, category = 'all') {
@@ -21,21 +27,37 @@ function renderExercises(exercises, category = 'all') {
     .filter((ex) => category === 'all' || ex.category === category)
     .forEach((ex) => {
       const node = tpl.content.cloneNode(true);
-      const card = node.querySelector('.exercise-card');
-      card.dataset.category = ex.category;
 
       node.querySelector('.badge-cat').textContent = ex.category;
       node.querySelector('.ex-name').textContent = ex.name;
       node.querySelector('.ex-en').textContent = ex.nameEn;
       node.querySelector('.ex-pattern').textContent = ex.pattern;
+      node.querySelector('.ex-plane').textContent = ex.plane || '—';
+      node.querySelector('.ex-chain').textContent = ex.chain || '—';
 
-      const mapMode = ['Push'].includes(ex.category) ? 'front' : 'back';
-      // snatch / squat show useful on back-ish; bench front
-      const mode = ex.id === 'bench' || ex.id === 'squat' ? (ex.id === 'bench' ? 'front' : 'front') : mapMode;
-      node.querySelector('.body-map').appendChild(createBodyMap(ex.highlight || [], mode));
+      node.querySelector('.body-map').appendChild(
+        createBodyMap(ex.highlight || [], mapModeFor(ex))
+      );
 
       fillList(node.querySelector('.primary-list'), ex.primary);
       fillList(node.querySelector('.secondary-list'), ex.secondary);
+
+      const oi = node.querySelector('.oi-list');
+      oi.innerHTML = '';
+      if (ex.originInsertion && ex.originInsertion.length) {
+        ex.originInsertion.forEach((row) => {
+          const li = document.createElement('li');
+          li.innerHTML = `<strong>${row.muscle}</strong><br><span class="hint">기시: ${row.origin}<br>정지: ${row.insertion}</span>`;
+          oi.appendChild(li);
+        });
+      } else {
+        const li = document.createElement('li');
+        li.className = 'hint';
+        li.textContent = '복합 동작 — 단일 기시/정지보다 운동사슬·타이밍이 핵심';
+        oi.appendChild(li);
+      }
+
+      fillList(node.querySelector('.innervation-list'), ex.innervation && ex.innervation.length ? ex.innervation : ['(복합 — 주요 신경은 주동근 항목 참고)']);
 
       const joints = node.querySelector('.joint-list');
       joints.innerHTML = '';
@@ -46,6 +68,7 @@ function renderExercises(exercises, category = 'all') {
       });
 
       node.querySelector('.why-text').textContent = ex.why;
+      node.querySelector('.exam-tip').textContent = ex.examTip || '';
       fillList(node.querySelector('.cue-list'), ex.cues);
       node.querySelector('.level-note').textContent = ex.levelNote || '';
       const mn = node.querySelector('.machine-note');
@@ -69,6 +92,10 @@ document.getElementById('category-filters').addEventListener('click', (e) => {
 loadExercises()
   .then((data) => {
     allExercises = data.exercises;
+    if (data.meta) {
+      document.getElementById('meta-purpose').textContent = data.meta.purpose || '';
+      document.getElementById('meta-disclaimer').textContent = data.meta.disclaimer || '';
+    }
     renderExercises(allExercises);
   })
   .catch((err) => {

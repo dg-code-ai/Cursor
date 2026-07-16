@@ -14,7 +14,7 @@
       <div class="header__brand">
         <p class="eyebrow"><a href="canvas.html">트레이닝 캔버스</a> · <a href="index.html">역도 기록</a></p>
         <h1>해부학 가이드</h1>
-        <p class="subtitle">동작을 근육·관절·왜 하는지까지 한눈에</p>
+        <p class="subtitle">생활스포츠지도사 대비 · 본인 루틴으로 배우는 기능해부·역학</p>
       </div>
       <div class="chip-row" id="category-filters">
         <button class="chip active" data-cat="all">전체</button>
@@ -27,13 +27,14 @@
 
     <main>
       <section class="card legend-card">
-        <h2>근육 하이라이트 범례</h2>
+        <h2>보는 법</h2>
         <div class="legend-grid">
           <span><i class="swatch swatch-primary"></i> 주동근 (Primary)</span>
-          <span><i class="swatch swatch-secondary"></i> 협응근 (Secondary)</span>
-          <span><i class="swatch swatch-muted"></i> 거의 안 씀</span>
+          <span><i class="swatch swatch-secondary"></i> 협응·안정 (Secondary)</span>
+          <span><i class="swatch swatch-muted"></i> 비활성</span>
         </div>
-        <p class="hint">카드의 실루엣은 교육용 단순화입니다. 실제 기시·정지는 해부학 아틀라스와 다를 수 있어요.</p>
+        <p class="hint" id="meta-purpose"></p>
+        <p class="hint" id="meta-disclaimer"></p>
       </section>
 
       <div id="exercise-grid" class="exercise-grid"></div>
@@ -42,14 +43,18 @@
 
   <template id="exercise-card-tpl">
     <article class="card exercise-card">
-      <div class="exercise-card__top">
-        <div>
+      <div class="exercise-card__top exercise-card__top--wide">
+        <div class="exercise-card__copy">
           <span class="badge-cat"></span>
           <h2 class="ex-name"></h2>
           <p class="ex-en"></p>
           <p class="ex-pattern"></p>
+          <div class="meta-row">
+            <div><span class="meta-label">운동면</span><p class="ex-plane"></p></div>
+            <div><span class="meta-label">운동사슬</span><p class="ex-chain"></p></div>
+          </div>
         </div>
-        <div class="body-map" aria-hidden="true"></div>
+        <div class="body-map body-map--lg" aria-hidden="true"></div>
       </div>
 
       <div class="split-2">
@@ -63,12 +68,23 @@
         </div>
       </div>
 
+      <h3>기시 · 정지</h3>
+      <ul class="oi-list"></ul>
+
+      <h3>신경지배</h3>
+      <ul class="innervation-list"></ul>
+
       <h3>관절 동작</h3>
       <ul class="joint-list"></ul>
 
       <div class="callout">
-        <strong>왜 이 동작?</strong>
+        <strong>왜 이 동작? (코칭)</strong>
         <p class="why-text"></p>
+      </div>
+
+      <div class="callout callout--exam">
+        <strong>자격증 포인트 (생리·역학)</strong>
+        <p class="exam-tip"></p>
       </div>
 
       <h3>큐 (폼)</h3>
