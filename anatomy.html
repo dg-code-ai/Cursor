@@ -14,7 +14,7 @@
       <div class="header__brand">
         <p class="eyebrow"><a href="canvas.html">트레이닝 캔버스</a> · <a href="index.html">역도 기록</a></p>
         <h1>해부학 가이드</h1>
-        <p class="subtitle">생활스포츠지도사 대비 · 본인 루틴으로 배우는 기능해부·역학</p>
+        <p class="subtitle">OpenStax · Gray's Anatomy 원판으로 보는 기능해부</p>
       </div>
       <div class="chip-row" id="category-filters">
         <button class="chip active" data-cat="all">전체</button>
@@ -26,15 +26,34 @@
     </header>
 
     <main>
-      <section class="card legend-card">
-        <h2>보는 법</h2>
-        <div class="legend-grid">
-          <span><i class="swatch swatch-primary"></i> 주동근 (Primary)</span>
-          <span><i class="swatch swatch-secondary"></i> 협응·안정 (Secondary)</span>
-          <span><i class="swatch swatch-muted"></i> 비활성</span>
-        </div>
+      <section class="card">
+        <h2>전신 근육 맵 (OpenStax)</h2>
         <p class="hint" id="meta-purpose"></p>
+        <div class="plate-pair">
+          <figure class="plate">
+            <img src="assets/anatomy/anterior-openstax.jpg" alt="전면 골격근 — OpenStax" loading="lazy">
+            <figcaption>Anterior · 전면</figcaption>
+          </figure>
+          <figure class="plate">
+            <img src="assets/anatomy/posterior-openstax.jpg" alt="후면 골격근 — OpenStax" loading="lazy">
+            <figcaption>Posterior · 후면</figcaption>
+          </figure>
+        </div>
+        <details class="plate-details">
+          <summary>라벨 포함 Gray's 판 (Public Domain) 펼치기</summary>
+          <div class="plate-pair">
+            <figure class="plate">
+              <img src="assets/anatomy/anterior-gray.png" alt="전면 라벨 — Gray's Anatomy" loading="lazy">
+              <figcaption>Gray's anterior labeled</figcaption>
+            </figure>
+            <figure class="plate">
+              <img src="assets/anatomy/posterior-gray.png" alt="후면 라벨 — Gray's Anatomy" loading="lazy">
+              <figcaption>Gray's posterior labeled</figcaption>
+            </figure>
+          </div>
+        </details>
         <p class="hint" id="meta-disclaimer"></p>
+        <p class="hint" id="meta-attribution"></p>
       </section>
 
       <div id="exercise-grid" class="exercise-grid"></div>
@@ -43,7 +62,7 @@
 
   <template id="exercise-card-tpl">
     <article class="card exercise-card">
-      <div class="exercise-card__top exercise-card__top--wide">
+      <div class="exercise-card__top exercise-card__top--photo">
         <div class="exercise-card__copy">
           <span class="badge-cat"></span>
           <h2 class="ex-name"></h2>
@@ -53,8 +72,23 @@
             <div><span class="meta-label">운동면</span><p class="ex-plane"></p></div>
             <div><span class="meta-label">운동사슬</span><p class="ex-chain"></p></div>
           </div>
+          <div class="focus-chips primary-chips"></div>
         </div>
-        <div class="body-map body-map--lg" aria-hidden="true"></div>
+        <figure class="ex-plate">
+          <img class="ex-plate-img" alt="" loading="lazy">
+          <figcaption class="ex-plate-cap"></figcaption>
+        </figure>
+      </div>
+
+      <div class="detail-plates">
+        <figure class="detail-plate">
+          <img class="detail-img-1" alt="" loading="lazy">
+          <figcaption>Gray's detail</figcaption>
+        </figure>
+        <figure class="detail-plate detail-plate-2 hidden">
+          <img class="detail-img-2" alt="" loading="lazy">
+          <figcaption>Gray's detail</figcaption>
+        </figure>
       </div>
 
       <div class="split-2">
@@ -95,7 +129,6 @@
     </article>
   </template>
 
-  <script src="js/body-map.js"></script>
   <script src="js/anatomy.js"></script>
 </body>
 </html>

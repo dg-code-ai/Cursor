@@ -700,3 +700,106 @@
   font-size: 0.85rem;
   font-weight: 600;
 }
+
+/* Real anatomy plates */
+.plate-pair {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+@media (min-width: 720px) {
+  .plate-pair {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.plate,
+.ex-plate,
+.detail-plate {
+  margin: 0;
+  background: #0b1018;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.plate img,
+.ex-plate img,
+.detail-plate img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #fff;
+}
+
+.plate figcaption,
+.ex-plate figcaption,
+.detail-plate figcaption {
+  padding: 0.45rem 0.65rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.plate-details {
+  margin-top: 0.85rem;
+}
+
+.plate-details summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.exercise-card__top--photo {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 800px) {
+  .exercise-card__top--photo {
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: start;
+  }
+}
+
+.focus-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.75rem;
+}
+
+.focus-chip {
+  background: rgba(248, 113, 113, 0.18);
+  border: 1px solid rgba(248, 113, 113, 0.45);
+  color: #fecaca;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+}
+
+.detail-plates {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0.5rem 0 1rem;
+}
+
+@media (min-width: 600px) {
+  .detail-plates {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.detail-plate.hidden,
+.hidden {
+  display: none !important;
+}
+
+.detail-plate img {
+  max-height: 280px;
+  object-fit: contain;
+  margin: 0 auto;
+}
