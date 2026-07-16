@@ -49,12 +49,13 @@ python3 -m http.server 8080
 
 ### 트레이닝 캔버스 / 해부학
 
-**아이폰에서 바로 열기 (이 PR 브랜치):**
+**아이폰에서 바로 열기 (GitHub Pages — HTML로 렌더링됨):**
 
-- 캔버스: https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/canvas.html
-- 해부학: https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/anatomy.html
+- 캔버스: https://dg-code-ai.github.io/Cursor/canvas.html
+- 해부학: https://dg-code-ai.github.io/Cursor/anatomy.html
+- 역도 기록: https://dg-code-ai.github.io/Cursor/
 
-> `main`에는 아직 없음. `@main/canvas.html` 은 404가 정상.
+> jsDelivr/raw는 HTML을 `text/plain`으로 줘서 **소스 텍스트만** 보입니다. Pages 주소를 쓰세요.
 
 로컬:
 

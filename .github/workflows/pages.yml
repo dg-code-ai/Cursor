@@ -2,7 +2,10 @@ name: Deploy GitHub Pages
 
 on:
   push:
-    branches: [main, cursor/weightlifting-log-3169]
+    branches:
+      - main
+      - cursor/weightlifting-log-3169
+      - cursor/training-canvas-anatomy-5c6f
   workflow_dispatch:
 
 permissions:
@@ -26,9 +29,12 @@ jobs:
       - name: Prepare static site
         run: |
           mkdir -p deploy
-          cp index.html deploy/
-          cp -r css js deploy/
+          cp index.html canvas.html anatomy.html deploy/
+          cp -r css js data assets deploy/
+          # drop huge optional dual plate if present size is an issue later
           touch deploy/.nojekyll
+          ls -la deploy
+          ls -la deploy/assets/anatomy | head
 
       - uses: actions/upload-pages-artifact@v3
         with:
