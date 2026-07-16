@@ -355,18 +355,73 @@
       "id": "gym-2026-07-15",
       "date": "2026-07-15",
       "type": "Leg",
-      "title": "하체 (레그프레스 중심)",
-      "durationMin": null,
-      "totalSets": null,
-      "totalVolumeKg": null,
+      "title": "오전 운동",
+      "durationMin": 57,
+      "totalSets": 32,
+      "totalVolumeKg": 41220,
+      "calories": 487,
       "exercises": [
         {
+          "name": "점프박스",
+          "sets": [
+            { "kg": 0, "reps": 5 },
+            { "kg": 0, "reps": 5 },
+            { "kg": 0, "reps": 5 }
+          ],
+          "workingHighlight": "5×3 (총 15)"
+        },
+        {
+          "name": "바벨 행 스내치",
+          "sets": [
+            { "kg": 20, "reps": 1 },
+            { "kg": 40, "reps": 1 },
+            { "kg": 50, "reps": 1 },
+            { "kg": 60, "reps": 1 },
+            { "kg": 70, "reps": 1 },
+            { "kg": 70, "reps": 0 }
+          ],
+          "workingHighlight": "70×1 / 70 실패",
+          "overload": false
+        },
+        {
+          "name": "바벨 스내치 풀",
+          "sets": [
+            { "kg": 20, "reps": 2 },
+            { "kg": 40, "reps": 2 },
+            { "kg": 50, "reps": 2 },
+            { "kg": 60, "reps": 2 },
+            { "kg": 70, "reps": 2 },
+            { "kg": 70, "reps": 3 },
+            { "kg": 80, "reps": 3 },
+            { "kg": 90, "reps": 3 },
+            { "kg": 100, "reps": 3 }
+          ],
+          "workingHighlight": "100×3",
+          "overload": true
+        },
+        {
           "name": "레그 프레스",
-          "sets": [],
-          "workingHighlight": "고볼륨 (본인 보고)"
+          "sets": [
+            { "kg": 200, "reps": 15 },
+            { "kg": 240, "reps": 14 },
+            { "kg": 280, "reps": 13 },
+            { "kg": 320, "reps": 12 },
+            { "kg": 360, "reps": 8 },
+            { "kg": 400, "reps": 7 },
+            { "kg": 440, "reps": 6 },
+            { "kg": 480, "reps": 3 },
+            { "kg": 400, "reps": 5 },
+            { "kg": 320, "reps": 10 },
+            { "kg": 240, "reps": 12 },
+            { "kg": 200, "reps": 15 },
+            { "kg": 160, "reps": 18 },
+            { "kg": 160, "reps": 12 }
+          ],
+          "workingHighlight": "480×3 · 14세트 피라미드",
+          "overload": true
         }
       ],
-      "coachNote": "레그프레스로 하체 많이 침 → 다음날 데드 스킵 결정."
+      "coachNote": "레그프레스 초고볼륨(41k 중 대부분). 행스내치 70 터치 후 실패. 다음날 Pull에서 데드 스킵한 판단이 맞음. 다음 Leg는 프레스 세트 절반으로."
     },
     {
       "id": "gym-2026-07-16",
