@@ -126,7 +126,7 @@ function renderProfile(profile) {
   });
 
   document.getElementById('pr-stats').innerHTML = `
-    <div class="pill"><span>10k 베스트</span><strong>${profile.prs.tenKBest.timeMin}분</strong></div>
+    <div class="pill"><span>10k 베스트</span><strong>${(profile.prs.tenKBest.timeDisplay || (profile.prs.tenKBest.timeMin + '분'))}</strong></div>
     <div class="pill"><span>스내치 목표</span><strong>${profile.prs.snatchGoal}kg</strong></div>
   `;
 
@@ -182,7 +182,7 @@ function renderKpis(gymLog, runLog, profile) {
     <div class="kpi"><span>최근 풀업</span><strong>${pullUps?.workingHighlight || '—'}</strong></div>
     <div class="kpi"><span>최장 런</span><strong>${longestRun} km</strong></div>
     <div class="kpi"><span>파워스내치</span><strong>${profile.prs.powerSnatch}</strong></div>
-    <div class="kpi"><span>10k 베스트</span><strong>${profile.prs.tenKBest.timeMin}분</strong></div>
+    <div class="kpi"><span>10k 베스트</span><strong>${(profile.prs.tenKBest.timeDisplay || (profile.prs.tenKBest.timeMin + '분'))}</strong></div>
   `;
 }
 

@@ -2,6 +2,47 @@
   "version": 1,
   "sessions": [
     {
+      "id": "run-2026-05-10k-race",
+      "date": "2026-05",
+      "type": "race",
+      "distanceKm": 10.03,
+      "timeSec": 4146,
+      "pacePerKm": "6'53\"",
+      "bestPace": "3'44\"",
+      "avgSpeedKmh": 8.71,
+      "maxSpeedKmh": 16.06,
+      "avgHr": 177,
+      "maxHr": 192,
+      "avgCadence": 166,
+      "maxCadence": 186,
+      "steps": 22782,
+      "stepsPerKm": 2269,
+      "altitudeMinM": 4,
+      "altitudeMaxM": 10,
+      "hrZones": {
+        "max_165plus": "1:04:56",
+        "anaerobic_147_164": "0:01:22",
+        "aerobic_129_146": "0:01:22",
+        "low_110_128": "0:00:00",
+        "warmup_91_109": "0:00:00"
+      },
+      "laps": [
+        { "km": 1, "pace": "6'13\"", "delta": null },
+        { "km": 2, "pace": "6'01\"", "delta": "-0'12\"" },
+        { "km": 3, "pace": "6'32\"", "delta": "+0'31\"" },
+        { "km": 4, "pace": "6'51\"", "delta": "+0'19\"" },
+        { "km": 5, "pace": "7'01\"", "delta": "+0'10\"" },
+        { "km": 6, "pace": "6'58\"", "delta": "-0'03\"" },
+        { "km": 7, "pace": "7'31\"", "delta": "+0'33\"" },
+        { "km": 8, "pace": "7'22\"", "delta": "-0'09\"" },
+        { "km": 9, "pace": "7'14\"", "delta": "-0'08\"" },
+        { "km": 10, "pace": "7'08\"", "delta": "-0'06\"" },
+        { "km": 10.03, "pace": "5'19\"", "delta": "-1'49\"" }
+      ],
+      "source": "RunDay",
+      "coachNote": "공식 기준 PR. 기억의 68분이 아니라 1:09:06. 초반 6분대 → 7km 붕괴 → 후반 리커버리. 시합 강도(HR177)."
+    },
+    {
       "id": "run-2026-07-04",
       "date": "2026-07-04",
       "distanceKm": 7.02,

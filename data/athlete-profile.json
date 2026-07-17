@@ -14,7 +14,7 @@
     "powerSnatch": 85,
     "cleanAndJerk": 110,
     "snatchGoal": 100,
-    "tenKBest": { "timeMin": 68, "date": "2026-05" }
+    "tenKBest": { "timeMin": 69.1, "timeDisplay": "1:09:06", "date": "2026-05", "distanceKm": 10.03 }
   },
   "goals": [
     {
