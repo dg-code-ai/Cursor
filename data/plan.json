@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-16",
+  "updated": "2026-07-17",
   "principles": [
     "작업세트 과부하 (총 kg보다 끝세트 무게×회수)",
     "스내치: 리시브 개조 우선 (파워습관 금지)",
@@ -48,9 +48,9 @@
     "note": "새 주간 골격은 다음 주부터. 이번 주말은 러닝 복귀.",
     "sessions": [
       { "date": "2026-07-16", "day": "목", "plan": "Pull (등만, 데드 X)", "done": true },
-      { "date": "2026-07-17", "day": "금", "plan": "5km @ 8'00\"~8'30\"", "done": false },
-      { "date": "2026-07-18", "day": "토", "plan": "7km 재확인 @ 8분대", "done": false },
-      { "date": "2026-07-19", "day": "일", "plan": "역도면 러닝 스킵 / 없으면 쉬운 4km", "done": false }
+      { "date": "2026-07-17", "day": "금", "plan": "5km 이지 → 실제 8.03km / HR174 (거리↑·강도↑)", "done": true },
+      { "date": "2026-07-18", "day": "토", "plan": "휴식 or 초쉬운 3km (금이 롱런 역할 대체)", "done": false },
+      { "date": "2026-07-19", "day": "일", "plan": "역도면 스킵 / 없으면 회복만", "done": false }
     ]
   },
   "nextGymPrescription": {

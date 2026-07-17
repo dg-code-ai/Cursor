@@ -37,6 +37,18 @@
       "coachNote": "쉬운 지구력. 케이던스↓ / 접지시간↑."
     },
     {
+      "id": "run-recent-315",
+      "date": "2026-07-11",
+      "distanceKm": 3.15,
+      "timeSec": 1470,
+      "pacePerKm": "7'47\"",
+      "avgHr": 158,
+      "avgCadence": 154,
+      "verticalOscCm": 10.6,
+      "groundContactMs": 326,
+      "coachNote": "짧은 런, 후반 심박·페이스 상승."
+    },
+    {
       "id": "run-2026-07-12",
       "date": "2026-07-12",
       "distanceKm": 3.74,
@@ -50,24 +62,50 @@
       "coachNote": "후반 페이스업. 거리 빌드업 전 유지런."
     },
     {
-      "id": "run-recent-315",
-      "date": "2026-07-11",
-      "distanceKm": 3.15,
-      "timeSec": 1470,
-      "pacePerKm": "7'47\"",
-      "avgHr": 158,
-      "avgCadence": 154,
-      "verticalOscCm": 10.6,
-      "groundContactMs": 326,
-      "coachNote": "짧은 런, 후반 심박·페이스 상승."
+      "id": "run-2026-07-17",
+      "date": "2026-07-17",
+      "distanceKm": 8.03,
+      "timeSec": 4031,
+      "pacePerKm": "8'21\"",
+      "bestPace": "5'15\"",
+      "avgSpeedKmh": 7.17,
+      "maxSpeedKmh": 11.42,
+      "avgHr": 174,
+      "maxHr": 188,
+      "avgCadence": 153,
+      "maxCadence": 174,
+      "steps": 10178,
+      "stepsPerKm": 1266,
+      "altitudeMinM": 4,
+      "altitudeMaxM": 13,
+      "hrZones": {
+        "max_165plus": "1:00:27",
+        "anaerobic_147_164": "0:04:01",
+        "aerobic_129_146": "0:00:00",
+        "low_110_128": "0:00:00",
+        "warmup_91_109": "0:00:00"
+      },
+      "laps": [
+        { "km": 1, "pace": "7'33\"", "delta": null },
+        { "km": 2, "pace": "7'41\"", "delta": "+0'08\"" },
+        { "km": 3, "pace": "8'26\"", "delta": "+0'45\"" },
+        { "km": 4, "pace": "7'58\"", "delta": "-0'28\"" },
+        { "km": 5, "pace": "9'09\"", "delta": "+1'11\"" },
+        { "km": 6, "pace": "8'06\"", "delta": "-1'03\"" },
+        { "km": 7, "pace": "8'50\"", "delta": "+0'44\"" },
+        { "km": 8, "pace": "9'03\"", "delta": "+0'13\"" },
+        { "km": 8.03, "pace": "10'49\"", "delta": "+1'46\"" }
+      ],
+      "source": "RunDay",
+      "coachNote": "거리 목표 초과 달성(8km). 다만 평균심박 174·최대존 60분+로 이지런이 아님. 토 롱런은 쉬거나 초짧게."
     }
   ],
   "plan": {
     "thisWeekend": [
-      { "day": "금", "date": "2026-07-17", "target": "5km @ 8'00\"~8'30\"" },
-      { "day": "토", "date": "2026-07-18", "target": "7km @ 8분대 여유 (재확인)" },
-      { "day": "일", "date": "2026-07-19", "target": "역도면 스킵 / 없으면 쉬운 4km" }
+      { "day": "금", "date": "2026-07-17", "target": "5km @ 8'00\"~8'30\"", "actual": "8.03km / 8'21\" / HR174", "done": true },
+      { "day": "토", "date": "2026-07-18", "target": "휴식 or 아주 쉬운 3km (금이 이미 8km+고강도)", "done": false },
+      { "day": "일", "date": "2026-07-19", "target": "역도면 스킵 / 없으면 초쉬운 회복 조깅", "done": false }
     ],
-    "principle": "거리 먼저 → 페이스 나중. 체중 감량은 기대하지 않음."
+    "principle": "거리 먼저 → 페이스 나중. 체중 감량은 기대하지 않음. 이지런은 심박이 증거."
   }
 }
