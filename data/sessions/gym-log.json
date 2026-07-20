@@ -509,16 +509,16 @@
       "type": "Push",
       "title": "오전 운동",
       "durationMin": 60,
-      "totalSets": 26,
-      "totalVolumeKg": 10689,
-      "calories": 433,
+      "totalSets": 24,
+      "totalVolumeKg": 20689,
+      "calories": 425,
       "exercises": [
         {
           "name": "벤치 프레스",
           "sets": [
-            { "kg": 20, "reps": 12 },
-            { "kg": 60, "reps": 7 },
-            { "kg": 100, "reps": 5 },
+            { "kg": 80, "reps": 10 },
+            { "kg": 100, "reps": 7 },
+            { "kg": 120, "reps": 5 },
             { "kg": 130, "reps": 3 },
             { "kg": 140, "reps": 2 },
             { "kg": 120, "reps": 6 }
@@ -529,55 +529,55 @@
         {
           "name": "덤벨 인클라인 벤치 프레스",
           "sets": [
-            { "kg": 28, "reps": 11 },
-            { "kg": 28, "reps": 11 },
-            { "kg": 28, "reps": 11 },
-            { "kg": 28, "reps": 11 }
+            { "kg": 28, "reps": 10 },
+            { "kg": 28, "reps": 10 },
+            { "kg": 28, "reps": 10 },
+            { "kg": 28, "reps": 10 }
           ],
-          "workingHighlight": "28×11×4"
+          "workingHighlight": "28×10×4"
         },
         {
-          "name": "케이블 리어 델트",
+          "name": "케이블 리어 플라이",
           "sets": [
-            { "kg": 15, "reps": 10 },
-            { "kg": 10, "reps": 10 },
-            { "kg": 10, "reps": 14 },
-            { "kg": 15, "reps": 15 }
+            { "kg": 15, "reps": 15 },
+            { "kg": 18, "reps": 15 },
+            { "kg": 18, "reps": 14 },
+            { "kg": 20, "reps": 15 }
           ],
-          "workingHighlight": "15×15"
+          "workingHighlight": "20×15"
         },
         {
           "name": "덤벨 스탠딩 오버헤드 프레스",
           "sets": [
             { "kg": 14, "reps": 15 },
             { "kg": 14, "reps": 15 },
-            { "kg": 18, "reps": 10 },
-            { "kg": 15, "reps": 15 }
+            { "kg": 14, "reps": 15 },
+            { "kg": 14, "reps": 15 }
           ],
-          "workingHighlight": "18×10"
+          "workingHighlight": "14×15×4"
         },
         {
           "name": "케이블 로프 푸시 다운",
           "sets": [
-            { "kg": 30, "reps": 10 },
-            { "kg": 30, "reps": 10 },
-            { "kg": 32.5, "reps": 12 },
-            { "kg": 35, "reps": 12 }
+            { "kg": 18, "reps": 18 },
+            { "kg": 18, "reps": 18 },
+            { "kg": 22, "reps": 15 },
+            { "kg": 22, "reps": 12 }
           ],
-          "workingHighlight": "35×12"
+          "workingHighlight": "22×15"
         },
         {
-          "name": "케이블 사이드 로우",
+          "name": "케이블 사이드 레터럴 레이즈",
           "sets": [
-            { "kg": 20, "reps": 16 },
-            { "kg": 16, "reps": 15 },
-            { "kg": 16, "reps": 14 },
-            { "kg": 16, "reps": 16 }
+            { "kg": 10, "reps": 15 },
+            { "kg": 10, "reps": 15 },
+            { "kg": 10, "reps": 15 },
+            { "kg": 10, "reps": 15 }
           ],
-          "workingHighlight": "16×16"
+          "workingHighlight": "10×15×4"
         }
       ],
-      "coachNote": "3일 휴업 후 재개. 벤치 140×2 복귀 성공, 인클라인 28×11 작업세트. 145 안 간 판단 좋음. OHP·리어델트 라이트로 어깨 관리 OK."
+      "coachNote": "3일 휴업 후 재개. 벤치 80→100→120→130→140×2→백오프120×6. 인클 28×10×4. 어깨는 OHP·레터럴·리어 라이트. 재개 데이로 합격."
     }
   ]
 }
