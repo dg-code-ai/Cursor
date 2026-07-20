@@ -502,6 +502,82 @@
         }
       ],
       "coachNote": "총볼륨↓ / 작업세트 과부하↑. 묵직한 자극. 워밍업 힘 소모 자각."
+    },
+    {
+      "id": "gym-2026-07-20",
+      "date": "2026-07-20",
+      "type": "Push",
+      "title": "오전 운동",
+      "durationMin": 44,
+      "totalVolumeKg": 10480,
+      "calories": 433,
+      "locationNote": "평소 벤치 140대 대비 중량 크게 낮음 → 아파트/라이트 장비 가능성",
+      "exercises": [
+        {
+          "name": "벤치 프레스",
+          "sets": [
+            { "kg": 20, "reps": 10 },
+            { "kg": 30, "reps": 7 },
+            { "kg": 50, "reps": 6 },
+            { "kg": 50, "reps": 8 },
+            { "kg": 50, "reps": 12 },
+            { "kg": 60, "reps": 6 }
+          ],
+          "workingHighlight": "60×6 (라이트 재개)"
+        },
+        {
+          "name": "덤벨 인클라인 벤치 프레스",
+          "sets": [
+            { "kg": 20, "reps": 11 },
+            { "kg": 20, "reps": 11 },
+            { "kg": 20, "reps": 11 },
+            { "kg": 20, "reps": 11 }
+          ],
+          "workingHighlight": "20×11×4"
+        },
+        {
+          "name": "케이블 체스트 플라이",
+          "sets": [
+            { "kg": 15, "reps": 10 },
+            { "kg": 20, "reps": 6 },
+            { "kg": 20, "reps": 4 },
+            { "kg": 15, "reps": 5 }
+          ],
+          "workingHighlight": "20×6"
+        },
+        {
+          "name": "덤벨 스탠딩 오버헤드 프레스",
+          "sets": [
+            { "kg": 14, "reps": 15 },
+            { "kg": 15, "reps": 15 },
+            { "kg": 15, "reps": 15 },
+            { "kg": 16, "reps": 15 }
+          ],
+          "workingHighlight": "16×15"
+        },
+        {
+          "name": "케이블 로프 푸시 다운",
+          "sets": [
+            { "kg": 15, "reps": 10 },
+            { "kg": 20, "reps": 18 },
+            { "kg": 22.5, "reps": 15 },
+            { "kg": 25, "reps": 12 }
+          ],
+          "workingHighlight": "25×12"
+        },
+        {
+          "name": "케이블 시티드 로우",
+          "sets": [
+            { "kg": 25, "reps": 16 },
+            { "kg": 30, "reps": 15 },
+            { "kg": 30, "reps": 16 },
+            { "kg": 35, "reps": 16 }
+          ],
+          "workingHighlight": "35×16",
+          "overload": false
+        }
+      ],
+      "coachNote": "3일 휴업 후 Push 재개. 구성은 처방과 일치. 중량은 본짐 대비 라이트 → 재개/장소 제약 세션으로 합격. 다음 본짐에서 140 작업세트 복귀."
     }
   ]
 }
