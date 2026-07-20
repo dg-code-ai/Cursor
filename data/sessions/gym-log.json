@@ -521,9 +521,9 @@
             { "kg": 100, "reps": 5 },
             { "kg": 130, "reps": 3 },
             { "kg": 140, "reps": 2 },
-            { "kg": 100, "reps": 6 }
+            { "kg": 120, "reps": 6 }
           ],
-          "workingHighlight": "140×2",
+          "workingHighlight": "140×2 · 백오프 120×6",
           "overload": false
         },
         {
