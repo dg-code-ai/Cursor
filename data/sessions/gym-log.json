@@ -529,12 +529,12 @@
         {
           "name": "덤벨 인클라인 벤치 프레스",
           "sets": [
-            { "kg": 20, "reps": 10 },
-            { "kg": 20, "reps": 10 },
-            { "kg": 20, "reps": 10 },
-            { "kg": 20, "reps": 10 }
+            { "kg": 28, "reps": 11 },
+            { "kg": 28, "reps": 11 },
+            { "kg": 28, "reps": 11 },
+            { "kg": 28, "reps": 11 }
           ],
-          "workingHighlight": "20×10×4"
+          "workingHighlight": "28×11×4"
         },
         {
           "name": "케이블 리어 델트",
