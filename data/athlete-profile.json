@@ -1,6 +1,6 @@
 {
   "name": "Athlete",
-  "updated": "2026-07-16",
+  "updated": "2026-07-21",
   "body": {
     "weightKg": 106,
     "skeletalMuscleKg": 50.3,
@@ -9,12 +9,17 @@
   },
   "prs": {
     "benchPress": 145,
-    "squat": 180,
-    "deadlift": 190,
+    "squat": 190,
+    "deadlift": 200,
     "powerSnatch": 85,
     "cleanAndJerk": 110,
     "snatchGoal": 100,
-    "tenKBest": { "timeMin": 69.1, "timeDisplay": "1:09:06", "date": "2026-05", "distanceKm": 10.03 }
+    "tenKBest": {
+      "timeMin": 69.1,
+      "timeDisplay": "1:09:06",
+      "date": "2026-05",
+      "distanceKm": 10.03
+    }
   },
   "goals": [
     {
