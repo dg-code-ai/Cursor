@@ -1,11 +1,13 @@
 {
   "name": "Athlete",
-  "updated": "2026-07-21",
+  "updated": "2026-07-22",
   "body": {
-    "weightKg": 106,
+    "weightKg": 106.4,
     "skeletalMuscleKg": 50.3,
     "bodyFatKg": 19.5,
-    "bodyFatPercent": 18.4
+    "bodyFatPercent": 18.3,
+    "abdominalFatRatio": 0.91,
+    "note": "본인 예상: 한달 전과 유사. 오늘 인바디 재측정 예정."
   },
   "prs": {
     "benchPress": 145,
@@ -43,5 +45,15 @@
     "gym": "평일 점심",
     "injury": "왼발 족저근막염 (경미)",
     "prUpdate": "스쿼트 190(7/7), 데드 200(7/3) — Rise 공유앨범"
+  },
+  "nutrition": {
+    "phase": "maintain (스내치 Phase1)",
+    "goal": "체중 유지 · 골격근 유지 · 지방은 억지로 안 뺌",
+    "proteinG": "170-200",
+    "proteinPerKg": "1.6-1.9",
+    "carbs": "훈련일 넉넉 / 런·헬스 전후",
+    "fat": "극단적 제한 X",
+    "weightBandKg": "105-107",
+    "recheck": "인바디 나오면 숫자만 앨범/메시지로"
   }
 }
