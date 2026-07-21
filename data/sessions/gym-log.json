@@ -1700,7 +1700,7 @@
       "totalSets": 30,
       "totalVolumeKg": 7225,
       "calories": 481,
-      "grade": "A-",
+      "grade": "B+",
       "exercises": [
         {
           "name": "바벨 오버헤드 스쿼트",
@@ -1726,8 +1726,9 @@
               "reps": 3
             }
           ],
-          "workingHighlight": "40×3×3",
-          "overload": true
+          "workingHighlight": "40×3×3 (깊이 제한 — 본인 보고)",
+          "overload": true,
+          "depthNote": "앉는 게 잘 안 됨"
         },
         {
           "name": "바벨 스내치 밸런스",
@@ -1764,8 +1765,9 @@
               "reps": 4
             }
           ],
-          "workingHighlight": "60×4 (깊이 확인 필요)",
-          "overload": true
+          "workingHighlight": "60×4 (깊이 실패 — 본인 보고)",
+          "overload": true,
+          "depthNote": "깊게 받기 어려움"
         },
         {
           "name": "데드리프트",
@@ -1871,7 +1873,7 @@
           "workingHighlight": "20×12~14"
         }
       ],
-      "coachNote": "처방 그대로: OH squat·스내치 밸런스·행스내치 → 데드 → 등. Phase1 리시브 개조 첫 본격 세션. OH 40은 아직 가벼움(목표 70×3). 데드는 테크 후라 170×3 합격·180 실패 정상. 풀업 37 과부하."
+      "coachNote": "처방 순서 OK. 본인 피드백: OH squat부터 깊게 앉기 어려움 → 행스내치 깊은 리시브도 힘들었음. Phase1 병목=깊이(가동성·신뢰) 확인. 전날 Push(벤치140·OHP) 어깨/흉곽 잔여 가능. 다음 테크: OH를 가볍게·더 깊게(20~30 일시정) → 밸런스 → 행은 회수↓ 깊이↑."
     }
   ]
 }
