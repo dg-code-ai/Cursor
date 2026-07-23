@@ -201,5 +201,15 @@
       "스내치·OH: 깊게 ×2-3 여러 세트 — 맥스 X"
     ],
     "exception": "피크·테스트 주만 싱글"
+  },
+  "dataPipeline": {
+    "sharedAlbum": "RISE 운동기록",
+    "albumUrl": "https://www.icloud.com/sharedalbum/#B22GWZuqDHkpFVq",
+    "chatSignal": "앨범 봐봐",
+    "shortcutsDoc": "docs/shortcuts-setup.md",
+    "shortcuts": [
+      "운동 기록 올리기 — Rise 스크린샷 → 공유앨범",
+      "러닝 요약 복사 — Health 최근 런 → 클립보드 → 채팅 붙여넣기"
+    ]
   }
 }
