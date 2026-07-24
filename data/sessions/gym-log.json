@@ -2115,6 +2115,169 @@
         }
       ],
       "coachNote": "Push 라이트 처방 준수. 벤치 135×2×3까지, 145 도전 X — 서브맥스 볼륨 원칙과 일치. 인클 26→30 회수 양호, OHP 라이트, 플라이·푸시다운·로우 깔끔. 50분 22세트."
+    },
+    {
+      "id": "gym-2026-07-24",
+      "date": "2026-07-24",
+      "type": "Pull",
+      "title": "오전 운동 · Pull 라이트 + 스내치 테크",
+      "durationMin": 58,
+      "totalSets": 26,
+      "totalVolumeKg": 7315,
+      "calories": 447,
+      "grade": "A-",
+      "exercises": [
+        {
+          "name": "바벨 오버헤드 스쿼트",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 5
+            },
+            {
+              "kg": 30,
+              "reps": 5
+            },
+            {
+              "kg": 40,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "20×5 · 30×5 · 40×3 (외회전·깊이 피드백 대기)",
+          "overload": false
+        },
+        {
+          "name": "바벨 스내치 밸런스",
+          "sets": [
+            {
+              "kg": 50,
+              "reps": 3
+            },
+            {
+              "kg": 60,
+              "reps": 3
+            },
+            {
+              "kg": 60,
+              "reps": 2
+            }
+          ],
+          "workingHighlight": "60×3 / 60×2"
+        },
+        {
+          "name": "바벨 행 스내치",
+          "sets": [
+            {
+              "kg": 50,
+              "reps": 3
+            },
+            {
+              "kg": 60,
+              "reps": 3
+            },
+            {
+              "kg": 60,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "50×3 · 60×3×2 (회수↓ 처방 준수 · 깊이 확인)",
+          "overload": true
+        },
+        {
+          "name": "풀 업",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 8
+            },
+            {
+              "kg": 0,
+              "reps": 6
+            },
+            {
+              "kg": 0,
+              "reps": 7
+            },
+            {
+              "kg": 0,
+              "reps": 6
+            },
+            {
+              "kg": 0,
+              "reps": 7
+            }
+          ],
+          "workingHighlight": "총 34회"
+        },
+        {
+          "name": "랫 풀 다운",
+          "sets": [
+            {
+              "kg": 65,
+              "reps": 12
+            },
+            {
+              "kg": 70,
+              "reps": 10
+            },
+            {
+              "kg": 75,
+              "reps": 7
+            },
+            {
+              "kg": 80,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "80×5"
+        },
+        {
+          "name": "바벨 로우",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 10
+            },
+            {
+              "kg": 60,
+              "reps": 10
+            },
+            {
+              "kg": 100,
+              "reps": 7
+            },
+            {
+              "kg": 100,
+              "reps": 7
+            },
+            {
+              "kg": 100,
+              "reps": 6
+            }
+          ],
+          "workingHighlight": "100×7 / 100×7 / 100×6",
+          "overload": true
+        },
+        {
+          "name": "케이블 로프 스트레이트 암 풀 다운",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 14
+            },
+            {
+              "kg": 20,
+              "reps": 13
+            },
+            {
+              "kg": 20,
+              "reps": 12
+            }
+          ],
+          "workingHighlight": "20×12~14"
+        }
+      ],
+      "coachNote": "선택 A 준수. 테크→등, 데드 생략 OK. OH 20/30에서 볼륨 후 40×3. 행 회수 3으로 정리(7/21의 ×4보다 처방 합치). 로우 100 작업세트 양호. 외회전·깊이·버리기 체감은 본인 피드백 필요."
     }
   ]
 }
