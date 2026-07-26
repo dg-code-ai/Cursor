@@ -2282,6 +2282,57 @@
         "lateralDelt": "OH 후 측면삼각 아픔 — 안정근 피로로 해석",
         "rightHamGlute": "밸런스 초반 오른쪽 햄·엉덩이 땡김 — 관찰"
       }
+    },
+    {
+      "id": "oly-2026-07-26",
+      "date": "2026-07-26",
+      "type": "Olympic",
+      "title": "역도장 · 인상/용상 + 보조",
+      "grade": "B+",
+      "exercises": [
+        {
+          "name": "스내치(인상)",
+          "sets": [
+            {
+              "kg": 80,
+              "reps": null,
+              "note": "상한 80 · 세트 상세 미기록"
+            }
+          ],
+          "workingHighlight": "80까지",
+          "overload": false
+        },
+        {
+          "name": "클린앤저크(용상)",
+          "sets": [
+            {
+              "kg": 90,
+              "reps": null,
+              "note": "상한 90 · 세트 상세 미기록"
+            }
+          ],
+          "workingHighlight": "90까지"
+        },
+        {
+          "name": "스내치 밸런스",
+          "sets": [
+            {
+              "note": "훈련함 · 무게 미기록"
+            }
+          ],
+          "workingHighlight": "본인 보고"
+        },
+        {
+          "name": "판다 풀",
+          "sets": [
+            {
+              "note": "훈련함 · 무게 미기록"
+            }
+          ],
+          "workingHighlight": "본인 보고"
+        }
+      ],
+      "coachNote": "격주 역도 세션. 인상 80(파워PR 85 근접) · 용상 90(PR 110 대비 보수적). 밸런스·판다풀 = 리시브/풀 보조로 Phase1과 맞음. 금 햄 땡김 후라 밸런스 볼륨은 과하지 않았는지 확인 필요. 월은 Push 라이트·회복 여유."
     }
   ]
 }
