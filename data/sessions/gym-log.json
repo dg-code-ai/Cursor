@@ -2333,6 +2333,169 @@
         }
       ],
       "coachNote": "격주 역도 세션. 인상 80(파워PR 85 근접) · 용상 90(PR 110 대비 보수적). 밸런스·판다풀 = 리시브/풀 보조로 Phase1과 맞음. 금 햄 땡김 후라 밸런스 볼륨은 과하지 않았는지 확인 필요. 월은 Push 라이트·회복 여유."
+    },
+    {
+      "id": "gym-2026-07-28",
+      "date": "2026-07-28",
+      "type": "Pull",
+      "title": "오전 운동 · Pull + 스내치 테크",
+      "durationMin": 57,
+      "totalSets": 26,
+      "totalVolumeKg": 7690,
+      "calories": 448,
+      "grade": "A",
+      "exercises": [
+        {
+          "name": "바벨 오버헤드 스쿼트",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 5
+            },
+            {
+              "kg": 30,
+              "reps": 5
+            },
+            {
+              "kg": 40,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "40×5",
+          "overload": true
+        },
+        {
+          "name": "바벨 스내치 밸런스",
+          "sets": [
+            {
+              "kg": 50,
+              "reps": 3
+            },
+            {
+              "kg": 60,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "60×3"
+        },
+        {
+          "name": "바벨 행 스내치",
+          "sets": [
+            {
+              "kg": 40,
+              "reps": 3
+            },
+            {
+              "kg": 40,
+              "reps": 3
+            },
+            {
+              "kg": 40,
+              "reps": 3
+            },
+            {
+              "kg": 45,
+              "reps": 2
+            },
+            {
+              "kg": 45,
+              "reps": 2
+            }
+          ],
+          "workingHighlight": "40×3×3 · 45×2×2 (깊은 리시브 처방 그대로)",
+          "overload": true
+        },
+        {
+          "name": "풀 업",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 9
+            },
+            {
+              "kg": 0,
+              "reps": 7
+            },
+            {
+              "kg": 0,
+              "reps": 7
+            },
+            {
+              "kg": 0,
+              "reps": 6
+            },
+            {
+              "kg": 0,
+              "reps": 4
+            }
+          ],
+          "workingHighlight": "총 33회"
+        },
+        {
+          "name": "바벨 로우",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 11
+            },
+            {
+              "kg": 80,
+              "reps": 8
+            },
+            {
+              "kg": 100,
+              "reps": 7
+            },
+            {
+              "kg": 100,
+              "reps": 8
+            },
+            {
+              "kg": 100,
+              "reps": 7
+            }
+          ],
+          "workingHighlight": "100×7/8/7",
+          "overload": true
+        },
+        {
+          "name": "랫 풀 다운",
+          "sets": [
+            {
+              "kg": 65,
+              "reps": 13
+            },
+            {
+              "kg": 70,
+              "reps": 10
+            },
+            {
+              "kg": 75,
+              "reps": 7
+            }
+          ],
+          "workingHighlight": "75×7"
+        },
+        {
+          "name": "케이블 로프 스트레이트 암 풀 다운",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 15
+            },
+            {
+              "kg": 20,
+              "reps": 14
+            },
+            {
+              "kg": 20,
+              "reps": 11
+            }
+          ],
+          "workingHighlight": "20×11~15"
+        }
+      ],
+      "coachNote": "상세 처방 거의 완벽 수행. OH 40×5(이전 40×3에서 회수↑). 행 40×3×3 + 45×2×2 — Phase1 핵심 그대로. 밸런스 50/60 소량 OK. 로우 100 작업 3세트 충족. 데드 생략 OK. 랫 80 세트만 생략(무방)."
     }
   ]
 }
