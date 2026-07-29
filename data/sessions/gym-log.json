@@ -2677,6 +2677,145 @@
         ],
         "squatFeel": "160 first hard, second manageable"
       }
+    },
+    {
+      "id": "gym-2026-07-30",
+      "date": "2026-07-30",
+      "type": "Push",
+      "title": "오전 운동 · Push",
+      "durationMin": 54,
+      "totalSets": 22,
+      "totalVolumeKg": 10227,
+      "calories": 358,
+      "grade": "A",
+      "exercises": [
+        {
+          "name": "벤치 프레스",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 10
+            },
+            {
+              "kg": 100,
+              "reps": 8
+            },
+            {
+              "kg": 120,
+              "reps": 5
+            },
+            {
+              "kg": 130,
+              "reps": 4
+            },
+            {
+              "kg": 130,
+              "reps": 4
+            },
+            {
+              "kg": 135,
+              "reps": 1
+            }
+          ],
+          "workingHighlight": "130×4 ×2 (로그상 첫 기록) · 135×1",
+          "overload": true
+        },
+        {
+          "name": "덤벨 인클라인 벤치 프레스",
+          "sets": [
+            {
+              "kg": 26,
+              "reps": 15
+            },
+            {
+              "kg": 28,
+              "reps": 13
+            },
+            {
+              "kg": 30,
+              "reps": 12
+            }
+          ],
+          "workingHighlight": "30×12"
+        },
+        {
+          "name": "머신 펙 덱 플라이",
+          "sets": [
+            {
+              "kg": 50,
+              "reps": 17
+            },
+            {
+              "kg": 55,
+              "reps": 13
+            },
+            {
+              "kg": 55,
+              "reps": 12
+            }
+          ],
+          "workingHighlight": "55×12~13"
+        },
+        {
+          "name": "덤벨 스탠딩 오버헤드 프레스",
+          "sets": [
+            {
+              "kg": 18,
+              "reps": 20
+            },
+            {
+              "kg": 20,
+              "reps": 16
+            },
+            {
+              "kg": 22,
+              "reps": 14
+            }
+          ],
+          "workingHighlight": "22×14"
+        },
+        {
+          "name": "케이블 오버헤드 트라이셉스 익스텐션",
+          "sets": [
+            {
+              "kg": 17.5,
+              "reps": 17
+            },
+            {
+              "kg": 20,
+              "reps": 15
+            },
+            {
+              "kg": 22.5,
+              "reps": 13
+            },
+            {
+              "kg": 25,
+              "reps": 11
+            }
+          ],
+          "workingHighlight": "25×11"
+        },
+        {
+          "name": "케이블 시티드 로우",
+          "sets": [
+            {
+              "kg": 40,
+              "reps": 15
+            },
+            {
+              "kg": 40,
+              "reps": 12
+            },
+            {
+              "kg": 40,
+              "reps": 12
+            }
+          ],
+          "workingHighlight": "40×12~15"
+        }
+      ],
+      "coachNote": "벤치 130×4×2 — 기존 로그에 없던 과부하(이전 최고 130×3). 135×1로 마무리, 145 X. 인클·플라이 양호. OHP는 처방(14-18)보다 무거웠으나 회수 많아 서브맥스 볼륨 쪽."
     }
   ]
 }
