@@ -320,6 +320,43 @@
       ],
       "source": "RunDay/Fitness screenshot",
       "coachNote": "거리 8.45 달성·후반 걷기로 볼륨 확보 — 좋음. 다만 전반 5km가 이지가 아님: 랩3 7'56\", 평균HR153, 165+ 약 23분·147+ 합 55분+. 7/17과 같은 패턴(거리OK·강도과다). 다음 롱런은 처음부터 9'20\"+ / HR140대."
+    },
+    {
+      "id": "run-2026-08-01",
+      "date": "2026-08-01",
+      "type": "long-run-attempt",
+      "distanceKm": 5.55,
+      "timeSec": 2859,
+      "pacePerKm": "8'35\"",
+      "bestPace": "5'35\"",
+      "avgHr": 160,
+      "hrRange": [
+        102,
+        185
+      ],
+      "avgCadence": 145,
+      "cadenceRange": [
+        99,
+        177
+      ],
+      "avgPower": 213,
+      "powerRange": [
+        83,
+        412
+      ],
+      "verticalOscCm": 9.8,
+      "verticalOscRange": [
+        8.1,
+        11.5
+      ],
+      "groundContactMs": 323,
+      "groundContactRange": [
+        222,
+        384
+      ],
+      "location": "인천",
+      "source": "Apple Fitness",
+      "coachNote": "처방: 6-8km · 9'20\"+ · HR135-145. 실제: 5.55km · 8'35\" · HR160 (최대185). 거리↓·강도↑ — 7/17·7/25와 같은 패턴. 이지런 실패. 다음: 처음부터 걷기 섞어도 되니 HR140대 고정이 점수."
     }
   ],
   "plan": {
