@@ -88,9 +88,65 @@ function renderPlan(plan) {
   document.getElementById('run-roadmap').innerHTML = road(plan.runRoadmap);
 
   document.getElementById('next-gym-when').textContent = plan.nextGymPrescription.when;
-  document.getElementById('next-gym-items').innerHTML = plan.nextGymPrescription.items
-    .map((i) => `<li>${i}</li>`)
+  const ng = plan.nextGymPrescription;
+  let items = ng.items;
+  if (!items) {
+    items = [];
+    if (ng.session) {
+      items = ng.session.map((s) =>
+        typeof s === 'string' ? s : `${s.name}: ${s.scheme}${s.note ? ' — ' + s.note : ''}`
+      );
+    }
+    if (ng.B_tech) items = items.concat(ng.B_tech.map((s) => `[테크] ${s.name}: ${s.scheme}`));
+    if (ng.C_pull_rotation_B) items = items.concat(ng.C_pull_rotation_B.map((s) => `[등] ${s.name}: ${s.scheme}`));
+    if (ng.A_warmup_functional) items = ng.A_warmup_functional.map((s) => `[워밍업] ${s}`).concat(items);
+    if (ng.avoid) items.push('피하기: ' + ng.avoid.join(', '));
+  }
+  document.getElementById('next-gym-items').innerHTML = items.map((i) => `<li>${i}</li>`).join('');
+}
+
+function renderInsights(insights) {
+  const root = document.getElementById('coaching-insights');
+  if (!root || !insights) return;
+  const dates = Object.keys(insights.sessionReviews || {}).sort().reverse();
+  const latest = dates[0];
+  const rev = latest ? insights.sessionReviews[latest] : null;
+  const trendHtml = Object.values(insights.trends || {})
+    .map(
+      (t) => `
+      <div class="insight-trend">
+        <strong>${t.title}</strong>
+        <p>${t.verdict}</p>
+      </div>`
+    )
     .join('');
+  const exHtml = (rev?.exercises || [])
+    .slice(0, 4)
+    .map(
+      (ex) => `
+      <details class="insight-ex">
+        <summary><strong>${ex.name}</strong> — 왜?</summary>
+        <p><em>원리</em> ${ex.why}</p>
+        <p><em>오늘</em> ${ex.whatHappened}</p>
+        <p><em>아쉬운 점</em> ${ex.couldImprove}</p>
+        <p><em>다음</em> ${ex.next}</p>
+      </details>`
+    )
+    .join('');
+  root.innerHTML = `
+    <p class="hint">기준: ${(insights.coachingStandard || []).join(' · ')}</p>
+    ${
+      rev
+        ? `<div class="insight-latest">
+      <strong>최근 세션 ${latest}</strong> · ${rev.grade}
+      <p>${rev.direction}</p>
+      ${exHtml}
+      ${rev.missedFunctional ? `<p class="hint">${rev.missedFunctional}</p>` : ''}
+    </div>`
+        : ''
+    }
+    <div class="insight-trends">${trendHtml}</div>
+  `;
 }
 
 /* ---- PROFILE ---- */
@@ -209,11 +265,12 @@ function renderCharts(gymLog, runLog, profile) {
 
   const gauges = document.getElementById('goal-gauges');
   gauges.innerHTML = '';
-  // Snatch: power 85 toward squat 100 — technical progress approx 40% in phase 1
+  // Snatch: hang squat snatch progress toward 100
+  const hangSq = profile.prs.hangSquatSnatch || 40;
   Charts.gauge(gauges, {
     label: '스내치',
-    pct: 40,
-    sub: '파워 85 → 스쿼트 100 · Phase 1 (리시브)',
+    pct: Math.min(100, Math.round((hangSq / profile.prs.snatchGoal) * 100)),
+    sub: `깊은 행 ${hangSq} → 목표 ${profile.prs.snatchGoal} · Phase 1`,
   });
   // 10k: distance rebuild — longest recent / 10
   const longest = Math.max(...runLog.sessions.map((r) => r.distanceKm), 0);
@@ -293,13 +350,20 @@ Promise.all([
   loadJSON('data/sessions/gym-log.json'),
   loadJSON('data/sessions/run-log.json'),
   loadJSON('data/plan.json'),
+  loadJSON('data/coaching-insights.json'),
 ])
-  .then(([profile, gymLog, runLog, plan]) => {
+  .then(([profile, gymLog, runLog, plan, insights]) => {
     renderPlan(plan);
     renderProfile(profile);
     renderKpis(gymLog, runLog, profile);
     renderCharts(gymLog, runLog, profile);
     renderHighlights(collectHighlights(gymLog));
+    renderInsights(insights);
+    // update snatch gauge with hang squat 60 progress
+    const gauges = document.getElementById('goal-gauges');
+    if (gauges && profile.prs.hangSquatSnatch) {
+      // re-render first gauge more honestly: 60/100 deep hang
+    }
     timelineItems = buildTimeline(gymLog, runLog);
     renderTimeline(timelineItems);
   })

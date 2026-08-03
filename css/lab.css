@@ -803,3 +803,15 @@
   object-fit: contain;
   margin: 0 auto;
 }
+
+/* Coaching insights */
+.insights { display: grid; gap: 0.75rem; }
+.insight-latest { padding: 0.75rem; border-radius: 10px; background: #151b24; border: 1px solid #243044; }
+.insight-ex { margin-top: 0.5rem; padding: 0.5rem 0.65rem; border-radius: 8px; background: #0f1419; }
+.insight-ex summary { cursor: pointer; color: #e2e8f0; }
+.insight-ex p { margin: 0.35rem 0 0; font-size: 0.9rem; color: #94a3b8; line-height: 1.45; }
+.insight-ex em { color: #60a5fa; font-style: normal; margin-right: 0.35rem; }
+.insight-trends { display: grid; gap: 0.5rem; margin-top: 0.75rem; }
+.insight-trend { padding: 0.6rem 0.75rem; border-left: 3px solid #34d399; background: #151b24; border-radius: 0 8px 8px 0; }
+.insight-trend p { margin: 0.25rem 0 0; color: #94a3b8; font-size: 0.9rem; }
+.insight-chart { width: 100%; height: auto; border-radius: 10px; border: 1px solid #243044; display: block; }
