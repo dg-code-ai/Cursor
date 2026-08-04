@@ -3,14 +3,16 @@
 역도(올림픽 역도) 훈련을 위한 **메인 리프트 중심 기록 도구**입니다.  
 헬스 앱과 달리 **TM 기준 % 자동 계산**, **성공/실패 rep**, **주간 80%+ 볼륨**에 맞춰 설계했습니다.
 
-## 아이폰만으로 사용하기 (추천)
+## 트레이닝 캔버스 (대시보드) — 아이폰 한 번에 열기
 
-### 바로 시작 (PC·설정 불필요)
+Safari에서 **이 주소만** 탭하세요:
 
-1. Safari에서 아래 주소 열기  
-   **https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@main/index.html**
-2. 공유 버튼(□↑) → **홈 화면에 추가** → 이름: `역도 기록`
-3. 홈 화면 아이콘으로 실행
+**https://raw.githack.com/dg-code-ai/Cursor/cursor/training-canvas-anatomy-5c6f/canvas-standalone.html**
+
+(공유 → 홈 화면에 추가 하면 다음에 더 편합니다.)
+
+jsDelivr가 소스 텍스트로만 보이면 위 raw.githack 주소를 쓰세요.
+
 
 ### 사용 순서
 
