@@ -1,6 +1,6 @@
 {
   "name": "Athlete",
-  "updated": "2026-07-31",
+  "updated": "2026-08-04",
   "body": {
     "weightKg": 106.4,
     "skeletalMuscleKg": 50.3,
@@ -22,14 +22,14 @@
       "date": "2026-05",
       "distanceKm": 10.03
     },
-    "hangSquatSnatch": 60
+    "hangSquatSnatch": 65
   },
   "goals": [
     {
       "id": "snatch100",
       "title": "스쿼트 스내치 100kg",
       "deadline": "2026-09-30",
-      "current": "행 스쿼트 스내치 60×2 (2026-07-31) · 파워85 · 목표100",
+      "current": "행 스쿼트 스내치 65×2 (2026-08-04) · OH60",
       "phase": 1
     },
     {
@@ -46,7 +46,7 @@
     "gym": "평일 점심",
     "injury": "왼발 족저근막염 (경미)",
     "prUpdate": "스쿼트 190(7/7), 데드 200(7/3) — Rise 공유앨범",
-    "snatchDepth": "행 스쿼트 스내치 60 확인 (2026-07-31). Phase1 돌파.",
+    "snatchDepth": "행 65×2×2 · OH60 (2026-08-04)",
     "bench": "130×4×2 달성 (2026-07-30). PR 싱글 145."
   },
   "nutrition": {

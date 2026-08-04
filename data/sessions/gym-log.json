@@ -3155,6 +3155,192 @@
         }
       ],
       "coachNote": "보조 B 적용: 머신인클·머신플라이·바벨OHP·오버헤드삼두·페이스풀. 벤치 130×4×2 유지 후 140×2 — 과부하. 팔로프/파머스 캐리는 미실시(페이스풀로 대체 가능). 바벨OHP 60×6은 화 테크 전날치곤 약간 셈 — OH 스택만 보면 됨."
+    },
+    {
+      "id": "gym-2026-08-04",
+      "date": "2026-08-04",
+      "type": "Pull",
+      "title": "오전 운동 · Pull + 스내치 테크",
+      "durationMin": 61,
+      "totalSets": 30,
+      "totalVolumeKg": 8163,
+      "calories": 499,
+      "grade": "A+",
+      "exercises": [
+        {
+          "name": "바벨 오버헤드 스쿼트",
+          "sets": [
+            {
+              "kg": 30,
+              "reps": 5
+            },
+            {
+              "kg": 40,
+              "reps": 4
+            },
+            {
+              "kg": 50,
+              "reps": 4
+            },
+            {
+              "kg": 60,
+              "reps": 2
+            }
+          ],
+          "workingHighlight": "50×4 · 60×2",
+          "overload": true
+        },
+        {
+          "name": "바벨 스내치 밸런스",
+          "sets": [
+            {
+              "kg": 50,
+              "reps": 3
+            },
+            {
+              "kg": 60,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "60×3"
+        },
+        {
+          "name": "바벨 행 스내치",
+          "sets": [
+            {
+              "kg": 50,
+              "reps": 3
+            },
+            {
+              "kg": 55,
+              "reps": 2
+            },
+            {
+              "kg": 60,
+              "reps": 2
+            },
+            {
+              "kg": 65,
+              "reps": 2
+            },
+            {
+              "kg": 65,
+              "reps": 2
+            }
+          ],
+          "workingHighlight": "60×2 · 65×2×2 (깊이 확인 권장)",
+          "overload": true
+        },
+        {
+          "name": "풀 업",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 9
+            },
+            {
+              "kg": 0,
+              "reps": 7
+            },
+            {
+              "kg": 0,
+              "reps": 7
+            },
+            {
+              "kg": 0,
+              "reps": 6
+            },
+            {
+              "kg": 0,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "총 34회",
+          "overload": true
+        },
+        {
+          "name": "케이블 시티드 로우",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 13
+            },
+            {
+              "kg": 65,
+              "reps": 13
+            },
+            {
+              "kg": 70,
+              "reps": 9
+            }
+          ],
+          "workingHighlight": "70×9"
+        },
+        {
+          "name": "뉴트럴 그립 랫 풀 다운",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 12
+            },
+            {
+              "kg": 65,
+              "reps": 11
+            },
+            {
+              "kg": 70,
+              "reps": 8
+            },
+            {
+              "kg": 75,
+              "reps": 7
+            }
+          ],
+          "workingHighlight": "75×7"
+        },
+        {
+          "name": "덤벨 리어 플라이",
+          "sets": [
+            {
+              "kg": 8,
+              "reps": 15
+            },
+            {
+              "kg": 8,
+              "reps": 14
+            },
+            {
+              "kg": 8,
+              "reps": 12
+            },
+            {
+              "kg": 8,
+              "reps": 10
+            }
+          ],
+          "workingHighlight": "8×10~15"
+        },
+        {
+          "name": "데드리프트",
+          "sets": [
+            {
+              "kg": 140,
+              "reps": 3
+            },
+            {
+              "kg": 160,
+              "reps": 3
+            },
+            {
+              "kg": 160,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "160×3×2 (라이트 허용 범위)",
+          "overload": false
+        }
+      ],
+      "coachNote": "테크 과부하: OH60×2 · 행65×2×2. 7/31 스쿼트60 이후 65 시험. 풀34·로우·랫·리어플라이·데드160×3×2. 깊이(65) 본인 확인 권장."
     }
   ]
 }
