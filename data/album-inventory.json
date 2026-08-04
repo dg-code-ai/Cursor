@@ -41,19 +41,22 @@
     "2026-07": 94,
     "2026-08": 4
   },
-  "gymLogSessions": 89,
+  "gymLogSessions": 122,
   "backfillSummary": {
     "ranAt": "2026-08-04",
-    "added": 66,
-    "skippedExisting": 22,
-    "parseFailed": 116,
-    "noDetailScreenshot": 135,
+    "version": 2,
+    "added": 33,
+    "refreshed": 40,
+    "skippedExistingManual": 23,
+    "parseFailed": 183,
+    "noDetailScreenshot": 61,
     "sources": {
       "manual": 23,
-      "album-backfill": 66
+      "album-backfill": 99
     },
+    "avgExercisesPerOcrSession": 2.6,
     "loggedDateRange": {
-      "from": "2024-07-11",
+      "from": "2024-07-05",
       "to": "2026-08-04"
     }
   },
@@ -168,27 +171,12 @@
     }
   },
   "ingestPlan": [
-    "1) parse failed 116일 — OCR/파서 개선 후 재실행",
-    "2) no detail 135일 — Rise 요약만 있거나 셀카만 있는 날",
-    "3) 2026 priority 17일 잔여 — 수동 보강 권장"
+    "1) v2 파서: 89→122세션, 평균 2.6종목/세션",
+    "2) parse failed 183일 — OCR 품질 한계 (2024~초기)",
+    "3) no detail 61일 — Rise 상세 스크린 없음",
+    "4) 2026-06-15 1일 수동 보강 권장"
   ],
   "priorityBackfillRemaining2026": [
-    "2026-04-03",
-    "2026-04-14",
-    "2026-04-17",
-    "2026-04-21",
-    "2026-04-28",
-    "2026-04-29",
-    "2026-05-06",
-    "2026-05-07",
-    "2026-05-08",
-    "2026-05-19",
-    "2026-05-27",
-    "2026-06-15",
-    "2026-06-22",
-    "2026-06-23",
-    "2026-06-24",
-    "2026-06-25",
-    "2026-06-30"
+    "2026-06-15"
   ]
 }
