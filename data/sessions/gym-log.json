@@ -1,7 +1,2921 @@
 {
   "version": 1,
-  "note": "Rise 공유앨범 기반. workingSets는 과부하 추적용. 앨범 665장(2024-07~2026-07).",
+  "note": "Rise 공유앨범 backfill · 89세션 · 앨범 1439장 · manual 23 + OCR 66",
   "sessions": [
+    {
+      "id": "gym-2024-07-11",
+      "date": "2024-07-11",
+      "type": "Pull",
+      "title": "운동",
+      "durationMin": null,
+      "totalSets": 1,
+      "totalVolumeKg": 0,
+      "exercises": [
+        {
+          "name": "'중코승 소두p 식크고 스틱 데풀라이/ 3255k8 머신 레터럽 레이조 4465k8 덤렉-리이썩",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 0
+            }
+          ],
+          "workingHighlight": "총 0회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2024-07-14",
+      "date": "2024-07-14",
+      "type": "Push",
+      "title": "7.14 아침 운동",
+      "durationMin": null,
+      "totalSets": 1,
+      "totalVolumeKg": 0,
+      "exercises": [
+        {
+          "name": "7.14 아침 운동 머신 플라이 벤치 프레스 스미스 인클라인 벤치 프레스 머신 인클라인 체스트 프레스 머신 해머 벤치 프레스 머신 체스트 프레스 테이블 미들 플라이 테이블 로우 플라이 덤벌 풀 오버 바벨 인클라인 트라이셉스 테이블 로프 푸시 다운 테이블 푸시 다운 계속 하기 가슴 8개",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 89
+            }
+          ],
+          "workingHighlight": "총 89회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2024-09-06",
+      "date": "2024-09-06",
+      "type": "Pull",
+      "title": "운동",
+      "durationMin": 20,
+      "totalSets": 1,
+      "totalVolumeKg": 2280,
+      "exercises": [
+        {
+          "name": "일립 티철 머신 20분",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 6
+            }
+          ],
+          "workingHighlight": "총 6회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2024-10-07",
+      "date": "2024-10-07",
+      "type": "Push",
+      "title": "운동",
+      "durationMin": null,
+      "totalSets": 1,
+      "totalVolumeKg": 2520,
+      "exercises": [
+        {
+          "name": "스키트 2,520kg 바빛 스타프 레그 데드리프트 2,40Ok8 덤빛 리어 플라이 32Okg 덤빛 레터럽 테이즈 574kg 로프 폐이스 풀",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 1
+            }
+          ],
+          "workingHighlight": "총 1회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2024-10-13",
+      "date": "2024-10-13",
+      "type": "Pull",
+      "title": "운동",
+      "durationMin": null,
+      "totalSets": 1,
+      "totalVolumeKg": 2900,
+      "exercises": [
+        {
+          "name": "깨 머신 시티드 로우",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 2
+            }
+          ],
+          "workingHighlight": "총 2회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2024-11-05",
+      "date": "2024-11-05",
+      "type": "Pull",
+      "title": "운동",
+      "durationMin": null,
+      "totalSets": 1,
+      "totalVolumeKg": 105,
+      "exercises": [
+        {
+          "name": "스위트 3,260k8 머신 레그 의스템선",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "총 3회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2024-11-06",
+      "date": "2024-11-06",
+      "type": "Pull",
+      "title": "운동",
+      "durationMin": null,
+      "totalSets": 1,
+      "totalVolumeKg": 105,
+      "exercises": [
+        {
+          "name": "RIS디 테이블 시티드 로유",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "총 3회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2024-11-11",
+      "date": "2024-11-11",
+      "type": "Pull",
+      "title": "운동",
+      "durationMin": 10,
+      "totalSets": 1,
+      "totalVolumeKg": 2555,
+      "exercises": [
+        {
+          "name": "퍼신 원 암 시티드 로우",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 2
+            }
+          ],
+          "workingHighlight": "총 2회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2025-01-31",
+      "date": "2025-01-31",
+      "type": "Pull",
+      "title": "운동",
+      "durationMin": null,
+      "totalSets": 1,
+      "totalVolumeKg": 0,
+      "exercises": [
+        {
+          "name": "커트 3,825k8",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 8
+            }
+          ],
+          "workingHighlight": "총 8회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2025-02-10",
+      "date": "2025-02-10",
+      "type": "Push",
+      "title": "운동",
+      "durationMin": null,
+      "totalSets": 5,
+      "totalVolumeKg": 75,
+      "exercises": [
+        {
+          "name": "머신 인클라인 체스트 프레스",
+          "sets": [
+            {
+              "kg": 8,
+              "reps": 6
+            }
+          ],
+          "workingHighlight": "8×6"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2025-02-22",
+      "date": "2025-02-22",
+      "type": "Pull",
+      "title": "운동",
+      "durationMin": null,
+      "totalSets": 5,
+      "totalVolumeKg": 55,
+      "exercises": [
+        {
+          "name": "골로즈 그립 햇 풀 다운",
+          "sets": [
+            {
+              "kg": 8,
+              "reps": 7
+            }
+          ],
+          "workingHighlight": "8×7"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2025-03-09",
+      "date": "2025-03-09",
+      "type": "Push",
+      "title": "운동",
+      "durationMin": null,
+      "totalSets": 5,
+      "totalVolumeKg": 35,
+      "exercises": [
+        {
+          "name": "덤빛 인출라인 벤치 프레스",
+          "sets": [
+            {
+              "kg": 8,
+              "reps": 9
+            }
+          ],
+          "workingHighlight": "8×9"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2025-04-07",
+      "date": "2025-04-07",
+      "type": "Pull",
+      "title": "운동",
+      "durationMin": null,
+      "totalSets": 8,
+      "totalVolumeKg": 6,
+      "exercises": [
+        {
+          "name": "스미스 데드리프트",
+          "sets": [
+            {
+              "kg": 8,
+              "reps": 9
+            }
+          ],
+          "workingHighlight": "8×9"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2025-04-16",
+      "date": "2025-04-16",
+      "type": "Pull",
+      "title": "운동",
+      "durationMin": null,
+      "totalSets": 11,
+      "totalVolumeKg": 120,
+      "exercises": [
+        {
+          "name": "실내 자전거",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 7
+            }
+          ],
+          "workingHighlight": "총 7회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2025-09-03",
+      "date": "2025-09-03",
+      "type": "Pull",
+      "title": "운동햇어요",
+      "durationMin": 15,
+      "totalSets": 1,
+      "totalVolumeKg": 206159,
+      "exercises": [
+        {
+          "name": "총 운동 시간 8월 리포트 15시간 28분 총 운동 횟수 요일별 운동 횟수",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 15
+            }
+          ],
+          "workingHighlight": "총 15회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2025-10-15",
+      "date": "2025-10-15",
+      "type": "Pull",
+      "title": "운동하어요",
+      "durationMin": 5,
+      "totalSets": 1,
+      "totalVolumeKg": 100,
+      "exercises": [
+        {
+          "name": "총 운동 시간 10월 리포트 5시간 15분 총 운동 횟수 요일별 운동 횟수",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 0
+            }
+          ],
+          "workingHighlight": "총 0회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2025-11-02",
+      "date": "2025-11-02",
+      "type": "Pull",
+      "title": "오후 운동",
+      "durationMin": 1,
+      "totalSets": 29,
+      "totalVolumeKg": 13850,
+      "exercises": [
+        {
+          "name": "런넣머신",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 27
+            },
+            {
+              "kg": 25,
+              "reps": 20
+            },
+            {
+              "kg": 30,
+              "reps": 14
+            },
+            {
+              "kg": 15,
+              "reps": 1
+            },
+            {
+              "kg": 35,
+              "reps": 11
+            },
+            {
+              "kg": 40,
+              "reps": 9
+            }
+          ],
+          "workingHighlight": "40×9"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2025-11-25",
+      "date": "2025-11-25",
+      "type": "Pull",
+      "title": "운동하어요",
+      "durationMin": 14,
+      "totalSets": 1,
+      "totalVolumeKg": 100,
+      "exercises": [
+        {
+          "name": "총 운동 시간 11원 리포트 14시간 22분 총 운동 횟수 요일별 운동 횟수",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 15
+            }
+          ],
+          "workingHighlight": "총 15회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-01-07",
+      "date": "2026-01-07",
+      "type": "Pull",
+      "title": "오후 운동",
+      "durationMin": 1,
+      "totalSets": 33,
+      "totalVolumeKg": 11883,
+      "exercises": [
+        {
+          "name": "테이블 원 암 레터럼 레이즈",
+          "sets": [
+            {
+              "kg": 2.5,
+              "reps": 25
+            },
+            {
+              "kg": 3.8,
+              "reps": 19
+            },
+            {
+              "kg": 3.8,
+              "reps": 16
+            },
+            {
+              "kg": 3.75,
+              "reps": 15
+            },
+            {
+              "kg": 3.75,
+              "reps": 12
+            },
+            {
+              "kg": 3.75,
+              "reps": 14
+            },
+            {
+              "kg": 2.5,
+              "reps": 16
+            }
+          ],
+          "workingHighlight": "3.8×19"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-01-09",
+      "date": "2026-01-09",
+      "type": "Pull",
+      "title": "운동하어요",
+      "durationMin": 5,
+      "totalSets": 1,
+      "totalVolumeKg": 100,
+      "exercises": [
+        {
+          "name": "총 운동 시간 1월 리포트 5시간 0분 총 운동 횟수 요일별 운동 횟수",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "총 5회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-01-14",
+      "date": "2026-01-14",
+      "type": "Pull",
+      "title": "운동없어요",
+      "durationMin": 7,
+      "totalSets": 1,
+      "totalVolumeKg": 100,
+      "exercises": [
+        {
+          "name": "총 운동 시간 1월 리포트 7 시간 33분 총 운동 횟수 요일별 운동 횟수",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 8
+            }
+          ],
+          "workingHighlight": "총 8회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-01-19",
+      "date": "2026-01-19",
+      "type": "Pull",
+      "title": "운동하어요",
+      "durationMin": 8,
+      "totalSets": 1,
+      "totalVolumeKg": 100,
+      "exercises": [
+        {
+          "name": "총 운동 시간 1월 리포트 8시간 34분 총 운동 횟수 요일별 운동 횟수",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 9
+            }
+          ],
+          "workingHighlight": "총 9회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-01-21",
+      "date": "2026-01-21",
+      "type": "Pull",
+      "title": "오후 운동",
+      "durationMin": 53,
+      "totalSets": 33,
+      "totalVolumeKg": 11529,
+      "exercises": [
+        {
+          "name": "실내 자전거",
+          "sets": [
+            {
+              "kg": 5,
+              "reps": 2
+            }
+          ],
+          "workingHighlight": "5×2"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-01-22",
+      "date": "2026-01-22",
+      "type": "Pull",
+      "title": "운동하어요",
+      "durationMin": 11,
+      "totalSets": 1,
+      "totalVolumeKg": 100,
+      "exercises": [
+        {
+          "name": "총 운동 시간 1월 리포트 11시간 21분 총 운동 횟수 요일별 운동 횟수",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 12
+            }
+          ],
+          "workingHighlight": "총 12회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-01-23",
+      "date": "2026-01-23",
+      "type": "Pull",
+      "title": "운동하어요",
+      "durationMin": 12,
+      "totalSets": 1,
+      "totalVolumeKg": 100,
+      "exercises": [
+        {
+          "name": "총 운동 시간 1월 리포트 12시간 23분 총 운동 횟수 요일별 운동 횟수",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 13
+            }
+          ],
+          "workingHighlight": "총 13회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-01-26",
+      "date": "2026-01-26",
+      "type": "Pull",
+      "title": "운동하어요",
+      "durationMin": 13,
+      "totalSets": 1,
+      "totalVolumeKg": 100,
+      "exercises": [
+        {
+          "name": "총 운동 시간 1월 리포트 13시간 22분 총 운동 횟수 요일별 운동 횟수",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 14
+            }
+          ],
+          "workingHighlight": "총 14회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-01-27",
+      "date": "2026-01-27",
+      "type": "Pull",
+      "title": "운동하어요",
+      "durationMin": 14,
+      "totalSets": 1,
+      "totalVolumeKg": 100,
+      "exercises": [
+        {
+          "name": "총 운동 시간 1월 리포트 14시간 20분 총 운동 횟수 요일별 운동 횟수",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 15
+            }
+          ],
+          "workingHighlight": "총 15회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-01-28",
+      "date": "2026-01-28",
+      "type": "Pull",
+      "title": "운동하어요",
+      "durationMin": 15,
+      "totalSets": 1,
+      "totalVolumeKg": 100,
+      "exercises": [
+        {
+          "name": "총 운동 시간 1월 리포트 15시간 16분 총 운동 횟수 요일별 운동 횟수",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 16
+            }
+          ],
+          "workingHighlight": "총 16회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-01-29",
+      "date": "2026-01-29",
+      "type": "Pull",
+      "title": "운동하어요",
+      "durationMin": 16,
+      "totalSets": 1,
+      "totalVolumeKg": 100,
+      "exercises": [
+        {
+          "name": "총 운동 시간 1월 리포트 16시간 15분 총 운동 횟수 요일별 운동 횟수",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 17
+            }
+          ],
+          "workingHighlight": "총 17회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-02-03",
+      "date": "2026-02-03",
+      "type": "Pull",
+      "title": "오후 운동",
+      "durationMin": 51,
+      "totalSets": 28,
+      "totalVolumeKg": 15839,
+      "exercises": [
+        {
+          "name": "머신 시티드 레그 컬",
+          "sets": [
+            {
+              "kg": 40,
+              "reps": 15
+            },
+            {
+              "kg": 40,
+              "reps": 14
+            },
+            {
+              "kg": 40,
+              "reps": 9
+            },
+            {
+              "kg": 30,
+              "reps": 6
+            },
+            {
+              "kg": 45,
+              "reps": 17
+            },
+            {
+              "kg": 45,
+              "reps": 15
+            },
+            {
+              "kg": 45,
+              "reps": 13
+            },
+            {
+              "kg": 20,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "45×17"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-02-09",
+      "date": "2026-02-09",
+      "type": "Pull",
+      "title": "운동하어요",
+      "durationMin": 2,
+      "totalSets": 2,
+      "totalVolumeKg": 140,
+      "exercises": [
+        {
+          "name": "총 운동 시간 2월 리포트 2시간 43분 총 운동 횟수 요일별 운동 횟수",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "총 3회"
+        },
+        {
+          "name": "총 세트 1원 2월",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 89
+            }
+          ],
+          "workingHighlight": "총 89회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-02-11",
+      "date": "2026-02-11",
+      "type": "Pull",
+      "title": "운동하어요",
+      "durationMin": 3,
+      "totalSets": 1,
+      "totalVolumeKg": 140,
+      "exercises": [
+        {
+          "name": "총 운동 시간 2월 리포트 3시간 37분 총 운동 횟수 요일별 운동 횟수",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 4
+            }
+          ],
+          "workingHighlight": "총 4회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-02-13",
+      "date": "2026-02-13",
+      "type": "Pull",
+      "title": "운동하어요",
+      "durationMin": 4,
+      "totalSets": 1,
+      "totalVolumeKg": 120,
+      "exercises": [
+        {
+          "name": "총 운동 시간 2월 리포트 4시간 35분 총 운동 횟수 요일별 운동 횟수",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "총 5회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-02-19",
+      "date": "2026-02-19",
+      "type": "Pull",
+      "title": "오후 운동",
+      "durationMin": 58,
+      "totalSets": 31,
+      "totalVolumeKg": 9950,
+      "exercises": [
+        {
+          "name": "덥벌 사이드 레터럼 테이즈",
+          "sets": [
+            {
+              "kg": 4,
+              "reps": 30
+            },
+            {
+              "kg": 10,
+              "reps": 16
+            },
+            {
+              "kg": 12,
+              "reps": 14
+            },
+            {
+              "kg": 14,
+              "reps": 13
+            },
+            {
+              "kg": 6,
+              "reps": 18
+            }
+          ],
+          "workingHighlight": "14×13"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-02-26",
+      "date": "2026-02-26",
+      "type": "Pull",
+      "title": "운동하어요",
+      "durationMin": 7,
+      "totalSets": 1,
+      "totalVolumeKg": 140,
+      "exercises": [
+        {
+          "name": "총 운동 시간 2월 리포트 7 시간 10분 총 운동 횟수 요일별 운동 횟수",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 8
+            }
+          ],
+          "workingHighlight": "총 8회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-02-27",
+      "date": "2026-02-27",
+      "type": "Pull",
+      "title": "운동하어요",
+      "durationMin": 7,
+      "totalSets": 1,
+      "totalVolumeKg": 102,
+      "exercises": [
+        {
+          "name": "총 운동 시간 2월 리포트 7 시간 10분 총 운동 횟수 요일별 운동 횟수",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 8
+            }
+          ],
+          "workingHighlight": "총 8회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-03-05",
+      "date": "2026-03-05",
+      "type": "Leg",
+      "title": "오후 운동",
+      "durationMin": 42,
+      "totalSets": 22,
+      "totalVolumeKg": 60060,
+      "exercises": [
+        {
+          "name": "레그 프레스 카프 레이즈",
+          "sets": [
+            {
+              "kg": 160,
+              "reps": 15
+            },
+            {
+              "kg": 240,
+              "reps": 15
+            },
+            {
+              "kg": 280,
+              "reps": 13
+            },
+            {
+              "kg": 320,
+              "reps": 12
+            },
+            {
+              "kg": 360,
+              "reps": 10
+            },
+            {
+              "kg": 400,
+              "reps": 10
+            },
+            {
+              "kg": 440,
+              "reps": 8
+            },
+            {
+              "kg": 200,
+              "reps": 17
+            },
+            {
+              "kg": 200,
+              "reps": 19
+            },
+            {
+              "kg": 200,
+              "reps": 16
+            },
+            {
+              "kg": 440,
+              "reps": 7
+            },
+            {
+              "kg": 440,
+              "reps": 6
+            },
+            {
+              "kg": 360,
+              "reps": 9
+            },
+            {
+              "kg": 280,
+              "reps": 12
+            },
+            {
+              "kg": 200,
+              "reps": 16
+            },
+            {
+              "kg": 200,
+              "reps": 16
+            }
+          ],
+          "workingHighlight": "440×8"
+        },
+        {
+          "name": "머신 레그 익스템선",
+          "sets": [
+            {
+              "kg": 40,
+              "reps": 20
+            },
+            {
+              "kg": 40,
+              "reps": 16
+            },
+            {
+              "kg": 45,
+              "reps": 13
+            },
+            {
+              "kg": 50,
+              "reps": 12
+            },
+            {
+              "kg": 55,
+              "reps": 13
+            }
+          ],
+          "workingHighlight": "55×13"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-03-06",
+      "date": "2026-03-06",
+      "type": "Pull",
+      "title": "운동하어요",
+      "durationMin": 3,
+      "totalSets": 1,
+      "totalVolumeKg": 111,
+      "exercises": [
+        {
+          "name": "총 운동 시간 3월 리포트 3시간 0분 총 운동 횟수 요일별 운동 횟수",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 4
+            }
+          ],
+          "workingHighlight": "총 4회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-03-09",
+      "date": "2026-03-09",
+      "type": "Push",
+      "title": "아침 운동",
+      "durationMin": 50,
+      "totalSets": 28,
+      "totalVolumeKg": 11570,
+      "exercises": [
+        {
+          "name": "바벌 바벨 오버헤드 프레스",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 5
+            },
+            {
+              "kg": 70,
+              "reps": 4
+            },
+            {
+              "kg": 80,
+              "reps": 2
+            },
+            {
+              "kg": 60,
+              "reps": 4
+            },
+            {
+              "kg": 60,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "80×2"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-03-10",
+      "date": "2026-03-10",
+      "type": "Pull",
+      "title": "운동하어요",
+      "durationMin": 4,
+      "totalSets": 1,
+      "totalVolumeKg": 114,
+      "exercises": [
+        {
+          "name": "총 운동 시간 3월 리포트 4시간 39분 총 운동 횟수 요일별 운동 횟수",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 0
+            }
+          ],
+          "workingHighlight": "총 0회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-03-16",
+      "date": "2026-03-16",
+      "type": "Pull",
+      "title": "운동하어요",
+      "durationMin": 7,
+      "totalSets": 1,
+      "totalVolumeKg": 117,
+      "exercises": [
+        {
+          "name": "총 운동 시간 3월 리포트 7 시간 19분 총 운동 횟수 요일별 운동 횟수",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 9
+            }
+          ],
+          "workingHighlight": "총 9회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-03-18",
+      "date": "2026-03-18",
+      "type": "Pull",
+      "title": "운동하어요",
+      "durationMin": 8,
+      "totalSets": 1,
+      "totalVolumeKg": 135,
+      "exercises": [
+        {
+          "name": "총 운동 시간 3월 리포트 8시간 2분 총 운동 횟수 요일별 운동 횟수",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 10
+            }
+          ],
+          "workingHighlight": "총 10회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-03-19",
+      "date": "2026-03-19",
+      "type": "Pull",
+      "title": "운동하어요",
+      "durationMin": 8,
+      "totalSets": 1,
+      "totalVolumeKg": 135,
+      "exercises": [
+        {
+          "name": "총 운동 시간 3월 리포트 8시간 59분 총 운동 횟수 요일별 운동 횟수",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 11
+            }
+          ],
+          "workingHighlight": "총 11회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-03-20",
+      "date": "2026-03-20",
+      "type": "Push",
+      "title": "오후 운동",
+      "durationMin": 50,
+      "totalSets": 29,
+      "totalVolumeKg": 9565,
+      "exercises": [
+        {
+          "name": "바벨 인클라인 트라이셉스 익스템선",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 27
+            },
+            {
+              "kg": 25,
+              "reps": 21
+            },
+            {
+              "kg": 30,
+              "reps": 18
+            },
+            {
+              "kg": 30,
+              "reps": 16
+            },
+            {
+              "kg": 30,
+              "reps": 15
+            }
+          ],
+          "workingHighlight": "30×18"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-03-24",
+      "date": "2026-03-24",
+      "type": "Pull",
+      "title": "운동하어요",
+      "durationMin": 10,
+      "totalSets": 1,
+      "totalVolumeKg": 100,
+      "exercises": [
+        {
+          "name": "총 운동 시간 3월 리포트 10시간 38분 총 운동 횟수 요일별 운동 횟수",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 13
+            }
+          ],
+          "workingHighlight": "총 13회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-03-27",
+      "date": "2026-03-27",
+      "type": "Pull",
+      "title": "오후 운동",
+      "durationMin": 55,
+      "totalSets": 23,
+      "totalVolumeKg": 8531,
+      "exercises": [
+        {
+          "name": "인클라인 런넣머신",
+          "sets": [
+            {
+              "kg": 10,
+              "reps": 0
+            }
+          ],
+          "workingHighlight": "총 0회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-03-31",
+      "date": "2026-03-31",
+      "type": "Pull",
+      "title": "운동하어요",
+      "durationMin": 12,
+      "totalSets": 1,
+      "totalVolumeKg": 100,
+      "exercises": [
+        {
+          "name": "총 운동 시간 3월 리포트 12시간 22분 총 운동 횟수 요일별 운동 횟수",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 15
+            }
+          ],
+          "workingHighlight": "총 15회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-04-01",
+      "date": "2026-04-01",
+      "type": "Pull",
+      "title": "운동하어요",
+      "durationMin": 58,
+      "totalSets": 2,
+      "totalVolumeKg": 320,
+      "exercises": [
+        {
+          "name": "총 운동 시간 4월 리포트 시간 58분 총 운동 횟수 요일별 운동 횟수",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 1
+            }
+          ],
+          "workingHighlight": "총 1회"
+        },
+        {
+          "name": "총 세트 3월 4월",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 31
+            }
+          ],
+          "workingHighlight": "총 31회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-04-06",
+      "date": "2026-04-06",
+      "type": "Pull",
+      "title": "운동하어요",
+      "durationMin": 2,
+      "totalSets": 2,
+      "totalVolumeKg": 120,
+      "exercises": [
+        {
+          "name": "총 운동 시간 4월 리포트 2시간 41분 총 운동 횟수 요일별 운동 횟수",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "총 3회"
+        },
+        {
+          "name": "총 세트 3월 4월",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 85
+            }
+          ],
+          "workingHighlight": "총 85회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-04-07",
+      "date": "2026-04-07",
+      "type": "Pull",
+      "title": "오후 운동",
+      "durationMin": 53,
+      "totalSets": 29,
+      "totalVolumeKg": 7226,
+      "exercises": [
+        {
+          "name": "로프 폐이스 풀",
+          "sets": [
+            {
+              "kg": 15,
+              "reps": 22
+            },
+            {
+              "kg": 17.5,
+              "reps": 19
+            },
+            {
+              "kg": 20,
+              "reps": 17
+            },
+            {
+              "kg": 20,
+              "reps": 17
+            },
+            {
+              "kg": 20,
+              "reps": 11
+            }
+          ],
+          "workingHighlight": "20×17"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-04-16",
+      "date": "2026-04-16",
+      "type": "Pull",
+      "title": "운동하어요",
+      "durationMin": 5,
+      "totalSets": 1,
+      "totalVolumeKg": 108,
+      "exercises": [
+        {
+          "name": "총 운동 시간 4월 리포트 5시간 16분 총 운동 횟수 요일별 운동 횟수",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 6
+            }
+          ],
+          "workingHighlight": "총 6회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-04-20",
+      "date": "2026-04-20",
+      "type": "Push",
+      "title": "오후 운동",
+      "durationMin": 54,
+      "totalSets": 29,
+      "totalVolumeKg": 9058,
+      "exercises": [
+        {
+          "name": "프레스",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 20
+            },
+            {
+              "kg": 100,
+              "reps": 10
+            },
+            {
+              "kg": 120,
+              "reps": 4
+            },
+            {
+              "kg": 130,
+              "reps": 2
+            },
+            {
+              "kg": 22,
+              "reps": 20
+            },
+            {
+              "kg": 24,
+              "reps": 20
+            },
+            {
+              "kg": 26,
+              "reps": 18
+            },
+            {
+              "kg": 28,
+              "reps": 15
+            },
+            {
+              "kg": 140,
+              "reps": 1
+            },
+            {
+              "kg": 145,
+              "reps": 1
+            },
+            {
+              "kg": 120,
+              "reps": 3
+            },
+            {
+              "kg": 120,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "145×1"
+        },
+        {
+          "name": "테이블 로프 푸시 다운",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 25
+            },
+            {
+              "kg": 22.5,
+              "reps": 23
+            },
+            {
+              "kg": 25,
+              "reps": 18
+            },
+            {
+              "kg": 27.5,
+              "reps": 14
+            },
+            {
+              "kg": 30,
+              "reps": 9
+            },
+            {
+              "kg": 32.5,
+              "reps": 5
+            },
+            {
+              "kg": 35,
+              "reps": 6
+            }
+          ],
+          "workingHighlight": "35×6"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-04-22",
+      "date": "2026-04-22",
+      "type": "Pull",
+      "title": "오후 운동",
+      "durationMin": 56,
+      "totalSets": 32,
+      "totalVolumeKg": 9295,
+      "exercises": [
+        {
+          "name": "담벌 컬",
+          "sets": [
+            {
+              "kg": 8,
+              "reps": 15
+            },
+            {
+              "kg": 10,
+              "reps": 15
+            },
+            {
+              "kg": 12,
+              "reps": 11
+            },
+            {
+              "kg": 14,
+              "reps": 6
+            },
+            {
+              "kg": 16,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "16×5"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-04-24",
+      "date": "2026-04-24",
+      "type": "Push",
+      "title": "오후 운동",
+      "durationMin": 55,
+      "totalSets": 31,
+      "totalVolumeKg": 12255,
+      "exercises": [
+        {
+          "name": "프레스",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 10
+            },
+            {
+              "kg": 100,
+              "reps": 5
+            },
+            {
+              "kg": 120,
+              "reps": 3
+            },
+            {
+              "kg": 140,
+              "reps": 1
+            },
+            {
+              "kg": 60,
+              "reps": 17
+            },
+            {
+              "kg": 80,
+              "reps": 12
+            },
+            {
+              "kg": 90,
+              "reps": 10
+            },
+            {
+              "kg": 150,
+              "reps": 0
+            },
+            {
+              "kg": 100,
+              "reps": 8
+            },
+            {
+              "kg": 100,
+              "reps": 6
+            },
+            {
+              "kg": 100,
+              "reps": 5
+            },
+            {
+              "kg": 90,
+              "reps": 5
+            },
+            {
+              "kg": 100,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "140×1"
+        },
+        {
+          "name": "테이블 로프 푸시 다운",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 25
+            },
+            {
+              "kg": 22.5,
+              "reps": 23
+            },
+            {
+              "kg": 25,
+              "reps": 18
+            },
+            {
+              "kg": 27.5,
+              "reps": 13
+            },
+            {
+              "kg": 30,
+              "reps": 11
+            },
+            {
+              "kg": 32.5,
+              "reps": 8
+            },
+            {
+              "kg": 35,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "35×5"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-04-27",
+      "date": "2026-04-27",
+      "type": "Pull",
+      "title": "오후 운동",
+      "durationMin": 1,
+      "totalSets": 27,
+      "totalVolumeKg": 10267,
+      "exercises": [
+        {
+          "name": "자전거 리플라인 위크",
+          "sets": [
+            {
+              "kg": 1000,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "1000×3"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-05-04",
+      "date": "2026-05-04",
+      "type": "Push",
+      "title": "오후 운동",
+      "durationMin": 1,
+      "totalSets": 28,
+      "totalVolumeKg": 8310,
+      "exercises": [
+        {
+          "name": "테이블 로프 푸시 다운",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 30
+            },
+            {
+              "kg": 22.5,
+              "reps": 25
+            },
+            {
+              "kg": 25,
+              "reps": 19
+            },
+            {
+              "kg": 27.5,
+              "reps": 16
+            },
+            {
+              "kg": 30,
+              "reps": 13
+            },
+            {
+              "kg": 32.5,
+              "reps": 9
+            }
+          ],
+          "workingHighlight": "32.5×9"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-05-12",
+      "date": "2026-05-12",
+      "type": "Olympic",
+      "title": "오후 운동",
+      "durationMin": 50,
+      "totalSets": 18,
+      "totalVolumeKg": 4330,
+      "exercises": [
+        {
+          "name": "바벨 데피섯 데드리프트",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 5
+            },
+            {
+              "kg": 100,
+              "reps": 5
+            },
+            {
+              "kg": 140,
+              "reps": 4
+            },
+            {
+              "kg": 160,
+              "reps": 2
+            },
+            {
+              "kg": 140,
+              "reps": 2
+            },
+            {
+              "kg": 140,
+              "reps": 2
+            },
+            {
+              "kg": 140,
+              "reps": 2
+            },
+            {
+              "kg": 170,
+              "reps": 1
+            },
+            {
+              "kg": 180,
+              "reps": 1
+            }
+          ],
+          "workingHighlight": "180×1"
+        },
+        {
+          "name": "바벨 스내치 풀",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 3
+            },
+            {
+              "kg": 60,
+              "reps": 3
+            },
+            {
+              "kg": 60,
+              "reps": 2
+            },
+            {
+              "kg": 20,
+              "reps": 20
+            },
+            {
+              "kg": 20,
+              "reps": 3
+            },
+            {
+              "kg": 20,
+              "reps": 3
+            },
+            {
+              "kg": 20,
+              "reps": 3
+            },
+            {
+              "kg": 20,
+              "reps": 20
+            }
+          ],
+          "workingHighlight": "60×3"
+        },
+        {
+          "name": "자전거 리플라인 위크 11분",
+          "sets": [
+            {
+              "kg": 1100,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "1100×3"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-05-20",
+      "date": "2026-05-20",
+      "type": "Pull",
+      "title": "오후 운동",
+      "durationMin": null,
+      "totalSets": 32,
+      "totalVolumeKg": 9046,
+      "exercises": [
+        {
+          "name": "데드리프트",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 5
+            },
+            {
+              "kg": 100,
+              "reps": 5
+            },
+            {
+              "kg": 140,
+              "reps": 5
+            },
+            {
+              "kg": 160,
+              "reps": 4
+            },
+            {
+              "kg": 170,
+              "reps": 3
+            },
+            {
+              "kg": 180,
+              "reps": 2
+            },
+            {
+              "kg": 190,
+              "reps": 0
+            },
+            {
+              "kg": 140,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "180×2"
+        },
+        {
+          "name": "담벌 사이드 레터럼 테이블 시티드 로우 레이즈",
+          "sets": [
+            {
+              "kg": 50,
+              "reps": 15
+            },
+            {
+              "kg": 55,
+              "reps": 11
+            },
+            {
+              "kg": 60,
+              "reps": 8
+            },
+            {
+              "kg": 65,
+              "reps": 8
+            },
+            {
+              "kg": 4,
+              "reps": 25
+            },
+            {
+              "kg": 6,
+              "reps": 18
+            },
+            {
+              "kg": 8,
+              "reps": 15
+            },
+            {
+              "kg": 8,
+              "reps": 15
+            },
+            {
+              "kg": 8,
+              "reps": 15
+            },
+            {
+              "kg": 70,
+              "reps": 8
+            },
+            {
+              "kg": 75,
+              "reps": 4
+            },
+            {
+              "kg": 80,
+              "reps": 4
+            },
+            {
+              "kg": 6,
+              "reps": 18
+            }
+          ],
+          "workingHighlight": "80×4"
+        },
+        {
+          "name": "이지 바 컬",
+          "sets": [
+            {
+              "kg": 10,
+              "reps": 30
+            },
+            {
+              "kg": 15,
+              "reps": 19
+            },
+            {
+              "kg": 20,
+              "reps": 15
+            },
+            {
+              "kg": 25,
+              "reps": 10
+            },
+            {
+              "kg": 30,
+              "reps": 6
+            }
+          ],
+          "workingHighlight": "30×6"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-05-21",
+      "date": "2026-05-21",
+      "type": "Push",
+      "title": "오후 운동",
+      "durationMin": null,
+      "totalSets": 32,
+      "totalVolumeKg": 13050,
+      "exercises": [
+        {
+          "name": "벤치 프레스 바벨 쓸더 프레스",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 20
+            },
+            {
+              "kg": 100,
+              "reps": 9
+            },
+            {
+              "kg": 120,
+              "reps": 3
+            },
+            {
+              "kg": 140,
+              "reps": 1
+            },
+            {
+              "kg": 60,
+              "reps": 5
+            },
+            {
+              "kg": 80,
+              "reps": 1
+            },
+            {
+              "kg": 80,
+              "reps": 2
+            },
+            {
+              "kg": 85,
+              "reps": 1
+            },
+            {
+              "kg": 85,
+              "reps": 1
+            },
+            {
+              "kg": 100,
+              "reps": 7
+            },
+            {
+              "kg": 100,
+              "reps": 5
+            },
+            {
+              "kg": 100,
+              "reps": 5
+            },
+            {
+              "kg": 60,
+              "reps": 5
+            },
+            {
+              "kg": 60,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "140×1"
+        },
+        {
+          "name": "머신 레그 익스템선 테이블 미들 플라이",
+          "sets": [
+            {
+              "kg": 50,
+              "reps": 15
+            },
+            {
+              "kg": 50,
+              "reps": 11
+            },
+            {
+              "kg": 50,
+              "reps": 9
+            },
+            {
+              "kg": 50,
+              "reps": 14
+            },
+            {
+              "kg": 75,
+              "reps": 28
+            },
+            {
+              "kg": 10,
+              "reps": 22
+            },
+            {
+              "kg": 12.5,
+              "reps": 14
+            },
+            {
+              "kg": 15,
+              "reps": 10
+            },
+            {
+              "kg": 50,
+              "reps": 14
+            },
+            {
+              "kg": 50,
+              "reps": 13
+            },
+            {
+              "kg": 15,
+              "reps": 8
+            }
+          ],
+          "workingHighlight": "75×28"
+        },
+        {
+          "name": "테이블 로프 푸시 다운",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 30
+            },
+            {
+              "kg": 22.5,
+              "reps": 24
+            },
+            {
+              "kg": 25,
+              "reps": 20
+            },
+            {
+              "kg": 27.5,
+              "reps": 12
+            },
+            {
+              "kg": 30,
+              "reps": 12
+            },
+            {
+              "kg": 32.5,
+              "reps": 8
+            },
+            {
+              "kg": 35,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "35×5"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-05-22",
+      "date": "2026-05-22",
+      "type": "Pull",
+      "title": "오후 운동",
+      "durationMin": 1,
+      "totalSets": 31,
+      "totalVolumeKg": 4664,
+      "exercises": [
+        {
+          "name": "스위트 바벨 프론트 스위트",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 5
+            },
+            {
+              "kg": 100,
+              "reps": 5
+            },
+            {
+              "kg": 140,
+              "reps": 2
+            },
+            {
+              "kg": 160,
+              "reps": 1
+            },
+            {
+              "kg": 100,
+              "reps": 1
+            },
+            {
+              "kg": 110,
+              "reps": 1
+            },
+            {
+              "kg": 120,
+              "reps": 1
+            },
+            {
+              "kg": 130,
+              "reps": 0
+            },
+            {
+              "kg": 170,
+              "reps": 1
+            },
+            {
+              "kg": 180,
+              "reps": 1
+            },
+            {
+              "kg": 100,
+              "reps": 2
+            },
+            {
+              "kg": 100,
+              "reps": 2
+            },
+            {
+              "kg": 100,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "180×1"
+        },
+        {
+          "name": "행안 레그 레이즈",
+          "sets": [
+            {
+              "kg": 100,
+              "reps": 3
+            },
+            {
+              "kg": 110,
+              "reps": 3
+            },
+            {
+              "kg": 120,
+              "reps": 2
+            },
+            {
+              "kg": 130,
+              "reps": 2
+            },
+            {
+              "kg": 140,
+              "reps": 1
+            }
+          ],
+          "workingHighlight": "140×1"
+        },
+        {
+          "name": "담벌 사이드 레터럼 테이즈",
+          "sets": [
+            {
+              "kg": 4,
+              "reps": 30
+            },
+            {
+              "kg": 6,
+              "reps": 18
+            },
+            {
+              "kg": 6,
+              "reps": 20
+            },
+            {
+              "kg": 6,
+              "reps": 20
+            },
+            {
+              "kg": 6,
+              "reps": 17
+            },
+            {
+              "kg": 6,
+              "reps": 18
+            },
+            {
+              "kg": 6,
+              "reps": 16
+            }
+          ],
+          "workingHighlight": "6×20"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-05-26",
+      "date": "2026-05-26",
+      "type": "Pull",
+      "title": "오후 운동",
+      "durationMin": 48,
+      "totalSets": 28,
+      "totalVolumeKg": 6507,
+      "exercises": [
+        {
+          "name": "데드리프트",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 5
+            },
+            {
+              "kg": 100,
+              "reps": 5
+            },
+            {
+              "kg": 140,
+              "reps": 5
+            },
+            {
+              "kg": 160,
+              "reps": 4
+            },
+            {
+              "kg": 180,
+              "reps": 2
+            },
+            {
+              "kg": 190,
+              "reps": 1
+            },
+            {
+              "kg": 140,
+              "reps": 3
+            },
+            {
+              "kg": 140,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "190×1"
+        },
+        {
+          "name": "테이블 로프 스트레이트 암 풀 다운 인출라인 담벌 컬",
+          "sets": [
+            {
+              "kg": 15,
+              "reps": 19
+            },
+            {
+              "kg": 17.5,
+              "reps": 15
+            },
+            {
+              "kg": 20,
+              "reps": 10
+            },
+            {
+              "kg": 20,
+              "reps": 9
+            },
+            {
+              "kg": 6,
+              "reps": 18
+            },
+            {
+              "kg": 6,
+              "reps": 22
+            },
+            {
+              "kg": 6,
+              "reps": 20
+            },
+            {
+              "kg": 6,
+              "reps": 20
+            },
+            {
+              "kg": 6,
+              "reps": 19
+            },
+            {
+              "kg": 20,
+              "reps": 9
+            }
+          ],
+          "workingHighlight": "20×10"
+        },
+        {
+          "name": "이지 바 프리처 컬",
+          "sets": [
+            {
+              "kg": 15,
+              "reps": 21
+            },
+            {
+              "kg": 15,
+              "reps": 19
+            },
+            {
+              "kg": 15,
+              "reps": 16
+            },
+            {
+              "kg": 15,
+              "reps": 15
+            },
+            {
+              "kg": 15,
+              "reps": 14
+            }
+          ],
+          "workingHighlight": "15×21"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-05-28",
+      "date": "2026-05-28",
+      "type": "Leg",
+      "title": "오후 운동",
+      "durationMin": 51,
+      "totalSets": 28,
+      "totalVolumeKg": 58282,
+      "exercises": [
+        {
+          "name": "레그 프레스 카프 레이즈",
+          "sets": [
+            {
+              "kg": 160,
+              "reps": 15
+            },
+            {
+              "kg": 200,
+              "reps": 12
+            },
+            {
+              "kg": 240,
+              "reps": 12
+            },
+            {
+              "kg": 280,
+              "reps": 12
+            },
+            {
+              "kg": 320,
+              "reps": 11
+            },
+            {
+              "kg": 360,
+              "reps": 10
+            },
+            {
+              "kg": 400,
+              "reps": 7
+            },
+            {
+              "kg": 440,
+              "reps": 7
+            },
+            {
+              "kg": 160,
+              "reps": 21
+            },
+            {
+              "kg": 160,
+              "reps": 17
+            },
+            {
+              "kg": 160,
+              "reps": 19
+            },
+            {
+              "kg": 160,
+              "reps": 18
+            },
+            {
+              "kg": 480,
+              "reps": 5
+            },
+            {
+              "kg": 520,
+              "reps": 2
+            },
+            {
+              "kg": 440,
+              "reps": 4
+            },
+            {
+              "kg": 360,
+              "reps": 7
+            },
+            {
+              "kg": 160,
+              "reps": 17
+            },
+            {
+              "kg": 160,
+              "reps": 15
+            },
+            {
+              "kg": 280,
+              "reps": 10
+            },
+            {
+              "kg": 200,
+              "reps": 13
+            },
+            {
+              "kg": 160,
+              "reps": 20
+            }
+          ],
+          "workingHighlight": "520×2"
+        },
+        {
+          "name": "담벌 사이드 레터럼 테이즈",
+          "sets": [
+            {
+              "kg": 4,
+              "reps": 30
+            },
+            {
+              "kg": 6,
+              "reps": 21
+            },
+            {
+              "kg": 8,
+              "reps": 16
+            },
+            {
+              "kg": 10,
+              "reps": 13
+            },
+            {
+              "kg": 8,
+              "reps": 17
+            },
+            {
+              "kg": 6,
+              "reps": 15
+            },
+            {
+              "kg": 4,
+              "reps": 18
+            }
+          ],
+          "workingHighlight": "10×13"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-06-13",
+      "date": "2026-06-13",
+      "type": "Push",
+      "title": "아침 운동",
+      "durationMin": 53,
+      "totalSets": 29,
+      "totalVolumeKg": 9357,
+      "exercises": [
+        {
+          "name": "담벌 인클라인 벤치 벤치 프레스 프레스",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 12
+            },
+            {
+              "kg": 80,
+              "reps": 7
+            },
+            {
+              "kg": 100,
+              "reps": 3
+            },
+            {
+              "kg": 100,
+              "reps": 3
+            },
+            {
+              "kg": 24,
+              "reps": 16
+            },
+            {
+              "kg": 26,
+              "reps": 16
+            },
+            {
+              "kg": 28,
+              "reps": 11
+            },
+            {
+              "kg": 28,
+              "reps": 10
+            },
+            {
+              "kg": 100,
+              "reps": 3
+            },
+            {
+              "kg": 28,
+              "reps": 8
+            }
+          ],
+          "workingHighlight": "100×3"
+        },
+        {
+          "name": "머신 인클라인 해머 벤치 테이블 미들 플라이 프레스",
+          "sets": [
+            {
+              "kg": 45,
+              "reps": 21
+            },
+            {
+              "kg": 50,
+              "reps": 15
+            },
+            {
+              "kg": 55,
+              "reps": 13
+            },
+            {
+              "kg": 7.5,
+              "reps": 20
+            },
+            {
+              "kg": 10,
+              "reps": 15
+            },
+            {
+              "kg": 10,
+              "reps": 14
+            },
+            {
+              "kg": 10,
+              "reps": 13
+            },
+            {
+              "kg": 60,
+              "reps": 9
+            },
+            {
+              "kg": 10,
+              "reps": 13
+            },
+            {
+              "kg": 7.5,
+              "reps": 11
+            },
+            {
+              "kg": 5,
+              "reps": 16
+            }
+          ],
+          "workingHighlight": "60×9"
+        },
+        {
+          "name": "담벌 사이드 레터럼 테이즈",
+          "sets": [
+            {
+              "kg": 4,
+              "reps": 25
+            },
+            {
+              "kg": 6,
+              "reps": 24
+            },
+            {
+              "kg": 8,
+              "reps": 19
+            },
+            {
+              "kg": 10,
+              "reps": 15
+            },
+            {
+              "kg": 8,
+              "reps": 17
+            },
+            {
+              "kg": 6,
+              "reps": 15
+            },
+            {
+              "kg": 4,
+              "reps": 15
+            }
+          ],
+          "workingHighlight": "10×15"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-06-16",
+      "date": "2026-06-16",
+      "type": "Pull",
+      "title": "오후 운동",
+      "durationMin": 53,
+      "totalSets": 32,
+      "totalVolumeKg": 13088,
+      "exercises": [
+        {
+          "name": "바벌 로우 햇 풀 다운",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 20
+            },
+            {
+              "kg": 60,
+              "reps": 15
+            },
+            {
+              "kg": 80,
+              "reps": 8
+            },
+            {
+              "kg": 50,
+              "reps": 14
+            },
+            {
+              "kg": 55,
+              "reps": 13
+            },
+            {
+              "kg": 60,
+              "reps": 11
+            },
+            {
+              "kg": 65,
+              "reps": 9
+            },
+            {
+              "kg": 80,
+              "reps": 8
+            },
+            {
+              "kg": 80,
+              "reps": 7
+            },
+            {
+              "kg": 90,
+              "reps": 7
+            },
+            {
+              "kg": 90,
+              "reps": 6
+            },
+            {
+              "kg": 70,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "90×7"
+        },
+        {
+          "name": "테이블 시티드 로우 이지 바 리버스 그립 컬",
+          "sets": [
+            {
+              "kg": 50,
+              "reps": 11
+            },
+            {
+              "kg": 55,
+              "reps": 12
+            },
+            {
+              "kg": 60,
+              "reps": 8
+            },
+            {
+              "kg": 65,
+              "reps": 6
+            },
+            {
+              "kg": 15,
+              "reps": 15
+            },
+            {
+              "kg": 15,
+              "reps": 16
+            },
+            {
+              "kg": 15,
+              "reps": 15
+            },
+            {
+              "kg": 15,
+              "reps": 14
+            },
+            {
+              "kg": 70,
+              "reps": 6
+            },
+            {
+              "kg": 75,
+              "reps": 5
+            },
+            {
+              "kg": 80,
+              "reps": 5
+            },
+            {
+              "kg": 15,
+              "reps": 13
+            }
+          ],
+          "workingHighlight": "80×5"
+        },
+        {
+          "name": "덥벌 컬",
+          "sets": [
+            {
+              "kg": 8,
+              "reps": 15
+            },
+            {
+              "kg": 10,
+              "reps": 12
+            },
+            {
+              "kg": 12,
+              "reps": 9
+            },
+            {
+              "kg": 14,
+              "reps": 6
+            },
+            {
+              "kg": 16,
+              "reps": 4
+            },
+            {
+              "kg": 18,
+              "reps": 3
+            },
+            {
+              "kg": 6,
+              "reps": 8
+            }
+          ],
+          "workingHighlight": "18×3"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-06-17",
+      "date": "2026-06-17",
+      "type": "Pull",
+      "title": "오후 운동",
+      "durationMin": null,
+      "totalSets": 1,
+      "totalVolumeKg": 0,
+      "exercises": [
+        {
+          "name": "57초",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 7
+            }
+          ],
+          "workingHighlight": "총 7회"
+        }
+      ],
+      "source": "album-backfill"
+    },
+    {
+      "id": "gym-2026-06-18",
+      "date": "2026-06-18",
+      "type": "Push",
+      "title": "오후 운동",
+      "durationMin": 51,
+      "totalSets": 28,
+      "totalVolumeKg": 10990,
+      "exercises": [
+        {
+          "name": "머신 인클라인 체스트 벤치 프레스 프레스",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 15
+            },
+            {
+              "kg": 100,
+              "reps": 8
+            },
+            {
+              "kg": 120,
+              "reps": 4
+            },
+            {
+              "kg": 130,
+              "reps": 2
+            },
+            {
+              "kg": 60,
+              "reps": 15
+            },
+            {
+              "kg": 80,
+              "reps": 9
+            },
+            {
+              "kg": 80,
+              "reps": 7
+            },
+            {
+              "kg": 140,
+              "reps": 1
+            },
+            {
+              "kg": 145,
+              "reps": 0
+            },
+            {
+              "kg": 100,
+              "reps": 3
+            },
+            {
+              "kg": 100,
+              "reps": 3
+            },
+            {
+              "kg": 80,
+              "reps": 4
+            },
+            {
+              "kg": 60,
+              "reps": 6
+            }
+          ],
+          "workingHighlight": "140×1"
+        },
+        {
+          "name": "바벨 쓸더 프레스",
+          "sets": [
+            {
+              "kg": 5,
+              "reps": 25
+            },
+            {
+              "kg": 10,
+              "reps": 17
+            },
+            {
+              "kg": 10,
+              "reps": 20
+            },
+            {
+              "kg": 10,
+              "reps": 20
+            },
+            {
+              "kg": 60,
+              "reps": 2
+            },
+            {
+              "kg": 10,
+              "reps": 13
+            }
+          ],
+          "workingHighlight": "60×2"
+        },
+        {
+          "name": "테이블 로프 푸시 다운",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 30
+            },
+            {
+              "kg": 22.5,
+              "reps": 25
+            },
+            {
+              "kg": 25,
+              "reps": 13
+            },
+            {
+              "kg": 27.5,
+              "reps": 16
+            },
+            {
+              "kg": 30,
+              "reps": 12
+            },
+            {
+              "kg": 32.5,
+              "reps": 7
+            },
+            {
+              "kg": 35,
+              "reps": 6
+            }
+          ],
+          "workingHighlight": "35×6"
+        }
+      ],
+      "source": "album-backfill"
+    },
     {
       "id": "gym-2026-07-01",
       "date": "2026-07-01",

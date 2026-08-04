@@ -1,0 +1,3 @@
+tmp/album/cache/
+*.pyc
+__pycache__/
