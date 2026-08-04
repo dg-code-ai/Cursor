@@ -55,6 +55,10 @@ VOL_RE = re.compile(r"^[\d,.]+\s*kg", re.I)
 REPS_ONLY = re.compile(r"^\d{1,2}$")
 META_SETS = re.compile(r"^\d+세트$")
 META_REPS = re.compile(r"^\d+회$")
+SUMMARY_INLINE_RE = re.compile(
+    r"(?P<sets>\d+)\s*세트\s*[x×X*]?\s*(?:(?P<kg>\d+(?:\.\d+)?)\s*(?:kg|k8|ke))?\s*[x×X*스]?\s*(?P<reps>\d+)\s*회",
+    re.I,
+)
 
 READER = None
 
@@ -225,6 +229,22 @@ def working_highlight(sets: list[dict]) -> str | None:
     return None
 
 
+def parse_summary_inline(ln: str) -> list[dict]:
+    m = SUMMARY_INLINE_RE.search(ln.replace(" ", ""))
+    if not m:
+        return []
+    count = int(m.group("sets"))
+    reps = int(m.group("reps"))
+    kg_text = m.group("kg")
+    kg = float(kg_text) if kg_text is not None else 0
+    if count <= 0 or count > 20 or reps <= 0 or reps > 50:
+        return []
+    if kg > 500:
+        return []
+    kg_value = int(kg) if kg == int(kg) else kg
+    return [{"kg": kg_value, "reps": reps} for _ in range(count)]
+
+
 def parse_exercises(lines: list[str]) -> list[dict]:
     exercises = []
     i = 0
@@ -316,6 +336,49 @@ def parse_exercises(lines: list[str]) -> list[dict]:
     return exercises
 
 
+def parse_summary_style_exercises(lines: list[str]) -> list[dict]:
+    exercises = []
+    i = 0
+    n = len(lines)
+    while i < n - 1:
+        name = normalize_name(lines[i])
+        next_ln = lines[i + 1]
+        if not is_exercise_name(lines[i]):
+            i += 1
+            continue
+        if JUNK_NAME.search(name):
+            i += 1
+            continue
+
+        sets = parse_summary_inline(next_ln)
+        if not sets and i + 2 < n:
+            # Some OCR splits "140 kg" and "3회" across lines.
+            merged = f"{lines[i + 1]} {lines[i + 2]}"
+            sets = parse_summary_inline(merged)
+            if sets:
+                i += 1
+        if not sets:
+            i += 1
+            continue
+
+        ex = {"name": name, "sets": sets}
+        wh = working_highlight(sets)
+        if wh:
+            ex["workingHighlight"] = wh
+        exercises.append(ex)
+        i += 2
+    return exercises
+
+
+def is_junk_exercise_name(name: str) -> bool:
+    return bool(JUNK_NAME.search(name))
+
+
+def is_junk_session(session: dict) -> bool:
+    names = [e.get("name", "") for e in session.get("exercises", [])]
+    return bool(names) and all(is_junk_exercise_name(name) for name in names)
+
+
 def parse_meta(lines: list[str]) -> dict:
     meta = {"durationMin": None, "totalSets": None, "totalVolumeKg": None, "title": "운동"}
     seen_kg: list[int] = []
@@ -358,10 +421,19 @@ def infer_type(names: list[str]) -> str:
 
 def session_from_lines(lines: list[str], date: str) -> dict | None:
     exercises = parse_exercises(lines)
+    if len(exercises) < 2:
+        summary_exercises = parse_summary_style_exercises(lines)
+        seen_names = {e["name"] for e in exercises}
+        for ex in summary_exercises:
+            if ex["name"] not in seen_names:
+                exercises.append(ex)
+                seen_names.add(ex["name"])
     if not exercises:
         return None
     meta = parse_meta(lines)
     names = [e["name"] for e in exercises]
+    if all(is_junk_exercise_name(name) for name in names):
+        return None
     stype = infer_type(names)
     vol = meta["totalVolumeKg"]
     if vol is None:
@@ -454,6 +526,8 @@ def backfill(
                 continue
 
         if not session:
+            if prev and prev.get("source") == "album-backfill" and is_junk_session(prev):
+                del existing[date]
             if last_error:
                 print(f"fail {date}: {last_error}", file=sys.stderr)
             print(f"skip {date}: parse failed", file=sys.stderr)
