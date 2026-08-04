@@ -1,5 +1,14 @@
 /** Lightweight SVG charts — no external deps */
 
+const ChartTheme = {
+  grid: '#d8dee8',
+  axis: '#6b7280',
+  value: '#12151c',
+  muted: '#5a6573',
+  target: '#0f766e',
+  band: '#0f766e',
+};
+
 function el(tag, attrs = {}, children = []) {
   const node = document.createElementNS('http://www.w3.org/2000/svg', tag);
   Object.entries(attrs).forEach(([k, v]) => node.setAttribute(k, v));
@@ -14,24 +23,23 @@ function maxOf(arr, fallback = 1) {
 /** Vertical bar chart */
 function barChart(container, { labels, values, colors, targetLine, unit = '' }) {
   container.innerHTML = '';
-  const w = 360;
-  const h = 180;
-  const pad = { t: 16, r: 12, b: 36, l: 40 };
+  const w = 380;
+  const h = 190;
+  const pad = { t: 18, r: 12, b: 36, l: 40 };
   const innerW = w - pad.l - pad.r;
   const innerH = h - pad.t - pad.b;
   const max = maxOf([...values, targetLine || 0]);
   const n = values.length || 1;
-  const gap = 6;
-  const barW = Math.max(8, (innerW - gap * (n - 1)) / n);
+  const gap = 8;
+  const barW = Math.max(10, (innerW - gap * (n - 1)) / n);
 
   const svg = el('svg', { viewBox: `0 0 ${w} ${h}`, class: 'chart-svg', role: 'img' });
 
-  // grid
   for (let i = 0; i <= 3; i++) {
     const y = pad.t + (innerH * i) / 3;
     const val = Math.round(max * (1 - i / 3));
-    svg.appendChild(el('line', { x1: pad.l, y1: y, x2: w - pad.r, y2: y, stroke: '#2d3a4f', 'stroke-width': '1' }));
-    svg.appendChild(el('text', { x: pad.l - 6, y: y + 3, fill: '#8b9cb3', 'font-size': '9', 'text-anchor': 'end' }, [String(val)]));
+    svg.appendChild(el('line', { x1: pad.l, y1: y, x2: w - pad.r, y2: y, stroke: ChartTheme.grid, 'stroke-width': '1' }));
+    svg.appendChild(el('text', { x: pad.l - 6, y: y + 3, fill: ChartTheme.axis, 'font-size': '9', 'text-anchor': 'end' }, [String(val)]));
   }
 
   if (targetLine) {
@@ -42,7 +50,7 @@ function barChart(container, { labels, values, colors, targetLine, unit = '' }) 
         y1: ty,
         x2: w - pad.r,
         y2: ty,
-        stroke: '#34d399',
+        stroke: ChartTheme.target,
         'stroke-width': '1.5',
         'stroke-dasharray': '4 3',
       })
@@ -59,15 +67,15 @@ function barChart(container, { labels, values, colors, targetLine, unit = '' }) 
         y,
         width: barW,
         height: Math.max(bh, 1),
-        rx: 4,
-        fill: colors?.[i] || '#3b82f6',
+        rx: 5,
+        fill: colors?.[i] || '#0f766e',
       })
     );
     svg.appendChild(
       el('text', {
         x: x + barW / 2,
         y: h - 12,
-        fill: '#8b9cb3',
+        fill: ChartTheme.muted,
         'font-size': '9',
         'text-anchor': 'middle',
       }, [labels[i] || ''])
@@ -75,7 +83,7 @@ function barChart(container, { labels, values, colors, targetLine, unit = '' }) 
   });
 
   if (unit) {
-    svg.appendChild(el('text', { x: pad.l, y: 12, fill: '#8b9cb3', 'font-size': '9' }, [unit]));
+    svg.appendChild(el('text', { x: pad.l, y: 12, fill: ChartTheme.muted, 'font-size': '9' }, [unit]));
   }
 
   container.appendChild(svg);
@@ -95,10 +103,10 @@ function hBarChart(container, { labels, values, maxRef, colors }) {
   labels.forEach((label, i) => {
     const y = 12 + i * rowH;
     const bw = ((values[i] / max) * (w - padL - padR));
-    svg.appendChild(el('text', { x: 4, y: y + 12, fill: '#8b9cb3', 'font-size': '11' }, [label]));
-    svg.appendChild(el('rect', { x: padL, y: y, width: Math.max(bw, 2), height: 16, rx: 4, fill: colors?.[i] || '#3b82f6' }));
+    svg.appendChild(el('text', { x: 4, y: y + 12, fill: ChartTheme.muted, 'font-size': '11' }, [label]));
+    svg.appendChild(el('rect', { x: padL, y: y, width: Math.max(bw, 2), height: 16, rx: 4, fill: colors?.[i] || '#0f766e' }));
     svg.appendChild(
-      el('text', { x: padL + bw + 6, y: y + 12, fill: '#e8edf4', 'font-size': '11' }, [String(values[i])])
+      el('text', { x: padL + bw + 6, y: y + 12, fill: ChartTheme.value, 'font-size': '11' }, [String(values[i])])
     );
   });
 
@@ -136,8 +144,8 @@ function donutChart(container, segments) {
     offset += len;
   });
 
-  svg.appendChild(el('text', { x: cx, y: cy - 2, fill: '#e8edf4', 'font-size': '13', 'text-anchor': 'middle', 'font-weight': '700' }, ['106']));
-  svg.appendChild(el('text', { x: cx, y: cy + 14, fill: '#8b9cb3', 'font-size': '9', 'text-anchor': 'middle' }, ['kg']));
+  svg.appendChild(el('text', { x: cx, y: cy - 2, fill: ChartTheme.value, 'font-size': '13', 'text-anchor': 'middle', 'font-weight': '700' }, ['106']));
+  svg.appendChild(el('text', { x: cx, y: cy + 14, fill: ChartTheme.muted, 'font-size': '9', 'text-anchor': 'middle' }, ['kg']));
   container.appendChild(svg);
 
   const legend = document.createElement('div');
@@ -159,13 +167,13 @@ function gauge(container, { label, pct, sub }) {
   const filled = (clamped / 100) * c;
   wrap.innerHTML = `
     <svg viewBox="0 0 ${size} ${size}" class="chart-svg">
-      <circle cx="60" cy="60" r="${r}" fill="none" stroke="#2d3a4f" stroke-width="10"/>
-      <circle cx="60" cy="60" r="${r}" fill="none" stroke="#3b82f6" stroke-width="10"
+      <circle cx="60" cy="60" r="${r}" fill="none" stroke="#d8dee8" stroke-width="10"/>
+      <circle cx="60" cy="60" r="${r}" fill="none" stroke="#0f766e" stroke-width="10"
         stroke-linecap="round"
         stroke-dasharray="${filled} ${c - filled}"
         transform="rotate(-90 60 60)"/>
-      <text x="60" y="56" text-anchor="middle" fill="#e8edf4" font-size="18" font-weight="700">${Math.round(clamped)}%</text>
-      <text x="60" y="74" text-anchor="middle" fill="#8b9cb3" font-size="9">${label}</text>
+      <text x="60" y="56" text-anchor="middle" fill="#12151c" font-size="18" font-weight="700">${Math.round(clamped)}%</text>
+      <text x="60" y="74" text-anchor="middle" fill="#5a6573" font-size="9">${label}</text>
     </svg>
     <p class="hint">${sub || ''}</p>
   `;
@@ -193,8 +201,8 @@ function lineChart(container, { labels, series, yMin, yMax, band, targetLine, un
   for (let i = 0; i <= 3; i++) {
     const y = pad.t + (innerH * i) / 3;
     const val = Math.round(maxV - (span * i) / 3);
-    svg.appendChild(el('line', { x1: pad.l, y1: y, x2: w - pad.r, y2: y, stroke: '#2d3a4f', 'stroke-width': '1' }));
-    svg.appendChild(el('text', { x: pad.l - 6, y: y + 3, fill: '#8b9cb3', 'font-size': '9', 'text-anchor': 'end' }, [String(val)]));
+    svg.appendChild(el('line', { x1: pad.l, y1: y, x2: w - pad.r, y2: y, stroke: ChartTheme.grid, 'stroke-width': '1' }));
+    svg.appendChild(el('text', { x: pad.l - 6, y: y + 3, fill: ChartTheme.axis, 'font-size': '9', 'text-anchor': 'end' }, [String(val)]));
   }
 
   if (band && band.length === 2) {
@@ -206,7 +214,7 @@ function lineChart(container, { labels, series, yMin, yMax, band, targetLine, un
         y: y1,
         width: innerW,
         height: Math.max(y2 - y1, 1),
-        fill: '#34d399',
+        fill: ChartTheme.band,
         opacity: '0.12',
       })
     );
@@ -220,7 +228,7 @@ function lineChart(container, { labels, series, yMin, yMax, band, targetLine, un
         y1: ty,
         x2: w - pad.r,
         y2: ty,
-        stroke: '#34d399',
+        stroke: ChartTheme.target,
         'stroke-width': '1.5',
         'stroke-dasharray': '4 3',
       })
@@ -237,7 +245,7 @@ function lineChart(container, { labels, series, yMin, yMax, band, targetLine, un
         el('polyline', {
           points: pts,
           fill: 'none',
-          stroke: s.color || '#3b82f6',
+          stroke: s.color || '#0f766e',
           'stroke-width': '2.5',
           'stroke-linejoin': 'round',
           'stroke-linecap': 'round',
@@ -246,13 +254,14 @@ function lineChart(container, { labels, series, yMin, yMax, band, targetLine, un
     }
     s.values.forEach((v, i) => {
       if (v == null) return;
-      svg.appendChild(el('circle', { cx: xAt(i), cy: yAt(v), r: 4, fill: s.color || '#3b82f6' }));
+      svg.appendChild(el('circle', { cx: xAt(i), cy: yAt(v), r: 4.5, fill: s.color || '#0f766e' }));
       svg.appendChild(
         el('text', {
           x: xAt(i),
-          y: yAt(v) - 8,
-          fill: '#e2e8f0',
+          y: yAt(v) - 9,
+          fill: ChartTheme.value,
           'font-size': '9',
+          'font-weight': '600',
           'text-anchor': 'middle',
         }, [String(v)])
       );
@@ -264,7 +273,7 @@ function lineChart(container, { labels, series, yMin, yMax, band, targetLine, un
       el('text', {
         x: xAt(i),
         y: h - 12,
-        fill: '#8b9cb3',
+        fill: ChartTheme.muted,
         'font-size': '9',
         'text-anchor': 'middle',
       }, [lab])
@@ -272,7 +281,7 @@ function lineChart(container, { labels, series, yMin, yMax, band, targetLine, un
   });
 
   if (unit) {
-    svg.appendChild(el('text', { x: pad.l, y: 12, fill: '#8b9cb3', 'font-size': '9' }, [unit]));
+    svg.appendChild(el('text', { x: pad.l, y: 12, fill: ChartTheme.muted, 'font-size': '9' }, [unit]));
   }
 
   container.appendChild(svg);

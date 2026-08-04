@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="theme-color" content="#0f1419">
+  <meta name="theme-color" content="#eef2f6">
   <title>트레이닝 캔버스 — Training Lab</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/lab.css">
@@ -28,60 +28,53 @@
     <main>
       <!-- DASHBOARD -->
       <section id="panel-dashboard" class="panel active">
-        <div class="card">
-          <div class="card-header">
-            <h2>한눈에</h2>
-            <span class="hint" id="dash-updated"></span>
-          </div>
-          <div class="kpi-row" id="dash-kpi"></div>
-        </div>
+        <p class="dash-section-title">지금 중요한 것</p>
+        <div class="dash-hero" id="dash-hero"></div>
+        <p class="hint" id="dash-updated" style="margin:0.25rem 0 0"></p>
 
-        <div class="split-panels">
-          <div class="card">
-            <h2>스내치 진행</h2>
-            <p class="hint">행 스쿼트 리시브 상한 kg · 점선 = 목표 100</p>
+        <p class="dash-section-title">어떻게 변해 왔나</p>
+        <div class="dash-story">
+          <div class="story-card">
+            <h2>스내치 · 깊은 리시브</h2>
+            <p class="hint">행 스쿼트 상한 kg · 점선 = 목표 100</p>
             <div id="dash-hang-snatch" class="chart-box"></div>
-            <p class="hint" id="dash-hang-verdict"></p>
+            <p class="verdict" id="dash-hang-verdict"></p>
           </div>
-          <div class="card">
-            <h2>OH 스쿼트 상한</h2>
-            <p class="hint">오버헤드 스쿼트 최고 작업 kg</p>
+          <div class="story-card">
+            <h2>OH 스쿼트</h2>
+            <p class="hint">오버헤드 안정 상한</p>
             <div id="dash-oh-squat" class="chart-box"></div>
           </div>
         </div>
 
-        <div class="split-panels">
-          <div class="card">
-            <h2>벤치 130 작업횟수</h2>
-            <p class="hint">서브맥스 과부하 · 점선 = 목표 4회</p>
+        <p class="dash-section-title">보조 지표</p>
+        <div class="support-grid">
+          <div class="support-card">
+            <h3>벤치 130 작업횟수</h3>
+            <p class="hint">서브맥스 · 점선 = 4회</p>
             <div id="dash-bench-130" class="chart-box"></div>
             <p class="hint" id="dash-bench-verdict"></p>
           </div>
-          <div class="card">
-            <h2>이지 런 심박</h2>
-            <p class="hint">초록 밴드 = HR 135-145 · 막대=거리</p>
+          <div class="support-card">
+            <h3>이지 런 심박</h3>
+            <p class="hint">초록 밴드 = 135–145</p>
             <div id="dash-run-hr" class="chart-box"></div>
             <p class="hint" id="dash-run-verdict"></p>
           </div>
         </div>
 
-        <div class="split-panels">
-          <div class="card">
-            <h2>목표 게이지</h2>
-            <div id="dash-gauges" class="goal-gauges"></div>
-          </div>
-          <div class="card">
-            <h2>최근 코칭</h2>
-            <div id="dash-latest-coach" class="insights"></div>
-          </div>
+        <div class="coach-strip" id="dash-latest-coach"></div>
+
+        <p class="dash-section-title">목표까지</p>
+        <div class="card" style="margin-top:0">
+          <div id="dash-gauges" class="goal-gauges"></div>
         </div>
 
-        <div class="card">
-          <h2>앨범 아카이브</h2>
-          <p class="hint">공유앨범 전체 · 로그에 아직 안 넣은 과거 기록 정리 현황</p>
-          <div class="kpi-row" id="dash-album-kpi"></div>
+        <details class="archive-panel card" style="padding:0.85rem 1rem">
+          <summary>앨범 아카이브 · 과거 기록 정리</summary>
+          <div class="kpi-row" id="dash-album-kpi" style="margin-top:0.75rem"></div>
           <div id="dash-album-months" class="album-months"></div>
-        </div>
+        </details>
       </section>
 
       <!-- PLAN -->

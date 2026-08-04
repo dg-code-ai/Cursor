@@ -1,8 +1,8 @@
 const TYPE_COLOR = {
-  Pull: '#60a5fa',
-  Push: '#f87171',
-  Leg: '#c084fc',
-  Run: '#34d399',
+  Pull: '#1d4ed8',
+  Push: '#be123c',
+  Leg: '#0f766e',
+  Run: '#b45309',
 };
 
 function formatSets(sets) {
@@ -163,9 +163,9 @@ function renderProfile(profile) {
     profile.body.weightKg - profile.body.skeletalMuscleKg - profile.body.bodyFatKg
   );
   Charts.donutChart(document.getElementById('chart-bodycomp'), [
-    { label: '골격근', value: profile.body.skeletalMuscleKg, color: '#60a5fa' },
-    { label: '체지방', value: profile.body.bodyFatKg, color: '#fbbf24' },
-    { label: '기타', value: Math.round(other * 10) / 10, color: '#64748b' },
+    { label: '골격근', value: profile.body.skeletalMuscleKg, color: '#0f766e' },
+    { label: '체지방', value: profile.body.bodyFatKg, color: '#b45309' },
+    { label: '기타', value: Math.round(other * 10) / 10, color: '#94a3b8' },
   ]);
 
   Charts.hBarChart(document.getElementById('chart-prs'), {
@@ -178,7 +178,7 @@ function renderProfile(profile) {
       profile.prs.cleanAndJerk,
     ],
     maxRef: 200,
-    colors: ['#f87171', '#c084fc', '#60a5fa', '#34d399', '#fbbf24'],
+    colors: ['#be123c', '#0f766e', '#1d4ed8', '#0d9488', '#b45309'],
   });
 
   document.getElementById('pr-stats').innerHTML = `
@@ -263,22 +263,10 @@ function extractLiftSeries(gymLog, nameMatch, pick) {
 
 function renderDashboard(profile, gymLog, runLog, insights, album) {
   const hangSq = profile.prs.hangSquatSnatch || 0;
+  const goal = profile.prs.snatchGoal || 100;
   const updated = insights?.updated || profile.updated || '';
-  document.getElementById('dash-updated').textContent = updated ? `업데이트 ${updated}` : '';
+  document.getElementById('dash-updated').textContent = updated ? `데이터 ${updated}` : '';
 
-  const gymN = gymLog.sessions.length;
-  const runN = runLog.sessions.length;
-  const longest = Math.max(...runLog.sessions.map((r) => r.distanceKm || 0), 0);
-  document.getElementById('dash-kpi').innerHTML = `
-    <div class="kpi"><span>헬스 세션</span><strong>${gymN}</strong></div>
-    <div class="kpi"><span>러닝</span><strong>${runN}</strong></div>
-    <div class="kpi"><span>행 스쿼트</span><strong>${hangSq}kg</strong></div>
-    <div class="kpi"><span>벤치 PR</span><strong>${profile.prs.benchPress}</strong></div>
-    <div class="kpi"><span>최장 런</span><strong>${longest}km</strong></div>
-    <div class="kpi"><span>앨범 사진</span><strong>${album?.totalPhotos?.toLocaleString?.() || album?.totalPhotos || '—'}</strong></div>
-  `;
-
-  // Hang snatch max kg per session
   const hang = extractLiftSeries(
     gymLog,
     (n) => n.includes('행 스내치'),
@@ -287,17 +275,6 @@ function renderDashboard(profile, gymLog, runLog, insights, album) {
       return kgs.length ? Math.max(...kgs) : null;
     }
   );
-  Charts.lineChart(document.getElementById('dash-hang-snatch'), {
-    labels: hang.map((h) => shortDate(h.date)),
-    series: [{ values: hang.map((h) => h.value), color: '#a78bfa' }],
-    yMin: 30,
-    yMax: 110,
-    targetLine: 100,
-    unit: 'kg',
-  });
-  document.getElementById('dash-hang-verdict').textContent =
-    insights?.trends?.hangSnatchDeep?.verdict || '행 깊은 리시브 추세';
-
   const oh = extractLiftSeries(
     gymLog,
     (n) => n.includes('오버헤드 스쿼트'),
@@ -306,14 +283,7 @@ function renderDashboard(profile, gymLog, runLog, insights, album) {
       return kgs.length ? Math.max(...kgs) : null;
     }
   );
-  Charts.barChart(document.getElementById('dash-oh-squat'), {
-    labels: oh.map((h) => shortDate(h.date)),
-    values: oh.map((h) => h.value),
-    colors: oh.map(() => '#60a5fa'),
-    unit: 'kg',
-  });
 
-  // Bench best reps at >=130
   const benchRows = [];
   gymLog.sessions
     .slice()
@@ -324,81 +294,131 @@ function renderDashboard(profile, gymLog, runLog, insights, album) {
         const at130 = (ex.sets || []).filter((x) => (x.kg || 0) >= 130 && (x.reps || 0) > 0);
         if (!at130.length) return;
         const bestReps = Math.max(...at130.filter((x) => x.kg === 130).map((x) => x.reps || 0), 0);
-        const topKg = Math.max(...at130.map((x) => x.kg || 0));
         benchRows.push({
           date: s.date,
           reps: bestReps || Math.max(...at130.map((x) => x.reps || 0)),
-          topKg,
         });
       });
     });
+
+  const runs = [...runLog.sessions]
+    .filter((r) => r.avgHr)
+    .sort((a, b) => (a.date > b.date ? 1 : -1));
+  const lastRun = runs[runs.length - 1];
+  const easyOk = lastRun ? lastRun.avgHr <= 145 : null;
+  const hangPrev = hang.length > 1 ? hang[hang.length - 2].value : null;
+  const hangDelta = hangPrev != null ? hangSq - hangPrev : null;
+  const benchLast = benchRows.length ? benchRows[benchRows.length - 1].reps : null;
+  const benchPrev = benchRows.length > 1 ? benchRows[benchRows.length - 2].reps : null;
+
+  const deltaHtml = (d, unit = '') => {
+    if (d == null) return `<span class="hero-metric__delta flat">기준점 수집 중</span>`;
+    if (d > 0) return `<span class="hero-metric__delta up">▲ +${d}${unit} 상승</span>`;
+    if (d < 0) return `<span class="hero-metric__delta down">▼ ${d}${unit}</span>`;
+    return `<span class="hero-metric__delta flat">→ 유지</span>`;
+  };
+
+  document.getElementById('dash-hero').innerHTML = `
+    <article class="hero-metric hero-metric--primary">
+      <span class="hero-metric__label">스쿼트 스내치 (행)</span>
+      <div><span class="hero-metric__value">${hangSq}</span><span class="hero-metric__unit">/ ${goal} kg</span></div>
+      ${deltaHtml(hangDelta, 'kg')}
+      <p class="hero-metric__note">깊이 있는 리시브가 목표의 핵심 지표입니다.</p>
+    </article>
+    <article class="hero-metric">
+      <span class="hero-metric__label">벤치 130 작업</span>
+      <div><span class="hero-metric__value">${benchLast ?? '—'}</span><span class="hero-metric__unit">reps</span></div>
+      ${deltaHtml(benchLast != null && benchPrev != null ? benchLast - benchPrev : null, '')}
+      <p class="hero-metric__note">서브맥스 반복 · 4회가 최근 목표선</p>
+    </article>
+    <article class="hero-metric">
+      <span class="hero-metric__label">최근 이지 런</span>
+      <div><span class="hero-metric__value">${lastRun ? lastRun.avgHr : '—'}</span><span class="hero-metric__unit">bpm</span></div>
+      <span class="hero-metric__delta ${easyOk === true ? 'up' : easyOk === false ? 'down' : 'flat'}">
+        ${easyOk === true ? '이지 밴드 안' : easyOk === false ? '너무 높음 · 135–145 목표' : '기록 없음'}
+      </span>
+      <p class="hero-metric__note">${lastRun ? `${lastRun.distanceKm}km · ${lastRun.pacePerKm || ''}` : '다음 런부터 HR이 점수'}</p>
+    </article>
+  `;
+
+  Charts.lineChart(document.getElementById('dash-hang-snatch'), {
+    labels: hang.map((h) => shortDate(h.date)),
+    series: [{ values: hang.map((h) => h.value), color: '#0f766e' }],
+    yMin: 30,
+    yMax: 110,
+    targetLine: 100,
+    unit: 'kg',
+  });
+  const hangVerdict = document.getElementById('dash-hang-verdict');
+  hangVerdict.textContent = insights?.trends?.hangSnatchDeep?.verdict || '행 깊은 리시브 추세';
+  hangVerdict.className = 'verdict';
+
+  Charts.barChart(document.getElementById('dash-oh-squat'), {
+    labels: oh.map((h) => shortDate(h.date)),
+    values: oh.map((h) => h.value),
+    colors: oh.map(() => '#148f86'),
+    unit: 'kg',
+  });
+
   Charts.barChart(document.getElementById('dash-bench-130'), {
     labels: benchRows.map((b) => shortDate(b.date)),
     values: benchRows.map((b) => b.reps),
-    colors: benchRows.map((b) => (b.reps >= 4 ? '#34d399' : '#3b82f6')),
+    colors: benchRows.map((b) => (b.reps >= 4 ? '#047857' : '#1d4ed8')),
     targetLine: 4,
     unit: 'reps @ 130',
   });
   document.getElementById('dash-bench-verdict').textContent =
     insights?.trends?.bench130?.verdict || '';
 
-  // Run: distance bars + HR line — use dual via line for HR and bar for distance separately in one box: show HR line with easy band
-  const runs = [...runLog.sessions]
-    .filter((r) => r.avgHr)
-    .sort((a, b) => (a.date > b.date ? 1 : -1));
   Charts.lineChart(document.getElementById('dash-run-hr'), {
     labels: runs.map((r) => shortDate(r.date)),
-    series: [
-      { values: runs.map((r) => r.avgHr), color: '#f87171' },
-      { values: runs.map((r) => Math.round((r.distanceKm || 0) * 20)), color: '#64748b' },
-    ],
-    yMin: 100,
-    yMax: 200,
+    series: [{ values: runs.map((r) => r.avgHr), color: '#be123c' }],
+    yMin: 120,
+    yMax: 190,
     band: [135, 145],
-    unit: 'HR (회색=km×20)',
+    unit: 'avg HR',
   });
-  document.getElementById('dash-run-verdict').textContent =
-    insights?.trends?.easyRun?.verdict || '';
+  const runVerdict = document.getElementById('dash-run-verdict');
+  runVerdict.textContent = insights?.trends?.easyRun?.verdict || '';
+  if (insights?.trends?.easyRun?.verdict?.includes('실패')) {
+    runVerdict.style.color = '#9f1239';
+  }
 
+  const longest = Math.max(...runLog.sessions.map((r) => r.distanceKm || 0), 0);
   const gauges = document.getElementById('dash-gauges');
   gauges.innerHTML = '';
   Charts.gauge(gauges, {
     label: '스내치',
-    pct: Math.min(100, Math.round((hangSq / (profile.prs.snatchGoal || 100)) * 100)),
-    sub: `깊은 행 ${hangSq} → ${profile.prs.snatchGoal}`,
+    pct: Math.min(100, Math.round((hangSq / goal) * 100)),
+    sub: `깊은 행 ${hangSq} → ${goal}`,
   });
   Charts.gauge(gauges, {
     label: '10km',
     pct: Math.min(100, Math.round((longest / 10) * 100)),
-    sub: `최장 ${longest}km / 10 · 이지 HR이 병목`,
+    sub: `최장 ${longest}km · 이지 HR이 병목`,
   });
   Charts.gauge(gauges, {
     label: '벤치130',
-    pct: benchRows.length ? Math.min(100, Math.round((benchRows[benchRows.length - 1].reps / 5) * 100)) : 0,
-    sub: `최근 130×${benchRows.length ? benchRows[benchRows.length - 1].reps : '—'}`,
+    pct: benchLast != null ? Math.min(100, Math.round((benchLast / 5) * 100)) : 0,
+    sub: `최근 130×${benchLast ?? '—'}`,
   });
 
-  // latest coach blurb
   const dates = Object.keys(insights?.sessionReviews || {}).sort().reverse();
   const latest = dates[0];
   const rev = latest ? insights.sessionReviews[latest] : null;
   document.getElementById('dash-latest-coach').innerHTML = rev
-    ? `<div class="insight-latest"><strong>${latest}</strong> · ${rev.grade}<p>${rev.direction}</p></div>`
-    : '<p class="hint">세션 리뷰 없음</p>';
+    ? `<strong>최근 코칭 · ${latest}</strong> · ${rev.grade}<div style="margin-top:0.35rem;color:var(--text-muted)">${rev.direction}</div>`
+    : '<strong>최근 코칭</strong><div style="margin-top:0.35rem;color:var(--text-muted)">세션 리뷰 없음</div>';
 
-  // album
   if (album) {
     document.getElementById('dash-album-kpi').innerHTML = `
       <div class="kpi"><span>사진</span><strong>${album.totalPhotos}</strong></div>
       <div class="kpi"><span>촬영일</span><strong>${album.uniqueDates}</strong></div>
-      <div class="kpi"><span>기간</span><strong>${(album.dateRange?.from || '').slice(0, 4)}-${(album.dateRange?.to || '').slice(0, 7)}</strong></div>
-      <div class="kpi"><span>로그된 세션</span><strong>${album.gymLogSessions}</strong></div>
+      <div class="kpi"><span>로그 세션</span><strong>${album.gymLogSessions}</strong></div>
     `;
     const months = Object.entries(album.byMonth || {}).slice(-12);
     document.getElementById('dash-album-months').innerHTML = months
-      .map(
-        ([m, n]) => `<div class="album-month"><strong>${m}</strong><span>${n}장</span></div>`
-      )
+      .map(([m, n]) => `<div class="album-month"><strong>${m}</strong><span>${n}장</span></div>`)
       .join('');
   }
 }
