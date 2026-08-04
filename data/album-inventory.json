@@ -41,20 +41,20 @@
     "2026-07": 94,
     "2026-08": 4
   },
-  "gymLogSessions": 122,
+  "gymLogSessions": 127,
   "backfillSummary": {
     "ranAt": "2026-08-04",
-    "version": 2,
-    "added": 33,
-    "refreshed": 40,
+    "version": 3,
+    "added": 4,
+    "refreshed": 93,
     "skippedExistingManual": 23,
-    "parseFailed": 183,
+    "parseFailed": 159,
     "noDetailScreenshot": 61,
     "sources": {
       "manual": 23,
-      "album-backfill": 99
+      "album-backfill": 104
     },
-    "avgExercisesPerOcrSession": 2.6,
+    "avgExercisesPerOcrSession": 2.9,
     "loggedDateRange": {
       "from": "2024-07-05",
       "to": "2026-08-04"
@@ -171,12 +171,10 @@
     }
   },
   "ingestPlan": [
-    "1) v2 파서: 89→122세션, 평균 2.6종목/세션",
-    "2) parse failed 183일 — OCR 품질 한계 (2024~초기)",
+    "1) v3 다중 후보 OCR: 122→127세션, 평균 2.9종목/세션",
+    "2) parse failed 159일 — OCR 품질 한계 (2024~초기)",
     "3) no detail 61일 — Rise 상세 스크린 없음",
-    "4) 2026-06-15 1일 수동 보강 권장"
+    "4) 2026 priority 미로그 0일"
   ],
-  "priorityBackfillRemaining2026": [
-    "2026-06-15"
-  ]
+  "priorityBackfillRemaining2026": []
 }

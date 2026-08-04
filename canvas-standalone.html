@@ -3653,13 +3653,13 @@ document.getElementById('result-filters')?.addEventListener('click', (e) => {
 });
 
 Promise.all([
-  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/athlete-profile.json?v=dash9'),
-  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/sessions/gym-log.json?v=dash9'),
-  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/sessions/run-log.json?v=dash9'),
-  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/plan.json?v=dash9'),
-  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/coaching-insights.json?v=dash9'),
-  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/goals.json?v=dash9'),
-  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/album-inventory.json?v=dash9').catch(() => null),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/athlete-profile.json?v=dash10'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/sessions/gym-log.json?v=dash10'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/sessions/run-log.json?v=dash10'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/plan.json?v=dash10'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/coaching-insights.json?v=dash10'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/goals.json?v=dash10'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/album-inventory.json?v=dash10').catch(() => null),
 ])
   .then(([profile, gymLog, runLog, plan, insights, goalsData, album]) => {
     renderDashboard(profile, gymLog, runLog, insights, album, goalsData);

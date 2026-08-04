@@ -86,9 +86,9 @@ def fetch_webstream(force: bool = False) -> dict:
     return data
 
 
-def pick_rise_detail(photos: list) -> tuple[dict, dict] | tuple[None, None]:
-    """Pick Rise workout detail screenshot (not mirror selfie)."""
-    cands = []
+def rank_rise_details(photos: list) -> list[tuple[dict, dict]]:
+    """Rank likely Rise detail screenshots (best first)."""
+    cands: list[tuple[int, dict, dict]] = []
     for p in photos:
         for deriv in p.get("derivatives", {}).values():
             fs = int(deriv.get("fileSize", 0) or 0)
@@ -113,9 +113,18 @@ def pick_rise_detail(photos: list) -> tuple[dict, dict] | tuple[None, None]:
                 if h >= 850 and w >= 850 and fs < 520_000:
                     cands.append((abs(fs - 210_000), p, deriv))
     if not cands:
-        return None, None
+        return []
     cands.sort(key=lambda x: x[0])
-    return cands[0][1], cands[0][2]
+    # De-duplicate by checksum to avoid trying same image repeatedly.
+    out: list[tuple[dict, dict]] = []
+    seen: set[str] = set()
+    for _, p, d in cands:
+        key = d.get("checksum")
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append((p, d))
+    return out
 
 
 def download_photo(photo: dict, deriv: dict, dest: Path) -> None:
@@ -309,6 +318,7 @@ def parse_exercises(lines: list[str]) -> list[dict]:
 
 def parse_meta(lines: list[str]) -> dict:
     meta = {"durationMin": None, "totalSets": None, "totalVolumeKg": None, "title": "운동"}
+    seen_kg: list[int] = []
     for ln in lines:
         if "운동" in ln and len(ln) < 20:
             meta["title"] = ln
@@ -321,8 +331,13 @@ def parse_meta(lines: list[str]) -> dict:
             if m:
                 meta["totalSets"] = int(m.group(1))
         m = re.search(r"([\d,]+)\s*kg", ln)
-        if m and meta["totalVolumeKg"] is None and "(" in ln:
-            meta["totalVolumeKg"] = int(m.group(1).replace(",", ""))
+        if m:
+            seen_kg.append(int(m.group(1).replace(",", "")))
+            if meta["totalVolumeKg"] is None and "(" in ln:
+                meta["totalVolumeKg"] = int(m.group(1).replace(",", ""))
+    if meta["totalVolumeKg"] is None and seen_kg:
+        # In low-quality OCR, summary line can lose "(+delta)" suffix.
+        meta["totalVolumeKg"] = max(seen_kg)
     return meta
 
 
@@ -419,21 +434,28 @@ def backfill(
         if not photos:
             continue
 
-        photo, deriv = pick_rise_detail(photos)
-        if not photo:
+        candidates = rank_rise_details(photos)
+        if not candidates:
             print(f"skip {date}: no detail screenshot", file=sys.stderr)
             continue
 
-        img = IMAGE_CACHE / f"{date}.jpg"
-        try:
-            download_photo(photo, deriv, img)
-            lines = ocr_image(img)
-            session = session_from_lines(lines, date)
-        except Exception as e:
-            print(f"fail {date}: {e}", file=sys.stderr)
-            continue
+        session = None
+        last_error = None
+        for idx, (photo, deriv) in enumerate(candidates[:5]):
+            img = IMAGE_CACHE / f"{date}-{idx}.jpg"
+            try:
+                download_photo(photo, deriv, img)
+                lines = ocr_image(img)
+                session = session_from_lines(lines, date)
+                if session:
+                    break
+            except Exception as e:
+                last_error = e
+                continue
 
         if not session:
+            if last_error:
+                print(f"fail {date}: {last_error}", file=sys.stderr)
             print(f"skip {date}: parse failed", file=sys.stderr)
             continue
 
