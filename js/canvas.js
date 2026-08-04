@@ -1058,7 +1058,6 @@ function setupGoalForm(goalsData, profile, gymLog, runLog, onUpdate) {
 }
 
 function renderDashboard(profile, gymLog, runLog, insights, album, goalsData) {
-  const hangSq = profile.prs.hangSquatSnatch || 0;
   const goal = profile.prs.snatchGoal || 100;
   const updated = insights?.updated || profile.updated || '';
   document.getElementById('dash-updated').textContent = updated ? `데이터 ${updated}` : '';
