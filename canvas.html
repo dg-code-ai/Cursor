@@ -36,7 +36,7 @@
         <div class="progress-explorer">
           <div class="progress-explorer__head">
             <label class="progress-select">
-              <span>운동 종목</span>
+              <span>내가 한 종목에서 고르기</span>
               <select id="dash-lift-select" aria-label="운동 종목 선택"></select>
             </label>
             <div class="metric-toggle" id="dash-lift-metric" role="group" aria-label="지표">
@@ -44,6 +44,7 @@
               <button type="button" class="metric-btn" data-metric="volume">세션 볼륨</button>
             </div>
           </div>
+          <p class="progress-explorer__hint" id="dash-lift-count"></p>
           <div class="chip-row progress-presets" id="dash-lift-presets"></div>
           <div id="dash-lift-chart" class="chart-box chart-box--tall"></div>
           <p class="progress-meta" id="dash-lift-meta"></p>
@@ -97,9 +98,15 @@
       <!-- PLAN -->
       <section id="panel-plan" class="panel">
         <div class="card">
-          <h2>이번 주 체크리스트</h2>
+          <h2>이번 주 계획</h2>
           <p class="hint" id="week-note"></p>
           <div id="week-checklist" class="week-checklist"></div>
+        </div>
+
+        <div class="card">
+          <h2>다음 헬스 처방</h2>
+          <p class="hint" id="next-gym-when"></p>
+          <ul class="guide-list" id="next-gym-items"></ul>
         </div>
 
         <div class="card">
@@ -118,20 +125,24 @@
             <div id="run-roadmap" class="roadmap"></div>
           </div>
         </div>
-
-        <div class="card">
-          <h2>다음 헬스 처방</h2>
-          <p class="hint" id="next-gym-when"></p>
-          <ul class="guide-list" id="next-gym-items"></ul>
-        </div>
       </section>
 
       <!-- RESULTS / LOG -->
       <section id="panel-results" class="panel">
+        <div class="split-panels">
+          <div class="card">
+            <h2>헬스 볼륨 추이</h2>
+            <div id="chart-gym-volume" class="chart-box"></div>
+          </div>
+          <div class="card">
+            <h2>러닝 거리</h2>
+            <div id="chart-run-distance" class="chart-box"></div>
+          </div>
+        </div>
+
         <div class="card">
-          <h2>코칭 인사이트 (세션 상세)</h2>
-          <p class="hint">왜 · 회고 · 다음</p>
-          <div id="coaching-insights" class="insights"></div>
+          <h2>핵심 작업세트</h2>
+          <div id="highlights" class="highlights highlights--cards"></div>
         </div>
 
         <div class="card">
@@ -151,20 +162,10 @@
           <div id="timeline" class="timeline"></div>
         </div>
 
-        <div class="split-panels">
-          <div class="card">
-            <h2>헬스 볼륨 추이</h2>
-            <div id="chart-gym-volume" class="chart-box"></div>
-          </div>
-          <div class="card">
-            <h2>러닝 거리</h2>
-            <div id="chart-run-distance" class="chart-box"></div>
-          </div>
-        </div>
-
         <div class="card">
-          <h2>핵심 작업세트</h2>
-          <div id="highlights" class="highlights highlights--cards"></div>
+          <h2>코칭 인사이트 (세션 상세)</h2>
+          <p class="hint">왜 · 회고 · 다음</p>
+          <div id="coaching-insights" class="insights"></div>
         </div>
       </section>
 

@@ -41,19 +41,32 @@ document.querySelectorAll('.canvas-tabs .tab').forEach((tab) => {
 
 /* ---- PLAN ---- */
 function renderPlan(plan) {
-  document.getElementById('week-note').textContent = `${plan.thisWeek.label} — ${plan.thisWeek.note}`;
-  document.getElementById('week-checklist').innerHTML = plan.thisWeek.sessions
-    .map(
-      (s) => `
-    <div class="check-item ${s.done ? 'check-item--done' : ''}">
-      <span class="check-box">${s.done ? '✓' : ''}</span>
+  const week = plan.thisWeek;
+  document.getElementById('week-note').textContent = `${week.label} — ${week.note}`;
+  document.getElementById('week-checklist').innerHTML = week.sessions
+    .map((s) => {
+      const checks = (s.checkpoints || [])
+        .map(
+          (c) =>
+            `<li class="check-point ${s.done ? 'is-done' : ''}"><span class="check-point__mark">${s.done ? '✓' : '○'}</span>${c}</li>`
+        )
+        .join('');
+      const actual = s.actual
+        ? `<p class="check-actual">기록: ${s.actual}</p>`
+        : '';
+      const status = s.skipped ? '스킵' : s.done ? '완료' : '예정';
+      return `
+    <div class="check-item ${s.done ? 'check-item--done' : 'check-item--todo'} ${s.skipped ? 'check-item--skip' : ''}">
+      <span class="check-box">${s.done && !s.skipped ? '✓' : ''}</span>
       <div>
-        <strong>${s.day} · ${s.date.slice(5)}</strong>
-        <p>${s.plan}</p>
+        <strong>${s.day} · ${s.date.slice(5)}${s.focus ? ` · ${s.focus}` : ''}</strong>
+        <p class="check-plan">${s.plan}</p>
+        ${checks ? `<ul class="check-points">${checks}</ul>` : ''}
+        ${actual}
       </div>
-      <span class="check-status">${s.done ? '완료' : '예정'}</span>
-    </div>`
-    )
+      <span class="check-status">${status}</span>
+    </div>`;
+    })
     .join('');
 
   document.getElementById('week-skeleton').innerHTML = plan.weeklySkeleton
@@ -266,13 +279,21 @@ function listExercises(gymLog) {
     (s.exercises || []).forEach((ex) => {
       const name = ex.name;
       if (!name) return;
-      const cur = map.get(name) || { name, count: 0, lastDate: '' };
+      const cur = map.get(name) || { name, count: 0, lastDate: '', types: {} };
       cur.count += 1;
       if (s.date > cur.lastDate) cur.lastDate = s.date;
+      const t = s.type || '기타';
+      cur.types[t] = (cur.types[t] || 0) + 1;
       map.set(name, cur);
     });
   });
-  return [...map.values()].sort((a, b) => b.count - a.count || (a.name > b.name ? 1 : -1));
+  return [...map.values()]
+    .map((e) => {
+      const primary =
+        Object.entries(e.types).sort((a, b) => b[1] - a[1])[0]?.[0] || '기타';
+      return { ...e, primary };
+    })
+    .sort((a, b) => b.count - a.count || (a.name > b.name ? 1 : -1));
 }
 
 function topKgFromExercise(ex) {
@@ -396,12 +417,28 @@ function setupLiftProgress(gymLog) {
   const select = document.getElementById('dash-lift-select');
   const presetsEl = document.getElementById('dash-lift-presets');
   const metricEl = document.getElementById('dash-lift-metric');
+  const countEl = document.getElementById('dash-lift-count');
   if (!select || !presetsEl || !metricEl) return;
 
   const names = new Set(exercises.map((e) => e.name));
-  select.innerHTML = exercises
-    .map((e) => `<option value="${e.name}">${e.name} (${e.count})</option>`)
+  const groupOrder = ['Push', 'Pull', 'Leg', 'Olympic', '기타'];
+  const byGroup = {};
+  exercises.forEach((e) => {
+    const g = groupOrder.includes(e.primary) ? e.primary : '기타';
+    (byGroup[g] ||= []).push(e);
+  });
+  select.innerHTML = groupOrder
+    .filter((g) => byGroup[g]?.length)
+    .map((g) => {
+      const opts = byGroup[g]
+        .map((e) => `<option value="${e.name}">${e.name} · ${e.count}회</option>`)
+        .join('');
+      return `<optgroup label="${g}">${opts}</optgroup>`;
+    })
     .join('');
+  if (countEl) {
+    countEl.textContent = `로그에 있는 종목 ${exercises.length}개 · 드롭다운에서 고르세요`;
+  }
 
   const presetNames = LIFT_PRESETS.filter((n) => names.has(n));
   const extras = exercises.filter((e) => !presetNames.includes(e.name)).slice(0, 4);
