@@ -1544,21 +1544,167 @@ body:has(.lab) .album-month strong { color: var(--text); }
   margin-right: 0.3rem;
 }
 
-.goal-gauges {
+.goal-tracker {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 0.75rem;
-  margin-top: 0.5rem;
 }
-
-.gauge {
-  text-align: center;
+@media (min-width: 720px) {
+  .goal-tracker { grid-template-columns: 1fr 1fr; }
 }
-
-.gauge .hint {
-  margin: 0.25rem 0 0;
-  font-size: 0.75rem;
+.goal-track {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.05rem;
+  animation: dash-rise 0.55s ease both;
 }
+.goal-track:nth-child(2) { animation-delay: 0.06s; }
+.goal-track:nth-child(3) { animation-delay: 0.12s; }
+.goal-track:nth-child(4) { animation-delay: 0.18s; }
+.goal-track--done {
+  border-color: rgba(4, 120, 87, 0.4);
+  background: linear-gradient(145deg, rgba(4, 120, 87, 0.06), var(--surface));
+}
+.goal-track--late {
+  border-color: rgba(190, 18, 60, 0.35);
+}
+.goal-track__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  align-items: flex-start;
+  margin-bottom: 0.35rem;
+}
+.goal-track__head h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.goal-track__badge {
+  flex-shrink: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+.goal-track__badge--ok { color: var(--success); border-color: rgba(4, 120, 87, 0.35); background: rgba(4, 120, 87, 0.08); }
+.goal-track__badge--warn { color: var(--warning); border-color: rgba(180, 83, 9, 0.35); background: rgba(180, 83, 9, 0.08); }
+.goal-track__badge--late { color: var(--danger); border-color: rgba(190, 18, 60, 0.35); background: rgba(190, 18, 60, 0.08); }
+.goal-track__badge--done { color: var(--success); border-color: rgba(4, 120, 87, 0.45); }
+.goal-track__values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  align-items: baseline;
+  margin: 0.15rem 0 0.65rem;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+.goal-track__values strong {
+  font-family: var(--font-number);
+  font-size: 1.15rem;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+.goal-track__deadline {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+.goal-bar-row {
+  margin-top: 0.45rem;
+}
+.goal-bar-row span {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  font-weight: 650;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+.goal-bar {
+  height: 8px;
+  background: var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.goal-bar i {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.35s ease;
+}
+.goal-bar--achieve i { background: linear-gradient(90deg, #0f766e, #14b8a6); }
+.goal-bar--time i { background: linear-gradient(90deg, #64748b, #94a3b8); }
+.goal-track__note {
+  margin: 0.55rem 0 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+}
+.goal-form-panel { margin-top: 0.65rem; padding: 0.85rem 1rem; }
+.goal-form-panel > summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+.goal-form { margin-top: 0.75rem; }
+.goal-form__grid {
+  display: grid;
+  gap: 0.65rem;
+}
+@media (min-width: 560px) {
+  .goal-form__grid { grid-template-columns: 1fr 1fr; }
+}
+.goal-form__wide { grid-column: 1 / -1; }
+.goal-form label span {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+.goal-form input,
+.goal-form select {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.6rem 0.75rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  background: var(--surface-2);
+  color: var(--text);
+}
+.goal-form input:focus,
+.goal-form select:focus {
+  outline: 2px solid var(--accent-soft);
+  border-color: var(--accent);
+}
+.goal-form__actions {
+  margin-top: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem 1rem;
+}
+.btn-primary {
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 650;
+  font-size: 0.9rem;
+  padding: 0.55rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn-primary:hover { background: var(--accent-hover); }
 
 .highlights--cards {
   display: grid;
@@ -1809,10 +1955,61 @@ body:has(.lab) .album-month strong { color: var(--text); }
 
         <div class="coach-strip" id="dash-latest-coach"></div>
 
-        <p class="dash-section-title">목표까지</p>
-        <div class="card" style="margin-top:0">
-          <div id="dash-gauges" class="goal-gauges"></div>
-        </div>
+        <p class="dash-section-title">목표 · 기한 · 진행</p>
+        <div class="goal-tracker" id="dash-goals"></div>
+        <details class="goal-form-panel card" id="goal-form-panel">
+          <summary>목표 추가 · 수정</summary>
+          <form id="goal-form" class="goal-form">
+            <div class="goal-form__grid">
+              <label>
+                <span>목표 이름</span>
+                <input type="text" name="title" required placeholder="예: 스쿼트 200kg" />
+              </label>
+              <label>
+                <span>종류</span>
+                <select name="kind" required>
+                  <option value="lift_kg">중량 (kg) — 높을수록 좋음</option>
+                  <option value="run_distance_km">러닝 거리 (km)</option>
+                  <option value="run_time_sec">러닝 시간 (초) — 낮을수록 좋음</option>
+                  <option value="bench_reps">벤치 반복 (reps @ kg)</option>
+                  <option value="custom">직접 입력 (현재값 수동)</option>
+                </select>
+              </label>
+              <label>
+                <span>목표값</span>
+                <input type="number" name="targetValue" required step="any" />
+              </label>
+              <label>
+                <span>달성 기한</span>
+                <input type="date" name="deadline" required />
+              </label>
+              <label>
+                <span>시작값 (선택)</span>
+                <input type="number" name="baselineValue" step="any" placeholder="비우면 오늘 기준" />
+              </label>
+              <label>
+                <span>시작일 (선택)</span>
+                <input type="date" name="baselineDate" />
+              </label>
+              <label class="goal-form__wide" data-show="lift_kg">
+                <span>추적 종목 (중량)</span>
+                <input type="text" name="exerciseMatch" placeholder="예: 행 스내치, 스쿼트" />
+              </label>
+              <label data-show="bench_reps">
+                <span>기준 중량 (kg)</span>
+                <input type="number" name="weightKg" value="130" step="1" />
+              </label>
+              <label class="goal-form__wide">
+                <span>메모 (선택)</span>
+                <input type="text" name="note" placeholder="왜 이 목표인지" />
+              </label>
+            </div>
+            <div class="goal-form__actions">
+              <button type="submit" class="btn-primary">목표 저장</button>
+              <p class="hint">폰·브라우저에 저장됩니다. JSON 기본 목표는 그대로 유지됩니다.</p>
+            </div>
+          </form>
+        </details>
 
         <details class="archive-panel card" style="padding:0.85rem 1rem">
           <summary>앨범 아카이브 · 과거 기록 정리</summary>
@@ -2974,7 +3171,301 @@ function extractLiftSeries(gymLog, nameMatch, pick) {
   return rows;
 }
 
-function renderDashboard(profile, gymLog, runLog, insights, album) {
+const GOALS_STORAGE_KEY = 'lab-goals-custom';
+
+function todayISO() {
+  return new Date().toISOString().slice(0, 10);
+}
+
+function parseISODate(s) {
+  if (!s) return null;
+  const d = new Date(`${s}T12:00:00`);
+  return Number.isNaN(d.getTime()) ? null : d;
+}
+
+function daysBetween(a, b) {
+  const ms = 86400000;
+  return Math.round((b - a) / ms);
+}
+
+function formatRunTime(sec) {
+  if (sec == null) return '—';
+  const m = Math.floor(sec / 60);
+  const s = Math.round(sec % 60);
+  return `${m}:${String(s).padStart(2, '0')}`;
+}
+
+function formatGoalValue(goal, value) {
+  if (value == null) return '—';
+  const k = goal.kind;
+  if (k === 'run_time_sec') return formatRunTime(value);
+  if (k === 'run_distance_km') return `${value} km`;
+  if (k === 'bench_reps') return `${value}회`;
+  if (k === 'lift_kg') return `${value} kg`;
+  return String(value);
+}
+
+function loadGoalOverrides() {
+  try {
+    return JSON.parse(localStorage.getItem(GOALS_STORAGE_KEY) || '{}');
+  } catch {
+    return {};
+  }
+}
+
+function saveCustomGoals(customList) {
+  const store = loadGoalOverrides();
+  store.custom = customList;
+  localStorage.setItem(GOALS_STORAGE_KEY, JSON.stringify(store));
+}
+
+function mergeGoals(goalsData) {
+  const base = (goalsData?.goals || []).map((g) => ({ ...g, source: 'default' }));
+  const store = loadGoalOverrides();
+  const byId = Object.fromEntries(base.map((g) => [g.id, { ...g }]));
+  Object.entries(store.overrides || {}).forEach(([id, patch]) => {
+    if (byId[id]) Object.assign(byId[id], patch);
+  });
+  (store.custom || []).forEach((g) => {
+    byId[g.id] = { ...g, source: 'custom' };
+  });
+  return Object.values(byId).sort((a, b) => (a.deadline > b.deadline ? 1 : -1));
+}
+
+function currentForGoal(goal, profile, gymLog, runLog) {
+  const store = loadGoalOverrides();
+  const manual = store.current?.[goal.id];
+  if (manual != null && goal.kind === 'custom') return manual;
+
+  const k = goal.kind;
+  if (k === 'lift_kg') {
+    const match = goal.track?.exerciseMatch || '';
+    const rows = extractLiftSeries(gymLog, (n) => n.includes(match), topKgFromExercise);
+    if (rows.length) return rows[rows.length - 1].value;
+    if (match.includes('행') && profile.prs?.hangSquatSnatch) return profile.prs.hangSquatSnatch;
+    return null;
+  }
+  if (k === 'bench_reps') {
+    const w = goal.track?.weightKg || 130;
+    const rows = extractLiftSeries(
+      gymLog,
+      (n) => n === '벤치 프레스',
+      (ex) => {
+        const at = (ex.sets || []).filter((s) => (s.kg || 0) >= w && (s.reps || 0) > 0);
+        if (!at.length) return null;
+        const atW = at.filter((s) => s.kg === w);
+        return Math.max(...(atW.length ? atW : at).map((s) => s.reps || 0));
+      }
+    );
+    return rows.length ? rows[rows.length - 1].value : null;
+  }
+  if (k === 'run_distance_km') {
+    return Math.max(...runLog.sessions.map((r) => r.distanceKm || 0), 0) || null;
+  }
+  if (k === 'run_time_sec') {
+    const best = profile.prs?.tenKBest;
+    if (best?.timeMin) return Math.round(best.timeMin * 60);
+    if (best?.timeSec) return best.timeSec;
+    return null;
+  }
+  if (k === 'custom') {
+    return manual ?? goal.currentValue ?? null;
+  }
+  return null;
+}
+
+function computeGoalProgress(goal, profile, gymLog, runLog) {
+  const current = currentForGoal(goal, profile, gymLog, runLog);
+  const baseline = goal.baseline?.value ?? current ?? 0;
+  const target = goal.target?.value;
+  const startDate = parseISODate(goal.baseline?.date || goal.startDate || todayISO());
+  const deadline = parseISODate(goal.deadline);
+  const today = parseISODate(todayISO());
+
+  let achievePct = 0;
+  const lowerBetter = goal.kind === 'run_time_sec';
+  if (current != null && target != null && baseline != null) {
+    if (lowerBetter) {
+      const span = baseline - target;
+      achievePct = span > 0 ? ((baseline - current) / span) * 100 : current <= target ? 100 : 0;
+    } else {
+      const span = target - baseline;
+      achievePct = span > 0 ? ((current - baseline) / span) * 100 : current >= target ? 100 : 0;
+    }
+  }
+  achievePct = Math.max(0, Math.min(100, Math.round(achievePct)));
+
+  let timePct = 0;
+  let daysLeft = null;
+  if (startDate && deadline && today) {
+    const total = daysBetween(startDate, deadline);
+    const elapsed = daysBetween(startDate, today);
+    daysLeft = daysBetween(today, deadline);
+    timePct = total > 0 ? Math.round((elapsed / total) * 100) : 0;
+    timePct = Math.max(0, Math.min(100, timePct));
+  }
+
+  const done = lowerBetter
+    ? current != null && target != null && current <= target
+    : current != null && target != null && current >= target;
+  const overdue = deadline && today && today > deadline && !done;
+
+  let status = '순조';
+  let statusClass = 'ok';
+  if (done) {
+    status = '달성';
+    statusClass = 'done';
+  } else if (overdue) {
+    status = '기한 지남';
+    statusClass = 'late';
+  } else if (achievePct + 8 < timePct) {
+    status = '지연';
+    statusClass = 'late';
+  } else if (achievePct + 15 < timePct) {
+    status = '주의';
+    statusClass = 'warn';
+  }
+
+  const deadlineLabel = goal.deadline ? goal.deadline.replace(/-/g, '.').slice(2) : '';
+  const daysLabel =
+    daysLeft == null
+      ? ''
+      : daysLeft < 0
+        ? `${Math.abs(daysLeft)}일 지남`
+        : daysLeft === 0
+          ? '오늘까지'
+          : `${daysLeft}일 남음`;
+
+  return {
+    current,
+    baseline,
+    target,
+    achievePct,
+    timePct,
+    done,
+    overdue,
+    status,
+    statusClass,
+    deadlineLabel,
+    daysLabel,
+    currentLabel: formatGoalValue(goal, current),
+    targetLabel: goal.target?.label || formatGoalValue(goal, target),
+    baselineLabel: goal.baseline?.label || formatGoalValue(goal, baseline),
+  };
+}
+
+function renderGoalTracker(goalsData, profile, gymLog, runLog) {
+  const root = document.getElementById('dash-goals');
+  if (!root) return;
+  const goals = mergeGoals(goalsData);
+  if (!goals.length) {
+    root.innerHTML = '<p class="hint">등록된 목표가 없습니다.</p>';
+    return;
+  }
+
+  root.innerHTML = goals
+    .map((g) => {
+      const p = computeGoalProgress(g, profile, gymLog, runLog);
+      return `
+    <article class="goal-track ${p.done ? 'goal-track--done' : p.statusClass === 'late' ? 'goal-track--late' : ''}">
+      <div class="goal-track__head">
+        <h3>${g.title}</h3>
+        <span class="goal-track__badge goal-track__badge--${p.statusClass}">${p.status}</span>
+      </div>
+      <div class="goal-track__values">
+        <span>현재 <strong>${p.currentLabel}</strong></span>
+        <span>→ 목표 <strong>${p.targetLabel}</strong></span>
+      </div>
+      <p class="goal-track__deadline">기한 ${p.deadlineLabel}${p.daysLabel ? ` · ${p.daysLabel}` : ''}</p>
+      <div class="goal-bar-row">
+        <span><em>달성</em><em>${p.achievePct}%</em></span>
+        <div class="goal-bar goal-bar--achieve"><i style="width:${p.achievePct}%"></i></div>
+      </div>
+      <div class="goal-bar-row">
+        <span><em>기간 경과</em><em>${p.timePct}%</em></span>
+        <div class="goal-bar goal-bar--time"><i style="width:${p.timePct}%"></i></div>
+      </div>
+      ${g.note ? `<p class="goal-track__note">${g.note}</p>` : ''}
+    </article>`;
+    })
+    .join('');
+}
+
+function setupGoalForm(goalsData, profile, gymLog, runLog, onUpdate) {
+  const form = document.getElementById('goal-form');
+  const kindSel = form?.querySelector('[name="kind"]');
+  if (!form) return;
+
+  const toggleFields = () => {
+    const kind = kindSel.value;
+    form.querySelectorAll('[data-show]').forEach((el) => {
+      el.style.display = el.dataset.show === kind ? '' : 'none';
+    });
+  };
+  kindSel?.addEventListener('change', toggleFields);
+  toggleFields();
+
+  if (!form.dataset.defaultDeadline) {
+    const d = new Date();
+    d.setMonth(d.getMonth() + 3);
+    form.querySelector('[name="deadline"]').value = d.toISOString().slice(0, 10);
+    form.dataset.defaultDeadline = '1';
+  }
+
+  form.onsubmit = (e) => {
+    e.preventDefault();
+    const fd = new FormData(form);
+    const kind = fd.get('kind');
+    const title = String(fd.get('title')).trim();
+    const targetValue = Number(fd.get('targetValue'));
+    const deadline = fd.get('deadline');
+    const baselineValue = fd.get('baselineValue');
+    const baselineDate = fd.get('baselineDate') || todayISO();
+    const note = String(fd.get('note') || '').trim();
+    const id = `custom-${Date.now()}`;
+
+    const goal = {
+      id,
+      title,
+      kind,
+      baseline: {
+        value: baselineValue !== '' ? Number(baselineValue) : 0,
+        date: baselineDate,
+      },
+      target: { value: targetValue },
+      deadline,
+      note,
+    };
+
+    if (kind === 'lift_kg') {
+      goal.track = { exerciseMatch: String(fd.get('exerciseMatch') || title).trim() };
+      goal.target.unit = 'kg';
+    } else if (kind === 'run_distance_km') {
+      goal.track = { type: 'longest' };
+      goal.target.unit = 'km';
+    } else if (kind === 'run_time_sec') {
+      goal.track = { distanceKm: 10 };
+      goal.target.unit = 'sec';
+      goal.target.label = formatRunTime(targetValue);
+    } else if (kind === 'bench_reps') {
+      goal.track = { weightKg: Number(fd.get('weightKg') || 130) };
+      goal.target.unit = 'reps';
+    } else if (kind === 'custom') {
+      goal.currentValue = baselineValue !== '' ? Number(baselineValue) : 0;
+    }
+
+    const store = loadGoalOverrides();
+    const custom = store.custom || [];
+    custom.push(goal);
+    saveCustomGoals(custom);
+    form.reset();
+    toggleFields();
+    if (onUpdate) onUpdate();
+    document.getElementById('goal-form-panel')?.removeAttribute('open');
+  };
+}
+
+function renderDashboard(profile, gymLog, runLog, insights, album, goalsData) {
   const hangSq = profile.prs.hangSquatSnatch || 0;
   const goal = profile.prs.snatchGoal || 100;
   const updated = insights?.updated || profile.updated || '';
@@ -3004,7 +3495,6 @@ function renderDashboard(profile, gymLog, runLog, insights, album) {
   const runs = [...runLog.sessions]
     .filter((r) => r.avgHr)
     .sort((a, b) => (a.date > b.date ? 1 : -1));
-  const benchLast = benchRows.length ? benchRows[benchRows.length - 1].reps : null;
 
   Charts.lineChart(document.getElementById('dash-hang-snatch'), {
     labels: hang.map((h) => shortDate(h.date)),
@@ -3050,23 +3540,10 @@ function renderDashboard(profile, gymLog, runLog, insights, album) {
   }
 
   const longest = Math.max(...runLog.sessions.map((r) => r.distanceKm || 0), 0);
-  const gauges = document.getElementById('dash-gauges');
-  gauges.innerHTML = '';
-  Charts.gauge(gauges, {
-    label: '스내치',
-    pct: Math.min(100, Math.round((hangSq / goal) * 100)),
-    sub: `깊은 행 ${hangSq} → ${goal}`,
-  });
-  Charts.gauge(gauges, {
-    label: '10km',
-    pct: Math.min(100, Math.round((longest / 10) * 100)),
-    sub: `최장 ${longest}km · 이지 HR이 병목`,
-  });
-  Charts.gauge(gauges, {
-    label: '벤치130',
-    pct: benchLast != null ? Math.min(100, Math.round((benchLast / 5) * 100)) : 0,
-    sub: `최근 130×${benchLast ?? '—'}`,
-  });
+
+  const refreshGoals = () => renderGoalTracker(goalsData, profile, gymLog, runLog);
+  refreshGoals();
+  setupGoalForm(goalsData, profile, gymLog, runLog, refreshGoals);
 
   const dates = Object.keys(insights?.sessionReviews || {}).sort().reverse();
   const latest = dates[0];
@@ -3176,15 +3653,16 @@ document.getElementById('result-filters')?.addEventListener('click', (e) => {
 });
 
 Promise.all([
-  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/athlete-profile.json?v=dash6'),
-  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/sessions/gym-log.json?v=dash6'),
-  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/sessions/run-log.json?v=dash6'),
-  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/plan.json?v=dash6'),
-  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/coaching-insights.json?v=dash6'),
-  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/album-inventory.json?v=dash6').catch(() => null),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/athlete-profile.json?v=dash7'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/sessions/gym-log.json?v=dash7'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/sessions/run-log.json?v=dash7'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/plan.json?v=dash7'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/coaching-insights.json?v=dash7'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/goals.json?v=dash7'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/album-inventory.json?v=dash7').catch(() => null),
 ])
-  .then(([profile, gymLog, runLog, plan, insights, album]) => {
-    renderDashboard(profile, gymLog, runLog, insights, album);
+  .then(([profile, gymLog, runLog, plan, insights, goalsData, album]) => {
+    renderDashboard(profile, gymLog, runLog, insights, album, goalsData);
     renderPlan(plan);
     renderProfile(profile);
     renderKpis(gymLog, runLog, profile);

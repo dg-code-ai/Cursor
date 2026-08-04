@@ -92,10 +92,61 @@
 
         <div class="coach-strip" id="dash-latest-coach"></div>
 
-        <p class="dash-section-title">목표까지</p>
-        <div class="card" style="margin-top:0">
-          <div id="dash-gauges" class="goal-gauges"></div>
-        </div>
+        <p class="dash-section-title">목표 · 기한 · 진행</p>
+        <div class="goal-tracker" id="dash-goals"></div>
+        <details class="goal-form-panel card" id="goal-form-panel">
+          <summary>목표 추가 · 수정</summary>
+          <form id="goal-form" class="goal-form">
+            <div class="goal-form__grid">
+              <label>
+                <span>목표 이름</span>
+                <input type="text" name="title" required placeholder="예: 스쿼트 200kg" />
+              </label>
+              <label>
+                <span>종류</span>
+                <select name="kind" required>
+                  <option value="lift_kg">중량 (kg) — 높을수록 좋음</option>
+                  <option value="run_distance_km">러닝 거리 (km)</option>
+                  <option value="run_time_sec">러닝 시간 (초) — 낮을수록 좋음</option>
+                  <option value="bench_reps">벤치 반복 (reps @ kg)</option>
+                  <option value="custom">직접 입력 (현재값 수동)</option>
+                </select>
+              </label>
+              <label>
+                <span>목표값</span>
+                <input type="number" name="targetValue" required step="any" />
+              </label>
+              <label>
+                <span>달성 기한</span>
+                <input type="date" name="deadline" required />
+              </label>
+              <label>
+                <span>시작값 (선택)</span>
+                <input type="number" name="baselineValue" step="any" placeholder="비우면 오늘 기준" />
+              </label>
+              <label>
+                <span>시작일 (선택)</span>
+                <input type="date" name="baselineDate" />
+              </label>
+              <label class="goal-form__wide" data-show="lift_kg">
+                <span>추적 종목 (중량)</span>
+                <input type="text" name="exerciseMatch" placeholder="예: 행 스내치, 스쿼트" />
+              </label>
+              <label data-show="bench_reps">
+                <span>기준 중량 (kg)</span>
+                <input type="number" name="weightKg" value="130" step="1" />
+              </label>
+              <label class="goal-form__wide">
+                <span>메모 (선택)</span>
+                <input type="text" name="note" placeholder="왜 이 목표인지" />
+              </label>
+            </div>
+            <div class="goal-form__actions">
+              <button type="submit" class="btn-primary">목표 저장</button>
+              <p class="hint">폰·브라우저에 저장됩니다. JSON 기본 목표는 그대로 유지됩니다.</p>
+            </div>
+          </form>
+        </details>
 
         <details class="archive-panel card" style="padding:0.85rem 1rem">
           <summary>앨범 아카이브 · 과거 기록 정리</summary>

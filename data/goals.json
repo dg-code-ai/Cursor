@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "updated": "2026-08-04",
+  "goals": [
+    {
+      "id": "hang-snatch-100",
+      "title": "스쿼트 스내치 100kg",
+      "kind": "lift_kg",
+      "track": { "exerciseMatch": "행 스내치" },
+      "baseline": { "value": 60, "date": "2026-07-28" },
+      "target": { "value": 100, "unit": "kg" },
+      "deadline": "2026-09-30",
+      "note": "깊은 리시브 · Phase1→3"
+    },
+    {
+      "id": "tenk-60",
+      "title": "10km 60분",
+      "kind": "run_time_sec",
+      "track": { "distanceKm": 10 },
+      "baseline": { "value": 4146, "date": "2026-05-01", "label": "1:09:06" },
+      "target": { "value": 3600, "unit": "min", "label": "60:00" },
+      "deadline": "2026-12-31",
+      "note": "거리·이지 HR 먼저 · 페이스는 나중"
+    },
+    {
+      "id": "long-run-8",
+      "title": "롱런 8km (이지)",
+      "kind": "run_distance_km",
+      "track": { "type": "longest" },
+      "baseline": { "value": 5.55, "date": "2026-08-01" },
+      "target": { "value": 8, "unit": "km" },
+      "deadline": "2026-08-31",
+      "note": "HR 135–145 유지가 전제"
+    },
+    {
+      "id": "bench-130-x5",
+      "title": "벤치 130×5",
+      "kind": "bench_reps",
+      "track": { "weightKg": 130 },
+      "baseline": { "value": 4, "date": "2026-07-30" },
+      "target": { "value": 5, "unit": "reps" },
+      "deadline": "2026-10-31",
+      "note": "서브맥스 · 145 싱글과 별개"
+    }
+  ]
+}
