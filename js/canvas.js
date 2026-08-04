@@ -246,6 +246,212 @@ function shortDate(d) {
   return d.slice(5).replace('-', '/');
 }
 
+const LIFT_PRESETS = [
+  '바벨 행 스내치',
+  '바벨 오버헤드 스쿼트',
+  '벤치 프레스',
+  '스쿼트',
+  '데드리프트',
+  '풀 업',
+  '바벨 로우',
+  '바벨 오버헤드 프레스',
+];
+
+const LIFT_STORAGE_KEY = 'lab-lift-progress';
+const LIFT_METRIC_KEY = 'lab-lift-metric';
+
+function listExercises(gymLog) {
+  const map = new Map();
+  gymLog.sessions.forEach((s) => {
+    (s.exercises || []).forEach((ex) => {
+      const name = ex.name;
+      if (!name) return;
+      const cur = map.get(name) || { name, count: 0, lastDate: '' };
+      cur.count += 1;
+      if (s.date > cur.lastDate) cur.lastDate = s.date;
+      map.set(name, cur);
+    });
+  });
+  return [...map.values()].sort((a, b) => b.count - a.count || (a.name > b.name ? 1 : -1));
+}
+
+function topKgFromExercise(ex) {
+  const kgs = (ex.sets || [])
+    .filter((s) => (s.kg || 0) > 0 && (s.reps || 0) > 0)
+    .map((s) => s.kg);
+  if (kgs.length) return Math.max(...kgs);
+  const any = (ex.sets || []).map((s) => s.kg || 0).filter((k) => k > 0);
+  return any.length ? Math.max(...any) : null;
+}
+
+function volumeFromExercise(ex) {
+  const vol = (ex.sets || []).reduce((sum, s) => sum + (s.kg || 0) * (s.reps || 0), 0);
+  return vol > 0 ? Math.round(vol) : null;
+}
+
+function bestRepsFromExercise(ex) {
+  const reps = (ex.sets || []).map((s) => s.reps || 0).filter((r) => r > 0);
+  return reps.length ? Math.max(...reps) : null;
+}
+
+function totalRepsFromExercise(ex) {
+  const total = (ex.sets || []).reduce((sum, s) => sum + (s.reps || 0), 0);
+  return total > 0 ? total : null;
+}
+
+function exerciseHasLoad(gymLog, name) {
+  return gymLog.sessions.some((s) =>
+    (s.exercises || []).some(
+      (ex) => ex.name === name && (ex.sets || []).some((set) => (set.kg || 0) > 0)
+    )
+  );
+}
+
+function seriesForExercise(gymLog, name, metric, hasLoad) {
+  let pick;
+  if (metric === 'volume') {
+    pick = hasLoad ? volumeFromExercise : totalRepsFromExercise;
+  } else {
+    pick = hasLoad ? topKgFromExercise : bestRepsFromExercise;
+  }
+  return extractLiftSeries(gymLog, (n) => n === name, pick);
+}
+
+function formatLiftDelta(rows, unit) {
+  if (rows.length < 2) return null;
+  const last = rows[rows.length - 1].value;
+  const prev = rows[rows.length - 2].value;
+  const d = last - prev;
+  if (d > 0) return `이전 대비 +${d}${unit}`;
+  if (d < 0) return `이전 대비 ${d}${unit}`;
+  return '이전과 동일';
+}
+
+function renderLiftProgress(gymLog, name, metric) {
+  const select = document.getElementById('dash-lift-select');
+  const chartEl = document.getElementById('dash-lift-chart');
+  const metaEl = document.getElementById('dash-lift-meta');
+  if (!select || !chartEl || !metaEl) return;
+
+  if (select.value !== name) select.value = name;
+
+  const hasLoad = exerciseHasLoad(gymLog, name);
+  document.querySelectorAll('#dash-lift-presets .chip').forEach((c) => {
+    c.classList.toggle('active', c.dataset.lift === name);
+  });
+  document.querySelectorAll('#dash-lift-metric .metric-btn').forEach((b) => {
+    b.classList.toggle('active', b.dataset.metric === metric);
+    if (b.dataset.metric === 'topKg') {
+      b.textContent = hasLoad ? '상한 kg' : '최고 횟수';
+    } else if (b.dataset.metric === 'volume') {
+      b.textContent = hasLoad ? '세션 볼륨' : '총 횟수';
+    }
+  });
+
+  const rows = seriesForExercise(gymLog, name, metric, hasLoad);
+  if (!rows.length) {
+    chartEl.innerHTML = '<p class="hint">이 종목 기록이 아직 없습니다.</p>';
+    metaEl.textContent = '';
+    return;
+  }
+
+  const values = rows.map((r) => r.value);
+  const labels = rows.map((r) => shortDate(r.date));
+  const unit =
+    metric === 'volume' ? (hasLoad ? 'kg·reps' : '총 reps') : hasLoad ? 'kg' : 'reps';
+  const unitShort = metric === 'volume' ? (hasLoad ? '' : '') : hasLoad ? ' kg' : '회';
+  const yPad = Math.max(...values) * 0.08 || 1;
+  const yMin = Math.max(0, Math.floor(Math.min(...values) - yPad));
+  const yMax = Math.ceil(Math.max(...values) + yPad);
+
+  Charts.lineChart(chartEl, {
+    labels,
+    series: [{ values, color: '#0f766e' }],
+    yMin,
+    yMax,
+    unit,
+  });
+
+  const last = rows[rows.length - 1];
+  const best = Math.max(...values);
+  const delta = formatLiftDelta(rows, hasLoad && metric === 'topKg' ? 'kg' : '');
+  const metricLabel =
+    metric === 'volume' ? (hasLoad ? '세션 볼륨' : '총 횟수') : hasLoad ? '상한' : '최고 세트';
+  const lastDisp =
+    metric === 'volume' && hasLoad
+      ? last.value.toLocaleString()
+      : `${last.value}${unitShort}`;
+  const bestDisp =
+    metric === 'volume' && hasLoad ? best.toLocaleString() : `${best}${unitShort}`;
+  metaEl.innerHTML = `
+    <strong>${name}</strong> · ${rows.length}회 기록 ·
+    최근 ${metricLabel} <strong>${lastDisp}</strong>
+    (${shortDate(last.date)}) · 최고 ${bestDisp}
+    ${delta ? ` · ${delta}` : ''}
+  `;
+}
+
+function setupLiftProgress(gymLog) {
+  const exercises = listExercises(gymLog);
+  const select = document.getElementById('dash-lift-select');
+  const presetsEl = document.getElementById('dash-lift-presets');
+  const metricEl = document.getElementById('dash-lift-metric');
+  if (!select || !presetsEl || !metricEl) return;
+
+  const names = new Set(exercises.map((e) => e.name));
+  select.innerHTML = exercises
+    .map((e) => `<option value="${e.name}">${e.name} (${e.count})</option>`)
+    .join('');
+
+  const presetNames = LIFT_PRESETS.filter((n) => names.has(n));
+  const extras = exercises.filter((e) => !presetNames.includes(e.name)).slice(0, 4);
+  const chips = [
+    ...presetNames.map((n) => ({
+      name: n,
+      short: n.replace(/^바벨 |^머신 |^덤벨 |^케이블 /, ''),
+    })),
+    ...extras.map((e) => ({
+      name: e.name,
+      short: e.name.replace(/^바벨 |^머신 |^덤벨 |^케이블 /, '').slice(0, 10),
+    })),
+  ];
+  presetsEl.innerHTML = chips
+    .map((c) => `<button type="button" class="chip" data-lift="${c.name}">${c.short}</button>`)
+    .join('');
+
+  let selected =
+    localStorage.getItem(LIFT_STORAGE_KEY) ||
+    (names.has('벤치 프레스') ? '벤치 프레스' : exercises[0]?.name);
+  if (!names.has(selected)) selected = exercises[0]?.name;
+  let metric = localStorage.getItem(LIFT_METRIC_KEY) || 'topKg';
+  if (metric !== 'topKg' && metric !== 'volume') metric = 'topKg';
+
+  const paint = () => {
+    localStorage.setItem(LIFT_STORAGE_KEY, selected);
+    localStorage.setItem(LIFT_METRIC_KEY, metric);
+    renderLiftProgress(gymLog, selected, metric);
+  };
+
+  select.onchange = () => {
+    selected = select.value;
+    paint();
+  };
+  presetsEl.onclick = (e) => {
+    const chip = e.target.closest('[data-lift]');
+    if (!chip) return;
+    selected = chip.dataset.lift;
+    paint();
+  };
+  metricEl.onclick = (e) => {
+    const btn = e.target.closest('[data-metric]');
+    if (!btn) return;
+    metric = btn.dataset.metric;
+    paint();
+  };
+
+  paint();
+}
+
 function extractLiftSeries(gymLog, nameMatch, pick) {
   const rows = [];
   gymLog.sessions
@@ -266,6 +472,8 @@ function renderDashboard(profile, gymLog, runLog, insights, album) {
   const goal = profile.prs.snatchGoal || 100;
   const updated = insights?.updated || profile.updated || '';
   document.getElementById('dash-updated').textContent = updated ? `데이터 ${updated}` : '';
+
+  setupLiftProgress(gymLog);
 
   const hang = extractLiftSeries(
     gymLog,

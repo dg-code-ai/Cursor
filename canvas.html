@@ -32,7 +32,24 @@
         <div class="dash-hero" id="dash-hero"></div>
         <p class="hint" id="dash-updated" style="margin:0.25rem 0 0"></p>
 
-        <p class="dash-section-title">어떻게 변해 왔나</p>
+        <p class="dash-section-title">종목 프로그레스</p>
+        <div class="progress-explorer">
+          <div class="progress-explorer__head">
+            <label class="progress-select">
+              <span>운동 종목</span>
+              <select id="dash-lift-select" aria-label="운동 종목 선택"></select>
+            </label>
+            <div class="metric-toggle" id="dash-lift-metric" role="group" aria-label="지표">
+              <button type="button" class="metric-btn active" data-metric="topKg">상한 kg</button>
+              <button type="button" class="metric-btn" data-metric="volume">세션 볼륨</button>
+            </div>
+          </div>
+          <div class="chip-row progress-presets" id="dash-lift-presets"></div>
+          <div id="dash-lift-chart" class="chart-box chart-box--tall"></div>
+          <p class="progress-meta" id="dash-lift-meta"></p>
+        </div>
+
+        <p class="dash-section-title">핵심 추세</p>
         <div class="dash-story">
           <div class="story-card">
             <h2>스내치 · 깊은 리시브</h2>
