@@ -146,6 +146,100 @@ body:has(.lab) .chip.active { background: var(--accent); border-color: var(--acc
   color: var(--text-muted);
   margin: 1.4rem 0 0.65rem;
 }
+.dash-section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.35rem 1rem;
+  margin: 1.4rem 0 0.65rem;
+}
+.dash-section-head .dash-section-title { margin: 0; }
+.dash-section-hint {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+.hero-metric__pick {
+  display: block;
+  margin: -0.15rem 0 0.45rem;
+}
+.hero-metric__pick select {
+  width: 100%;
+  appearance: none;
+  background: transparent
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%235a6573' d='M1 1l4 4 4-4'/%3E%3C/svg%3E")
+    no-repeat right 0.1rem center;
+  border: none;
+  border-bottom: 1px dashed var(--border);
+  border-radius: 0;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.15rem 1.1rem 0.25rem 0;
+  cursor: pointer;
+}
+.hero-metric__pick select:focus {
+  outline: none;
+  border-bottom-color: var(--accent);
+  color: var(--accent);
+}
+.progress-dual {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 0.65rem;
+}
+@media (min-width: 720px) {
+  .progress-dual { grid-template-columns: 1fr 1fr; }
+}
+.progress-pane h3 {
+  margin: 0 0 0.15rem;
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+.progress-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+@media (min-width: 560px) {
+  .progress-stats { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+.progress-stat {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.55rem 0.65rem;
+}
+.progress-stat span {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+.progress-stat strong {
+  display: block;
+  margin-top: 0.15rem;
+  font-family: var(--font-number);
+  font-size: 1.05rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+.progress-stat em {
+  display: block;
+  margin-top: 0.15rem;
+  font-style: normal;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+.progress-stat em.up { color: var(--success); }
+.progress-stat em.down { color: var(--danger); }
 .progress-explorer {
   background: var(--surface);
   border: 1px solid var(--border);

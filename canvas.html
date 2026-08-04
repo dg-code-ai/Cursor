@@ -28,7 +28,10 @@
     <main>
       <!-- DASHBOARD -->
       <section id="panel-dashboard" class="panel active">
-        <p class="dash-section-title">지금 중요한 것</p>
+        <div class="dash-section-head">
+          <p class="dash-section-title" style="margin:0">지금 중요한 것</p>
+          <p class="dash-section-hint">카드마다 지표를 바꿀 수 있습니다</p>
+        </div>
         <div class="dash-hero" id="dash-hero"></div>
         <p class="hint" id="dash-updated" style="margin:0.25rem 0 0"></p>
 
@@ -36,17 +39,23 @@
         <div class="progress-explorer">
           <div class="progress-explorer__head">
             <label class="progress-select">
-              <span>내가 한 종목에서 고르기</span>
+              <span>부위별 · 내가 한 종목</span>
               <select id="dash-lift-select" aria-label="운동 종목 선택"></select>
             </label>
-            <div class="metric-toggle" id="dash-lift-metric" role="group" aria-label="지표">
-              <button type="button" class="metric-btn active" data-metric="topKg">상한 kg</button>
-              <button type="button" class="metric-btn" data-metric="volume">세션 볼륨</button>
-            </div>
           </div>
           <p class="progress-explorer__hint" id="dash-lift-count"></p>
           <div class="chip-row progress-presets" id="dash-lift-presets"></div>
-          <div id="dash-lift-chart" class="chart-box chart-box--tall"></div>
+          <div class="progress-stats" id="dash-lift-stats"></div>
+          <div class="progress-dual">
+            <div class="progress-pane">
+              <h3 id="dash-lift-top-title">상한 kg</h3>
+              <div id="dash-lift-chart-top" class="chart-box"></div>
+            </div>
+            <div class="progress-pane">
+              <h3 id="dash-lift-vol-title">세션 볼륨</h3>
+              <div id="dash-lift-chart-vol" class="chart-box"></div>
+            </div>
+          </div>
           <p class="progress-meta" id="dash-lift-meta"></p>
         </div>
 

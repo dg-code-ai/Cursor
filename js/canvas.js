@@ -271,7 +271,21 @@ const LIFT_PRESETS = [
 ];
 
 const LIFT_STORAGE_KEY = 'lab-lift-progress';
-const LIFT_METRIC_KEY = 'lab-lift-metric';
+const HERO_STORAGE_KEY = 'lab-hero-slots';
+const DEFAULT_HERO_SLOTS = ['hangSnatch', 'bench130', 'easyRunHr'];
+const BODY_PART_ORDER = ['역도', '하체', '가슴', '등', '어깨', '팔', '코어', '기타'];
+
+function bodyPartForExercise(name) {
+  const n = name || '';
+  if (/스내치|클린|저크|오버헤드 스쿼트|스내치 밸런스|판다|인상|용상/.test(n)) return '역도';
+  if (/풀 업|랫|로우|풀 다운|스트레이트 암|리어 플라이|페이스 풀/.test(n)) return '등';
+  if (/벤치|체스트|플라이|펙|딥스/.test(n)) return '가슴';
+  if (/스쿼트|레그|데드|힙|런지|카프|수평 레그|점프/.test(n)) return '하체';
+  if (/숄더|오버헤드 프레스|레터럴|사이드/.test(n)) return '어깨';
+  if (/컬|푸시 다운|트라이|해머|킥백|스컬/.test(n)) return '팔';
+  if (/행잉|코어|플랭크|캐리/.test(n)) return '코어';
+  return '기타';
+}
 
 function listExercises(gymLog) {
   const map = new Map();
@@ -291,7 +305,7 @@ function listExercises(gymLog) {
     .map((e) => {
       const primary =
         Object.entries(e.types).sort((a, b) => b[1] - a[1])[0]?.[0] || '기타';
-      return { ...e, primary };
+      return { ...e, primary, bodyPart: bodyPartForExercise(e.name) };
     })
     .sort((a, b) => b.count - a.count || (a.name > b.name ? 1 : -1));
 }
@@ -343,72 +357,113 @@ function formatLiftDelta(rows, unit) {
   const last = rows[rows.length - 1].value;
   const prev = rows[rows.length - 2].value;
   const d = last - prev;
-  if (d > 0) return `이전 대비 +${d}${unit}`;
-  if (d < 0) return `이전 대비 ${d}${unit}`;
-  return '이전과 동일';
+  if (d > 0) return { text: `▲ +${d}${unit}`, cls: 'up' };
+  if (d < 0) return { text: `▼ ${d}${unit}`, cls: 'down' };
+  return { text: '→ 유지', cls: 'flat' };
 }
 
-function renderLiftProgress(gymLog, name, metric) {
+function seriesBounds(values) {
+  if (!values.length) return { yMin: 0, yMax: 1 };
+  const yPad = Math.max(...values) * 0.08 || 1;
+  return {
+    yMin: Math.max(0, Math.floor(Math.min(...values) - yPad)),
+    yMax: Math.ceil(Math.max(...values) + yPad),
+  };
+}
+
+function renderLiftProgress(gymLog, name) {
   const select = document.getElementById('dash-lift-select');
-  const chartEl = document.getElementById('dash-lift-chart');
+  const topEl = document.getElementById('dash-lift-chart-top');
+  const volEl = document.getElementById('dash-lift-chart-vol');
+  const statsEl = document.getElementById('dash-lift-stats');
   const metaEl = document.getElementById('dash-lift-meta');
-  if (!select || !chartEl || !metaEl) return;
+  const topTitle = document.getElementById('dash-lift-top-title');
+  const volTitle = document.getElementById('dash-lift-vol-title');
+  if (!select || !topEl || !volEl || !metaEl) return;
 
   if (select.value !== name) select.value = name;
-
-  const hasLoad = exerciseHasLoad(gymLog, name);
   document.querySelectorAll('#dash-lift-presets .chip').forEach((c) => {
     c.classList.toggle('active', c.dataset.lift === name);
   });
-  document.querySelectorAll('#dash-lift-metric .metric-btn').forEach((b) => {
-    b.classList.toggle('active', b.dataset.metric === metric);
-    if (b.dataset.metric === 'topKg') {
-      b.textContent = hasLoad ? '상한 kg' : '최고 횟수';
-    } else if (b.dataset.metric === 'volume') {
-      b.textContent = hasLoad ? '세션 볼륨' : '총 횟수';
-    }
-  });
 
-  const rows = seriesForExercise(gymLog, name, metric, hasLoad);
-  if (!rows.length) {
-    chartEl.innerHTML = '<p class="hint">이 종목 기록이 아직 없습니다.</p>';
+  const hasLoad = exerciseHasLoad(gymLog, name);
+  const topRows = seriesForExercise(gymLog, name, 'topKg', hasLoad);
+  const volRows = seriesForExercise(gymLog, name, 'volume', hasLoad);
+  const part = bodyPartForExercise(name);
+
+  if (topTitle) topTitle.textContent = hasLoad ? '상한 kg' : '최고 횟수';
+  if (volTitle) volTitle.textContent = hasLoad ? '세션 볼륨 (kg×reps)' : '총 횟수';
+
+  if (!topRows.length && !volRows.length) {
+    topEl.innerHTML = '<p class="hint">이 종목 기록이 아직 없습니다.</p>';
+    volEl.innerHTML = '';
+    if (statsEl) statsEl.innerHTML = '';
     metaEl.textContent = '';
     return;
   }
 
-  const values = rows.map((r) => r.value);
-  const labels = rows.map((r) => shortDate(r.date));
-  const unit =
-    metric === 'volume' ? (hasLoad ? 'kg·reps' : '총 reps') : hasLoad ? 'kg' : 'reps';
-  const unitShort = metric === 'volume' ? (hasLoad ? '' : '') : hasLoad ? ' kg' : '회';
-  const yPad = Math.max(...values) * 0.08 || 1;
-  const yMin = Math.max(0, Math.floor(Math.min(...values) - yPad));
-  const yMax = Math.ceil(Math.max(...values) + yPad);
+  if (topRows.length) {
+    const values = topRows.map((r) => r.value);
+    const { yMin, yMax } = seriesBounds(values);
+    Charts.lineChart(topEl, {
+      labels: topRows.map((r) => shortDate(r.date)),
+      series: [{ values, color: '#0f766e' }],
+      yMin,
+      yMax,
+      unit: hasLoad ? 'kg' : 'reps',
+    });
+  } else {
+    topEl.innerHTML = '<p class="hint">상한 기록 없음</p>';
+  }
 
-  Charts.lineChart(chartEl, {
-    labels,
-    series: [{ values, color: '#0f766e' }],
-    yMin,
-    yMax,
-    unit,
-  });
+  if (volRows.length) {
+    Charts.barChart(volEl, {
+      labels: volRows.map((r) => shortDate(r.date)),
+      values: volRows.map((r) => r.value),
+      colors: volRows.map(() => '#1d4ed8'),
+      unit: hasLoad ? 'kg·reps' : 'reps',
+    });
+  } else {
+    volEl.innerHTML = '<p class="hint">볼륨 기록 없음</p>';
+  }
 
-  const last = rows[rows.length - 1];
-  const best = Math.max(...values);
-  const delta = formatLiftDelta(rows, hasLoad && metric === 'topKg' ? 'kg' : '');
-  const metricLabel =
-    metric === 'volume' ? (hasLoad ? '세션 볼륨' : '총 횟수') : hasLoad ? '상한' : '최고 세트';
-  const lastDisp =
-    metric === 'volume' && hasLoad
-      ? last.value.toLocaleString()
-      : `${last.value}${unitShort}`;
-  const bestDisp =
-    metric === 'volume' && hasLoad ? best.toLocaleString() : `${best}${unitShort}`;
+  const topLast = topRows[topRows.length - 1];
+  const volLast = volRows[volRows.length - 1];
+  const topBest = topRows.length ? Math.max(...topRows.map((r) => r.value)) : null;
+  const volBest = volRows.length ? Math.max(...volRows.map((r) => r.value)) : null;
+  const topDelta = formatLiftDelta(topRows, hasLoad ? 'kg' : '');
+  const volDelta = formatLiftDelta(volRows, '');
+  const topUnit = hasLoad ? ' kg' : '회';
+  const volFmt = (v) => (hasLoad ? Number(v).toLocaleString() : `${v}회`);
+
+  if (statsEl) {
+    statsEl.innerHTML = `
+      <div class="progress-stat">
+        <span>최근 ${hasLoad ? '상한' : '최고'}</span>
+        <strong>${topLast ? `${topLast.value}${topUnit}` : '—'}</strong>
+        <em class="${topDelta?.cls || ''}">${topDelta?.text || '—'}</em>
+      </div>
+      <div class="progress-stat">
+        <span>최고 ${hasLoad ? '상한' : '세트'}</span>
+        <strong>${topBest != null ? `${topBest}${topUnit}` : '—'}</strong>
+        <em>${topLast ? shortDate(topLast.date) : ''}</em>
+      </div>
+      <div class="progress-stat">
+        <span>최근 볼륨</span>
+        <strong>${volLast ? volFmt(volLast.value) : '—'}</strong>
+        <em class="${volDelta?.cls || ''}">${volDelta?.text || '—'}</em>
+      </div>
+      <div class="progress-stat">
+        <span>최고 볼륨</span>
+        <strong>${volBest != null ? volFmt(volBest) : '—'}</strong>
+        <em>${volLast ? shortDate(volLast.date) : ''}</em>
+      </div>
+    `;
+  }
+
   metaEl.innerHTML = `
-    <strong>${name}</strong> · ${rows.length}회 기록 ·
-    최근 ${metricLabel} <strong>${lastDisp}</strong>
-    (${shortDate(last.date)}) · 최고 ${bestDisp}
-    ${delta ? ` · ${delta}` : ''}
+    <strong>${name}</strong> · ${part} · ${Math.max(topRows.length, volRows.length)}회 기록
+    ${hasLoad ? ' · 상한 + 세션 볼륨' : ' · 횟수 기준 (체중 종목)'}
   `;
 }
 
@@ -416,57 +471,46 @@ function setupLiftProgress(gymLog) {
   const exercises = listExercises(gymLog);
   const select = document.getElementById('dash-lift-select');
   const presetsEl = document.getElementById('dash-lift-presets');
-  const metricEl = document.getElementById('dash-lift-metric');
   const countEl = document.getElementById('dash-lift-count');
-  if (!select || !presetsEl || !metricEl) return;
+  if (!select || !presetsEl) return;
 
   const names = new Set(exercises.map((e) => e.name));
-  const groupOrder = ['Push', 'Pull', 'Leg', 'Olympic', '기타'];
-  const byGroup = {};
+  const byPart = {};
   exercises.forEach((e) => {
-    const g = groupOrder.includes(e.primary) ? e.primary : '기타';
-    (byGroup[g] ||= []).push(e);
+    (byPart[e.bodyPart] ||= []).push(e);
   });
-  select.innerHTML = groupOrder
-    .filter((g) => byGroup[g]?.length)
+  select.innerHTML = BODY_PART_ORDER.filter((g) => byPart[g]?.length)
     .map((g) => {
-      const opts = byGroup[g]
+      const opts = byPart[g]
         .map((e) => `<option value="${e.name}">${e.name} · ${e.count}회</option>`)
         .join('');
       return `<optgroup label="${g}">${opts}</optgroup>`;
     })
     .join('');
+
   if (countEl) {
-    countEl.textContent = `로그에 있는 종목 ${exercises.length}개 · 드롭다운에서 고르세요`;
+    const parts = BODY_PART_ORDER.filter((g) => byPart[g]?.length)
+      .map((g) => `${g} ${byPart[g].length}`)
+      .join(' · ');
+    countEl.textContent = `총 ${exercises.length}종목 · ${parts}`;
   }
 
   const presetNames = LIFT_PRESETS.filter((n) => names.has(n));
-  const extras = exercises.filter((e) => !presetNames.includes(e.name)).slice(0, 4);
-  const chips = [
-    ...presetNames.map((n) => ({
-      name: n,
-      short: n.replace(/^바벨 |^머신 |^덤벨 |^케이블 /, ''),
-    })),
-    ...extras.map((e) => ({
-      name: e.name,
-      short: e.name.replace(/^바벨 |^머신 |^덤벨 |^케이블 /, '').slice(0, 10),
-    })),
-  ];
-  presetsEl.innerHTML = chips
-    .map((c) => `<button type="button" class="chip" data-lift="${c.name}">${c.short}</button>`)
+  presetsEl.innerHTML = presetNames
+    .map((n) => {
+      const short = n.replace(/^바벨 |^머신 |^덤벨 |^케이블 /, '');
+      return `<button type="button" class="chip" data-lift="${n}">${short}</button>`;
+    })
     .join('');
 
   let selected =
     localStorage.getItem(LIFT_STORAGE_KEY) ||
     (names.has('벤치 프레스') ? '벤치 프레스' : exercises[0]?.name);
   if (!names.has(selected)) selected = exercises[0]?.name;
-  let metric = localStorage.getItem(LIFT_METRIC_KEY) || 'topKg';
-  if (metric !== 'topKg' && metric !== 'volume') metric = 'topKg';
 
   const paint = () => {
     localStorage.setItem(LIFT_STORAGE_KEY, selected);
-    localStorage.setItem(LIFT_METRIC_KEY, metric);
-    renderLiftProgress(gymLog, selected, metric);
+    renderLiftProgress(gymLog, selected);
   };
 
   select.onchange = () => {
@@ -479,11 +523,226 @@ function setupLiftProgress(gymLog) {
     selected = chip.dataset.lift;
     paint();
   };
-  metricEl.onclick = (e) => {
-    const btn = e.target.closest('[data-metric]');
-    if (!btn) return;
-    metric = btn.dataset.metric;
-    paint();
+
+  paint();
+}
+
+function liftTopSeries(gymLog, nameExact) {
+  return extractLiftSeries(gymLog, (n) => n === nameExact, topKgFromExercise);
+}
+
+function liftNameIncludesSeries(gymLog, needle) {
+  return extractLiftSeries(
+    gymLog,
+    (n) => n.includes(needle),
+    (ex) => topKgFromExercise(ex) ?? bestRepsFromExercise(ex)
+  );
+}
+
+function bench130Series(gymLog) {
+  const rows = [];
+  gymLog.sessions
+    .slice()
+    .sort((a, b) => (a.date > b.date ? 1 : -1))
+    .forEach((s) => {
+      (s.exercises || []).forEach((ex) => {
+        if (ex.name !== '벤치 프레스') return;
+        const at130 = (ex.sets || []).filter((x) => (x.kg || 0) >= 130 && (x.reps || 0) > 0);
+        if (!at130.length) return;
+        const bestReps = Math.max(...at130.filter((x) => x.kg === 130).map((x) => x.reps || 0), 0);
+        rows.push({
+          date: s.date,
+          value: bestReps || Math.max(...at130.map((x) => x.reps || 0)),
+        });
+      });
+    });
+  return rows;
+}
+
+function pullupTotalSeries(gymLog) {
+  return extractLiftSeries(gymLog, (n) => n === '풀 업', totalRepsFromExercise);
+}
+
+function buildHeroCatalog(profile, gymLog, runLog) {
+  const goal = profile.prs.snatchGoal || 100;
+  const hang = liftNameIncludesSeries(gymLog, '행 스내치');
+  const oh = liftNameIncludesSeries(gymLog, '오버헤드 스쿼트');
+  const squat = liftTopSeries(gymLog, '스쿼트');
+  const dead = liftTopSeries(gymLog, '데드리프트');
+  const bench = liftTopSeries(gymLog, '벤치 프레스');
+  const bench130 = bench130Series(gymLog);
+  const pull = pullupTotalSeries(gymLog);
+  const row = liftTopSeries(gymLog, '바벨 로우');
+  const runs = [...runLog.sessions]
+    .filter((r) => r.avgHr)
+    .sort((a, b) => (a.date > b.date ? 1 : -1));
+  const lastRun = runs[runs.length - 1];
+  const longest = Math.max(...runLog.sessions.map((r) => r.distanceKm || 0), 0);
+  const hangPr = profile.prs.hangSquatSnatch || hang[hang.length - 1]?.value || null;
+
+  const fromSeries = (rows, unit, note, opts = {}) => {
+    const last = opts.lastOverride != null ? opts.lastOverride : rows[rows.length - 1]?.value ?? null;
+    const prev = rows.length >= 2 ? rows[rows.length - 2].value : null;
+    const delta = last != null && prev != null ? last - prev : null;
+    return { value: last, unit, delta, deltaUnit: opts.deltaUnit ?? unit, note, suffix: opts.suffix };
+  };
+
+  return [
+    {
+      id: 'hangSnatch',
+      label: '행 스쿼트 스내치',
+      ...fromSeries(hang, 'kg', '깊이 있는 리시브가 목표의 핵심 지표입니다.', {
+        lastOverride: hangPr,
+        suffix: `/ ${goal}`,
+      }),
+    },
+    {
+      id: 'ohSquat',
+      label: 'OH 스쿼트',
+      ...fromSeries(oh, 'kg', '오버헤드 안정 상한'),
+    },
+    {
+      id: 'bench130',
+      label: '벤치 130 작업',
+      ...fromSeries(bench130, 'reps', '서브맥스 반복 · 4회가 최근 목표선', { deltaUnit: '' }),
+    },
+    {
+      id: 'benchTop',
+      label: '벤치 상한',
+      ...fromSeries(bench, 'kg', '세션 최고 중량'),
+    },
+    {
+      id: 'squatTop',
+      label: '스쿼트 상한',
+      ...fromSeries(squat, 'kg', '세션 최고 중량'),
+    },
+    {
+      id: 'deadTop',
+      label: '데드 상한',
+      ...fromSeries(dead, 'kg', '세션 최고 중량'),
+    },
+    {
+      id: 'pullupTotal',
+      label: '풀업 총횟수',
+      ...fromSeries(pull, '회', '세션 총 반복', { deltaUnit: '' }),
+    },
+    {
+      id: 'rowTop',
+      label: '바벨 로우 상한',
+      ...fromSeries(row, 'kg', '등 메인 상한'),
+    },
+    {
+      id: 'easyRunHr',
+      label: '최근 이지 런',
+      value: lastRun?.avgHr ?? null,
+      unit: 'bpm',
+      delta: null,
+      deltaUnit: '',
+      note: lastRun
+        ? `${lastRun.distanceKm}km · ${lastRun.pacePerKm || ''}`
+        : '다음 런부터 HR이 점수',
+      status:
+        lastRun == null ? null : lastRun.avgHr <= 145 ? '이지 밴드 안' : '너무 높음 · 135–145 목표',
+      statusOk: lastRun == null ? null : lastRun.avgHr <= 145,
+    },
+    {
+      id: 'longestRun',
+      label: '최장 런',
+      value: longest || null,
+      unit: 'km',
+      delta: null,
+      deltaUnit: '',
+      note: '시즌 최장 거리',
+    },
+    {
+      id: 'bodyWeight',
+      label: '체중',
+      value: profile.body?.weightKg ?? null,
+      unit: 'kg',
+      delta: null,
+      deltaUnit: '',
+      note: '유지 구간 105–107 참고',
+    },
+    {
+      id: 'snatchGoal',
+      label: '스내치 목표 진행',
+      value: hangPr != null ? Math.round((hangPr / goal) * 100) : null,
+      unit: '%',
+      delta: null,
+      deltaUnit: '',
+      note: `${hangPr ?? '—'} → ${goal} kg`,
+      suffix: '',
+    },
+  ];
+}
+
+function loadHeroSlots(catalog) {
+  let slots;
+  try {
+    slots = JSON.parse(localStorage.getItem(HERO_STORAGE_KEY) || 'null');
+  } catch {
+    slots = null;
+  }
+  if (!Array.isArray(slots) || slots.length !== 3) slots = [...DEFAULT_HERO_SLOTS];
+  const ids = new Set(catalog.map((c) => c.id));
+  return slots.map((id, i) => (ids.has(id) ? id : DEFAULT_HERO_SLOTS[i]));
+}
+
+function setupHeroMetrics(profile, gymLog, runLog) {
+  const root = document.getElementById('dash-hero');
+  if (!root) return;
+  const catalog = buildHeroCatalog(profile, gymLog, runLog);
+  const byId = Object.fromEntries(catalog.map((c) => [c.id, c]));
+
+  const paint = () => {
+    const slots = loadHeroSlots(catalog);
+    const options = catalog
+      .map((c) => `<option value="${c.id}">${c.label}</option>`)
+      .join('');
+
+    root.innerHTML = slots
+      .map((id, i) => {
+        const m = byId[id] || catalog[0];
+        let deltaHtml;
+        if (m.status != null) {
+          const cls = m.statusOk === true ? 'up' : m.statusOk === false ? 'down' : 'flat';
+          deltaHtml = `<span class="hero-metric__delta ${cls}">${m.status}</span>`;
+        } else if (m.delta == null) {
+          deltaHtml = `<span class="hero-metric__delta flat">기준점 수집 중</span>`;
+        } else if (m.delta > 0) {
+          deltaHtml = `<span class="hero-metric__delta up">▲ +${m.delta}${m.deltaUnit || ''} 상승</span>`;
+        } else if (m.delta < 0) {
+          deltaHtml = `<span class="hero-metric__delta down">▼ ${m.delta}${m.deltaUnit || ''}</span>`;
+        } else {
+          deltaHtml = `<span class="hero-metric__delta flat">→ 유지</span>`;
+        }
+
+        const unitBits = [
+          m.suffix ? `<span class="hero-metric__unit">${m.suffix}</span>` : '',
+          m.unit ? `<span class="hero-metric__unit">${m.unit}</span>` : '',
+        ].join(' ');
+
+        return `
+      <article class="hero-metric ${i === 0 ? 'hero-metric--primary' : ''}">
+        <label class="hero-metric__pick">
+          <select data-slot="${i}" aria-label="지표 ${i + 1} 선택">${options}</select>
+        </label>
+        <div><span class="hero-metric__value">${m.value ?? '—'}</span>${unitBits}</div>
+        ${deltaHtml}
+        <p class="hero-metric__note">${m.note || ''}</p>
+      </article>`;
+      })
+      .join('');
+
+    root.querySelectorAll('select[data-slot]').forEach((sel) => {
+      sel.value = slots[Number(sel.dataset.slot)];
+      sel.onchange = () => {
+        const next = loadHeroSlots(catalog);
+        next[Number(sel.dataset.slot)] = sel.value;
+        localStorage.setItem(HERO_STORAGE_KEY, JSON.stringify(next));
+        paint();
+      };
+    });
   };
 
   paint();
@@ -510,6 +769,7 @@ function renderDashboard(profile, gymLog, runLog, insights, album) {
   const updated = insights?.updated || profile.updated || '';
   document.getElementById('dash-updated').textContent = updated ? `데이터 ${updated}` : '';
 
+  setupHeroMetrics(profile, gymLog, runLog);
   setupLiftProgress(gymLog);
 
   const hang = extractLiftSeries(
@@ -529,62 +789,11 @@ function renderDashboard(profile, gymLog, runLog, insights, album) {
     }
   );
 
-  const benchRows = [];
-  gymLog.sessions
-    .slice()
-    .sort((a, b) => (a.date > b.date ? 1 : -1))
-    .forEach((s) => {
-      (s.exercises || []).forEach((ex) => {
-        if (ex.name !== '벤치 프레스') return;
-        const at130 = (ex.sets || []).filter((x) => (x.kg || 0) >= 130 && (x.reps || 0) > 0);
-        if (!at130.length) return;
-        const bestReps = Math.max(...at130.filter((x) => x.kg === 130).map((x) => x.reps || 0), 0);
-        benchRows.push({
-          date: s.date,
-          reps: bestReps || Math.max(...at130.map((x) => x.reps || 0)),
-        });
-      });
-    });
-
+  const benchRows = bench130Series(gymLog).map((r) => ({ date: r.date, reps: r.value }));
   const runs = [...runLog.sessions]
     .filter((r) => r.avgHr)
     .sort((a, b) => (a.date > b.date ? 1 : -1));
-  const lastRun = runs[runs.length - 1];
-  const easyOk = lastRun ? lastRun.avgHr <= 145 : null;
-  const hangPrev = hang.length > 1 ? hang[hang.length - 2].value : null;
-  const hangDelta = hangPrev != null ? hangSq - hangPrev : null;
   const benchLast = benchRows.length ? benchRows[benchRows.length - 1].reps : null;
-  const benchPrev = benchRows.length > 1 ? benchRows[benchRows.length - 2].reps : null;
-
-  const deltaHtml = (d, unit = '') => {
-    if (d == null) return `<span class="hero-metric__delta flat">기준점 수집 중</span>`;
-    if (d > 0) return `<span class="hero-metric__delta up">▲ +${d}${unit} 상승</span>`;
-    if (d < 0) return `<span class="hero-metric__delta down">▼ ${d}${unit}</span>`;
-    return `<span class="hero-metric__delta flat">→ 유지</span>`;
-  };
-
-  document.getElementById('dash-hero').innerHTML = `
-    <article class="hero-metric hero-metric--primary">
-      <span class="hero-metric__label">스쿼트 스내치 (행)</span>
-      <div><span class="hero-metric__value">${hangSq}</span><span class="hero-metric__unit">/ ${goal} kg</span></div>
-      ${deltaHtml(hangDelta, 'kg')}
-      <p class="hero-metric__note">깊이 있는 리시브가 목표의 핵심 지표입니다.</p>
-    </article>
-    <article class="hero-metric">
-      <span class="hero-metric__label">벤치 130 작업</span>
-      <div><span class="hero-metric__value">${benchLast ?? '—'}</span><span class="hero-metric__unit">reps</span></div>
-      ${deltaHtml(benchLast != null && benchPrev != null ? benchLast - benchPrev : null, '')}
-      <p class="hero-metric__note">서브맥스 반복 · 4회가 최근 목표선</p>
-    </article>
-    <article class="hero-metric">
-      <span class="hero-metric__label">최근 이지 런</span>
-      <div><span class="hero-metric__value">${lastRun ? lastRun.avgHr : '—'}</span><span class="hero-metric__unit">bpm</span></div>
-      <span class="hero-metric__delta ${easyOk === true ? 'up' : easyOk === false ? 'down' : 'flat'}">
-        ${easyOk === true ? '이지 밴드 안' : easyOk === false ? '너무 높음 · 135–145 목표' : '기록 없음'}
-      </span>
-      <p class="hero-metric__note">${lastRun ? `${lastRun.distanceKm}km · ${lastRun.pacePerKm || ''}` : '다음 런부터 HR이 점수'}</p>
-    </article>
-  `;
 
   Charts.lineChart(document.getElementById('dash-hang-snatch'), {
     labels: hang.map((h) => shortDate(h.date)),
