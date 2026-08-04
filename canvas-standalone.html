@@ -1225,27 +1225,116 @@ textarea:focus {
   margin: 0 auto;
 }
 
+/* Coaching insights */
+.insights { display: grid; gap: 0.75rem; }
+.insight-latest { padding: 0.75rem; border-radius: 10px; background: #151b24; border: 1px solid #243044; }
+.insight-ex { margin-top: 0.5rem; padding: 0.5rem 0.65rem; border-radius: 8px; background: #0f1419; }
+.insight-ex summary { cursor: pointer; color: #e2e8f0; }
+.insight-ex p { margin: 0.35rem 0 0; font-size: 0.9rem; color: #94a3b8; line-height: 1.45; }
+.insight-ex em { color: #60a5fa; font-style: normal; margin-right: 0.35rem; }
+.insight-trends { display: grid; gap: 0.5rem; margin-top: 0.75rem; }
+.insight-trend { padding: 0.6rem 0.75rem; border-left: 3px solid #34d399; background: #151b24; border-radius: 0 8px 8px 0; }
+.insight-trend p { margin: 0.25rem 0 0; color: #94a3b8; font-size: 0.9rem; }
+.insight-chart { width: 100%; height: auto; border-radius: 10px; border: 1px solid #243044; display: block; }
+
+.album-months {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+.album-month {
+  background: #151b24;
+  border: 1px solid #243044;
+  border-radius: 8px;
+  padding: 0.55rem 0.65rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+.album-month strong { color: #e2e8f0; }
+.album-month span { color: #94a3b8; }
+
   </style>
 </head>
 <body>
-
-  <div class="app lab">
+<div class="app lab">
     <header class="header">
       <div class="header__brand">
         <p class="eyebrow"><a href="anatomy.html">해부학 가이드</a> · <a href="index.html">역도 기록</a></p>
         <h1>트레이닝 캔버스</h1>
-        <p class="subtitle">계획은 계획대로 · 결과는 그래프로</p>
+        <p class="subtitle">대시보드 · 계획 · 코칭 인사이트</p>
       </div>
       <nav class="tabs canvas-tabs" role="tablist">
-        <button class="tab active" data-panel="plan" role="tab">계획</button>
-        <button class="tab" data-panel="results" role="tab">결과</button>
+        <button class="tab active" data-panel="dashboard" role="tab">대시보드</button>
+        <button class="tab" data-panel="plan" role="tab">계획</button>
+        <button class="tab" data-panel="results" role="tab">로그</button>
         <button class="tab" data-panel="profile" role="tab">프로필</button>
       </nav>
     </header>
 
     <main>
+      <!-- DASHBOARD -->
+      <section id="panel-dashboard" class="panel active">
+        <div class="card">
+          <div class="card-header">
+            <h2>한눈에</h2>
+            <span class="hint" id="dash-updated"></span>
+          </div>
+          <div class="kpi-row" id="dash-kpi"></div>
+        </div>
+
+        <div class="split-panels">
+          <div class="card">
+            <h2>스내치 진행</h2>
+            <p class="hint">행 스쿼트 리시브 상한 kg · 점선 = 목표 100</p>
+            <div id="dash-hang-snatch" class="chart-box"></div>
+            <p class="hint" id="dash-hang-verdict"></p>
+          </div>
+          <div class="card">
+            <h2>OH 스쿼트 상한</h2>
+            <p class="hint">오버헤드 스쿼트 최고 작업 kg</p>
+            <div id="dash-oh-squat" class="chart-box"></div>
+          </div>
+        </div>
+
+        <div class="split-panels">
+          <div class="card">
+            <h2>벤치 130 작업횟수</h2>
+            <p class="hint">서브맥스 과부하 · 점선 = 목표 4회</p>
+            <div id="dash-bench-130" class="chart-box"></div>
+            <p class="hint" id="dash-bench-verdict"></p>
+          </div>
+          <div class="card">
+            <h2>이지 런 심박</h2>
+            <p class="hint">초록 밴드 = HR 135-145 · 막대=거리</p>
+            <div id="dash-run-hr" class="chart-box"></div>
+            <p class="hint" id="dash-run-verdict"></p>
+          </div>
+        </div>
+
+        <div class="split-panels">
+          <div class="card">
+            <h2>목표 게이지</h2>
+            <div id="dash-gauges" class="goal-gauges"></div>
+          </div>
+          <div class="card">
+            <h2>최근 코칭</h2>
+            <div id="dash-latest-coach" class="insights"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>앨범 아카이브</h2>
+          <p class="hint">공유앨범 전체 · 로그에 아직 안 넣은 과거 기록 정리 현황</p>
+          <div class="kpi-row" id="dash-album-kpi"></div>
+          <div id="dash-album-months" class="album-months"></div>
+        </div>
+      </section>
+
       <!-- PLAN -->
-      <section id="panel-plan" class="panel active">
+      <section id="panel-plan" class="panel">
         <div class="card">
           <h2>이번 주 체크리스트</h2>
           <p class="hint" id="week-note"></p>
@@ -1253,7 +1342,7 @@ textarea:focus {
         </div>
 
         <div class="card">
-          <h2>주간 골격 (다음 주부터)</h2>
+          <h2>주간 골격</h2>
           <div id="week-skeleton" class="week-skeleton"></div>
           <ul class="guide-list" id="principles"></ul>
         </div>
@@ -1276,53 +1365,45 @@ textarea:focus {
         </div>
       </section>
 
-      <!-- RESULTS -->
+      <!-- RESULTS / LOG -->
       <section id="panel-results" class="panel">
         <div class="card">
+          <h2>코칭 인사이트 (세션 상세)</h2>
+          <p class="hint">왜 · 회고 · 다음</p>
+          <div id="coaching-insights" class="insights"></div>
+        </div>
+
+        <div class="card">
           <div class="card-header">
-            <h2>한눈에 보는 결과</h2>
+            <h2>세션 타임라인</h2>
             <div class="chip-row" id="result-filters">
               <button class="chip active" data-type="all">전체</button>
               <button class="chip" data-type="Pull">Pull</button>
               <button class="chip" data-type="Push">Push</button>
               <button class="chip" data-type="Leg">Leg</button>
               <button class="chip" data-type="Run">러닝</button>
+              <button class="chip" data-type="Olympic">역도</button>
             </div>
           </div>
           <div class="kpi-row" id="kpi-row"></div>
+          <span class="hint" id="session-count"></span>
+          <div id="timeline" class="timeline"></div>
         </div>
 
         <div class="split-panels">
           <div class="card">
             <h2>헬스 볼륨 추이</h2>
-            <p class="hint">세션 총 kg (참고) · 막대 색 = 분할</p>
             <div id="chart-gym-volume" class="chart-box"></div>
           </div>
           <div class="card">
-            <h2>러닝 거리 추이</h2>
-            <p class="hint">km · 점선 = 이번 주말 목표(7km)</p>
+            <h2>러닝 거리</h2>
             <div id="chart-run-distance" class="chart-box"></div>
           </div>
         </div>
 
-        <div class="split-panels">
-          <div class="card">
-            <h2>목표 게이지</h2>
-            <div id="goal-gauges" class="goal-gauges"></div>
-          </div>
-          <div class="card">
-            <h2>핵심 작업세트</h2>
-            <p class="hint">과부하(↑) 표시 · 숫자 나열 대신 카드</p>
-            <div id="highlights" class="highlights highlights--cards"></div>
-          </div>
-        </div>
-
         <div class="card">
-          <div class="card-header">
-            <h2>세션 로그</h2>
-            <span class="hint" id="session-count"></span>
-          </div>
-          <div id="timeline" class="timeline"></div>
+          <h2>핵심 작업세트</h2>
+          <div id="highlights" class="highlights highlights--cards"></div>
         </div>
       </section>
 
@@ -1346,10 +1427,6 @@ textarea:focus {
       </section>
     </main>
   </div>
-
-  
-  
-
   <script>
 /** Lightweight SVG charts — no external deps */
 
@@ -1525,7 +1602,113 @@ function gauge(container, { label, pct, sub }) {
   container.appendChild(wrap);
 }
 
-window.Charts = { barChart, hBarChart, donutChart, gauge };
+/** Line chart with optional band and target */
+function lineChart(container, { labels, series, yMin, yMax, band, targetLine, unit = '' }) {
+  container.innerHTML = '';
+  const w = 400;
+  const h = 200;
+  const pad = { t: 20, r: 14, b: 36, l: 40 };
+  const innerW = w - pad.l - pad.r;
+  const innerH = h - pad.t - pad.b;
+  const allVals = series.flatMap((s) => s.values.filter((v) => v != null));
+  const minV = yMin != null ? yMin : Math.min(...allVals, targetLine || Infinity, band?.[0] ?? Infinity);
+  const maxV = yMax != null ? yMax : Math.max(...allVals, targetLine || 0, band?.[1] ?? 0);
+  const span = Math.max(maxV - minV, 1);
+  const n = Math.max(labels.length, 1);
+  const xAt = (i) => pad.l + (n === 1 ? innerW / 2 : (i / (n - 1)) * innerW);
+  const yAt = (v) => pad.t + innerH * (1 - (v - minV) / span);
+
+  const svg = el('svg', { viewBox: `0 0 ${w} ${h}`, class: 'chart-svg', role: 'img' });
+
+  for (let i = 0; i <= 3; i++) {
+    const y = pad.t + (innerH * i) / 3;
+    const val = Math.round(maxV - (span * i) / 3);
+    svg.appendChild(el('line', { x1: pad.l, y1: y, x2: w - pad.r, y2: y, stroke: '#2d3a4f', 'stroke-width': '1' }));
+    svg.appendChild(el('text', { x: pad.l - 6, y: y + 3, fill: '#8b9cb3', 'font-size': '9', 'text-anchor': 'end' }, [String(val)]));
+  }
+
+  if (band && band.length === 2) {
+    const y1 = yAt(band[1]);
+    const y2 = yAt(band[0]);
+    svg.appendChild(
+      el('rect', {
+        x: pad.l,
+        y: y1,
+        width: innerW,
+        height: Math.max(y2 - y1, 1),
+        fill: '#34d399',
+        opacity: '0.12',
+      })
+    );
+  }
+
+  if (targetLine != null) {
+    const ty = yAt(targetLine);
+    svg.appendChild(
+      el('line', {
+        x1: pad.l,
+        y1: ty,
+        x2: w - pad.r,
+        y2: ty,
+        stroke: '#34d399',
+        'stroke-width': '1.5',
+        'stroke-dasharray': '4 3',
+      })
+    );
+  }
+
+  series.forEach((s) => {
+    const pts = s.values
+      .map((v, i) => (v == null ? null : `${xAt(i)},${yAt(v)}`))
+      .filter(Boolean)
+      .join(' ');
+    if (pts) {
+      svg.appendChild(
+        el('polyline', {
+          points: pts,
+          fill: 'none',
+          stroke: s.color || '#3b82f6',
+          'stroke-width': '2.5',
+          'stroke-linejoin': 'round',
+          'stroke-linecap': 'round',
+        })
+      );
+    }
+    s.values.forEach((v, i) => {
+      if (v == null) return;
+      svg.appendChild(el('circle', { cx: xAt(i), cy: yAt(v), r: 4, fill: s.color || '#3b82f6' }));
+      svg.appendChild(
+        el('text', {
+          x: xAt(i),
+          y: yAt(v) - 8,
+          fill: '#e2e8f0',
+          'font-size': '9',
+          'text-anchor': 'middle',
+        }, [String(v)])
+      );
+    });
+  });
+
+  labels.forEach((lab, i) => {
+    svg.appendChild(
+      el('text', {
+        x: xAt(i),
+        y: h - 12,
+        fill: '#8b9cb3',
+        'font-size': '9',
+        'text-anchor': 'middle',
+      }, [lab])
+    );
+  });
+
+  if (unit) {
+    svg.appendChild(el('text', { x: pad.l, y: 12, fill: '#8b9cb3', 'font-size': '9' }, [unit]));
+  }
+
+  container.appendChild(svg);
+}
+
+window.Charts = { barChart, hBarChart, donutChart, gauge, lineChart };
 
   </script>
   <script>
@@ -1619,9 +1802,65 @@ function renderPlan(plan) {
   document.getElementById('run-roadmap').innerHTML = road(plan.runRoadmap);
 
   document.getElementById('next-gym-when').textContent = plan.nextGymPrescription.when;
-  document.getElementById('next-gym-items').innerHTML = plan.nextGymPrescription.items
-    .map((i) => `<li>${i}</li>`)
+  const ng = plan.nextGymPrescription;
+  let items = ng.items;
+  if (!items) {
+    items = [];
+    if (ng.session) {
+      items = ng.session.map((s) =>
+        typeof s === 'string' ? s : `${s.name}: ${s.scheme}${s.note ? ' — ' + s.note : ''}`
+      );
+    }
+    if (ng.B_tech) items = items.concat(ng.B_tech.map((s) => `[테크] ${s.name}: ${s.scheme}`));
+    if (ng.C_pull_rotation_B) items = items.concat(ng.C_pull_rotation_B.map((s) => `[등] ${s.name}: ${s.scheme}`));
+    if (ng.A_warmup_functional) items = ng.A_warmup_functional.map((s) => `[워밍업] ${s}`).concat(items);
+    if (ng.avoid) items.push('피하기: ' + ng.avoid.join(', '));
+  }
+  document.getElementById('next-gym-items').innerHTML = items.map((i) => `<li>${i}</li>`).join('');
+}
+
+function renderInsights(insights) {
+  const root = document.getElementById('coaching-insights');
+  if (!root || !insights) return;
+  const dates = Object.keys(insights.sessionReviews || {}).sort().reverse();
+  const latest = dates[0];
+  const rev = latest ? insights.sessionReviews[latest] : null;
+  const trendHtml = Object.values(insights.trends || {})
+    .map(
+      (t) => `
+      <div class="insight-trend">
+        <strong>${t.title}</strong>
+        <p>${t.verdict}</p>
+      </div>`
+    )
     .join('');
+  const exHtml = (rev?.exercises || [])
+    .slice(0, 4)
+    .map(
+      (ex) => `
+      <details class="insight-ex">
+        <summary><strong>${ex.name}</strong> — 왜?</summary>
+        <p><em>원리</em> ${ex.why}</p>
+        <p><em>오늘</em> ${ex.whatHappened}</p>
+        <p><em>아쉬운 점</em> ${ex.couldImprove}</p>
+        <p><em>다음</em> ${ex.next}</p>
+      </details>`
+    )
+    .join('');
+  root.innerHTML = `
+    <p class="hint">기준: ${(insights.coachingStandard || []).join(' · ')}</p>
+    ${
+      rev
+        ? `<div class="insight-latest">
+      <strong>최근 세션 ${latest}</strong> · ${rev.grade}
+      <p>${rev.direction}</p>
+      ${exHtml}
+      ${rev.missedFunctional ? `<p class="hint">${rev.missedFunctional}</p>` : ''}
+    </div>`
+        : ''
+    }
+    <div class="insight-trends">${trendHtml}</div>
+  `;
 }
 
 /* ---- PROFILE ---- */
@@ -1657,7 +1896,7 @@ function renderProfile(profile) {
   });
 
   document.getElementById('pr-stats').innerHTML = `
-    <div class="pill"><span>10k 베스트</span><strong>${profile.prs.tenKBest.timeMin}분</strong></div>
+    <div class="pill"><span>10k 베스트</span><strong>${(profile.prs.tenKBest.timeDisplay || (profile.prs.tenKBest.timeMin + '분'))}</strong></div>
     <div class="pill"><span>스내치 목표</span><strong>${profile.prs.snatchGoal}kg</strong></div>
   `;
 
@@ -1713,8 +1952,169 @@ function renderKpis(gymLog, runLog, profile) {
     <div class="kpi"><span>최근 풀업</span><strong>${pullUps?.workingHighlight || '—'}</strong></div>
     <div class="kpi"><span>최장 런</span><strong>${longestRun} km</strong></div>
     <div class="kpi"><span>파워스내치</span><strong>${profile.prs.powerSnatch}</strong></div>
-    <div class="kpi"><span>10k 베스트</span><strong>${profile.prs.tenKBest.timeMin}분</strong></div>
+    <div class="kpi"><span>10k 베스트</span><strong>${(profile.prs.tenKBest.timeDisplay || (profile.prs.tenKBest.timeMin + '분'))}</strong></div>
   `;
+}
+
+function shortDate(d) {
+  return d.slice(5).replace('-', '/');
+}
+
+function extractLiftSeries(gymLog, nameMatch, pick) {
+  const rows = [];
+  gymLog.sessions
+    .slice()
+    .sort((a, b) => (a.date > b.date ? 1 : -1))
+    .forEach((s) => {
+      (s.exercises || []).forEach((ex) => {
+        if (!nameMatch(ex.name || '')) return;
+        const v = pick(ex, s);
+        if (v != null) rows.push({ date: s.date, value: v, ex });
+      });
+    });
+  return rows;
+}
+
+function renderDashboard(profile, gymLog, runLog, insights, album) {
+  const hangSq = profile.prs.hangSquatSnatch || 0;
+  const updated = insights?.updated || profile.updated || '';
+  document.getElementById('dash-updated').textContent = updated ? `업데이트 ${updated}` : '';
+
+  const gymN = gymLog.sessions.length;
+  const runN = runLog.sessions.length;
+  const longest = Math.max(...runLog.sessions.map((r) => r.distanceKm || 0), 0);
+  document.getElementById('dash-kpi').innerHTML = `
+    <div class="kpi"><span>헬스 세션</span><strong>${gymN}</strong></div>
+    <div class="kpi"><span>러닝</span><strong>${runN}</strong></div>
+    <div class="kpi"><span>행 스쿼트</span><strong>${hangSq}kg</strong></div>
+    <div class="kpi"><span>벤치 PR</span><strong>${profile.prs.benchPress}</strong></div>
+    <div class="kpi"><span>최장 런</span><strong>${longest}km</strong></div>
+    <div class="kpi"><span>앨범 사진</span><strong>${album?.totalPhotos?.toLocaleString?.() || album?.totalPhotos || '—'}</strong></div>
+  `;
+
+  // Hang snatch max kg per session
+  const hang = extractLiftSeries(
+    gymLog,
+    (n) => n.includes('행 스내치'),
+    (ex) => {
+      const kgs = (ex.sets || []).map((s) => s.kg || 0).filter((k) => k > 0);
+      return kgs.length ? Math.max(...kgs) : null;
+    }
+  );
+  Charts.lineChart(document.getElementById('dash-hang-snatch'), {
+    labels: hang.map((h) => shortDate(h.date)),
+    series: [{ values: hang.map((h) => h.value), color: '#a78bfa' }],
+    yMin: 30,
+    yMax: 110,
+    targetLine: 100,
+    unit: 'kg',
+  });
+  document.getElementById('dash-hang-verdict').textContent =
+    insights?.trends?.hangSnatchDeep?.verdict || '행 깊은 리시브 추세';
+
+  const oh = extractLiftSeries(
+    gymLog,
+    (n) => n.includes('오버헤드 스쿼트'),
+    (ex) => {
+      const kgs = (ex.sets || []).map((s) => s.kg || 0).filter((k) => k > 0);
+      return kgs.length ? Math.max(...kgs) : null;
+    }
+  );
+  Charts.barChart(document.getElementById('dash-oh-squat'), {
+    labels: oh.map((h) => shortDate(h.date)),
+    values: oh.map((h) => h.value),
+    colors: oh.map(() => '#60a5fa'),
+    unit: 'kg',
+  });
+
+  // Bench best reps at >=130
+  const benchRows = [];
+  gymLog.sessions
+    .slice()
+    .sort((a, b) => (a.date > b.date ? 1 : -1))
+    .forEach((s) => {
+      (s.exercises || []).forEach((ex) => {
+        if (ex.name !== '벤치 프레스') return;
+        const at130 = (ex.sets || []).filter((x) => (x.kg || 0) >= 130 && (x.reps || 0) > 0);
+        if (!at130.length) return;
+        const bestReps = Math.max(...at130.filter((x) => x.kg === 130).map((x) => x.reps || 0), 0);
+        const topKg = Math.max(...at130.map((x) => x.kg || 0));
+        benchRows.push({
+          date: s.date,
+          reps: bestReps || Math.max(...at130.map((x) => x.reps || 0)),
+          topKg,
+        });
+      });
+    });
+  Charts.barChart(document.getElementById('dash-bench-130'), {
+    labels: benchRows.map((b) => shortDate(b.date)),
+    values: benchRows.map((b) => b.reps),
+    colors: benchRows.map((b) => (b.reps >= 4 ? '#34d399' : '#3b82f6')),
+    targetLine: 4,
+    unit: 'reps @ 130',
+  });
+  document.getElementById('dash-bench-verdict').textContent =
+    insights?.trends?.bench130?.verdict || '';
+
+  // Run: distance bars + HR line — use dual via line for HR and bar for distance separately in one box: show HR line with easy band
+  const runs = [...runLog.sessions]
+    .filter((r) => r.avgHr)
+    .sort((a, b) => (a.date > b.date ? 1 : -1));
+  Charts.lineChart(document.getElementById('dash-run-hr'), {
+    labels: runs.map((r) => shortDate(r.date)),
+    series: [
+      { values: runs.map((r) => r.avgHr), color: '#f87171' },
+      { values: runs.map((r) => Math.round((r.distanceKm || 0) * 20)), color: '#64748b' },
+    ],
+    yMin: 100,
+    yMax: 200,
+    band: [135, 145],
+    unit: 'HR (회색=km×20)',
+  });
+  document.getElementById('dash-run-verdict').textContent =
+    insights?.trends?.easyRun?.verdict || '';
+
+  const gauges = document.getElementById('dash-gauges');
+  gauges.innerHTML = '';
+  Charts.gauge(gauges, {
+    label: '스내치',
+    pct: Math.min(100, Math.round((hangSq / (profile.prs.snatchGoal || 100)) * 100)),
+    sub: `깊은 행 ${hangSq} → ${profile.prs.snatchGoal}`,
+  });
+  Charts.gauge(gauges, {
+    label: '10km',
+    pct: Math.min(100, Math.round((longest / 10) * 100)),
+    sub: `최장 ${longest}km / 10 · 이지 HR이 병목`,
+  });
+  Charts.gauge(gauges, {
+    label: '벤치130',
+    pct: benchRows.length ? Math.min(100, Math.round((benchRows[benchRows.length - 1].reps / 5) * 100)) : 0,
+    sub: `최근 130×${benchRows.length ? benchRows[benchRows.length - 1].reps : '—'}`,
+  });
+
+  // latest coach blurb
+  const dates = Object.keys(insights?.sessionReviews || {}).sort().reverse();
+  const latest = dates[0];
+  const rev = latest ? insights.sessionReviews[latest] : null;
+  document.getElementById('dash-latest-coach').innerHTML = rev
+    ? `<div class="insight-latest"><strong>${latest}</strong> · ${rev.grade}<p>${rev.direction}</p></div>`
+    : '<p class="hint">세션 리뷰 없음</p>';
+
+  // album
+  if (album) {
+    document.getElementById('dash-album-kpi').innerHTML = `
+      <div class="kpi"><span>사진</span><strong>${album.totalPhotos}</strong></div>
+      <div class="kpi"><span>촬영일</span><strong>${album.uniqueDates}</strong></div>
+      <div class="kpi"><span>기간</span><strong>${(album.dateRange?.from || '').slice(0, 4)}-${(album.dateRange?.to || '').slice(0, 7)}</strong></div>
+      <div class="kpi"><span>로그된 세션</span><strong>${album.gymLogSessions}</strong></div>
+    `;
+    const months = Object.entries(album.byMonth || {}).slice(-12);
+    document.getElementById('dash-album-months').innerHTML = months
+      .map(
+        ([m, n]) => `<div class="album-month"><strong>${m}</strong><span>${n}장</span></div>`
+      )
+      .join('');
+  }
 }
 
 function renderCharts(gymLog, runLog, profile) {
@@ -1722,43 +2122,27 @@ function renderCharts(gymLog, runLog, profile) {
     .filter((s) => s.totalVolumeKg)
     .sort((a, b) => (a.date > b.date ? 1 : -1));
 
-  Charts.barChart(document.getElementById('chart-gym-volume'), {
-    labels: gymSorted.map((s) => s.date.slice(5)),
-    values: gymSorted.map((s) => Math.round(s.totalVolumeKg / 1000)),
-    colors: gymSorted.map((s) => TYPE_COLOR[s.type] || '#3b82f6'),
-    unit: '단위: 천 kg',
-  });
+  const volEl = document.getElementById('chart-gym-volume');
+  if (volEl) {
+    Charts.barChart(volEl, {
+      labels: gymSorted.map((s) => s.date.slice(5)),
+      values: gymSorted.map((s) => Math.round(s.totalVolumeKg / 1000)),
+      colors: gymSorted.map((s) => TYPE_COLOR[s.type] || '#3b82f6'),
+      unit: '단위: 천 kg',
+    });
+  }
 
-  const runs = [...runLog.sessions].sort((a, b) => (a.date > b.date ? 1 : -1));
-  Charts.barChart(document.getElementById('chart-run-distance'), {
-    labels: runs.map((s) => s.date.slice(5)),
-    values: runs.map((s) => s.distanceKm),
-    colors: runs.map(() => TYPE_COLOR.Run),
-    targetLine: 7,
-    unit: 'km',
-  });
-
-  const gauges = document.getElementById('goal-gauges');
-  gauges.innerHTML = '';
-  // Snatch: power 85 toward squat 100 — technical progress approx 40% in phase 1
-  Charts.gauge(gauges, {
-    label: '스내치',
-    pct: 40,
-    sub: '파워 85 → 스쿼트 100 · Phase 1 (리시브)',
-  });
-  // 10k: distance rebuild — longest recent / 10
-  const longest = Math.max(...runLog.sessions.map((r) => r.distanceKm), 0);
-  Charts.gauge(gauges, {
-    label: '10km',
-    pct: Math.min(100, Math.round((longest / 10) * 100)),
-    sub: `거리 복귀 ${longest}km / 10km · 페이스는 나중`,
-  });
-  // Time goal: 68 → 60, show how close on time once distance is back (informational)
-  Charts.gauge(gauges, {
-    label: '페이스 여력',
-    pct: Math.min(100, Math.round(((90 - 68) / (90 - 60)) * 100)),
-    sub: '5월 68분 베이스 있음 · 체중 유지 전략',
-  });
+  const runEl = document.getElementById('chart-run-distance');
+  if (runEl) {
+    const runs = [...runLog.sessions].sort((a, b) => (a.date > b.date ? 1 : -1));
+    Charts.barChart(runEl, {
+      labels: runs.map((s) => s.date.slice(5)),
+      values: runs.map((s) => s.distanceKm),
+      colors: runs.map(() => TYPE_COLOR.Run),
+      targetLine: 7,
+      unit: 'km',
+    });
+  }
 }
 
 function buildTimeline(gymLog, runLog) {
@@ -1769,7 +2153,8 @@ function buildTimeline(gymLog, runLog) {
 
 function renderTimeline(items, filter = 'all') {
   const filtered = items.filter((i) => filter === 'all' || i.type === filter);
-  document.getElementById('session-count').textContent = `${filtered.length}세션`;
+  const countEl = document.getElementById('session-count');
+  if (countEl) countEl.textContent = `${filtered.length}세션`;
 
   document.getElementById('timeline').innerHTML = filtered
     .map((s) => {
@@ -1811,7 +2196,7 @@ function renderTimeline(items, filter = 'all') {
 
 let timelineItems = [];
 
-document.getElementById('result-filters').addEventListener('click', (e) => {
+document.getElementById('result-filters')?.addEventListener('click', (e) => {
   const btn = e.target.closest('.chip');
   if (!btn) return;
   document.querySelectorAll('#result-filters .chip').forEach((c) => c.classList.remove('active'));
@@ -1820,17 +2205,21 @@ document.getElementById('result-filters').addEventListener('click', (e) => {
 });
 
 Promise.all([
-  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/athlete-profile.json'),
-  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/sessions/gym-log.json'),
-  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/sessions/run-log.json'),
-  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/plan.json'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/athlete-profile.json?v=dash2'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/sessions/gym-log.json?v=dash2'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/sessions/run-log.json?v=dash2'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/plan.json?v=dash2'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/coaching-insights.json?v=dash2'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/album-inventory.json?v=dash2').catch(() => null),
 ])
-  .then(([profile, gymLog, runLog, plan]) => {
+  .then(([profile, gymLog, runLog, plan, insights, album]) => {
+    renderDashboard(profile, gymLog, runLog, insights, album);
     renderPlan(plan);
     renderProfile(profile);
     renderKpis(gymLog, runLog, profile);
     renderCharts(gymLog, runLog, profile);
     renderHighlights(collectHighlights(gymLog));
+    renderInsights(insights);
     timelineItems = buildTimeline(gymLog, runLog);
     renderTimeline(timelineItems);
   })
