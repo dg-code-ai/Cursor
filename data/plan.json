@@ -544,5 +544,11 @@
         "기능성 대신 이지런·회복"
       ]
     }
+  },
+  "archiveBackfill": {
+    "status": "inventory ready",
+    "albumPhotos": 1439,
+    "next": "2026년 미로그 날짜부터 대시보드에 세션 반영",
+    "canvas": "대시보드 탭 = 실시간 SVG 차트 (정적 PNG 대체)"
   }
 }

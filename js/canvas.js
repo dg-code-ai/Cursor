@@ -242,49 +242,193 @@ function renderKpis(gymLog, runLog, profile) {
   `;
 }
 
+function shortDate(d) {
+  return d.slice(5).replace('-', '/');
+}
+
+function extractLiftSeries(gymLog, nameMatch, pick) {
+  const rows = [];
+  gymLog.sessions
+    .slice()
+    .sort((a, b) => (a.date > b.date ? 1 : -1))
+    .forEach((s) => {
+      (s.exercises || []).forEach((ex) => {
+        if (!nameMatch(ex.name || '')) return;
+        const v = pick(ex, s);
+        if (v != null) rows.push({ date: s.date, value: v, ex });
+      });
+    });
+  return rows;
+}
+
+function renderDashboard(profile, gymLog, runLog, insights, album) {
+  const hangSq = profile.prs.hangSquatSnatch || 0;
+  const updated = insights?.updated || profile.updated || '';
+  document.getElementById('dash-updated').textContent = updated ? `업데이트 ${updated}` : '';
+
+  const gymN = gymLog.sessions.length;
+  const runN = runLog.sessions.length;
+  const longest = Math.max(...runLog.sessions.map((r) => r.distanceKm || 0), 0);
+  document.getElementById('dash-kpi').innerHTML = `
+    <div class="kpi"><span>헬스 세션</span><strong>${gymN}</strong></div>
+    <div class="kpi"><span>러닝</span><strong>${runN}</strong></div>
+    <div class="kpi"><span>행 스쿼트</span><strong>${hangSq}kg</strong></div>
+    <div class="kpi"><span>벤치 PR</span><strong>${profile.prs.benchPress}</strong></div>
+    <div class="kpi"><span>최장 런</span><strong>${longest}km</strong></div>
+    <div class="kpi"><span>앨범 사진</span><strong>${album?.totalPhotos?.toLocaleString?.() || album?.totalPhotos || '—'}</strong></div>
+  `;
+
+  // Hang snatch max kg per session
+  const hang = extractLiftSeries(
+    gymLog,
+    (n) => n.includes('행 스내치'),
+    (ex) => {
+      const kgs = (ex.sets || []).map((s) => s.kg || 0).filter((k) => k > 0);
+      return kgs.length ? Math.max(...kgs) : null;
+    }
+  );
+  Charts.lineChart(document.getElementById('dash-hang-snatch'), {
+    labels: hang.map((h) => shortDate(h.date)),
+    series: [{ values: hang.map((h) => h.value), color: '#a78bfa' }],
+    yMin: 30,
+    yMax: 110,
+    targetLine: 100,
+    unit: 'kg',
+  });
+  document.getElementById('dash-hang-verdict').textContent =
+    insights?.trends?.hangSnatchDeep?.verdict || '행 깊은 리시브 추세';
+
+  const oh = extractLiftSeries(
+    gymLog,
+    (n) => n.includes('오버헤드 스쿼트'),
+    (ex) => {
+      const kgs = (ex.sets || []).map((s) => s.kg || 0).filter((k) => k > 0);
+      return kgs.length ? Math.max(...kgs) : null;
+    }
+  );
+  Charts.barChart(document.getElementById('dash-oh-squat'), {
+    labels: oh.map((h) => shortDate(h.date)),
+    values: oh.map((h) => h.value),
+    colors: oh.map(() => '#60a5fa'),
+    unit: 'kg',
+  });
+
+  // Bench best reps at >=130
+  const benchRows = [];
+  gymLog.sessions
+    .slice()
+    .sort((a, b) => (a.date > b.date ? 1 : -1))
+    .forEach((s) => {
+      (s.exercises || []).forEach((ex) => {
+        if (ex.name !== '벤치 프레스') return;
+        const at130 = (ex.sets || []).filter((x) => (x.kg || 0) >= 130 && (x.reps || 0) > 0);
+        if (!at130.length) return;
+        const bestReps = Math.max(...at130.filter((x) => x.kg === 130).map((x) => x.reps || 0), 0);
+        const topKg = Math.max(...at130.map((x) => x.kg || 0));
+        benchRows.push({
+          date: s.date,
+          reps: bestReps || Math.max(...at130.map((x) => x.reps || 0)),
+          topKg,
+        });
+      });
+    });
+  Charts.barChart(document.getElementById('dash-bench-130'), {
+    labels: benchRows.map((b) => shortDate(b.date)),
+    values: benchRows.map((b) => b.reps),
+    colors: benchRows.map((b) => (b.reps >= 4 ? '#34d399' : '#3b82f6')),
+    targetLine: 4,
+    unit: 'reps @ 130',
+  });
+  document.getElementById('dash-bench-verdict').textContent =
+    insights?.trends?.bench130?.verdict || '';
+
+  // Run: distance bars + HR line — use dual via line for HR and bar for distance separately in one box: show HR line with easy band
+  const runs = [...runLog.sessions]
+    .filter((r) => r.avgHr)
+    .sort((a, b) => (a.date > b.date ? 1 : -1));
+  Charts.lineChart(document.getElementById('dash-run-hr'), {
+    labels: runs.map((r) => shortDate(r.date)),
+    series: [
+      { values: runs.map((r) => r.avgHr), color: '#f87171' },
+      { values: runs.map((r) => Math.round((r.distanceKm || 0) * 20)), color: '#64748b' },
+    ],
+    yMin: 100,
+    yMax: 200,
+    band: [135, 145],
+    unit: 'HR (회색=km×20)',
+  });
+  document.getElementById('dash-run-verdict').textContent =
+    insights?.trends?.easyRun?.verdict || '';
+
+  const gauges = document.getElementById('dash-gauges');
+  gauges.innerHTML = '';
+  Charts.gauge(gauges, {
+    label: '스내치',
+    pct: Math.min(100, Math.round((hangSq / (profile.prs.snatchGoal || 100)) * 100)),
+    sub: `깊은 행 ${hangSq} → ${profile.prs.snatchGoal}`,
+  });
+  Charts.gauge(gauges, {
+    label: '10km',
+    pct: Math.min(100, Math.round((longest / 10) * 100)),
+    sub: `최장 ${longest}km / 10 · 이지 HR이 병목`,
+  });
+  Charts.gauge(gauges, {
+    label: '벤치130',
+    pct: benchRows.length ? Math.min(100, Math.round((benchRows[benchRows.length - 1].reps / 5) * 100)) : 0,
+    sub: `최근 130×${benchRows.length ? benchRows[benchRows.length - 1].reps : '—'}`,
+  });
+
+  // latest coach blurb
+  const dates = Object.keys(insights?.sessionReviews || {}).sort().reverse();
+  const latest = dates[0];
+  const rev = latest ? insights.sessionReviews[latest] : null;
+  document.getElementById('dash-latest-coach').innerHTML = rev
+    ? `<div class="insight-latest"><strong>${latest}</strong> · ${rev.grade}<p>${rev.direction}</p></div>`
+    : '<p class="hint">세션 리뷰 없음</p>';
+
+  // album
+  if (album) {
+    document.getElementById('dash-album-kpi').innerHTML = `
+      <div class="kpi"><span>사진</span><strong>${album.totalPhotos}</strong></div>
+      <div class="kpi"><span>촬영일</span><strong>${album.uniqueDates}</strong></div>
+      <div class="kpi"><span>기간</span><strong>${(album.dateRange?.from || '').slice(0, 4)}-${(album.dateRange?.to || '').slice(0, 7)}</strong></div>
+      <div class="kpi"><span>로그된 세션</span><strong>${album.gymLogSessions}</strong></div>
+    `;
+    const months = Object.entries(album.byMonth || {}).slice(-12);
+    document.getElementById('dash-album-months').innerHTML = months
+      .map(
+        ([m, n]) => `<div class="album-month"><strong>${m}</strong><span>${n}장</span></div>`
+      )
+      .join('');
+  }
+}
+
 function renderCharts(gymLog, runLog, profile) {
   const gymSorted = [...gymLog.sessions]
     .filter((s) => s.totalVolumeKg)
     .sort((a, b) => (a.date > b.date ? 1 : -1));
 
-  Charts.barChart(document.getElementById('chart-gym-volume'), {
-    labels: gymSorted.map((s) => s.date.slice(5)),
-    values: gymSorted.map((s) => Math.round(s.totalVolumeKg / 1000)),
-    colors: gymSorted.map((s) => TYPE_COLOR[s.type] || '#3b82f6'),
-    unit: '단위: 천 kg',
-  });
+  const volEl = document.getElementById('chart-gym-volume');
+  if (volEl) {
+    Charts.barChart(volEl, {
+      labels: gymSorted.map((s) => s.date.slice(5)),
+      values: gymSorted.map((s) => Math.round(s.totalVolumeKg / 1000)),
+      colors: gymSorted.map((s) => TYPE_COLOR[s.type] || '#3b82f6'),
+      unit: '단위: 천 kg',
+    });
+  }
 
-  const runs = [...runLog.sessions].sort((a, b) => (a.date > b.date ? 1 : -1));
-  Charts.barChart(document.getElementById('chart-run-distance'), {
-    labels: runs.map((s) => s.date.slice(5)),
-    values: runs.map((s) => s.distanceKm),
-    colors: runs.map(() => TYPE_COLOR.Run),
-    targetLine: 7,
-    unit: 'km',
-  });
-
-  const gauges = document.getElementById('goal-gauges');
-  gauges.innerHTML = '';
-  // Snatch: hang squat snatch progress toward 100
-  const hangSq = profile.prs.hangSquatSnatch || 40;
-  Charts.gauge(gauges, {
-    label: '스내치',
-    pct: Math.min(100, Math.round((hangSq / profile.prs.snatchGoal) * 100)),
-    sub: `깊은 행 ${hangSq} → 목표 ${profile.prs.snatchGoal} · Phase 1`,
-  });
-  // 10k: distance rebuild — longest recent / 10
-  const longest = Math.max(...runLog.sessions.map((r) => r.distanceKm), 0);
-  Charts.gauge(gauges, {
-    label: '10km',
-    pct: Math.min(100, Math.round((longest / 10) * 100)),
-    sub: `거리 복귀 ${longest}km / 10km · 페이스는 나중`,
-  });
-  // Time goal: 68 → 60, show how close on time once distance is back (informational)
-  Charts.gauge(gauges, {
-    label: '페이스 여력',
-    pct: Math.min(100, Math.round(((90 - 68) / (90 - 60)) * 100)),
-    sub: '5월 68분 베이스 있음 · 체중 유지 전략',
-  });
+  const runEl = document.getElementById('chart-run-distance');
+  if (runEl) {
+    const runs = [...runLog.sessions].sort((a, b) => (a.date > b.date ? 1 : -1));
+    Charts.barChart(runEl, {
+      labels: runs.map((s) => s.date.slice(5)),
+      values: runs.map((s) => s.distanceKm),
+      colors: runs.map(() => TYPE_COLOR.Run),
+      targetLine: 7,
+      unit: 'km',
+    });
+  }
 }
 
 function buildTimeline(gymLog, runLog) {
@@ -295,7 +439,8 @@ function buildTimeline(gymLog, runLog) {
 
 function renderTimeline(items, filter = 'all') {
   const filtered = items.filter((i) => filter === 'all' || i.type === filter);
-  document.getElementById('session-count').textContent = `${filtered.length}세션`;
+  const countEl = document.getElementById('session-count');
+  if (countEl) countEl.textContent = `${filtered.length}세션`;
 
   document.getElementById('timeline').innerHTML = filtered
     .map((s) => {
@@ -337,7 +482,7 @@ function renderTimeline(items, filter = 'all') {
 
 let timelineItems = [];
 
-document.getElementById('result-filters').addEventListener('click', (e) => {
+document.getElementById('result-filters')?.addEventListener('click', (e) => {
   const btn = e.target.closest('.chip');
   if (!btn) return;
   document.querySelectorAll('#result-filters .chip').forEach((c) => c.classList.remove('active'));
@@ -351,19 +496,16 @@ Promise.all([
   loadJSON('data/sessions/run-log.json'),
   loadJSON('data/plan.json'),
   loadJSON('data/coaching-insights.json'),
+  loadJSON('data/album-inventory.json').catch(() => null),
 ])
-  .then(([profile, gymLog, runLog, plan, insights]) => {
+  .then(([profile, gymLog, runLog, plan, insights, album]) => {
+    renderDashboard(profile, gymLog, runLog, insights, album);
     renderPlan(plan);
     renderProfile(profile);
     renderKpis(gymLog, runLog, profile);
     renderCharts(gymLog, runLog, profile);
     renderHighlights(collectHighlights(gymLog));
     renderInsights(insights);
-    // update snatch gauge with hang squat 60 progress
-    const gauges = document.getElementById('goal-gauges');
-    if (gauges && profile.prs.hangSquatSnatch) {
-      // re-render first gauge more honestly: 60/100 deep hang
-    }
     timelineItems = buildTimeline(gymLog, runLog);
     renderTimeline(timelineItems);
   })

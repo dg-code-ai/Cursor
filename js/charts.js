@@ -172,4 +172,110 @@ function gauge(container, { label, pct, sub }) {
   container.appendChild(wrap);
 }
 
-window.Charts = { barChart, hBarChart, donutChart, gauge };
+/** Line chart with optional band and target */
+function lineChart(container, { labels, series, yMin, yMax, band, targetLine, unit = '' }) {
+  container.innerHTML = '';
+  const w = 400;
+  const h = 200;
+  const pad = { t: 20, r: 14, b: 36, l: 40 };
+  const innerW = w - pad.l - pad.r;
+  const innerH = h - pad.t - pad.b;
+  const allVals = series.flatMap((s) => s.values.filter((v) => v != null));
+  const minV = yMin != null ? yMin : Math.min(...allVals, targetLine || Infinity, band?.[0] ?? Infinity);
+  const maxV = yMax != null ? yMax : Math.max(...allVals, targetLine || 0, band?.[1] ?? 0);
+  const span = Math.max(maxV - minV, 1);
+  const n = Math.max(labels.length, 1);
+  const xAt = (i) => pad.l + (n === 1 ? innerW / 2 : (i / (n - 1)) * innerW);
+  const yAt = (v) => pad.t + innerH * (1 - (v - minV) / span);
+
+  const svg = el('svg', { viewBox: `0 0 ${w} ${h}`, class: 'chart-svg', role: 'img' });
+
+  for (let i = 0; i <= 3; i++) {
+    const y = pad.t + (innerH * i) / 3;
+    const val = Math.round(maxV - (span * i) / 3);
+    svg.appendChild(el('line', { x1: pad.l, y1: y, x2: w - pad.r, y2: y, stroke: '#2d3a4f', 'stroke-width': '1' }));
+    svg.appendChild(el('text', { x: pad.l - 6, y: y + 3, fill: '#8b9cb3', 'font-size': '9', 'text-anchor': 'end' }, [String(val)]));
+  }
+
+  if (band && band.length === 2) {
+    const y1 = yAt(band[1]);
+    const y2 = yAt(band[0]);
+    svg.appendChild(
+      el('rect', {
+        x: pad.l,
+        y: y1,
+        width: innerW,
+        height: Math.max(y2 - y1, 1),
+        fill: '#34d399',
+        opacity: '0.12',
+      })
+    );
+  }
+
+  if (targetLine != null) {
+    const ty = yAt(targetLine);
+    svg.appendChild(
+      el('line', {
+        x1: pad.l,
+        y1: ty,
+        x2: w - pad.r,
+        y2: ty,
+        stroke: '#34d399',
+        'stroke-width': '1.5',
+        'stroke-dasharray': '4 3',
+      })
+    );
+  }
+
+  series.forEach((s) => {
+    const pts = s.values
+      .map((v, i) => (v == null ? null : `${xAt(i)},${yAt(v)}`))
+      .filter(Boolean)
+      .join(' ');
+    if (pts) {
+      svg.appendChild(
+        el('polyline', {
+          points: pts,
+          fill: 'none',
+          stroke: s.color || '#3b82f6',
+          'stroke-width': '2.5',
+          'stroke-linejoin': 'round',
+          'stroke-linecap': 'round',
+        })
+      );
+    }
+    s.values.forEach((v, i) => {
+      if (v == null) return;
+      svg.appendChild(el('circle', { cx: xAt(i), cy: yAt(v), r: 4, fill: s.color || '#3b82f6' }));
+      svg.appendChild(
+        el('text', {
+          x: xAt(i),
+          y: yAt(v) - 8,
+          fill: '#e2e8f0',
+          'font-size': '9',
+          'text-anchor': 'middle',
+        }, [String(v)])
+      );
+    });
+  });
+
+  labels.forEach((lab, i) => {
+    svg.appendChild(
+      el('text', {
+        x: xAt(i),
+        y: h - 12,
+        fill: '#8b9cb3',
+        'font-size': '9',
+        'text-anchor': 'middle',
+      }, [lab])
+    );
+  });
+
+  if (unit) {
+    svg.appendChild(el('text', { x: pad.l, y: 12, fill: '#8b9cb3', 'font-size': '9' }, [unit]));
+  }
+
+  container.appendChild(svg);
+}
+
+window.Charts = { barChart, hBarChart, donutChart, gauge, lineChart };

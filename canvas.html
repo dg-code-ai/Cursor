@@ -15,18 +15,77 @@
       <div class="header__brand">
         <p class="eyebrow"><a href="anatomy.html">해부학 가이드</a> · <a href="index.html">역도 기록</a></p>
         <h1>트레이닝 캔버스</h1>
-        <p class="subtitle">계획은 계획대로 · 결과는 그래프로</p>
+        <p class="subtitle">대시보드 · 계획 · 코칭 인사이트</p>
       </div>
       <nav class="tabs canvas-tabs" role="tablist">
-        <button class="tab active" data-panel="plan" role="tab">계획</button>
-        <button class="tab" data-panel="results" role="tab">결과</button>
+        <button class="tab active" data-panel="dashboard" role="tab">대시보드</button>
+        <button class="tab" data-panel="plan" role="tab">계획</button>
+        <button class="tab" data-panel="results" role="tab">로그</button>
         <button class="tab" data-panel="profile" role="tab">프로필</button>
       </nav>
     </header>
 
     <main>
+      <!-- DASHBOARD -->
+      <section id="panel-dashboard" class="panel active">
+        <div class="card">
+          <div class="card-header">
+            <h2>한눈에</h2>
+            <span class="hint" id="dash-updated"></span>
+          </div>
+          <div class="kpi-row" id="dash-kpi"></div>
+        </div>
+
+        <div class="split-panels">
+          <div class="card">
+            <h2>스내치 진행</h2>
+            <p class="hint">행 스쿼트 리시브 상한 kg · 점선 = 목표 100</p>
+            <div id="dash-hang-snatch" class="chart-box"></div>
+            <p class="hint" id="dash-hang-verdict"></p>
+          </div>
+          <div class="card">
+            <h2>OH 스쿼트 상한</h2>
+            <p class="hint">오버헤드 스쿼트 최고 작업 kg</p>
+            <div id="dash-oh-squat" class="chart-box"></div>
+          </div>
+        </div>
+
+        <div class="split-panels">
+          <div class="card">
+            <h2>벤치 130 작업횟수</h2>
+            <p class="hint">서브맥스 과부하 · 점선 = 목표 4회</p>
+            <div id="dash-bench-130" class="chart-box"></div>
+            <p class="hint" id="dash-bench-verdict"></p>
+          </div>
+          <div class="card">
+            <h2>이지 런 심박</h2>
+            <p class="hint">초록 밴드 = HR 135-145 · 막대=거리</p>
+            <div id="dash-run-hr" class="chart-box"></div>
+            <p class="hint" id="dash-run-verdict"></p>
+          </div>
+        </div>
+
+        <div class="split-panels">
+          <div class="card">
+            <h2>목표 게이지</h2>
+            <div id="dash-gauges" class="goal-gauges"></div>
+          </div>
+          <div class="card">
+            <h2>최근 코칭</h2>
+            <div id="dash-latest-coach" class="insights"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>앨범 아카이브</h2>
+          <p class="hint">공유앨범 전체 · 로그에 아직 안 넣은 과거 기록 정리 현황</p>
+          <div class="kpi-row" id="dash-album-kpi"></div>
+          <div id="dash-album-months" class="album-months"></div>
+        </div>
+      </section>
+
       <!-- PLAN -->
-      <section id="panel-plan" class="panel active">
+      <section id="panel-plan" class="panel">
         <div class="card">
           <h2>이번 주 체크리스트</h2>
           <p class="hint" id="week-note"></p>
@@ -34,7 +93,7 @@
         </div>
 
         <div class="card">
-          <h2>주간 골격 (다음 주부터)</h2>
+          <h2>주간 골격</h2>
           <div id="week-skeleton" class="week-skeleton"></div>
           <ul class="guide-list" id="principles"></ul>
         </div>
@@ -57,73 +116,45 @@
         </div>
       </section>
 
-      <!-- RESULTS -->
+      <!-- RESULTS / LOG -->
       <section id="panel-results" class="panel">
         <div class="card">
-          <h2>코칭 인사이트</h2>
-          <p class="hint">왜 · 회고 · 추세 · 다음 — 세션마다 이 네 가지</p>
+          <h2>코칭 인사이트 (세션 상세)</h2>
+          <p class="hint">왜 · 회고 · 다음</p>
           <div id="coaching-insights" class="insights"></div>
-          <div class="split-panels" style="margin-top:1rem">
-            <div>
-              <h3 class="hint">벤치 130 작업횟수</h3>
-              <img class="insight-chart" src="assets/charts/bench-130-progress.png" alt="벤치 130 추이">
-            </div>
-            <div>
-              <h3 class="hint">행 스내치 깊이</h3>
-              <img class="insight-chart" src="assets/charts/hang-snatch-depth.png" alt="행 스내치 깊이">
-            </div>
-          </div>
-          <div style="margin-top:1rem">
-            <h3 class="hint">이지 런 HR vs 거리</h3>
-            <img class="insight-chart" src="assets/charts/run-hr-vs-easy.png" alt="러닝 HR">
-          </div>
         </div>
 
         <div class="card">
           <div class="card-header">
-            <h2>한눈에 보는 결과</h2>
+            <h2>세션 타임라인</h2>
             <div class="chip-row" id="result-filters">
               <button class="chip active" data-type="all">전체</button>
               <button class="chip" data-type="Pull">Pull</button>
               <button class="chip" data-type="Push">Push</button>
               <button class="chip" data-type="Leg">Leg</button>
               <button class="chip" data-type="Run">러닝</button>
+              <button class="chip" data-type="Olympic">역도</button>
             </div>
           </div>
           <div class="kpi-row" id="kpi-row"></div>
+          <span class="hint" id="session-count"></span>
+          <div id="timeline" class="timeline"></div>
         </div>
 
         <div class="split-panels">
           <div class="card">
             <h2>헬스 볼륨 추이</h2>
-            <p class="hint">세션 총 kg (참고) · 막대 색 = 분할</p>
             <div id="chart-gym-volume" class="chart-box"></div>
           </div>
           <div class="card">
-            <h2>러닝 거리 추이</h2>
-            <p class="hint">km · 점선 = 이번 주말 목표(7km)</p>
+            <h2>러닝 거리</h2>
             <div id="chart-run-distance" class="chart-box"></div>
           </div>
         </div>
 
-        <div class="split-panels">
-          <div class="card">
-            <h2>목표 게이지</h2>
-            <div id="goal-gauges" class="goal-gauges"></div>
-          </div>
-          <div class="card">
-            <h2>핵심 작업세트</h2>
-            <p class="hint">과부하(↑) 표시 · 숫자 나열 대신 카드</p>
-            <div id="highlights" class="highlights highlights--cards"></div>
-          </div>
-        </div>
-
         <div class="card">
-          <div class="card-header">
-            <h2>세션 로그</h2>
-            <span class="hint" id="session-count"></span>
-          </div>
-          <div id="timeline" class="timeline"></div>
+          <h2>핵심 작업세트</h2>
+          <div id="highlights" class="highlights highlights--cards"></div>
         </div>
       </section>
 

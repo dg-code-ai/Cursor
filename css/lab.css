@@ -815,3 +815,22 @@
 .insight-trend { padding: 0.6rem 0.75rem; border-left: 3px solid #34d399; background: #151b24; border-radius: 0 8px 8px 0; }
 .insight-trend p { margin: 0.25rem 0 0; color: #94a3b8; font-size: 0.9rem; }
 .insight-chart { width: 100%; height: auto; border-radius: 10px; border: 1px solid #243044; display: block; }
+
+.album-months {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+.album-month {
+  background: #151b24;
+  border: 1px solid #243044;
+  border-radius: 8px;
+  padding: 0.55rem 0.65rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+.album-month strong { color: #e2e8f0; }
+.album-month span { color: #94a3b8; }
