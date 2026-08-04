@@ -42,23 +42,33 @@ NAME_FIX = {
     "퍼신": "머신",
     "햇-": "랫 ",
     "스랜딩": "스트랜딩",
+    "덤빛": "덤벨",
+    "팀벌": "덤벨",
+    "친 업": "친업",
+    "풀업": "풀 업",
+    "레터럽": "레터럴",
+    "런넣": "런닝",
+    "런갈": "런닝",
 }
 
 JUNK_NAME = re.compile(
-    r"총 운동|리포트|요일별|월 리포트|^\d+초$|^\d+분|km$|위크 \d|인출라인 런",
+    r"총 운동|리포트|요일별|월 리포트|^\d+초$|^\d+분|분\s*\d+초|km$|위크 \d|인출라인 런|라이프 리셋|일립티컬|런닝머신|실내 자전거",
     re.I,
 )
 
 SET_RE = re.compile(r"(\d+(?:\.\d+)?)\s*[*x×X]\s*(\d+)")
 DATE_RE = re.compile(r"(\d{2})\.(\d{1,2})\.(\d{1,2})")
-VOL_RE = re.compile(r"^[\d,.]+\s*kg", re.I)
+VOL_RE = re.compile(r"^['\"]?[\d,.]+\s*kg", re.I)
 REPS_ONLY = re.compile(r"^\d{1,2}$")
-META_SETS = re.compile(r"^\d+세트$")
-META_REPS = re.compile(r"^\d+회$")
+META_SETS = re.compile(r"^\d+\s*세트[*'Xx×\s]*$")
+META_REPS = re.compile(r"^\d+\s*회$")
 SUMMARY_INLINE_RE = re.compile(
     r"(?P<sets>\d+)\s*세트\s*[x×X*]?\s*(?:(?P<kg>\d+(?:\.\d+)?)\s*(?:kg|k8|ke))?\s*[x×X*스]?\s*(?P<reps>\d+)\s*회",
     re.I,
 )
+PREFIX_SETS_NAME_RE = re.compile(r"^(?P<sets>\d+)\s*세트\s+(?P<name>.+)$")
+KG_ONLY_RE = re.compile(r"^['\"]?(?P<kg>\d+(?:\.\d+)?)\s*kg$", re.I)
+DURATION_MIN_RE = re.compile(r"(?:(?P<h>\d+)\s*시간)?\s*(?P<m>\d+)\s*분")
 
 READER = None
 
@@ -98,23 +108,32 @@ def rank_rise_details(photos: list) -> list[tuple[dict, dict]]:
             fs = int(deriv.get("fileSize", 0) or 0)
             h = int(deriv.get("height", 0) or 0)
             w = int(deriv.get("width", 0) or 0)
-            if h < 900 or w < 900:
+            # Portrait detail (~1200h) or landscape detail (~700h, full width)
+            portrait = h >= 900 and w >= 900
+            landscape = w >= 1100 and 650 <= h <= 1000
+            if not (portrait or landscape):
                 continue
             if fs < 90_000:
                 continue
-            # Mirror selfies tend to be ~500k+; detail screens ~130–280k
-            if fs > 520_000:
+            # Prefer workout detail screens over large mirror selfies
+            if fs > 600_000:
                 continue
-            score = abs(fs - 210_000) + abs(h - 1200) * 50
+            if landscape:
+                # Landscape detail screens often hold full set rows.
+                score = abs(fs - 120_000) - 50_000
+            else:
+                score = abs(fs - 210_000) + abs(h - 1200) * 50
+                if fs > 520_000:
+                    score += 80_000
             cands.append((score, p, deriv))
     if not cands:
-        # Fallback: tallest non-selfie
+        # Fallback: tallest/largest non-tiny image
         for p in photos:
             for deriv in p.get("derivatives", {}).values():
                 fs = int(deriv.get("fileSize", 0) or 0)
                 h = int(deriv.get("height", 0) or 0)
                 w = int(deriv.get("width", 0) or 0)
-                if h >= 850 and w >= 850 and fs < 520_000:
+                if min(h, w) >= 650 and fs < 650_000:
                     cands.append((abs(fs - 210_000), p, deriv))
     if not cands:
         return []
@@ -180,7 +199,9 @@ def is_header_line(ln: str) -> bool:
         return True
     if re.match(r"^\d{1,2}[\.:]\d{2}$", ln):
         return True
-    if ln.endswith("분") and "위크" not in ln:
+    if DURATION_MIN_RE.fullmatch(ln.replace(" ", "")) or (
+        ln.endswith("분") and "위크" not in ln and "세트" not in ln
+    ):
         return True
     if "Cal" in ln:
         return True
@@ -196,6 +217,8 @@ def is_meta_line(ln: str) -> bool:
         return True
     if ln.startswith("(+"):
         return True
+    if ln in {"X", "x", "*", "×"}:
+        return True
     return False
 
 
@@ -207,6 +230,12 @@ def is_exercise_name(ln: str) -> bool:
     if parse_set_line(ln):
         return False
     if REPS_ONLY.match(ln):
+        return False
+    if re.search(r"^\d+\s*회", ln):
+        return False
+    if re.match(r"^[Xx×*]", ln):
+        return False
+    if re.search(r"\d+\s*m$", ln, re.I):
         return False
     if len(ln) > 40:
         return False
@@ -245,7 +274,95 @@ def parse_summary_inline(ln: str) -> list[dict]:
     return [{"kg": kg_value, "reps": reps} for _ in range(count)]
 
 
+def parse_header_blocks(lines: list[str]) -> list[dict] | None:
+    """Rise 2-column headers: name/N세트/vol repeated, then set rows."""
+    i = 0
+    n = len(lines)
+    while i < n and (is_header_line(lines[i]) or is_meta_line(lines[i]) or not is_exercise_name(lines[i])):
+        if parse_set_line(lines[i]) or REPS_ONLY.match(lines[i]):
+            return None
+        i += 1
+    if i >= n:
+        return None
+
+    headers: list[tuple[str, int]] = []
+    while i < n:
+        if parse_set_line(lines[i]) or REPS_ONLY.match(lines[i]):
+            break
+        if not is_exercise_name(lines[i]):
+            if is_meta_line(lines[i]) or is_header_line(lines[i]):
+                i += 1
+                continue
+            break
+        name = normalize_name(lines[i])
+        i += 1
+        count = None
+        while i < n and is_meta_line(lines[i]):
+            m = META_SETS.match(lines[i]) or re.match(r"^(\d+)\s*세트", lines[i])
+            if m and count is None:
+                count = int(re.search(r"\d+", lines[i]).group())
+            i += 1
+        if count:
+            headers.append((name, count))
+        else:
+            return None
+        # Stop header scan once we have at least 1 and next looks like sets
+        if i < n and (parse_set_line(lines[i]) or REPS_ONLY.match(lines[i])):
+            break
+
+    if len(headers) < 1:
+        return None
+
+    sets: list[dict] = []
+    while i < n:
+        if is_exercise_name(lines[i]) and sets:
+            break
+        parsed = parse_set_line(lines[i])
+        if parsed:
+            sets.append(parsed)
+            i += 1
+            continue
+        if REPS_ONLY.match(lines[i]):
+            sets.append({"kg": 0, "reps": int(lines[i])})
+            i += 1
+            continue
+        if is_meta_line(lines[i]) or is_header_line(lines[i]):
+            i += 1
+            continue
+        if sets:
+            break
+        i += 1
+
+    if not sets:
+        return None
+
+    exercises = []
+    offset = 0
+    for name, count in headers:
+        part = sets[offset : offset + count]
+        offset += count
+        if not part:
+            continue
+        if JUNK_NAME.search(name) or len(name) < 2:
+            continue
+        ex = {"name": name, "sets": part}
+        wh = working_highlight(part)
+        if wh:
+            ex["workingHighlight"] = wh
+        exercises.append(ex)
+    if offset < len(sets) and exercises:
+        exercises[-1]["sets"].extend(sets[offset:])
+        wh = working_highlight(exercises[-1]["sets"])
+        if wh:
+            exercises[-1]["workingHighlight"] = wh
+    return exercises or None
+
+
 def parse_exercises(lines: list[str]) -> list[dict]:
+    header_ex = parse_header_blocks(lines)
+    if header_ex and len(header_ex) >= 2:
+        return header_ex
+
     exercises = []
     i = 0
     n = len(lines)
@@ -333,6 +450,113 @@ def parse_exercises(lines: list[str]) -> list[dict]:
                 ex["workingHighlight"] = wh
             exercises.append(ex)
 
+    if header_ex and (not exercises or len(header_ex) > len(exercises)):
+        return header_ex
+    return exercises
+
+
+def is_valid_exercise_name(name: str) -> bool:
+    if len(name) < 2:
+        return False
+    if JUNK_NAME.search(name):
+        return False
+    if re.match(r"^[Xx×*'\"0-9]", name):
+        return False
+    if re.search(r"\d+\s*m$", name, re.I):
+        return False
+    if re.search(r"^\d+\s*회", name):
+        return False
+    if not re.search(r"[가-힣]", name):
+        return False
+    return True
+
+
+def parse_prefix_sets_name(lines: list[str]) -> list[dict]:
+    """Parse compact lines like '4세트 데드 행 스트레칭' / '8세트 풀업'."""
+    exercises = []
+    for ln in lines:
+        m = PREFIX_SETS_NAME_RE.match(ln.strip())
+        if not m:
+            continue
+        count = int(m.group("sets"))
+        name = normalize_name(m.group("name"))
+        if count <= 0 or count > 20 or not is_valid_exercise_name(name):
+            continue
+        sets = [{"kg": 0, "reps": 1} for _ in range(count)]
+        ex = {"name": name, "sets": sets, "workingHighlight": f"{count}세트"}
+        exercises.append(ex)
+    return exercises
+
+
+def parse_loose_summary_exercises(lines: list[str]) -> list[dict]:
+    """Parse split OCR blocks: name / N세트 / kg / X / N회."""
+    exercises = []
+    i = 0
+    n = len(lines)
+    while i < n:
+        if not is_exercise_name(lines[i]):
+            i += 1
+            continue
+        name = normalize_name(lines[i])
+        if JUNK_NAME.search(name):
+            i += 1
+            continue
+
+        j = i + 1
+        count = None
+        kg = None
+        reps = None
+        while j < n and j <= i + 6:
+            tok = lines[j].strip()
+            if is_exercise_name(tok) and j > i + 1:
+                break
+            m_sets = META_SETS.match(tok) or re.match(r"^(\d+)\s*세트", tok)
+            if m_sets and count is None:
+                count = int(re.search(r"\d+", tok).group())
+                j += 1
+                continue
+            m_kg = KG_ONLY_RE.match(tok.replace(" ", ""))
+            if m_kg and kg is None:
+                kg = float(m_kg.group("kg"))
+                j += 1
+                continue
+            m_reps = META_REPS.match(tok) or re.match(r"^(\d+)\s*회$", tok)
+            if m_reps and reps is None:
+                reps = int(re.search(r"\d+", tok).group())
+                j += 1
+                continue
+            if tok in {"X", "x", "*", "×"}:
+                j += 1
+                continue
+            # Merged inline summary on following lines
+            inline = parse_summary_inline(tok)
+            if inline:
+                count = len(inline)
+                kg = inline[0]["kg"]
+                reps = inline[0]["reps"]
+                j += 1
+                break
+            if count is not None and (kg is not None or reps is not None):
+                break
+            j += 1
+
+        if count and (reps is not None or kg is not None):
+            kg_value = 0 if kg is None else (int(kg) if kg == int(kg) else kg)
+            rep_value = reps if reps is not None else 0
+            if rep_value <= 0 and kg_value <= 0:
+                i += 1
+                continue
+            if rep_value <= 0:
+                rep_value = 1
+            sets = [{"kg": kg_value, "reps": rep_value} for _ in range(min(count, 20))]
+            ex = {"name": name, "sets": sets}
+            wh = working_highlight(sets)
+            if wh:
+                ex["workingHighlight"] = wh
+            exercises.append(ex)
+            i = max(j, i + 1)
+            continue
+        i += 1
     return exercises
 
 
@@ -357,6 +581,11 @@ def parse_summary_style_exercises(lines: list[str]) -> list[dict]:
             sets = parse_summary_inline(merged)
             if sets:
                 i += 1
+        if not sets and i + 3 < n:
+            merged = f"{lines[i + 1]} {lines[i + 2]} {lines[i + 3]}"
+            sets = parse_summary_inline(merged)
+            if sets:
+                i += 2
         if not sets:
             i += 1
             continue
@@ -367,6 +596,13 @@ def parse_summary_style_exercises(lines: list[str]) -> list[dict]:
             ex["workingHighlight"] = wh
         exercises.append(ex)
         i += 2
+
+    if len(exercises) < 2:
+        for ex in parse_loose_summary_exercises(lines):
+            if ex["name"] not in {e["name"] for e in exercises}:
+                exercises.append(ex)
+    if not exercises:
+        exercises.extend(parse_prefix_sets_name(lines))
     return exercises
 
 
@@ -385,15 +621,19 @@ def parse_meta(lines: list[str]) -> dict:
     for ln in lines:
         if "운동" in ln and len(ln) < 20:
             meta["title"] = ln
-        if ln.endswith("분") and meta["durationMin"] is None and re.search(r"^\d+분", ln):
-            m = re.search(r"(\d+)", ln)
-            if m:
-                meta["durationMin"] = int(m.group(1))
+        if meta["durationMin"] is None:
+            m = DURATION_MIN_RE.search(ln.replace(" ", ""))
+            if m and ("시간" in ln or ln.endswith("분")) and "세트" not in ln:
+                hours = int(m.group("h") or 0)
+                minutes = int(m.group("m") or 0)
+                total = hours * 60 + minutes
+                if 0 < total <= 240:
+                    meta["durationMin"] = total
         if META_SETS.match(ln) and meta["totalSets"] is None:
             m = re.search(r"(\d+)", ln)
             if m:
                 meta["totalSets"] = int(m.group(1))
-        m = re.search(r"([\d,]+)\s*kg", ln)
+        m = re.search(r"([\d,]+)\s*kg", ln, re.I)
         if m:
             seen_kg.append(int(m.group(1).replace(",", "")))
             if meta["totalVolumeKg"] is None and "(" in ln:
@@ -428,6 +668,11 @@ def session_from_lines(lines: list[str], date: str) -> dict | None:
             if ex["name"] not in seen_names:
                 exercises.append(ex)
                 seen_names.add(ex["name"])
+    exercises = [
+        {**ex, "name": normalize_name(ex["name"].lstrip("'\""))}
+        for ex in exercises
+        if is_valid_exercise_name(normalize_name(ex["name"].lstrip("'\"")))
+    ]
     if not exercises:
         return None
     meta = parse_meta(lines)
@@ -513,14 +758,30 @@ def backfill(
 
         session = None
         last_error = None
-        for idx, (photo, deriv) in enumerate(candidates[:5]):
-            img = IMAGE_CACHE / f"{date}-{idx}.jpg"
+        best_score = -1
+        for idx, (photo, deriv) in enumerate(candidates[:6]):
+            checksum = str(deriv.get("checksum") or idx)[:16]
+            img = IMAGE_CACHE / f"{date}-{checksum}.jpg"
             try:
                 download_photo(photo, deriv, img)
                 lines = ocr_image(img)
-                session = session_from_lines(lines, date)
-                if session:
-                    break
+                cand_session = session_from_lines(lines, date)
+                if not cand_session or is_junk_session(cand_session):
+                    continue
+                score = len(cand_session["exercises"]) * 10 + sum(
+                    len(e.get("sets", [])) for e in cand_session["exercises"]
+                )
+                # Prefer sessions with real loaded sets over placeholder-only.
+                loaded = sum(
+                    1
+                    for e in cand_session["exercises"]
+                    for s in e.get("sets", [])
+                    if s.get("kg", 0) > 0 or s.get("reps", 0) > 1
+                )
+                score += loaded
+                if score > best_score:
+                    best_score = score
+                    session = cand_session
             except Exception as e:
                 last_error = e
                 continue

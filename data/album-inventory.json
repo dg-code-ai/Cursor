@@ -41,24 +41,38 @@
     "2026-07": 94,
     "2026-08": 4
   },
-  "gymLogSessions": 211,
+  "gymLogSessions": 251,
   "backfillSummary": {
     "ranAt": "2026-08-04",
-    "version": 4,
-    "added": 84,
-    "refreshed": 97,
+    "version": 5,
+    "added": 36,
+    "refreshed": 5,
     "skippedExistingManual": 23,
-    "parseFailed": 70,
-    "noDetailScreenshot": 61,
+    "parseFailedRemainingApprox": 82,
+    "noDetailScreenshotApprox": 7,
     "sources": {
       "manual": 23,
-      "album-backfill": 188
+      "album-backfill": 228
     },
-    "avgExercisesPerOcrSession": 3.39,
+    "avgExercisesPerOcrSession": 3.36,
     "loggedDateRange": {
-      "from": "2024-07-05",
+      "from": "2024-07-11",
       "to": "2026-08-04"
-    }
+    },
+    "recentRecovered": [
+      "2025-07-17",
+      "2025-09-03",
+      "2025-10-25",
+      "2026-01-23",
+      "2026-03-16"
+    ],
+    "recentStillMissing": [
+      "2025-07-13",
+      "2025-10-15",
+      "2025-11-03",
+      "2026-02-26",
+      "2026-06-17"
+    ]
   },
   "july2026AlbumDates": [
     "2026-07-01",
@@ -171,10 +185,10 @@
     }
   },
   "ingestPlan": [
-    "1) v4 요약형 파서: 127→211세션, 평균 3.39종목/세션",
-    "2) parse failed 70일 — 주로 2024 초기 OCR 품질 한계",
-    "3) no detail 61일 — Rise 상세 스크린 없음",
-    "4) 2026 priority 미로그 0일"
+    "1) v5 가로형/대형 상세 스크린 후보 확대: 211→251세션",
+    "2) 최근 실패 10일 중 5일 회수 (데드+행클린 포함)",
+    "3) 잔여 최근 5일: 월리포트/카디오만/거의 빈 세션",
+    "4) no detail은 제외 유지"
   ],
   "priorityBackfillRemaining2026": []
 }
