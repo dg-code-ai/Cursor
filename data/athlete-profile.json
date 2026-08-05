@@ -1,6 +1,35 @@
 {
   "name": "Athlete",
-  "updated": "2026-08-04",
+  "updated": "2026-08-05",
+  "gear": {
+    "runningShoes": [
+      {
+        "brand": "Asics",
+        "model": "Superblast 3",
+        "role": "max-cushion / long"
+      },
+      {
+        "brand": "Nike",
+        "model": "Winflo 11 Wide",
+        "role": "daily / wide"
+      },
+      {
+        "brand": "Hoka",
+        "model": "Mach X 3",
+        "role": "tempo / plated"
+      },
+      {
+        "brand": "Mizuno",
+        "model": "Wave Rebellion Pro",
+        "role": "race / speed"
+      },
+      {
+        "brand": "Adidas",
+        "model": "Duramo",
+        "role": "easy / backup"
+      }
+    ]
+  },
   "body": {
     "weightKg": 106.4,
     "skeletalMuscleKg": 50.3,
