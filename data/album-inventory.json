@@ -41,7 +41,7 @@
     "2026-07": 94,
     "2026-08": 4
   },
-  "gymLogSessions": 251,
+  "gymLogSessions": 32,
   "backfillSummary": {
     "ranAt": "2026-08-04",
     "version": 5,
@@ -190,5 +190,8 @@
     "3) 잔여 최근 5일: 월리포트/카디오만/거의 빈 세션",
     "4) no detail은 제외 유지"
   ],
-  "priorityBackfillRemaining2026": []
+  "priorityBackfillRemaining2026": [],
+  "activeFrom": "2026-06-05",
+  "archivedSessions": 219,
+  "dataWindowNote": "대시보드·활성 gym-log는 2026-06-05 이후만. 이전 OCR은 gym-log-archive-pre-2026-06.json"
 }

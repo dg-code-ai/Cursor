@@ -748,6 +748,18 @@ function setupHeroMetrics(profile, gymLog, runLog) {
   paint();
 }
 
+/** Keep dashboard on recent window (gym-log.activeFrom, default ~2 months). */
+function scopeActiveSessions(log, activeFrom) {
+  if (!log) return log;
+  const from = activeFrom || log.activeFrom;
+  if (!from) return log;
+  return {
+    ...log,
+    activeFrom: from,
+    sessions: (log.sessions || []).filter((s) => (s.date || '') >= from),
+  };
+}
+
 function extractLiftSeries(gymLog, nameMatch, pick) {
   const rows = [];
   gymLog.sessions
@@ -1251,6 +1263,9 @@ Promise.all([
   loadJSON('data/album-inventory.json').catch(() => null),
 ])
   .then(([profile, gymLog, runLog, plan, insights, goalsData, album]) => {
+    const from = gymLog.activeFrom || '2026-06-05';
+    gymLog = scopeActiveSessions(gymLog, from);
+    runLog = scopeActiveSessions(runLog, from);
     renderDashboard(profile, gymLog, runLog, insights, album, goalsData);
     renderPlan(plan);
     renderProfile(profile);

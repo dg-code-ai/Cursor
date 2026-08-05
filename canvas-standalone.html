@@ -3156,6 +3156,18 @@ function setupHeroMetrics(profile, gymLog, runLog) {
   paint();
 }
 
+/** Keep dashboard on recent window (gym-log.activeFrom, default ~2 months). */
+function scopeActiveSessions(log, activeFrom) {
+  if (!log) return log;
+  const from = activeFrom || log.activeFrom;
+  if (!from) return log;
+  return {
+    ...log,
+    activeFrom: from,
+    sessions: (log.sessions || []).filter((s) => (s.date || '') >= from),
+  };
+}
+
 function extractLiftSeries(gymLog, nameMatch, pick) {
   const rows = [];
   gymLog.sessions
@@ -3653,15 +3665,18 @@ document.getElementById('result-filters')?.addEventListener('click', (e) => {
 });
 
 Promise.all([
-  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/athlete-profile.json?v=dash13'),
-  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/sessions/gym-log.json?v=dash13'),
-  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/sessions/run-log.json?v=dash13'),
-  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/plan.json?v=dash13'),
-  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/coaching-insights.json?v=dash13'),
-  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/goals.json?v=dash13'),
-  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/album-inventory.json?v=dash13').catch(() => null),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/athlete-profile.json?v=dash14'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/sessions/gym-log.json?v=dash14'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/sessions/run-log.json?v=dash14'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/plan.json?v=dash14'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/coaching-insights.json?v=dash14'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/goals.json?v=dash14'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/album-inventory.json?v=dash14').catch(() => null),
 ])
   .then(([profile, gymLog, runLog, plan, insights, goalsData, album]) => {
+    const from = gymLog.activeFrom || '2026-06-05';
+    gymLog = scopeActiveSessions(gymLog, from);
+    runLog = scopeActiveSessions(runLog, from);
     renderDashboard(profile, gymLog, runLog, insights, album, goalsData);
     renderPlan(plan);
     renderProfile(profile);
