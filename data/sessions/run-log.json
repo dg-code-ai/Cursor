@@ -325,6 +325,7 @@
       "id": "run-2026-08-01",
       "date": "2026-08-01",
       "type": "long-run-attempt",
+      "timeOfDay": "morning",
       "distanceKm": 5.55,
       "timeSec": 2859,
       "pacePerKm": "8'35\"",
@@ -355,8 +356,9 @@
         384
       ],
       "location": "인천",
+      "shoe": "Hoka Mach X 3",
       "source": "Apple Fitness",
-      "coachNote": "처방: 6-8km · 9'20\"+ · HR135-145. 실제: 5.55km · 8'35\" · HR160 (최대185). 거리↓·강도↑ — 7/17·7/25와 같은 패턴. 이지런 실패. 다음: 처음부터 걷기 섞어도 되니 HR140대 고정이 점수."
+      "coachNote": "토 아침 호카 마하 X3. 5.55km · 8'35\" · HR160(최대185). 거리↓·강도↑ 패턴. 이후 기준: 9분대에서 심박 확인 후만 페이스 올리기."
     },
     {
       "id": "run-2026-08-04",
