@@ -11,7 +11,8 @@
       {
         "brand": "Nike",
         "model": "Winflo 11 Wide",
-        "role": "daily / wide"
+        "role": "daily / wide",
+        "note": "2026-08-04: 바닥에 착착 감김. 슈퍼블라스트 대비 접지감 선호."
       },
       {
         "brand": "Hoka",
@@ -28,7 +29,8 @@
         "model": "Duramo",
         "role": "easy / backup"
       }
-    ]
+    ],
+    "shoePreference": "이지·접지감 우선 시 윈플로. 슈퍼블라스트는 쿠션은 좋으나 연결감은 윈플로가 우위(본인)."
   },
   "body": {
     "weightKg": 106.4,
