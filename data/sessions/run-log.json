@@ -370,20 +370,41 @@
       "timeSec": 1990,
       "pacePerKm": "8'09\"",
       "bestPace": "5'36\"",
-      "paceRange": ["12'14\"", "5'36\""],
+      "paceRange": [
+        "12'14\"",
+        "5'36\""
+      ],
       "caloriesKcal": 442,
       "avgHr": 163,
-      "hrRange": [122, 189],
+      "hrRange": [
+        122,
+        189
+      ],
       "avgCadence": 148,
-      "cadenceRange": [82, 170],
+      "cadenceRange": [
+        82,
+        170
+      ],
       "avgPower": 226,
-      "powerRange": [91, 394],
+      "powerRange": [
+        91,
+        394
+      ],
       "verticalOscCm": 9.9,
-      "verticalOscRange": [8.8, 11.1],
+      "verticalOscRange": [
+        8.8,
+        11.1
+      ],
       "groundContactMs": 329,
-      "groundContactRange": [224, 372],
+      "groundContactRange": [
+        224,
+        372
+      ],
       "strideLengthM": 0.8,
-      "strideLengthRange": [0.7, 1.3],
+      "strideLengthRange": [
+        0.7,
+        1.3
+      ],
       "altitudeMinM": 6,
       "altitudeMaxM": 9,
       "location": "인천 송도",
@@ -391,6 +412,55 @@
       "shoeNote": "본인: 슈퍼블라스트보다 쿠션은 덜하지만 바닥에 착착 감김. 어제 감각 좋았음.",
       "source": "Apple Fitness / Watch",
       "coachNote": "화 스내치 후 저녁 자율런. 4.06km·8'09\"·HR163 — 느린 구간↔서지 혼재로 심박 누적. 신발 윈플로: 접지감 선호. 다음엔 9분대에서 심박 가라앉은 뒤만 페이스 올리기."
+    },
+    {
+      "id": "run-2026-08-06",
+      "date": "2026-08-06",
+      "type": "easy-recovery",
+      "title": "실외 달리기",
+      "timeOfDay": "20:30–21:01",
+      "distanceKm": 3.65,
+      "timeSec": 1873,
+      "elapsedSec": 1874,
+      "pacePerKm": "8'32\"",
+      "paceRange": [
+        "29'30\"",
+        "6'02\""
+      ],
+      "caloriesKcal": 360,
+      "avgHr": 148,
+      "hrRange": [
+        102,
+        178
+      ],
+      "avgCadence": 144,
+      "cadenceRange": [
+        70,
+        176
+      ],
+      "avgPower": 232,
+      "powerRange": [
+        82,
+        309
+      ],
+      "verticalOscCm": 9.7,
+      "verticalOscRange": [
+        8.3,
+        11.1
+      ],
+      "groundContactMs": 329,
+      "groundContactRange": [
+        250,
+        378
+      ],
+      "source": "Apple Fitness / Watch",
+      "context": "목 오전 Push 라이트 + 햄 당김(좌식 후 기립) 있는 날 저녁",
+      "graphRead": {
+        "hr": "초반 낮음 → 구간 대부분 완만 상승 → 후반 피크(178) 후 쿨다운 하강",
+        "pace": "중반 비교적 일정 · 맨끝 급감속(워크/쿨다운)",
+        "vsAug04": "8'09\"/HR163·max189 → 8'32\"/HR148·max178. 서지 패턴↓, 평균 심박 목표대 진입"
+      },
+      "coachNote": "화 4.06km·8'09\"·HR163(서지 혼재) 대비 페이스↓·평균심박↓가 핵심. 그래프상 페이스는 중반 비교적 평탄하고 심박만 완만 누적 — 느린↔서지 파형보다 ‘일정 조깅에 심박이 천천히 쌓이는’ 쪽에 가깝다. 평균 148은 이지 창(150 전후)에 들어옴. 후반 178은 피크 터치일 뿐 세션 전체 성격은 아님. 케이던스 144·접지 329ms는 이지+체중+햄 조심 보폭과 일치. 햄 당긴 날 저녁에 3.65km로 혈류 돌린 선택은 좋음 — 단 기립 땡이 악화됐는지만 본인 확인."
     }
   ],
   "plan": {
