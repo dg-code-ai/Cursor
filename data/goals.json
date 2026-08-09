@@ -59,10 +59,13 @@
       "note": "조깅 이지 HR150–155(상한160). 140대는 걷기. 8/8: 실내~6+실외3.5≈9.5km 거리 달성했으나 실외 평균7'59\"·존147+ 과다 — 이지 8km 품질 목표는 아직 미달. 다음엔 단일 블록·8'30\"–9'00\".",
       "lastAttempt": {
         "date": "2026-08-08",
-        "distanceKmApprox": 9.5,
-        "easyQuality": false,
+        "indoorKm": 6.02,
+        "indoorPace": "7'37\"",
+        "indoorAvgHr": 152,
+        "outdoorKm": 3.54,
         "outdoorPace": "7'59\"",
-        "outdoorAvgHr": 151
+        "totalKmApprox": 9.56,
+        "easyQuality": false
       }
     },
     {

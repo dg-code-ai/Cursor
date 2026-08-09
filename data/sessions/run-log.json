@@ -467,10 +467,47 @@
       "date": "2026-08-08",
       "type": "indoor-run",
       "title": "실내 달리기",
-      "distanceKm": 6.0,
+      "distanceKm": 6.02,
       "distanceNote": "본인 보고 약 6km · 워치 상세 미첨부",
-      "source": "athlete report",
-      "coachNote": "토 첫 블록. 상세 HR/페이스 없음 — 이어진 실외 3.5km와 합산 시 당일 총거리 ~9.5km."
+      "source": "Apple Fitness / Watch",
+      "coachNote": "6.02km·45:52·7'37\"·HR152(122–182)·케이던스157·접지319·VO9.6. 케이던스/접지는 이지 정상 구간. 다만 페이스 7'37\"는 앵커(8'30\"–9'00\")보다 ~1분 빠름. 평균 HR152는 창처럼 보여도 max182+막판 가속이라 ‘유지 이지’가 아니라 자극 런. 실외 3.5km(7'59\"/HR151)와 이어지면 당일 총 ~9.5km·두 번 자극.",
+      "timeSec": 2752,
+      "elapsedSec": 2754,
+      "pacePerKm": "7'37\"",
+      "paceRange": [
+        "10'32\"",
+        "5'23\""
+      ],
+      "avgHr": 152,
+      "hrRange": [
+        122,
+        182
+      ],
+      "avgCadence": 157,
+      "cadenceRange": [
+        122,
+        176
+      ],
+      "avgPower": 250,
+      "powerRange": [
+        162,
+        350
+      ],
+      "verticalOscCm": 9.6,
+      "verticalOscRange": [
+        7.9,
+        11.7
+      ],
+      "groundContactMs": 319,
+      "groundContactRange": [
+        204,
+        373
+      ],
+      "graphRead": {
+        "hr": "초반→후반 완만 상승, 후반부 피크(최대182)",
+        "pace": "중반 비교적 유지 · 막판 가속(5'23\"대 터치)",
+        "power": "후반 파워↑ — 페이스 가속과 동행"
+      }
     },
     {
       "id": "run-2026-08-08-jog",
