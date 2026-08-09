@@ -357,7 +357,7 @@
           "이후 용상: 하이행 감기만 · PR X"
         ],
         "eveningRun": "일 저녁 실외 ~3.5km 7'59\" HR151 max183 — 역도일 저녁 자극. 스내치 결과와 별도 기록.",
-        "actual": "스쿼트 스내치 40-60-70-75-80-85-87-90 성공 · 92 miss×4(쫄음/전방드롭/락미체결/고갈) · 저녁런 3.5km",
+        "actual": "스내치 40–90 성공·92 miss×4 · 풀용상 90 → 60 파워클린>푸시프레스>푸시저크 · 저녁런 3.5km",
         "grade": "A (90 성공 · 92 가시권)"
       }
     ]
@@ -405,6 +405,11 @@
         "fatigue"
       ],
       "next": "consolidate 90 · 92 fresh ≤2 attempts · no jump to 100 next session"
+    },
+    "cj": {
+      "fullCJ": 90,
+      "drill": "60 power clean + push press + push jerk combo",
+      "note": "No CJ PR chase; path drill after snatch fatigue — correct priority."
     }
   },
   "nextGymPrescription": {
@@ -968,5 +973,9 @@
       "절뚝임"
     ],
     "programming": "주 롱런 +1km 계단. 덜렁이 심하면 그날 컷해도 성공."
+  },
+  "nextOlympicFocus": {
+    "snatch": "90 make solid · 92 ≤2 fresh attempts",
+    "cj": "high-hang clean pull-under/감김 · light jerk dip-drive · avoid heavy full CJ volume after snatch PR day"
   }
 }
