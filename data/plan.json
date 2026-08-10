@@ -1136,6 +1136,37 @@
     "principle": "Strength and technique in parallel; do not wait for 200 squat to chase 100 snatch.",
     "federation": "대한역도연맹",
     "weightClass": "-110",
-    "bodyweightKg": 106.4
+    "bodyweightKg": 106.4,
+    "meetWindow": "2026-11",
+    "likelyMeet": "연맹회장배 (동호인 포함 가능)",
+    "phases": [
+      {
+        "id": "aug-sep",
+        "focus": "기반",
+        "snatch": "90 고정 → 92 → 95",
+        "cj": "하이행 감김 → 라이트 풀클린/저크 경로",
+        "squat": "170×2–3 → 180×1–2 (풀)",
+        "run": "이지 8km 정착 (질주 X)"
+      },
+      {
+        "id": "oct",
+        "focus": "시합 무게 접근",
+        "snatch": "95 반복 · 100 시도 창 1–2회",
+        "cj": "시합 오프너 후보 중량까지",
+        "squat": "190 재확인 또는 서브맥스 유지 (맥스 남발 X)",
+        "meetPractice": "오프너·2차·3차 시나리오 리허설"
+      },
+      {
+        "id": "early-nov",
+        "focus": "피킹/테이퍼",
+        "rule": "새 PR 욕심↓ · 성공률↑ · 계체 -110 여유",
+        "opensHint": "스내치 오프너 보수적(성공 확정 중량) → 2·3차로만 100 터치"
+      }
+    ],
+    "novTargetsDraft": {
+      "snatch": "시합 성공 95+ · 100 시도 가능 상태",
+      "cj": "연결 붙은 풀용상으로 토탈 경쟁력 (구체 kg는 9–10월에 확정)",
+      "squatTraining": "200은 시즌 목표 · 시합 주 맥스 X"
+    }
   }
 }
