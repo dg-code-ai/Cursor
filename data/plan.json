@@ -1124,5 +1124,15 @@
     ],
     "whenNot": "격주 역도 다음날 월 · 스내치92 싸움 다음 · 보조 9k+ 길게 간 날",
     "nextWindowHint": "이번 주 목은 라이트 유지. 다음 ‘역도 없는 주’의 월/목 Push 중 컨디션 좋은 날 130×5 시도."
+  },
+  "medalPath": {
+    "declared": "2026-08-10",
+    "lifts": {
+      "snatch": 100,
+      "squat": 200,
+      "cj": "TBD after pull connection"
+    },
+    "nearTerm": "snatch 92 make · squat 180×1–2 full",
+    "principle": "Strength and technique in parallel; do not wait for 200 squat to chase 100 snatch."
   }
 }
