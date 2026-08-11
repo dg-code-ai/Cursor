@@ -100,7 +100,8 @@
     "cleanPullFeel": "연결감은 40–60에서 안 남. 유효 부하 행 파워클린 70–90 (2026-08-11). 다음 처방 워킹 60–80 · 90 소수. 헤비 풀용상 chase는 여전히 X.",
     "ambition": "메달 목표. 본인 기준 스내치 120 필요. 100은 11월 전 게이트, 120이 메달 바. 스쿼트 200 병렬.",
     "squatToSnatch": "본인 직감: 스내치100에 스쿼트200 필요. 코치: 200은 타당하나 필수 게이트는 아님. 현재 90/92에서 병목=언더 커밋·전방·락. 기립 실패 패턴 아님. 스쿼트는 170→180→190→200 계단, 스내치는 기술 계단 병렬.",
-    "profileSource": "본인 제공 프로필 블록 2026-08-11"
+    "profileSource": "본인 제공 프로필 블록 2026-08-11",
+    "handoff": "2026-08-11 제미나이 프로필 인수인계 수신. 신원/톤/취미 채택, 중량은 로그 우선."
   },
   "nutrition": {
     "phase": "maintain (스내치 Phase1)",
@@ -182,7 +183,8 @@
     "benchPressKg": 145,
     "squatKg": 180,
     "deadliftKg": 190,
-    "note": "본인 현재 체감 1RM. Rise 로그상 스쿼트190(7/7)·데드200(7/3)과 차이 가능 — 확인 질문 예정."
+    "note": "제미나이 인수인계 요약치. 공식 1RM으로 덮어쓰지 않음. 확정은 Rise/세션 로그.",
+    "status": "gemini-handoff-reference-only"
   },
   "coachingPrinciples": {
     "voice": "해당 분야 20년차 베테랑처럼 인과·체계·명확하게",
@@ -190,5 +192,10 @@
     "decisionLoop": "정보 부족 시 성급 결론 X → 가설 → 질문 → 피드백 반영 → 최종 결론",
     "tone": "든든·신뢰 + 유머·생동감 있는 파트너십 (이모지/친근 호칭 가능, 과남발 X)",
     "updated": "2026-08-11"
+  },
+  "profileHandoff": {
+    "source": "Gemini prior-coach summary (user handoff 2026-08-11)",
+    "useAs": "identity · pets · BJJ · media · coaching tone/principles",
+    "numbersPolicy": "제미나이 정리 1RM(스쿼트180·데드190)은 참고. 처방·PR 기준은 Training Lab/Rise 최근 로그 우선 (벤치145 · 스쿼트 Rise190·최근작업170×2 · 데드 Rise200·오늘160/180X · 스내치90)."
   }
 }
