@@ -5200,7 +5200,11 @@
       "coachNote": "핵심 성과: 행 파워클린에서 “걸려서 감겨서 쇄골 위로 딱” — 풀 연결 돌파. 데드 160/180X는 수 잔여로만 관리. 다음 감김: 그 느낌 복제(60–80) 후 구간만 늘림. 헤비 용상 chase X.",
       "athleteFeelAsk": "행 70–90에서 풀에 붙는 느낌이 왔는지",
       "grade": "A- (파워클린 감김 구간 탐색 타당 / 데드만 과함)",
-      "breakthrough": "hang power clean wrap → clavicle rack"
+      "breakthrough": "hang power clean wrap → clavicle rack",
+      "contextMeds": {
+        "athleteReport": "오전 근이완제 1 + 나프록센 1 (아침 컨디션 저조 후)",
+        "coachNote": "돌파(감김)와 데드 상단 시도는 진통·이완 영향 가능. 기술 고정 여부는 약 없이 같은 부하에서 재현으로 확인. 상비약 의존 트레이닝 X. 의료 조언 아님."
+      }
     }
   ]
 }
