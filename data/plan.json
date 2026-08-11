@@ -1251,7 +1251,9 @@
     },
     "snatchMedalBar": 120,
     "snatchGate": 100,
-    "athleteStandard": "메달하려면 120은 들어가야 함"
+    "athleteStandard": "메달하려면 120은 들어가야 함",
+    "cjOfficial1RM": 110,
+    "cjNote": "Rise 공식 110. 시합용은 클린 여유 만든 뒤 110 재확인·상향."
   },
   "coachOperatingRules": {
     "voice": "해당 분야 20년차 베테랑처럼 인과·체계·명확하게",
