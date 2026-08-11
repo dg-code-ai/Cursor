@@ -1263,7 +1263,17 @@
     "snatchGate": 100,
     "athleteStandard": "메달하려면 120은 들어가야 함",
     "cjOfficial1RM": 110,
-    "cjNote": "Rise 공식 110. 시합용은 클린 여유 만든 뒤 110 재확인·상향."
+    "cjNote": "Rise 공식 110. 시합용은 클린 여유 만든 뒤 110 재확인·상향.",
+    "snatchTarget": 120,
+    "cjTarget": 150,
+    "totalIfBoth": 270,
+    "ratio": "120/150=0.80 (전형적 밸런스)",
+    "fromNow": {
+      "snatch": "+30 from 90",
+      "cj": "+40 from 110"
+    },
+    "strengthSupport": "스쿼트 200+ · 클린 여유(감김) · 저크 락 · 프론트스쿼트",
+    "timelineQuestion": "11월에 120+150 동시 vs 11월 스내치120 우선·용상150은 다음 사이클"
   },
   "coachOperatingRules": {
     "voice": "해당 분야 20년차 베테랑처럼 인과·체계·명확하게",
