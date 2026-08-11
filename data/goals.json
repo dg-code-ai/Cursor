@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-08-10",
+  "updated": "2026-08-11",
   "goals": [
     {
       "id": "squat-snatch-120",
@@ -123,7 +123,8 @@
       "baseline": {
         "value": 190,
         "date": "2026-07-07",
-        "label": "190 PR · 최근 170×2"
+        "label": "Rise 공식 1RM 190",
+        "source": "Rise"
       },
       "target": {
         "value": 200,

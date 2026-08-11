@@ -53,7 +53,7 @@
     "squat": 190,
     "deadlift": 200,
     "powerSnatch": 85,
-    "cleanAndJerk": 110,
+    "cleanAndJerk": 90,
     "snatchGoal": 100,
     "tenKBest": {
       "timeMin": 69.1,
@@ -62,11 +62,7 @@
       "distanceKm": 10.03
     },
     "hangSquatSnatch": 65,
-    "snatch": 90,
-    "squatRiseLogged": 190,
-    "deadliftRiseLogged": 200,
-    "squatSelfReport": 180,
-    "deadliftSelfReport": 190
+    "snatch": 90
   },
   "goals": [
     {
@@ -91,7 +87,7 @@
     "weightlifting": "격주 일요일 08:00 2시간",
     "gym": "평일 점심",
     "injury": "왼발 족저근막염 (경미)",
-    "prUpdate": "스쿼트 190(7/7), 데드 200(7/3) — Rise 공유앨범",
+    "prUpdate": "공식 1RM=Rise. 스쿼트190 · 데드200 · 벤치145 · 스내치90 · 용상90.",
     "snatchDepth": "2026-08-09 스쿼트 스내치 90 성공(풀). 사다리 40-60-70-75-80-85-87-90. 92는 언더 공포·전방 드롭·락 미체결·피로.",
     "bench": "130×4×2 달성 (2026-07-30). PR 싱글 145.",
     "squatStandard": "풀스쿼트만 인정 — 허벅지와 종아리가 닿아야 함. 하프/쿼터는 세트로 치지 않음.",
@@ -101,7 +97,7 @@
     "ambition": "메달 목표. 본인 기준 스내치 120 필요. 100은 11월 전 게이트, 120이 메달 바. 스쿼트 200 병렬.",
     "squatToSnatch": "본인 직감: 스내치100에 스쿼트200 필요. 코치: 200은 타당하나 필수 게이트는 아님. 현재 90/92에서 병목=언더 커밋·전방·락. 기립 실패 패턴 아님. 스쿼트는 170→180→190→200 계단, 스내치는 기술 계단 병렬.",
     "profileSource": "본인 제공 프로필 블록 2026-08-11",
-    "handoff": "2026-08-11 제미나이 프로필 인수인계 수신. 신원/톤/취미 채택, 중량은 로그 우선."
+    "handoff": "제미나이 인수인계는 신원/톤용. 공식 1RM은 Rise 기록으로 확정(2026-08-11 본인)."
   },
   "nutrition": {
     "phase": "maintain (스내치 Phase1)",
@@ -116,10 +112,30 @@
   "updatedAt": "2026-08-11",
   "lifts": {},
   "personalRecords": {
+    "benchPress": {
+      "kg": 145,
+      "source": "Rise"
+    },
+    "squat": {
+      "kg": 190,
+      "date": "2026-07-07",
+      "source": "Rise",
+      "standard": "풀스쿼트"
+    },
+    "deadlift": {
+      "kg": 200,
+      "date": "2026-07-03",
+      "source": "Rise"
+    },
+    "snatch": {
+      "kg": 90,
+      "date": "2026-08-09",
+      "source": "Rise/athlete+album"
+    },
     "cleanAndJerk": {
       "kg": 90,
       "date": "2026-08-09",
-      "note": "스내치 세션 후"
+      "source": "athlete report"
     }
   },
   "competition": {
@@ -183,8 +199,8 @@
     "benchPressKg": 145,
     "squatKg": 180,
     "deadliftKg": 190,
-    "note": "제미나이 인수인계 요약치. 공식 1RM으로 덮어쓰지 않음. 확정은 Rise/세션 로그.",
-    "status": "gemini-handoff-reference-only"
+    "note": "공식 아님. 공식 1RM은 Rise(official1RM).",
+    "status": "non-official-handoff-only"
   },
   "coachingPrinciples": {
     "voice": "해당 분야 20년차 베테랑처럼 인과·체계·명확하게",
@@ -197,5 +213,34 @@
     "source": "Gemini prior-coach summary (user handoff 2026-08-11)",
     "useAs": "identity · pets · BJJ · media · coaching tone/principles",
     "numbersPolicy": "제미나이 정리 1RM(스쿼트180·데드190)은 참고. 처방·PR 기준은 Training Lab/Rise 최근 로그 우선 (벤치145 · 스쿼트 Rise190·최근작업170×2 · 데드 Rise200·오늘160/180X · 스내치90)."
+  },
+  "official1RM": {
+    "source": "Rise 기록",
+    "policy": "공식 1RM = Rise에 기록된 값. 제미나이/체감치로 덮지 않음.",
+    "lifts": {
+      "benchPress": {
+        "kg": 145,
+        "note": "싱글 PR"
+      },
+      "squat": {
+        "kg": 190,
+        "date": "2026-07-07",
+        "note": "풀스쿼트"
+      },
+      "deadlift": {
+        "kg": 200,
+        "date": "2026-07-03"
+      },
+      "snatch": {
+        "kg": 90,
+        "date": "2026-08-09",
+        "note": "스쿼트 스내치"
+      },
+      "cleanAndJerk": {
+        "kg": 90,
+        "date": "2026-08-09",
+        "note": "스내치 세션 후 풀용상"
+      }
+    }
   }
 }
