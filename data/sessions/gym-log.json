@@ -5523,13 +5523,14 @@
       "coachNote": "하이브리드 B 첫날 — 구조가 맞음: 주연 푸시프레스, 조연 벤치. 상체 강력함(벤치120×5)도 남김. 다만 등 보호 모드 중량은 무시하고 푸시프레스 100·OHP 80까지 — 아침 등이 괜찮았다면 ‘가능’, 밤에 가운뎃등 재발하면 과했음. 다음 Push는 푸시프레스 워킹을 80–90대에 두고 100은 소수. 금: 스내치 출력 + 행 감김(약 없이 쇄골 딱 재현)."
     },
     {
-      "id": "hyrox-2026-08-18",
-      "date": "2026-08-18",
+      "id": "hyrox-2026-08-14",
+      "date": "2026-08-14",
       "type": "Hyrox",
-      "title": "하이록스 스타일 듀오 컨디셔닝",
-      "format": "duo · ~13분/라운드",
-      "durationMinEst": "52–78",
-      "roundsPerBlock": "2–3",
+      "title": "하이록스 세미나 · 듀오 컨디셔닝",
+      "format": "duo · 파트너 50/50 분담 · ~13분/라운드",
+      "durationMinEst": "~52",
+      "roundsPerBlock": 2,
+      "venue": "실내",
       "blocks": [
         {
           "name": "블록 A — 로잉·런·런지",
@@ -5539,7 +5540,7 @@
             "런지 80",
             "달리기 420m"
           ],
-          "rounds": "2–3",
+          "rounds": 2,
           "roundTimeMin": "~13"
         },
         {
@@ -5550,29 +5551,37 @@
             "버피 브로드 점프 40m",
             "달리기 420m"
           ],
-          "rounds": "2–3",
+          "rounds": 2,
           "roundTimeMin": "~13"
         }
       ],
       "volumeEst": {
-        "runMetersMin": 3360,
-        "runMetersMax": 5040,
-        "runKmRange": "3.36–5.04",
-        "lungesMin": 160,
-        "lungesMax": 240,
-        "rowKcalPerRound": 40,
+        "teamRunMeters": 3360,
+        "teamRunKm": 3.36,
+        "teamLunges": 160,
+        "teamRowKcal": 80,
         "farmersKg": 32,
-        "farmersMetersMin": 160,
-        "farmersMetersMax": 240,
-        "bbjMetersMin": 80,
-        "bbjMetersMax": 120
+        "teamFarmersMeters": 160,
+        "teamBbjMeters": 80,
+        "individualNote": "50/50 분담 → 본인 런 ~1.7km · 런지 ~80 · 로잉 ~40kcal · 파머스 ~80m · BBJ ~40m (추정)"
+      },
+      "runFeedback": {
+        "surface": "실내",
+        "pace": "정확 측정 불가",
+        "last420mMaxHr": 180
+      },
+      "postSession": {
+        "feel": "그냥 힘듦",
+        "localizedSoreness": false,
+        "stiffness": false,
+        "specificPain": false
       },
       "context": {
-        "priorFri": "하이록스 세미나 — 개인운동 패스",
-        "partner": "듀오"
+        "sameDay": "하이록스 세미나 — 예정 스내치 테크 대체",
+        "partner": "듀오 · 역할 반반"
       },
-      "coachNote": "금 세미나 후 화요일 하이록스형 볼륨. 420m 반복+런지80×2–3+32kg 파머스+버피점프40m — 역도 목표(120/150)와 병행 가능하나 햄·무릎·가운뎃등(8/12) 회복 확인 필요. 내일은 스내치/클린 테크 또는 Leg 중 택1, 점프·런지 추가 X.",
-      "grade": "B+ (하이록스 특화 볼륨 · 역도 주간과 겹침 — 의도적이면 OK)"
+      "coachNote": "금 세미나+듀오 2×2. 마지막 420m HR180=마무리 강도↑ but 국소 불편·묵직 없음=깨끗한 회복 신호. 50/50 분담이라 절대 볼륨은 절반 — 106kg 기준 충분히 소화 가능. 스내치 출력+행 감김은 이번 주 화–금 중 재배치.",
+      "grade": "A- (세미나 day 대체 · 회복 양호 · HR180은 마지막 한 방만)"
     }
   ]
 }
