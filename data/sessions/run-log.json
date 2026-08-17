@@ -545,6 +545,157 @@
       "partOfDay": "일 저녁",
       "coachNote": "일 저녁 실외 ~3.5km·7'59\"·HR151(max183)·케이던스155. 존 147+ 비중 큼(~22분/27분)·막판 서지. 토 실내와 날짜 분리 — 같은 날 더블이 아님. 일 스내치 도전 다음 저녁 자극이면 회복 측면에서 아쉬움; 다음 역도일 저녁은 걷기/완전 이지만.",
       "timeOfDay": "저녁"
+    },
+    {
+      "id": "run-2026-08-15-outdoor",
+      "date": "2026-08-15",
+      "type": "outdoor-run",
+      "title": "실외 달리기 (토 오전)",
+      "distanceKm": 5.06,
+      "timeSec": 2439,
+      "pacePerKm": "8'02\"",
+      "paceRange": [
+        "13'31\"",
+        "6'05\""
+      ],
+      "avgHr": 156,
+      "hrRange": [
+        118,
+        181
+      ],
+      "avgPower": 236,
+      "powerRange": [
+        85,
+        326
+      ],
+      "avgCadence": 151,
+      "cadenceRange": [
+        87,
+        166
+      ],
+      "verticalOscCm": 10.0,
+      "verticalOscRange": [
+        8.6,
+        11.4
+      ],
+      "groundContactMs": 332,
+      "groundContactRange": [
+        265,
+        378
+      ],
+      "activeKcal": 547,
+      "location": "인천광역시",
+      "routeNote": "해안/인천대교 인근 직선 구간",
+      "graphRead": {
+        "hr": "후반으로 갈수록 상승 · max181",
+        "pace": "중반 비교적 유지 · ~15·25분 부근 감속(휴식?) · 막판 가속"
+      },
+      "source": "Apple Fitness",
+      "timeOfDay": "오전",
+      "timeWindow": "06:44–07:25",
+      "coachNote": "금 하이록스 다음날 5km. 페이스 8'02\"=이지 앵커(8'30\"–9'00\")보다 빠름 · HR156·max181=평균은 창 근처 but 마무리 강도↑. 웨이트 X·런만=회복 겸 거리 — 방향 OK, 페이스 한 단만 더 내렸으면 A."
+    },
+    {
+      "id": "run-2026-08-16-outdoor",
+      "date": "2026-08-16",
+      "type": "outdoor-run",
+      "title": "실외 달리기 (일 오전)",
+      "distanceKm": 5.27,
+      "timeSec": 2550,
+      "elapsedSec": 3284,
+      "pacePerKm": "8'03\"",
+      "paceRange": [
+        "21'12\"",
+        "6'02\""
+      ],
+      "avgHr": 149,
+      "hrRange": [
+        99,
+        175
+      ],
+      "avgPower": 236,
+      "powerRange": [
+        78,
+        426
+      ],
+      "avgCadence": 151,
+      "cadenceRange": [
+        97,
+        183
+      ],
+      "verticalOscCm": 9.7,
+      "verticalOscRange": [
+        8.1,
+        11.7
+      ],
+      "groundContactMs": 336,
+      "groundContactRange": [
+        222,
+        378
+      ],
+      "activeKcal": 513,
+      "location": "인천광역시 · 송도",
+      "routeNote": "송도센트럴파크 인근",
+      "graphRead": {
+        "hr": "149 평균 · 완만 누적",
+        "pace": "케이던스 공백=걷기/휴식 구간 · 21'12\" 스파이크=워크",
+        "elapsed": "운동 42:30 vs 경과 54:44 → ~12분 휴식 포함"
+      },
+      "source": "Apple Fitness",
+      "timeOfDay": "오전",
+      "timeWindow": "08:02–08:56",
+      "coachNote": "3연속 둘째 날. 8'03\"·HR149=8/6(8'32\"/148)보다 페이스↑·심박 비슷 — 걷기 섞인 이지로 해석 가능. 경과 54분>운동 42분=솔직한 이지. 세 런 중 제일 ‘회복런’답다."
+    },
+    {
+      "id": "run-2026-08-17-outdoor",
+      "date": "2026-08-17",
+      "type": "outdoor-run",
+      "title": "실외 달리기 (월 오전)",
+      "distanceKm": 5.0,
+      "timeSec": 2196,
+      "elapsedSec": 2197,
+      "pacePerKm": "7'19\"",
+      "paceRange": [
+        "10'58\"",
+        "4'55\""
+      ],
+      "avgHr": 159,
+      "hrRange": [
+        108,
+        182
+      ],
+      "avgPower": 258,
+      "powerRange": [
+        95,
+        402
+      ],
+      "avgCadence": 158,
+      "cadenceRange": [
+        119,
+        182
+      ],
+      "verticalOscCm": 9.6,
+      "verticalOscRange": [
+        8.4,
+        11.0
+      ],
+      "groundContactMs": 323,
+      "groundContactRange": [
+        236,
+        372
+      ],
+      "activeKcal": 524,
+      "location": "인천광역시",
+      "routeNote": "인천대교 인근 직선",
+      "graphRead": {
+        "hr": "후반 상승 · max182",
+        "pace": "평균 7'19\" · 막판 케이던스·파워↑=마감 서지",
+        "cadence": "158 평균 · 종료 구간 182 SPM"
+      },
+      "source": "Apple Fitness",
+      "timeOfDay": "오전",
+      "timeWindow": "07:29–08:06",
+      "coachNote": "3연속 셋째 · 5km 딱. 7'19\"·HR159·max182=이지 아님 — 8/8 실내 7'37\" 패턴 재현(평균 HR만 보면 괜찮아 보이나 막판 서지). 웨이트 휴식 중 런만=OK but 내일 Pull+테크 전 회복런 아님. 오늘부터 페이스 내리거나 내일 헬스."
     }
   ],
   "plan": {

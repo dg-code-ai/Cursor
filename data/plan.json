@@ -97,20 +97,22 @@
   ],
   "thisWeek": {
     "label": "이번 주 (8/17–8/23)",
-    "note": "금(8/14) 하이록스 세미나+듀오 완료 · 스내치 테크는 이번 주 재배치 · 토–일 미보고",
+    "note": "금(8/14) 하이록스 · 토–월 런 3연속(~15.3km) · 웨이트 X · 화 Pull+테크 예정",
     "sessions": [
       {
         "date": "2026-08-17",
         "day": "월",
-        "focus": "회복 / 미보고",
-        "plan": "금 하이록스 후 — 몸 맑으면 가벼운 Push or 휴식",
-        "done": false
+        "focus": "런 only · 웨이트 X",
+        "plan": "회복 — 런 or 휴식",
+        "done": true,
+        "actual": "실외 5.00km · 7'19\" · HR159(max182) · 36:36 · 웨이트 X",
+        "grade": "B (페이스·막판 서지=이지 아님 / 3연속 셋째)"
       },
       {
         "date": "2026-08-18",
         "day": "화",
         "focus": "Pull + 스내치 테크",
-        "plan": "행 파워클린 감김 60–80 · 스내치 출력 70–85(깊이) · 등 서브맥스 · 런지·점프 X",
+        "plan": "Pull+테크 — 3연속 런(토–월) 잔여 보면 데드·볼륨 축소 OK",
         "done": false,
         "checkpoints": [
           "쇄골 딱 재현",
@@ -167,7 +169,7 @@
   },
   "priorWeekArchive": {
     "label": "지난 주 (8/10–8/16)",
-    "note": "월–목 완료 · 금 하이록스 세미나+듀오(2×2·HR180) · 토–일 미보고",
+    "note": "월–목 완료 · 금 하이록스 · 토–일 런 5km대(웨이트X) · 8/17 월 런은 thisWeek",
     "sessions": [
       {
         "date": "2026-08-10",
@@ -209,18 +211,18 @@
       {
         "date": "2026-08-15",
         "day": "토",
-        "focus": "이지 롱런",
-        "done": false,
-        "skipped": true,
-        "why": "미실행(추정)"
+        "focus": "런 only · 웨이트 X",
+        "done": true,
+        "actual": "실외 5.06km · 8'02\" · HR156(max181) · 40:39",
+        "grade": "B+"
       },
       {
         "date": "2026-08-16",
         "day": "일",
-        "focus": "회복",
-        "done": false,
-        "skipped": true,
-        "why": "미실행(추정)"
+        "focus": "런 only · 웨이트 X",
+        "done": true,
+        "actual": "실외 5.27km · 8'03\" · HR149(max175) · 42:30(경과54:44)",
+        "grade": "A-"
       }
     ]
   },
