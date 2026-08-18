@@ -696,6 +696,60 @@
       "timeOfDay": "오전",
       "timeWindow": "07:29–08:06",
       "coachNote": "3연속 셋째 · 5km 딱. 7'19\"·HR159·max182=이지 아님 — 8/8 실내 7'37\" 패턴 재현(평균 HR만 보면 괜찮아 보이나 막판 서지). 웨이트 휴식 중 런만=OK but 내일 Pull+테크 전 회복런 아님. 오늘부터 페이스 내리거나 내일 헬스."
+    },
+    {
+      "id": "run-2026-08-18-evening",
+      "date": "2026-08-18",
+      "type": "outdoor-run",
+      "title": "실외 달리기 (화 저녁)",
+      "distanceKm": 5.03,
+      "timeSec": 2387,
+      "elapsedSec": 2388,
+      "pacePerKm": "7'54\"",
+      "paceRange": [
+        "10'38\"",
+        "6'24\""
+      ],
+      "avgHr": 147,
+      "hrRange": [
+        100,
+        176
+      ],
+      "avgPower": 239,
+      "avgCadence": 155,
+      "cadenceRange": [
+        124,
+        166
+      ],
+      "verticalOscCm": 9.9,
+      "verticalOscRange": [
+        8.6,
+        11.4
+      ],
+      "groundContactMs": 333,
+      "groundContactRange": [
+        270,
+        385
+      ],
+      "strideLengthM": 0.8,
+      "strideLengthRange": [
+        0.8,
+        0.9
+      ],
+      "activeKcal": 502,
+      "perceivedExertion": 7,
+      "perceivedExertionNote": "어려움",
+      "location": "인천광역시",
+      "graphRead": {
+        "hr": "초반부터 후반까지 완만 상승 · 평균147 · max176",
+        "pace": "전반 느림 · 20분 이후 가속(후반 서지)",
+        "cadence": "후반 안정↑ · 평균155"
+      },
+      "source": "Apple Fitness",
+      "timeOfDay": "저녁",
+      "timeWindow": "21:24–22:04",
+      "sameDayGym": "오전 Pull+스내치 테크",
+      "coachNote": "화 오전 테크 다음 저녁 5.03km. HR147=이지 창 안쪽(150–155보다 낮음) — 심박은 최근 제일 깨끗. 페이스 7'54\"는 앵커(8'30\"–9'00\")보다 빠름 + 후반 가속. 자각 7(어려움) vs HR147=테크 잔여로 체감↑. 수 Leg 전날 저녁런 — 하체 말짱 보고와 맞으면 진행하되 180 chase X."
     }
   ],
   "plan": {
