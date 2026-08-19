@@ -201,7 +201,7 @@
         "plan": "화 테크+저녁런 5km 다음 — 스쿼트 160–175 · RDL 80–90 · 180 chase X · 런지·점프 X",
         "done": true,
         "actual": "스쿼트 160–180×1 · 185×0 · RDL 100×8×3+5 · 익스텐션80 · 컬70 · 어덕션70 · 52분·13115kg",
-        "grade": "B+ (180 재확인 / 185·RDL100 처방 초과)"
+        "grade": "B+ (190 경로 · 185 miss는 컨디션 / RDL100 볼륨)"
       },
       {
         "date": "2026-08-20",
@@ -427,7 +427,7 @@
     "default": "reps/sets at 70-85% over daily max singles",
     "phase": "스내치 Phase1 · 무릎 관리와 동일 방향",
     "examples": [
-      "스쿼트: 150×3, 160×2-3 위주 / 190 싱글은 가끔",
+      "스쿼트: 160×2–3 · 170×2 · 180×1 워킹 / 185–190은 맑은 Leg에서 프로브",
       "데드: 160-170×3 위주 / 200 근처 드물게",
       "벤치: 120-130×3-5 / 145는 주 0-1",
       "스내치·OH: 깊게 ×2-3 여러 세트 — 맥스 X"
@@ -1243,7 +1243,7 @@
       "squat": 200,
       "cj": "TBD after pull connection"
     },
-    "nearTerm": "snatch 92 make · squat 180×1–2 full",
+    "nearTerm": "snatch 92 make · squat 185 make · 190 재확인",
     "principle": "Strength and technique in parallel; do not wait for 200 squat to chase 100 snatch.",
     "federation": "대한역도연맹",
     "weightClass": "-110",
@@ -1256,7 +1256,7 @@
         "focus": "더블 트랙 기반",
         "snatch": "90→92→95→100",
         "cj": "감김 70–90 → 풀클린 여유 → 저크 · 용상 120 터치 목표",
-        "squat": "170–180 작업 · 190 재확인"
+        "squat": "180 워킹 · 185 게이트 · 190 재확인 → 200"
       },
       {
         "id": "oct",
@@ -1453,6 +1453,24 @@
       "benchSub": "115–125 ×5 ×1–2 · 130+는 벤치 전용 데이에"
     },
     "note": "8/13 아침 등 OK 데이 기준. 가운뎃등 묵직 재발·누워서 아픔이면 그날만 한 단 다운. 평소 55 고정은 폐기."
+  },
+  "squatLoadCalibration": {
+    "asOf": "2026-08-19",
+    "official1RM": 190,
+    "prDate": "2026-07-07",
+    "standard": "풀스쿼트",
+    "seasonTarget": 200,
+    "athleteFeedback": "PR 190 근처까지는 다시 돌아가야 함 — 180 캡은 너무 낮음",
+    "coachAgree": true,
+    "error": "8/19 처방 160–175·180 X = PP55와 같은 저평가. 180은 이미 2회 성공(8/12·8/19).",
+    "workingBands": {
+      "volume": "160×2–3 · 170×2",
+      "topWorking": "175–180×1",
+      "nextGate": "185×1 (180이 끊김 없이 나온 맑은 날)",
+      "retest": "190 (185 make 다음)",
+      "notEverySession": "190 매일 X · 185는 싱글 사다리+저녁런 위가 아니라 fresh Leg에서"
+    },
+    "aug19Read": "180×1 성공 · 185×0 = 경로 맞음, 조건만 나쁨(화 저녁런+160부터 싱글 쌓기). 185를 포기 중량으로 읽지 말 것."
   },
   "backSorenessAug12Night": {
     "report": "자려고 누웠는데 등이 너무 아팠음",
