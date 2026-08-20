@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "note": "최근 2달 정제 로그 · 2026-06-05~ · manual+정리 OCR · 세션 36",
+  "note": "최근 2달 정제 로그 · 2026-06-05~ · manual+정리 OCR · 세션 37",
   "activeFrom": "2026-06-05",
   "sessions": [
     {
@@ -5702,6 +5702,84 @@
       },
       "coachNote": "하체 말짱 보고대로 Leg 진행. 공식 PR 190(7/7)이라 180은 천장 아님 — 워킹/재확인. 185 miss는 ‘아직 네 무게 아님’이 아니라 화 저녁런+싱글 사다리 위 프로브 실패. 다음 Leg: 180 워킹 후 fresh 185, 붙으면 190 터치. RDL 100 볼륨은 햄·등만 따로 관리. 목 Push 과신전 주의.",
       "grade": "B+ (190 경로로 올라감 / 185는 컨디션 이슈 · RDL100 볼륨 큼)"
+    },
+    {
+      "id": "gym-2026-08-20",
+      "date": "2026-08-20",
+      "type": "Push",
+      "title": "아침 운동 · Push 하이브리드 B",
+      "durationMin": 53,
+      "totalSets": 21,
+      "totalVolumeKg": 6080,
+      "caloriesKcal": 294,
+      "volumeDeltaKg": -992.5,
+      "exercises": [
+        {
+          "name": "푸시 프레스",
+          "sets": [
+            { "kg": 40, "reps": 7 },
+            { "kg": 60, "reps": 5 },
+            { "kg": 80, "reps": 3 },
+            { "kg": 90, "reps": 2 },
+            { "kg": 95, "reps": 1 }
+          ],
+          "workingHighlight": "90×2 · 95×1",
+          "coachNote": "주연 유지. 100 안 감 — 수 Leg(RDL100) 다음날 상단 컷 적절. 8/13은 100×1, 오늘은 95에서 멈춤."
+        },
+        {
+          "name": "바벨 오버헤드 프레스",
+          "sets": [
+            { "kg": 50, "reps": 7 },
+            { "kg": 60, "reps": 5 },
+            { "kg": 70, "reps": 3 },
+            { "kg": 80, "reps": 1 }
+          ],
+          "workingHighlight": "70×3 · 80×1",
+          "coachNote": "처방 75 워킹·80 X였으나 80은 싱글 터치만. 8/13 80×3보다 보수적."
+        },
+        {
+          "name": "로프 페이스 풀",
+          "sets": [
+            { "kg": 15, "reps": 20 },
+            { "kg": 17.5, "reps": 20 },
+            { "kg": 20, "reps": 17 },
+            { "kg": 22.5, "reps": 16 }
+          ],
+          "workingHighlight": "22.5×16"
+        },
+        {
+          "name": "케이블 팔로프 프레스",
+          "sets": [
+            { "kg": 15, "reps": 15 },
+            { "kg": 17.5, "reps": 12 },
+            { "kg": 20, "reps": 12 },
+            { "kg": 20, "reps": 10 }
+          ],
+          "workingHighlight": "20×12/10"
+        },
+        {
+          "name": "벤치 프레스",
+          "sets": [
+            { "kg": 60, "reps": 10 },
+            { "kg": 100, "reps": 5 },
+            { "kg": 120, "reps": 3 },
+            { "kg": 120, "reps": 3 }
+          ],
+          "workingHighlight": "120×3×2 (서브)",
+          "coachNote": "조연 짧게 · 130 chase 없음. 처방 120×5보다 횟수↓ — Leg 다음날 선택 OK."
+        }
+      ],
+      "source": "Rise album",
+      "style": "B-hybrid",
+      "vsPrescription": {
+        "structure": "PP→OHP→페이스풀→팔로프→벤치 서브 · B 순서 합격",
+        "pushPress": "워킹 80–90 · 상단 95 · 100 X · OK",
+        "ohp": "80×1 터치 (처방 80 X) — 싱글만",
+        "bench": "120×3×2 서브 · 130 X · OK",
+        "lowerBody": "없음 · OK"
+      },
+      "coachNote": "하이브리드 B 둘째날 — 8/13보다 상단을 한 단 내린 게 수 Leg 다음날답다. PP 95·OHP 80 싱글·벤치 120×3. 하체 0. 금: 스내치 70–85 락 타이밍 + 행 파워클린 감김. 헬스장 스내치 상한은 안전감.",
+      "grade": "A (B 구조 · 100/130 chase 없음 · Leg 다음날 보수)"
     }
   ]
 }
