@@ -750,6 +750,58 @@
       "timeWindow": "21:24–22:04",
       "sameDayGym": "오전 Pull+스내치 테크",
       "coachNote": "화 오전 테크 다음 저녁 5.03km. HR147=이지 창 안쪽(150–155보다 낮음) — 심박은 최근 제일 깨끗. 페이스 7'54\"는 앵커(8'30\"–9'00\")보다 빠름 + 후반 가속. 자각 7(어려움) vs HR147=테크 잔여로 체감↑. 수 Leg 전날 저녁런 — 하체 말짱 보고와 맞으면 진행하되 180 chase X."
+    },
+    {
+      "id": "run-2026-08-20-evening",
+      "date": "2026-08-20",
+      "type": "outdoor-run",
+      "title": "실외 달리기 (목 저녁)",
+      "distanceKm": 3.75,
+      "timeSec": 1807,
+      "elapsedSec": 1808,
+      "pacePerKm": "8'01\"",
+      "paceRange": [
+        "10'13\"",
+        "6'27\""
+      ],
+      "avgHr": 145,
+      "hrRange": [
+        100,
+        161
+      ],
+      "avgPower": 237,
+      "avgCadence": 155,
+      "cadenceRange": [
+        126,
+        164
+      ],
+      "verticalOscCm": 9.9,
+      "verticalOscRange": [
+        8.6,
+        11.3
+      ],
+      "groundContactMs": 336,
+      "groundContactRange": [
+        273,
+        381
+      ],
+      "strideLengthM": 0.8,
+      "strideLengthRange": [
+        0.7,
+        0.9
+      ],
+      "activeKcal": 371,
+      "location": "인천광역시",
+      "graphRead": {
+        "hr": "초반 상승 후 중후반 145 전후 유지 · max161",
+        "pace": "초반 느림 · 후반 다소 가속(6'27\" 터치)",
+        "cadence": "155 평균 · 비교적 평탄"
+      },
+      "source": "Apple Fitness",
+      "timeOfDay": "저녁",
+      "timeWindow": "21:58–22:28",
+      "sameDayGym": "오전 Push 하이브리드 B",
+      "coachNote": "목 Push 다음 저녁 3.75km. HR145·max161=최근 이지 중 제일 깨끗(180대 없음). 페이스 8'01\"는 앵커보다 약간 빠름·후반 가속 잔여 but 거리 짧아서 일 역도 전 부담은 작음. 토는 걷기/스킵 권장."
     }
   ],
   "plan": {
