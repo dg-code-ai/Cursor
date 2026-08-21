@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "note": "최근 2달 정제 로그 · 2026-06-05~ · manual+정리 OCR · 세션 37",
+  "note": "최근 2달 정제 로그 · 2026-06-05~ · manual+정리 OCR · 세션 38",
   "activeFrom": "2026-06-05",
   "sessions": [
     {
@@ -5780,6 +5780,82 @@
       },
       "coachNote": "하이브리드 B 둘째날 — 8/13보다 상단을 한 단 내린 게 수 Leg 다음날답다. PP 95·OHP 80 싱글·벤치 120×3. 하체 0. 금: 스내치 70–85 락 타이밍 + 행 파워클린 감김. 헬스장 스내치 상한은 안전감.",
       "grade": "A (B 구조 · 100/130 chase 없음 · Leg 다음날 보수)"
+    },
+    {
+      "id": "tech-2026-08-21",
+      "date": "2026-08-21",
+      "type": "Pull",
+      "title": "오전 운동 · 숏테크 (일 역도 전 감김)",
+      "durationMin": 48,
+      "totalSets": 20,
+      "totalVolumeKg": 6070,
+      "caloriesKcal": 315,
+      "volumeDeltaKg": 750,
+      "exercises": [
+        {
+          "name": "바벨 행 클린",
+          "sets": [
+            { "kg": 60, "reps": 5 },
+            { "kg": 70, "reps": 3 },
+            { "kg": 80, "reps": 3 },
+            { "kg": 90, "reps": 1 },
+            { "kg": 80, "reps": 3 }
+          ],
+          "workingHighlight": "80×3 · 90×1 · 80×3",
+          "loggedAs": "Rise 행클린 · 의도=감김(파워/행)",
+          "coachNote": "처방 80상한 → 90×1 터치 후 80으로 복귀. 감김 경로 유지 · 일 전 상단은 한 장만."
+        },
+        {
+          "name": "바벨 클린 풀",
+          "sets": [
+            { "kg": 100, "reps": 2 },
+            { "kg": 100, "reps": 3 },
+            { "kg": 100, "reps": 3 }
+          ],
+          "workingHighlight": "100×3×2",
+          "coachNote": "처방 70–80 → 실제 100. 수신 X라 부담은 덜하나 일 전 풀 자극은 있음."
+        },
+        {
+          "name": "바벨 스내치",
+          "sets": [
+            { "kg": 40, "reps": 3 },
+            { "kg": 60, "reps": 2 },
+            { "kg": 60, "reps": 2 },
+            { "kg": 70, "reps": 2 }
+          ],
+          "workingHighlight": "70×2",
+          "coachNote": "80 재시도 없음 — 핵심 하드노 준수. 70은 경계선이나 출력 chase 아님."
+        },
+        {
+          "name": "케이블 시티드 로우",
+          "sets": [
+            { "kg": 60, "reps": 11 },
+            { "kg": 60, "reps": 13 },
+            { "kg": 60, "reps": 10 },
+            { "kg": 60, "reps": 8 }
+          ],
+          "workingHighlight": "60×13"
+        },
+        {
+          "name": "머신 앱 스윙",
+          "sets": [
+            { "kg": 15, "reps": 25 },
+            { "kg": 15, "reps": 17 },
+            { "kg": 15, "reps": 18 },
+            { "kg": 15, "reps": 18 }
+          ],
+          "workingHighlight": "15×25"
+        }
+      ],
+      "source": "Rise album",
+      "vsPrescription": {
+        "hangClean": "80 워킹 + 90×1 · 처방보다 상단 한 장",
+        "cleanPull": "100×3 · 처방 70–80보다 ↑",
+        "snatch": "70×2 · 80 X · 핵심 OK",
+        "time": "48분 (목표 35–45)"
+      },
+      "coachNote": "일 역도 전 금 — 방향은 맞음(감김 메인·스내치 80 안 감). 다만 행 90·클린풀 100·로우/앱까지 붙여 볼륨·시간이 숏테크보다 큼. 토는 완전 휴식. 일: 스내치 워밍을 천천히, 80에서 락 확인 후 90.",
+      "grade": "A- (스내치 80 X 지킴 / 클린 경로·시간 다소 ↑)"
     }
   ]
 }
