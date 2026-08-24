@@ -856,6 +856,61 @@
       "timeWindow": "07:55–08:48",
       "context": "금 테크(48분) 다음날 · 처방=걷기/휴식 · 일 역도(스내치90/92) 전날",
       "coachNote": "처방은 토 휴식이었으나 6.01km·8'50\"·HR147=8/16(8'03\"/149)보다 페이스↓·심박 비슷 — 이지 회복런에 가깝다. max167·180대 없음=주간 런 중 제일 깨끗한 심박 프로필. 다만 53분·6km=완전 휴식은 아님 → 일 스내치 워밍업 여유·92 chase는 컨디션 보고."
+    },
+    {
+      "id": "run-2026-08-23-evening",
+      "date": "2026-08-23",
+      "type": "outdoor-run",
+      "title": "실외 달리기 (일 저녁)",
+      "distanceKm": 3.13,
+      "timeSec": 1371,
+      "elapsedSec": 1373,
+      "pacePerKm": "7'17\"",
+      "paceRange": [
+        "12'45\"",
+        "5'06\""
+      ],
+      "caloriesKcal": 301,
+      "activeKcal": 301,
+      "avgHr": 153,
+      "hrRange": [
+        101,
+        178
+      ],
+      "avgPower": 262,
+      "avgCadence": 164,
+      "cadenceRange": [
+        62,
+        179
+      ],
+      "verticalOscCm": 9.3,
+      "verticalOscRange": [
+        7.8,
+        10.7
+      ],
+      "groundContactMs": 316,
+      "groundContactRange": [
+        244,
+        365
+      ],
+      "strideLengthM": 0.9,
+      "strideLengthRange": [
+        0.7,
+        1.1
+      ],
+      "location": "인천광역시 · 인천대교 인근",
+      "routeNote": "직선 구간(해안/고속도로 인근)",
+      "graphRead": {
+        "hr": "초반→후반 완만 상승 · max178",
+        "pace": "초반 12'45\"대(워크?) → 후반 5'06\"–6'대 가속 · 평균 7'17\"",
+        "cadence": "164 평균 · 후반 안정",
+        "form": "접지 316ms(토 351↓) · 보폭 0.9m · 파워 262W=자극런"
+      },
+      "source": "Apple Fitness",
+      "timeOfDay": "저녁",
+      "timeWindow": "20:14–20:36",
+      "context": "격주 역도장 예정일 · 토 6km 이지 다음날 저녁",
+      "coachNote": "일 역도장 예정일 저녁 3.13km. 7'17\"·HR153·max178·파워262=이지 아님 — 8/17(7'19\"/159)·8/9(7'59\"/151·max183) 패턴. 후반 페이스·심박 가속=자극런. 역도장 결과 미보고 — 오전/낮 세션 있으면 별도 기록 필요. 역도일 저녁은 걷기/스킵 권장."
     }
   ],
   "plan": {
