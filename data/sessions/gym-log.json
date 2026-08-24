@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "note": "최근 2달 정제 로그 · 2026-06-05~ · manual+정리 OCR · 세션 39",
+  "note": "최근 2달 정제 로그 · 2026-06-05~ · manual+정리 OCR · 세션 40",
   "activeFrom": "2026-06-05",
   "sessions": [
     {
@@ -5927,6 +5927,89 @@
       "eveningAfter": "실외 3.13km 7'17\" HR153",
       "coachNote": "앨범 영상(2:12) 확인 — **인상 91(4트) · 용상 115(2트)** 듀얼 PR. 60→89 풀스내치 사다리·깊이 게이트 성공. 91=8/9 90 다음 +1 · 파워습관 없이 수신. 용상 110 통과→115 2트. 토 아침 6km 후에도 PR = 플랫폼·기술 우선. 저녁 7'17\"런은 역도일 패턴(회복 X).",
       "grade": "A+ (듀얼 PR · 풀스내치 확인)"
+    },
+    {
+      "id": "gym-2026-08-24",
+      "date": "2026-08-24",
+      "type": "Push",
+      "title": "점심 운동 · Push 하이브리드 B (역도 다음날)",
+      "timeOfDay": "12:35",
+      "durationMin": 46,
+      "totalSets": 24,
+      "totalVolumeKg": 5715,
+      "caloriesKcal": 321,
+      "volumeDeltaKg": 510,
+      "exercises": [
+        {
+          "name": "푸시 프레스",
+          "sets": [
+            { "kg": 40, "reps": 7 },
+            { "kg": 60, "reps": 5 },
+            { "kg": 70, "reps": 3 },
+            { "kg": 80, "reps": 2 }
+          ],
+          "workingHighlight": "80×2",
+          "coachNote": "처방 상한 80×2 준수 · 90/95 X — 어제 OH 잔여 관리 OK"
+        },
+        {
+          "name": "바벨 오버헤드 프레스",
+          "sets": [
+            { "kg": 40, "reps": 6 },
+            { "kg": 50, "reps": 5 },
+            { "kg": 60, "reps": 4 },
+            { "kg": 70, "reps": 3 }
+          ],
+          "workingHighlight": "70×3",
+          "coachNote": "처방 60 워킹·80 X → 실제 70×3. 한 단만 위. 치명적 X"
+        },
+        {
+          "name": "벤치 프레스",
+          "sets": [
+            { "kg": 60, "reps": 10 },
+            { "kg": 100, "reps": 7 },
+            { "kg": 120, "reps": 4 },
+            { "kg": 130, "reps": 2 },
+            { "kg": 140, "reps": 1 },
+            { "kg": 145, "reps": 1 },
+            { "kg": 150, "reps": 1, "note": "싱글 PR · 이전 145 / 150 miss 기록" }
+          ],
+          "workingHighlight": "150×1 PR",
+          "coachNote": "처방=120×4×2 · 130+ X. 실제=싱글 사다리→150 — 역도 다음날 회복 Push가 아닌 PR 데이. 실력 신호는 A, 타이밍은 C."
+        },
+        {
+          "name": "로프 페이스 풀",
+          "sets": [
+            { "kg": 15, "reps": 20 },
+            { "kg": 17.5, "reps": 20 },
+            { "kg": 20, "reps": 19 },
+            { "kg": 20, "reps": 16 }
+          ],
+          "workingHighlight": "20×19"
+        },
+        {
+          "name": "데드버그",
+          "sets": [
+            { "kg": 0, "reps": 10 },
+            { "kg": 0, "reps": 10 },
+            { "kg": 0, "reps": 10 },
+            { "kg": 0, "reps": 10 },
+            { "kg": 0, "reps": 10 }
+          ],
+          "workingHighlight": "총 50회"
+        }
+      ],
+      "source": "Rise album",
+      "albumGuids": ["C1DA3871", "A93BB1EB"],
+      "vsPrescription": {
+        "pushPress": "80×2 상한 · OK",
+        "ohp": "60→70×3 · 약간↑",
+        "bench": "120 유지 → 실제 150 PR · 하드노 위반",
+        "hardNo": "런·스내치·데드 X · OK",
+        "time": "46분 (목표 ~45)"
+      },
+      "coachNote": "구조(PP→OHP→벤치→페이스풀→데드버그)는 하이브리드 B 유지. PP 80 컷=어제 스내치 잔여 배려. **벤치 150×1** = 싱글 PR(기존 145·150 miss). 다만 처방은 역도 다음날 라이트(120×4×2)였음 — 신경계·어깨 여유를 깎아 화 Pull/수 Leg에 영향 가능. 다음 Push는 다시 서브맥스(130×4–5)로 복귀.",
+      "grade": "B+ (150 PR · 타이밍/처방 위반)",
+      "athleteSignal": "역도 PR 다음날에도 벤치 150 가능 — 상체 여력 강함"
     }
   ]
 }
