@@ -802,6 +802,60 @@
       "timeWindow": "21:58–22:28",
       "sameDayGym": "오전 Push 하이브리드 B",
       "coachNote": "목 Push 다음 저녁 3.75km. HR145·max161=최근 이지 중 제일 깨끗(180대 없음). 페이스 8'01\"는 앵커보다 약간 빠름·후반 가속 잔여 but 거리 짧아서 일 역도 전 부담은 작음. 토는 걷기/스킵 권장."
+    },
+    {
+      "id": "run-2026-08-22-outdoor",
+      "date": "2026-08-22",
+      "type": "outdoor-run",
+      "title": "실외 달리기 (토 오전)",
+      "distanceKm": 6.01,
+      "timeSec": 3185,
+      "elapsedSec": 3186,
+      "pacePerKm": "8'50\"",
+      "paceRange": [
+        "10'39\"",
+        "7'31\""
+      ],
+      "caloriesKcal": 617,
+      "activeKcal": 617,
+      "avgHr": 147,
+      "hrRange": [
+        102,
+        167
+      ],
+      "avgPower": 213,
+      "avgCadence": 151,
+      "cadenceRange": [
+        135,
+        162
+      ],
+      "verticalOscCm": 9.4,
+      "verticalOscRange": [
+        8.6,
+        10.8
+      ],
+      "groundContactMs": 351,
+      "groundContactRange": [
+        285,
+        380
+      ],
+      "strideLengthM": 0.8,
+      "strideLengthRange": [
+        0.7,
+        0.8
+      ],
+      "location": "인천광역시",
+      "graphRead": {
+        "hr": "초반 낮음 → 전 구간 완만 상승 · max167(180대 없음)",
+        "pace": "7'31\"–10'39\" 요동 · 평균 8'50\"=앵커(8'30\"–9'00\") 안쪽",
+        "cadence": "151 평균 · 135–162 비교적 안정",
+        "form": "접지 351ms=이지+체중(106kg) · 수직 9.4cm · 보폭 0.8m"
+      },
+      "source": "Apple Fitness",
+      "timeOfDay": "오전",
+      "timeWindow": "07:55–08:48",
+      "context": "금 테크(48분) 다음날 · 처방=걷기/휴식 · 일 역도(스내치90/92) 전날",
+      "coachNote": "처방은 토 휴식이었으나 6.01km·8'50\"·HR147=8/16(8'03\"/149)보다 페이스↓·심박 비슷 — 이지 회복런에 가깝다. max167·180대 없음=주간 런 중 제일 깨끗한 심박 프로필. 다만 53분·6km=완전 휴식은 아님 → 일 스내치 워밍업 여유·92 chase는 컨디션 보고."
     }
   ],
   "plan": {
