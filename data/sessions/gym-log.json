@@ -5865,40 +5865,68 @@
       "id": "oly-2026-08-23",
       "date": "2026-08-23",
       "type": "Olympic",
-      "title": "역도장 · 인상/용상 PR 갱신",
+      "title": "역도장 · 인상 91 / 용상 115 PR",
       "location": "역도장(플랫폼)",
       "timeOfDay": "오전/낮",
-      "source": "athlete report",
-      "mediaNote": "Snatch/C&J 영상 썸네일 — KRATOS 10kg 그린 · TYR 신발 · Zero To Hero 슬리브",
+      "durationMin": 132,
+      "source": "iCloud RISE 앨범 영상 + 프레임 분석",
+      "mediaId": "7452C152-2C88-4A08-8945-15230A01DD67",
+      "exercises": [
+        {
+          "name": "스내치",
+          "sets": [
+            { "kg": 60, "reps": 1, "note": "풀스내치 · 깊은 수신" },
+            { "kg": 80, "reps": 1 },
+            { "kg": 85, "reps": 1 },
+            { "kg": 89, "reps": 1, "note": "OH 스쿼트 수신 · 여유" },
+            { "kg": 91, "reps": 1, "attempts": 4, "note": "PR · 4트 성공 · 풀스내치" }
+          ],
+          "workingHighlight": "91 PR (4트)",
+          "depthStandard": "풀스내치"
+        },
+        {
+          "name": "클린앤저크",
+          "sets": [
+            { "kg": 110, "reps": 1, "note": "클린 수신 · 프론트 랙" },
+            { "kg": 115, "reps": 1, "attempts": 2, "note": "PR · 2트 성공" }
+          ],
+          "workingHighlight": "115 PR (2트)"
+        }
+      ],
       "prUpdate": {
         "snatch": {
           "previousKg": 90,
           "previousDate": "2026-08-09",
-          "newKg": null,
-          "confirmed": true,
-          "note": "본인 확인 인상 PR 갱신 · 정확한 kg 미보고 → Rise/OCR 보완"
+          "newKg": 91,
+          "attempts": 4,
+          "confirmed": true
         },
         "cleanAndJerk": {
           "previousKg": 110,
           "previousSource": "Rise",
-          "newKg": null,
-          "confirmed": true,
-          "note": "본인 확인 용상 PR 갱신 · 정확한 kg 미보고 → Rise/OCR 보완"
+          "newKg": 115,
+          "attempts": 2,
+          "confirmed": true
+        }
+      },
+      "formReview": {
+        "snatch": {
+          "good": ["60–89 전 구간 풀스내치 · OH 스쿼트 깊이", "91 PR도 파워 도망 없이 깊은 수신", "8/9 92 miss(언더·락) 대비 커밋 개선"],
+          "fix": ["91=4트 — 훈련 OK · 시합은 3트 내 opener/2nd 설계", "90–92 구간 다음엔 2트 상한 유지"]
+        },
+        "cj": {
+          "good": ["110·115 클린 = 깊은 스쿼트 수신 · 팔꿈치 전방", "115 2트 성공 후 확실한 리커버리"],
+          "fix": ["115 1트 영상 구간 있음 — 2트 전략(1트=커밋·2트=정리) 유지"]
         }
       },
       "context": {
-        "priorDayRun": "토 08/22 **아침** 6.01km 8'50\" HR147 — 코치 회복 우려 vs 실제 역도 PR",
-        "priorWeekTech": "금 세컨풀 접촉감 OK · 헬스장 스내치 파워습관 자기컷 → 플랫폼에서 상향"
+        "priorDayRun": "토 08/22 아침 6.01km 8'50\" HR147",
+        "priorWeekTech": "금 세컨풀 OK · 헬스장 스내치 파워 자기컷"
       },
-      "athleteFeedback": "토 아침에 뛴 거 맞음. 도움 안 됐다고 했지만 인상·용상 다 기록 갱신.",
-      "eveningAfter": "실외 3.13km 7'17\" HR153 (run-2026-08-23-evening)",
-      "vsPrescription": {
-        "snatch": "90 고정→92 ≤2 — PR 달성(kg TBD)",
-        "cj": "PR chase X였으나 실제 용상 PR 갱신",
-        "checkpoints": "92×4 반복 X 여부 미보고"
-      },
-      "coachNote": "8/23 역도장 — **인상·용상 듀얼 PR**(본인 확인). 토 **아침** 6km 이지 후에도 플랫폼에서 기록 경신 = 금 세컨풀·깊이 게이트·역도장 환경이 헬스장 제약보다 우선했다는 신호. 코치의 ‘토 런=일 역도 방해’ 가설은 이번엔 틀림 — 다만 n=1, 저녁 7'17\" 자극런은 여전히 역도일 패턴. **다음:** Rise/OCR로 정확한 kg·92 시도 횟수·용상 사다리 기록 → athlete-profile 공식 PR 반영.",
-      "grade": "A (듀얼 PR · 세부 kg 대기)"
+      "athleteFeedback": "토 아침런 맞음 · 인상·용상 PR",
+      "eveningAfter": "실외 3.13km 7'17\" HR153",
+      "coachNote": "앨범 영상(2:12) 확인 — **인상 91(4트) · 용상 115(2트)** 듀얼 PR. 60→89 풀스내치 사다리·깊이 게이트 성공. 91=8/9 90 다음 +1 · 파워습관 없이 수신. 용상 110 통과→115 2트. 토 아침 6km 후에도 PR = 플랫폼·기술 우선. 저녁 7'17\"런은 역도일 패턴(회복 X).",
+      "grade": "A+ (듀얼 PR · 풀스내치 확인)"
     }
   ]
 }

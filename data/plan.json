@@ -287,23 +287,22 @@
           }
         },
         "checkpoints": ["스내치 90 깊이", "92는 2시도 상한", "용상 PR X", "8/9처럼 92×4 X"],
-        "actual": "역도장 — **인상 PR · 용상 PR** (kg 미보고 · Rise/OCR 대기) · 저녁 3.13km 7'17\" HR153",
-        "grade": "A (듀얼 PR) · 저녁런 C+",
-        "coachRead": "토 **아침** 6km(8'50\"/147) 다음날 역도장에서 인상·용상 **모두 PR** — 코치 회복 우려는 이번엔 빗나감. 금 세컨풀+플랫폼+깊이 게이트가 헬스장 파워습관보다 이겼다. 저녁 7'17\"·178은 8/9 패턴 재현(역도일 저녁 자극) — PR과 별개로 다음엔 걷기. **kg·사다리 확인 필요.**",
+        "actual": "역도장 — **인상 91 PR (4트)** · **용상 115 PR (2트)** · 저녁 3.13km",
+        "grade": "A+ (듀얼 PR) · 저녁런 C+",
+        "coachRead": "영상 확인: 60→89 풀스내치 · 91=4트 깊은 수신 PR. 용상 110→115(2트). 8/9 92 miss 대비 **언더 커밋·락** 개선. 91 4트=훈련 OK·시합 3트 설계 필요. 토 아침 6km 후 PR — 회복 가설 이번엔 X.",
+        "olympicStatus": "완료 — 인상91 · 용상115",
+        "breakthrough": {
+          "snatchPR": 91,
+          "cjPR": 115,
+          "priorSnatchKg": 90,
+          "priorCjKg": 110
+        },
         "eveningRun": {
           "distanceKm": 3.13,
           "pace": "7'17\"",
           "avgHr": 153,
           "maxHr": 178,
-          "avgPower": 262,
           "timeWindow": "20:14–20:36"
-        },
-        "olympicStatus": "PR 갱신 (인상+용상 · kg 미보고)",
-        "breakthrough": {
-          "snatchPR": true,
-          "cjPR": true,
-          "priorSnatchKg": 90,
-          "priorCjKg": 110
         },
         "athleteNote": "토 아침런 맞음 · 인상 용상 다 기록 갱신"
       }
