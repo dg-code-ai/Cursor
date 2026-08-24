@@ -97,7 +97,7 @@
   ],
   "thisWeek": {
     "label": "이번 주 (8/17–8/23)",
-    "note": "금 감김 · 토 6km 이지 · 일 역도장(미보고)+저녁런 3.13km",
+    "note": "금 감김 · 토 아침 6km · **일 역도장 인상+용상 PR** · 저녁런 3.13km",
     "sessions": [
       {
         "date": "2026-08-17",
@@ -287,9 +287,9 @@
           }
         },
         "checkpoints": ["스내치 90 깊이", "92는 2시도 상한", "용상 PR X", "8/9처럼 92×4 X"],
-        "actual": "역도장 미보고 · 저녁 실외 3.13km · 7'17\" · HR153(max178) · 22:51 · 301kcal",
-        "grade": "런 C+ (역도장=미보고)",
-        "coachRead": "저녁 7'17\"·HR153·max178·파워262=이지 아님 — 후반 가속 자극런. 8/9 역도 다음 저녁런 패턴 재현. 역도장(스내치90/92·용상) 결과 없음 — 갔다면 Rise/OCR로 보완 필요.",
+        "actual": "역도장 — **인상 PR · 용상 PR** (kg 미보고 · Rise/OCR 대기) · 저녁 3.13km 7'17\" HR153",
+        "grade": "A (듀얼 PR) · 저녁런 C+",
+        "coachRead": "토 **아침** 6km(8'50\"/147) 다음날 역도장에서 인상·용상 **모두 PR** — 코치 회복 우려는 이번엔 빗나감. 금 세컨풀+플랫폼+깊이 게이트가 헬스장 파워습관보다 이겼다. 저녁 7'17\"·178은 8/9 패턴 재현(역도일 저녁 자극) — PR과 별개로 다음엔 걷기. **kg·사다리 확인 필요.**",
         "eveningRun": {
           "distanceKm": 3.13,
           "pace": "7'17\"",
@@ -298,7 +298,14 @@
           "avgPower": 262,
           "timeWindow": "20:14–20:36"
         },
-        "olympicStatus": "미보고"
+        "olympicStatus": "PR 갱신 (인상+용상 · kg 미보고)",
+        "breakthrough": {
+          "snatchPR": true,
+          "cjPR": true,
+          "priorSnatchKg": 90,
+          "priorCjKg": 110
+        },
+        "athleteNote": "토 아침런 맞음 · 인상 용상 다 기록 갱신"
       }
     ]
   },
@@ -974,10 +981,15 @@
     "programming": "주 롱런 +1km 계단. 덜렁이 심하면 그날 컷해도 성공."
   },
   "nextOlympicFocus": {
-    "date": "2026-08-23",
-    "snatch": "90 make solid · 92 ≤2 fresh attempts · 80에서 프레스아웃이면 상한↓",
-    "cj": "행 감김 70–90 · 라이트 저크 딥-드라이브 · 스내치 후 용상 PR X",
-    "fridayBefore": "감김만 · 스내치 70+ 헬스장 X"
+    "date": "2026-09-06",
+    "snatch": "8/23 PR kg 확정 후 — 92+ 고정·95 탐색",
+    "cj": "8/23 PR kg 확정 후 — 감김 유지·120 터치 준비",
+    "fridayBefore": "숏테크 감김 · 헬스장 스내치 70+ X",
+    "lastSession": {
+      "date": "2026-08-23",
+      "result": "인상 PR + 용상 PR (kg 미보고)",
+      "note": "토 아침 6km 후에도 성공"
+    }
   },
   "cleanCue": {
     "athleteWords": "걸려서 감겨서 쇄골위로 딱",

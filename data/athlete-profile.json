@@ -95,7 +95,7 @@
     "weightlifting": "격주 일요일 08:00 2시간",
     "gym": "평일 점심",
     "injury": "왼발 족저근막염 (경미)",
-    "prUpdate": "공식 1RM=Rise. 스쿼트190 · 데드200 · 벤치145 · 스내치90 · 용상110.",
+    "prUpdate": "공식 1RM=Rise. 스쿼트190 · 데드200 · 벤치145 · 스내치90 · 용상110. **2026-08-23 역도장: 인상+용상 PR 갱신(본인 확인, kg 미보고)**.",
     "snatchDepth": "2026-08-09 스쿼트 스내치 90 성공(풀). 사다리 40-60-70-75-80-85-87-90. 92는 언더 공포·전방 드롭·락 미체결·피로.",
     "bench": "130×4×2 달성 (2026-07-30). PR 싱글 145.",
     "squatStandard": "풀스쿼트만 인정 — 허벅지와 종아리가 닿아야 함. 하프/쿼터는 세트로 치지 않음.",
@@ -121,7 +121,14 @@
     "weightBandKg": "105-107",
     "recheck": "인바디 나오면 숫자만 앨범/메시지로"
   },
-  "updatedAt": "2026-08-13",
+  "updatedAt": "2026-08-24",
+  "pendingOfficialPR": {
+    "date": "2026-08-23",
+    "venue": "역도장",
+    "snatch": { "confirmed": true, "previousKg": 90, "newKg": null },
+    "cleanAndJerk": { "confirmed": true, "previousKg": 110, "newKg": null },
+    "note": "본인 확인 듀얼 PR · Rise/OCR kg 확정 전까지 official1RM 미변경"
+  },
   "lifts": {},
   "personalRecords": {
     "benchPress": {
