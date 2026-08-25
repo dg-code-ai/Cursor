@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "note": "최근 2달 정제 로그 · 2026-06-05~ · manual+정리 OCR · 세션 40",
+  "note": "최근 2달 정제 로그 · 2026-06-05~ · manual+정리 OCR · 세션 41",
   "activeFrom": "2026-06-05",
   "sessions": [
     {
@@ -6010,6 +6010,85 @@
       "coachNote": "구조(PP→OHP→벤치→페이스풀→데드버그)는 하이브리드 B 유지. PP 80 컷=어제 스내치 잔여 배려. **벤치 150×1** = 싱글 PR(기존 145·150 miss). 다만 처방은 역도 다음날 라이트(120×4×2)였음 — 신경계·어깨 여유를 깎아 화 Pull/수 Leg에 영향 가능. 다음 Push는 다시 서브맥스(130×4–5)로 복귀.",
       "grade": "B+ (150 PR · 타이밍/처방 위반)",
       "athleteSignal": "역도 PR 다음날에도 벤치 150 가능 — 상체 여력 강함"
+    },
+    {
+      "id": "gym-2026-08-25",
+      "date": "2026-08-25",
+      "type": "Pull",
+      "title": "오전 운동 · Pull (데드 헤비 · 테크 스킵)",
+      "timeOfDay": "12:43",
+      "durationMin": 49,
+      "totalSets": 23,
+      "totalVolumeKg": 8400,
+      "caloriesKcal": 357,
+      "volumeDeltaKg": 1370,
+      "exercises": [
+        {
+          "name": "데드리프트",
+          "sets": [
+            { "kg": 100, "reps": 5 },
+            { "kg": 140, "reps": 5 },
+            { "kg": 160, "reps": 3 },
+            { "kg": 180, "reps": 2 },
+            { "kg": 190, "reps": 1 },
+            { "kg": 195, "reps": 0, "note": "miss" }
+          ],
+          "workingHighlight": "190×1 · 195×0",
+          "coachNote": "공식 PR 200 대비 190 재확인. 처방 hardNo 데드160+ 위반 — 숏테크 날 헤비 데드."
+        },
+        {
+          "name": "풀 업",
+          "sets": [
+            { "kg": 0, "reps": 6 },
+            { "kg": 0, "reps": 2 },
+            { "kg": 0, "reps": 5 },
+            { "kg": 0, "reps": 5 },
+            { "kg": 0, "reps": 4 }
+          ],
+          "workingHighlight": "총 22회"
+        },
+        {
+          "name": "케이블 시티드 로우",
+          "sets": [
+            { "kg": 60, "reps": 13 },
+            { "kg": 65, "reps": 12 },
+            { "kg": 70, "reps": 10 },
+            { "kg": 75, "reps": 8 }
+          ],
+          "workingHighlight": "75×8"
+        },
+        {
+          "name": "랫 풀 다운",
+          "sets": [
+            { "kg": 65, "reps": 11 },
+            { "kg": 70, "reps": 9 },
+            { "kg": 75, "reps": 7 },
+            { "kg": 80, "reps": 3 }
+          ],
+          "workingHighlight": "80×3"
+        },
+        {
+          "name": "이지 바 컬",
+          "sets": [
+            { "kg": 20, "reps": 16 },
+            { "kg": 20, "reps": 16 },
+            { "kg": 20, "reps": 15 },
+            { "kg": 20, "reps": 13 }
+          ],
+          "workingHighlight": "20×16"
+        }
+      ],
+      "source": "Rise album",
+      "albumGuids": ["867DAA44", "A4F656B8"],
+      "vsPrescription": {
+        "hangClean": "없음 · 처방 메인 스킵",
+        "snatch": "없음 · 숏테크 스킵",
+        "deadlift": "190×1 · 처방 데드160+ X 위반",
+        "back": "로우·랫·풀업 · OK (볼륨↑)",
+        "time": "49분"
+      },
+      "coachNote": "처방=행 감김+스내치65+등 라이트. 실제=**풀 Pull + 데드 190**. 등·이두는 깔끔. 190 make/195 miss=데드 엔진 살아 있음(PR200). 다만 일 역도(8/30) 전 주 화에 테크 0·헤비 힌지 = 후사슬·신경계를 수 Leg·금 테크 전에 소모. 수: 스쿼트 보수·RDL↓. 금에 감김 반드시.",
+      "grade": "B (데드190 · 테크 스킵)"
     }
   ]
 }
