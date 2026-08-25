@@ -913,6 +913,57 @@
       "timeWindow": "20:14–20:36",
       "context": "격주 역도장 당일 · **오전/낮 인상+용상 PR** · 토 아침 6km 다음날 저녁",
       "coachNote": "일 역도장 **듀얼 PR** 당일 저녁 3.13km · **마하X3**. 7'17\"·HR153·max178·**케이던스164**(이지런 151–155 대비↑) · 접지316ms(토351↓) · 파워262=자극런. 신발=턴오버↑ 체감과 수치 일치. 이지 날 마하=페이스·심박 같이 올라가기 쉬움 — **템포/짧은 자극용**. 롱·회복=윈플로/슈퍼블라스트."
+    },
+    {
+      "id": "run-2026-08-24-evening",
+      "date": "2026-08-24",
+      "type": "outdoor-run",
+      "title": "실외 달리기 (월 저녁)",
+      "distanceKm": 3.14,
+      "timeSec": 1611,
+      "elapsedSec": 1611,
+      "pacePerKm": "8'32\"",
+      "paceRange": [
+        "9'43\"",
+        "7'13\""
+      ],
+      "caloriesKcal": 289,
+      "activeKcal": 289,
+      "avgHr": 138,
+      "hrRange": [
+        95,
+        154
+      ],
+      "avgPower": 224,
+      "avgCadence": 152,
+      "cadenceRange": [
+        109,
+        164
+      ],
+      "verticalOscCm": 10.0,
+      "verticalOscRange": [
+        9.1,
+        11.0
+      ],
+      "groundContactMs": 348,
+      "groundContactRange": [
+        283,
+        388
+      ],
+      "strideLengthM": 0.8,
+      "location": "인천광역시",
+      "graphRead": {
+        "hr": "95→154 완만 상승 · 평균138 · max154(160 미달)",
+        "pace": "초반 느림 · 후반 7'13\" 터치 but 평균 8'32\"=앵커",
+        "cadence": "152 평균 · 이지 프로필(마하164와 대비)",
+        "form": "접지 348ms · 보폭 0.8m · 파워224=회복런"
+      },
+      "source": "Apple Fitness",
+      "timeOfDay": "저녁",
+      "timeWindow": "21:19–21:46",
+      "sameDayGym": "점심 Push · 벤치150 PR",
+      "context": "처방=월 런 X · 실제=벤치150 다음 저녁 이지 3.14km",
+      "coachNote": "**최근 이지 중 최상**. 8'32\"·HR138(max154)·케이던스152·접지348=8/6(8'32\"/148) 템플릿 재현 + 심박은 더 낮음. 일 마하 7'17\"/164와 완전 다른 프로필 — 이지 날 조절 성공. 처방은 런X였으나 강도·거리가 회복에 맞음. 화 숏테크 전 부담 작음."
     }
   ],
   "plan": {
