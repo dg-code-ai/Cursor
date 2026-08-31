@@ -95,9 +95,10 @@
       "status": "upcoming"
     }
   ],
-  "thisWeek": {
-    "label": "이번 주 (8/24–8/30)",
-    "note": "월 벤치150 · 화 데드190·테크X · 수 PT · 주말 런 7.64+5.23=**8월 80km** · 일 역도 스킵",
+  "weekArchive_20260824": {
+    "label": "완료 주 (8/24–8/30)",
+    "note": "월 벤치150 · 화 데드190·테크X · 수 PT · 주말 런 · 8월 80km · 8/30 역도→9/6 연기",
+    "archived": "2026-08-31",
     "sessions": [
       {
         "date": "2026-08-24",
@@ -197,7 +198,66 @@
         "skippedOlympic": true,
         "actual": "역도 X · 실외 5.23km · 9'02\" · HR135(max162) · 07:04–07:51 · **8월 80km 달성**",
         "grade": "런 A (이지 조절) · 역도=스킵",
-        "coachRead": "92 chase 연기=다리·일정상 합리적. 9'02\"/HR135=토보다 이지 — DOMS 낀 주말 마무리 좋음. 다음 격주 역도에서 92≤2 재개."
+        "coachRead": "92 chase 연기=다리·일정상 합리적. 9'02\"/HR135=토보다 이지 — DOMS 낀 주말 마무리 좋음. **역도 → 9/6(일) 재예약.**"
+      }
+    ]
+  },
+  "thisWeek": {
+    "label": "이번 주 (8/31–9/6)",
+    "note": "8/30 역도 연기 → **9/6(일) 역도 92≤2** · Leg·테크 보강 · 토 역도 전 이지",
+    "sessions": [
+      {
+        "date": "2026-08-31",
+        "day": "월",
+        "focus": "Push 라이트 (주말런·다리 회복)",
+        "plan": "PP 70–80 · OHP 50–60 · 벤치 120×4–5 (150 X) · 하체 X",
+        "done": false,
+        "readiness": "주말 12.87km + 수 PT DOMS 잔여 — 상체만 · RPE≤7.5"
+      },
+      {
+        "date": "2026-09-01",
+        "day": "화",
+        "focus": "Pull + 숏테크 (지난주 테크 보강)",
+        "plan": "행 감김 60–80 · 스내치 50–65 락 · 등 라이트 · 데드 160+ X",
+        "done": false
+      },
+      {
+        "date": "2026-09-02",
+        "day": "수",
+        "focus": "Leg (바벨 + holdingStrengthLeg 선택)",
+        "plan": "스쿼트 140→160→175–180×1 · 185 X · 또는 holdingStrengthLeg 템플릿(rep 12–15)",
+        "done": false,
+        "readiness": "다리 회복 확인 후 바벨 vs 버티는힘 Leg 결정"
+      },
+      {
+        "date": "2026-09-03",
+        "day": "목",
+        "focus": "Push 라이트",
+        "plan": "PP 70–80 · OHP 50–60 · 벤치 120×4 · 9/6 역도 전 어깨 보존",
+        "done": false
+      },
+      {
+        "date": "2026-09-04",
+        "day": "금",
+        "focus": "숏테크 감김 (9/6 전 필수)",
+        "plan": "행 70–80 · 스내치 빈바–65 · 70+·92 chase X",
+        "done": false
+      },
+      {
+        "date": "2026-09-05",
+        "day": "토",
+        "focus": "이지런 or 걷기 (역도 전날)",
+        "plan": "4–5km · 9'00\"+ · HR150–155 · 막판 서지 X · 역도 전날 롱런 X",
+        "done": false
+      },
+      {
+        "date": "2026-09-06",
+        "day": "일",
+        "focus": "격주 역도장",
+        "plan": "스내치 85–89 고정 → 92 ≤2 · 용상 110–115 · 120 터치 선택",
+        "done": false,
+        "rescheduledFrom": "2026-08-30",
+        "athleteScheduled": true
       }
     ]
   },
@@ -876,10 +936,14 @@
     "programming": "주 롱런 +1km 계단. 덜렁이 심하면 그날 컷해도 성공."
   },
   "nextOlympicFocus": {
-    "date": "2026-08-30",
+    "date": "2026-09-06",
+    "day": "일",
+    "rescheduledFrom": "2026-08-30",
+    "athleteScheduled": true,
     "snatch": "85–89 고정 → 92 ≤2 · 95는 92 깨끗할 때만",
     "cj": "110 재확인 → 115 · 120 터치 ≤2",
-    "fridayBefore": "숏테크 감김 · 헬스장 스내치 70+ X",
+    "fridayBefore": "9/4(금) 숏테크 감김 · 헬스장 스내치 70+ X",
+    "saturdayBefore": "9/5(토) 이지 4–5km or 걷기 · 롱런 X",
     "lastSession": {
       "date": "2026-08-23",
       "result": "인상91 · 용상115"
@@ -1461,7 +1525,7 @@
     "aug26Note": "8/26 PT 32×20×3 = rep 과함·타이밍 나쁨. 축은 맞으나 템플릿 rep(12–15)로 다음부터 정리.",
     "nextApply": {
       "target": "다음 바벨 Leg 슬롯",
-      "estimate": "2026-09-03 (수) — 이번 주(8/30 역도)는 회복·역도 우선, 바벨 Leg는 그 다음 주"
+      "estimate": "2026-09-02 (수) — 9/6 역도 전 · rep 12–15 템플릿"
     }
   },
   "squatLoadCalibration": {
