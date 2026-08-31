@@ -964,8 +964,125 @@
       "sameDayGym": "점심 Push · 벤치150 PR",
       "context": "처방=월 런 X · 실제=벤치150 다음 저녁 이지 3.14km",
       "coachNote": "**최근 이지 중 최상**. 8'32\"·HR138(max154)·케이던스152·접지348=8/6(8'32\"/148) 템플릿 재현 + 심박은 더 낮음. 일 마하 7'17\"/164와 완전 다른 프로필 — 이지 날 조절 성공. 처방은 런X였으나 강도·거리가 회복에 맞음. 화 숏테크 전 부담 작음."
+    },
+    {
+      "id": "run-2026-08-29-morning",
+      "date": "2026-08-29",
+      "type": "outdoor-run",
+      "title": "실외 달리기 (토 오전 · 송도)",
+      "distanceKm": 7.64,
+      "timeSec": 3724,
+      "elapsedSec": 4374,
+      "pacePerKm": "8'07\"",
+      "paceRange": [
+        "13'09\"",
+        "6'12\""
+      ],
+      "caloriesKcal": 790,
+      "activeKcal": 790,
+      "avgHr": 155,
+      "hrRange": [
+        98,
+        176
+      ],
+      "avgPower": 239,
+      "avgCadence": 148,
+      "cadenceRange": [
+        97,
+        176
+      ],
+      "verticalOscCm": 9.8,
+      "verticalOscRange": [
+        8.7,
+        11.1
+      ],
+      "groundContactMs": 336,
+      "groundContactRange": [
+        236,
+        378
+      ],
+      "strideLengthM": 0.8,
+      "strideLengthRange": [
+        0.7,
+        1.0
+      ],
+      "location": "인천광역시 · 송도 센트럴파크 일대",
+      "routeNote": "차드윅·센트럴파크 루프",
+      "graphRead": {
+        "hr": "6블록 워크·휴식 패턴 · 평균155 · max176",
+        "pace": "6'12\"–13'09\" · 평균8'07\"=앵커(8'30\"–9'00\") 안쪽",
+        "cadence": "148 평균 · 구간별 97–176",
+        "form": "접지336ms · 보폭0.8m · 파워239W=중강도·거리런"
+      },
+      "source": "Apple Fitness",
+      "timeOfDay": "오전",
+      "timeWindow": "08:13–09:26",
+      "context": "수 PT DOMS(사두·햄·둔근) 잔여 · **8월 마일리지 80km 목표 주** · 처방=5–6km 이지",
+      "coachNote": "7.64km·8'07\"·HR155(max176)=처방 거리↑·페이스는 앵커 안쪽 but 심박은 이지 상한(155). 그래프=워크/조깅 블록 6회(경과72분·이동62분). 80km 채우기용 **B+** — 거리 이득, max176·수 PT 잔여 고려 시 다음날 더 이지가 맞음."
+    },
+    {
+      "id": "run-2026-08-30-morning",
+      "date": "2026-08-30",
+      "type": "outdoor-run",
+      "title": "실외 달리기 (일 오전 · 해안)",
+      "distanceKm": 5.23,
+      "timeSec": 2835,
+      "elapsedSec": 2835,
+      "pacePerKm": "9'02\"",
+      "paceRange": [
+        "18'08\"",
+        "5'48\""
+      ],
+      "caloriesKcal": 460,
+      "activeKcal": 460,
+      "avgHr": 135,
+      "hrRange": [
+        100,
+        162
+      ],
+      "avgPower": 210,
+      "avgCadence": 147,
+      "cadenceRange": [
+        87,
+        176
+      ],
+      "verticalOscCm": 9.2,
+      "verticalOscRange": [
+        8.0,
+        10.6
+      ],
+      "groundContactMs": 354,
+      "groundContactRange": [
+        230,
+        383
+      ],
+      "strideLengthM": 0.8,
+      "strideLengthRange": [
+        0.7,
+        1.0
+      ],
+      "location": "인천광역시 · 인천대교·랜드마크로 해안",
+      "routeNote": "직선 해안 구간",
+      "graphRead": {
+        "hr": "100–162 · 평균135 · max162(160 근접 but 평균 깨끗)",
+        "pace": "18'08\"–5'48\" · 중후반 워크 구간 · 평균9'02\"=이지 앵커",
+        "cadence": "147 평균 · 이지 프로필",
+        "form": "접지354ms(피로·DOMS) · 보폭0.8m · 파워210=회복런"
+      },
+      "source": "Apple Fitness",
+      "timeOfDay": "오전",
+      "timeWindow": "07:04–07:51",
+      "context": "처방=격주 역도(92≤2) · 실제=역도 스킵·이지런 · 토 7.64km 다음날 · **8월 80km 달성**",
+      "coachNote": "**진짜 이지**. 9'02\"·HR135(max162)·케이던스147=8/24(8'32\"/138)와 같은 축. DOMS 낀 다리에 맞는 조절 — 토보다 한 단 낮춤 잘함. 역도 스킵=92 chase 다음 격주로. 80km 마일리지 **A**."
     }
   ],
+  "monthlyMileage": {
+    "2026-08": {
+      "totalKm": 80,
+      "note": "8/29–30 주말 12.87km 포함 달성 · 선수 확인",
+      "coachRead": "거리 빌드업 목표 달성. 페이스는 8'30\"–9'00\"·HR150–155 앵커 유지가 다음 달(85–90km) 핵심."
+    }
+  },
   "plan": {
     "thisWeekend": [
       {
