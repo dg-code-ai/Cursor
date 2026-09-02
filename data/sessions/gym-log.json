@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "note": "Rise 공유앨범 backfill · 49세션 · 앨범 1468장 · manual 39 + OCR 10",
+  "note": "Rise 공유앨범 backfill · 50세션 · 앨범 1470장 · manual 39 + OCR 11",
   "activeFrom": "2026-06-05",
   "sessions": [
     {
@@ -6608,6 +6608,125 @@
       ],
       "source": "album-backfill",
       "coachNote": "처방=Push 라이트(150 X). 실제=벤치 150×1·155×0 · OHP 70×3 · 미들플라이 7.5×20×4(선수 확인) · 페이스풀. PP 없음."
+    },
+    {
+      "id": "gym-2026-09-01",
+      "date": "2026-09-01",
+      "type": "Olympic",
+      "title": "오전 운동",
+      "durationMin": 51,
+      "totalSets": 21,
+      "totalVolumeKg": 4645,
+      "exercises": [
+        {
+          "name": "파위 클린",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 3
+            },
+            {
+              "kg": 70,
+              "reps": 2
+            },
+            {
+              "kg": 80,
+              "reps": 3
+            },
+            {
+              "kg": 90,
+              "reps": 2
+            }
+          ],
+          "workingHighlight": "90×2"
+        },
+        {
+          "name": "바벨 스내치",
+          "sets": [
+            {
+              "kg": 95,
+              "reps": 1
+            },
+            {
+              "kg": 60,
+              "reps": 2
+            },
+            {
+              "kg": 60,
+              "reps": 2
+            },
+            {
+              "kg": 65,
+              "reps": 2
+            },
+            {
+              "kg": 70,
+              "reps": 1
+            }
+          ],
+          "workingHighlight": "95×1"
+        },
+        {
+          "name": "풀 업",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "총 5회"
+        },
+        {
+          "name": "머신 시티드 로우",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 5
+            },
+            {
+              "kg": 40,
+              "reps": 15
+            },
+            {
+              "kg": 50,
+              "reps": 12
+            },
+            {
+              "kg": 60,
+              "reps": 9
+            },
+            {
+              "kg": 60,
+              "reps": 6
+            }
+          ],
+          "workingHighlight": "60×9"
+        },
+        {
+          "name": "로프 페이스 풀",
+          "sets": [
+            {
+              "kg": 15,
+              "reps": 20
+            },
+            {
+              "kg": 17.5,
+              "reps": 20
+            },
+            {
+              "kg": 20,
+              "reps": 16
+            },
+            {
+              "kg": 20,
+              "reps": 15
+            }
+          ],
+          "workingHighlight": "20×16"
+        }
+      ],
+      "source": "album-backfill",
+      "coachNote": "처방=행감김·스내치65·데드X. 행파워클린 90×2=메인 성공. 스내치 95×1=OCR 확인 필요(65 오인?). 데드 없음=9/6 전 좋음. 풀업5만=등 최소."
     }
   ]
 }
