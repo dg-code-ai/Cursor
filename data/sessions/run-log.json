@@ -1078,14 +1078,30 @@
     {
       "id": "run-2026-09-02-evening",
       "date": "2026-09-02",
-      "type": "outdoor-run",
-      "title": "저녁 런 (수 Leg 후)",
-      "distanceKm": 3.0,
-      "source": "athlete-report",
+      "type": "indoor-run",
+      "title": "실내 달리기 (수 저녁 · NRC)",
+      "distanceKm": 3.58,
+      "timeSec": 1641,
+      "elapsedSec": 1643,
+      "pacePerKm": "7'38\"",
+      "paceRange": [
+        "10'16\"",
+        "6'02\""
+      ],
+      "caloriesKcal": 319,
+      "activeKcal": 319,
+      "avgHr": 146,
+      "hrRange": [
+        100,
+        174
+      ],
+      "source": "Nike Run Club → Apple Fitness",
       "timeOfDay": "저녁",
+      "timeWindow": "21:51–22:18",
       "sameDayGym": "낮 Leg · 스쿼트180×1 · 고블릿24×20×4",
-      "context": "9/6 역도 4일 전 · 수 바벨 Leg 당일 저녁",
-      "coachNote": "선수 보고 ~3km. Health 세부(페이스·HR) 대기. 거리 짧아서 역도 전 부담 작음 — 이지였으면 OK."
+      "context": "9/6 역도 4일 전 · 수 바벨 Leg 당일 저녁 · 실내",
+      "metricsNote": "NRC→Fitness는 거리·페이스·심박·칼로리만. 케이던스·접지·수직진폭·보폭·파워는 런데이/워치 네이티브 대비 비어 있음.",
+      "coachNote": "3.58km·7'38\"·HR146(max174). 심박 평균은 이지 창(150–155) 안쪽 but 페이스는 앵커(8'30\"+)보다 빠름·max174·후반 가속=중강도 숏. 수 스쿼트180 당일치고 거리 짧아서 역도 전 치명적은 아님 — 토는 진짜 이지로."
     }
   ],
   "monthlyMileage": {
