@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "note": "Rise 공유앨범 backfill · 50세션 · 앨범 1470장 · manual 39 + OCR 11",
+  "note": "Rise 공유앨범 backfill · 51세션 · 앨범 1472장 · manual 39 + OCR 12",
   "activeFrom": "2026-06-05",
   "sessions": [
     {
@@ -6678,6 +6678,7 @@
         },
         {
           "name": "머신 시티드 로우",
+          "note": "편측 플레이트",
           "sets": [
             {
               "kg": 0,
@@ -6700,7 +6701,7 @@
               "reps": 6
             }
           ],
-          "workingHighlight": "60×9"
+          "workingHighlight": "편측 60×9"
         },
         {
           "name": "로프 페이스 풀",
@@ -6727,6 +6728,117 @@
       ],
       "source": "album-backfill",
       "coachNote": "처방=행감김·스내치65·데드X. 행파워클린 **95×1**(선수 확인·스내치 오분류 수정). 스내치 70×1=터치만. 시티드로우=편측. 데드 없음."
+    },
+    {
+      "id": "gym-2026-09-02",
+      "date": "2026-09-02",
+      "type": "Leg",
+      "title": "낮 운동 + 저녁 런",
+      "durationMin": 53,
+      "totalSets": 19,
+      "totalVolumeKg": 8800,
+      "exercises": [
+        {
+          "name": "바벨 스쿼트",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 5
+            },
+            {
+              "kg": 100,
+              "reps": 5
+            },
+            {
+              "kg": 140,
+              "reps": 2
+            },
+            {
+              "kg": 150,
+              "reps": 2
+            },
+            {
+              "kg": 160,
+              "reps": 1
+            },
+            {
+              "kg": 170,
+              "reps": 1
+            },
+            {
+              "kg": 175,
+              "reps": 1
+            },
+            {
+              "kg": 180,
+              "reps": 1
+            }
+          ],
+          "workingHighlight": "180×1"
+        },
+        {
+          "name": "덤벨 고블릿 스쿼트",
+          "sets": [
+            {
+              "kg": 24,
+              "reps": 20
+            },
+            {
+              "kg": 24,
+              "reps": 20
+            },
+            {
+              "kg": 24,
+              "reps": 20
+            },
+            {
+              "kg": 24,
+              "reps": 20
+            }
+          ],
+          "workingHighlight": "24×20×4",
+          "note": "holdingStrength · 템플릿 12–15 대비 rep↑"
+        },
+        {
+          "name": "머신 힙 쓰러스트",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 15
+            }
+          ],
+          "workingHighlight": "20×15",
+          "note": "OCR 1세트만 — 추가 세트 있으면 보정"
+        },
+        {
+          "name": "머신 시티드 레그 컬",
+          "sets": [
+            {
+              "kg": 50,
+              "reps": 15
+            },
+            {
+              "kg": 55,
+              "reps": 15
+            },
+            {
+              "kg": 60,
+              "reps": 14
+            },
+            {
+              "kg": 65,
+              "reps": 12
+            }
+          ],
+          "workingHighlight": "65×12"
+        }
+      ],
+      "eveningRun": {
+        "distanceKm": 3,
+        "note": "선수 보고 ~3km · Health 세부 대기"
+      },
+      "source": "album-backfill",
+      "coachNote": "바벨 스쿼트 180×1=처방 상단 달성 · 185 X. 고블릿 24×20×4=버티는힘 병행 but rep 과다(템플릿12–15). 힙쓰러스트 OCR 빈약. 저녁 ~3km. 9/6 역도 4일 전 — 목 휴식이 맞음."
     }
   ]
 }

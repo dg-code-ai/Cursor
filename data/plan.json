@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-31",
+  "updated": "2026-09-03",
   "principles": [
     "평소는 서브맥스 볼륨 (예: 100×1 대신 80×3). 맥스는 드물게 테스트",
     "스내치: 리시브 개조 우선 (파워습관 금지)",
@@ -231,17 +231,24 @@
       {
         "date": "2026-09-02",
         "day": "수",
-        "focus": "Leg (바벨 + holdingStrengthLeg 선택)",
+        "focus": "Leg + 저녁 이지런",
         "plan": "스쿼트 140→160→175–180×1 · 185 X · 또는 holdingStrengthLeg 템플릿(rep 12–15)",
-        "done": false,
-        "readiness": "다리 회복 확인 후 바벨 vs 버티는힘 Leg 결정"
+        "done": true,
+        "readiness": "다리 회복 확인 후 바벨 vs 버티는힘 Leg 결정",
+        "actual": "스쿼트 60–**180×1** · 고블릿24×20×4 · 힙쓰러스트 · 레그컬65 · 53분 · 저녁 ~3km",
+        "grade": "B+ (180×1 · 바벨+버티는힘 병행) / 고블릿 rep↑",
+        "coachRead": "바벨 Leg 상단 180 달성 · 185 chase X=처방 준수. 고블릿 24×20×4는 holdingStrength 축 맞지만 **rep 과다**(8/26 PT와 같은 패턴). 저녁 3km=거리 유지. 9/6 4일 전 — 목 휴식 현명."
       },
       {
         "date": "2026-09-03",
         "day": "목",
-        "focus": "Push 라이트",
+        "focus": "휴식 (수 Leg+런 후)",
         "plan": "PP 70–80 · OHP 50–60 · 벤치 120×4 · 9/6 역도 전 어깨 보존",
-        "done": false
+        "done": true,
+        "skipped": true,
+        "actual": "완전 휴식 · 웨이트 X · 런 X",
+        "grade": "A (타이밍)",
+        "coachRead": "수 스쿼트180+고블릿+저녁런 다음 목 Push 스킵=9/6 역도 여유. 금 숏테크만 필수."
       },
       {
         "date": "2026-09-04",

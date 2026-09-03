@@ -1074,6 +1074,18 @@
       "timeWindow": "07:04–07:51",
       "context": "처방=격주 역도(92≤2) · 실제=역도 스킵·이지런 · 토 7.64km 다음날 · **8월 80km 달성**",
       "coachNote": "**진짜 이지**. 9'02\"·HR135(max162)·케이던스147=8/24(8'32\"/138)와 같은 축. DOMS 낀 다리에 맞는 조절 — 토보다 한 단 낮춤 잘함. 역도 스킵=92 chase 다음 격주로. 80km 마일리지 **A**."
+    },
+    {
+      "id": "run-2026-09-02-evening",
+      "date": "2026-09-02",
+      "type": "outdoor-run",
+      "title": "저녁 런 (수 Leg 후)",
+      "distanceKm": 3.0,
+      "source": "athlete-report",
+      "timeOfDay": "저녁",
+      "sameDayGym": "낮 Leg · 스쿼트180×1 · 고블릿24×20×4",
+      "context": "9/6 역도 4일 전 · 수 바벨 Leg 당일 저녁",
+      "coachNote": "선수 보고 ~3km. Health 세부(페이스·HR) 대기. 거리 짧아서 역도 전 부담 작음 — 이지였으면 OK."
     }
   ],
   "monthlyMileage": {
