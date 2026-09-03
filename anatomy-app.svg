@@ -1,0 +1,1502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 400 800">
+  <foreignObject x="0" y="0" width="400" height="800">
+    <iframe xmlns="http://www.w3.org/1999/xhtml"
+      style="width:100vw;height:100vh;border:0;position:fixed;inset:0"
+      srcdoc="<!DOCTYPE html>
+<html lang=&quot;ko&quot;>
+<head>
+  <meta charset=&quot;UTF-8&quot;>
+  <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, viewport-fit=cover&quot;>
+  <meta name=&quot;theme-color&quot; content=&quot;#0f1419&quot;>
+  <title>해부학 가이드</title>
+  <style>
+:root {
+  --bg: #0f1419;
+  --surface: #1a2332;
+  --surface-2: #243044;
+  --border: #2d3a4f;
+  --text: #e8edf4;
+  --text-muted: #8b9cb3;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --success: #22c55e;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --radius: 12px;
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: &quot;Pretendard&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 1rem 3rem;
+}
+
+.header {
+  margin-bottom: 1.5rem;
+}
+
+.header__brand h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin: 0.25rem 0 1rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tab {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.15s;
+}
+
+.tab:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.tab.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.nav-lab {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.nav-lab a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+}
+
+.nav-lab a:hover {
+  border-color: var(--accent);
+}
+
+.panel {
+  display: none;
+}
+
+.panel.active {
+  display: block;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.card h2 {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card-header h2 {
+  margin: 0;
+}
+
+.session-meta {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+input,
+select,
+textarea,
+output {
+  font: inherit;
+  color: var(--text);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.6rem 0.75rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.full-width {
+  margin-bottom: 0.75rem;
+}
+
+.computed output {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.1rem;
+  font: inherit;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+
+.btn-ghost {
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-ghost:hover {
+  border-color: var(--accent);
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: #fff;
+}
+
+.file-btn {
+  display: inline-flex;
+  align-items: center;
+}
+
+.session-preview {
+  font-size: 0.9rem;
+}
+
+.session-preview.empty {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.session-entry {
+  padding: 0.75rem;
+  background: var(--surface-2);
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.session-entry__meta {
+  flex: 1;
+}
+
+.session-entry__lift {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+}
+
+.session-entry__detail {
+  margin-top: 0.25rem;
+}
+
+.session-entry__memo {
+  margin-top: 0.25rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge-success {
+  background: rgba(34, 197, 94, 0.2);
+  color: var(--success);
+}
+
+.badge-fail {
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--danger);
+}
+
+.badge-partial {
+  background: rgba(245, 158, 11, 0.2);
+  color: var(--warning);
+}
+
+.btn-remove {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 0.25rem;
+}
+
+.btn-remove:hover {
+  color: var(--danger);
+}
+
+.filters {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.history-day {
+  margin-bottom: 1.25rem;
+}
+
+.history-day__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.history-day__date {
+  font-weight: 600;
+}
+
+.history-day__condition {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.stat-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.weekly-prs,
+.weekly-conditions {
+  font-size: 0.9rem;
+}
+
+.weekly-prs p,
+.weekly-conditions p {
+  margin: 0.35rem 0;
+}
+
+.guide-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.guide-list li {
+  margin-bottom: 0.35rem;
+}
+
+.hint {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin: 0 0 1rem;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 2rem;
+}
+
+@media (max-width: 600px) {
+  .session-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Training Lab — canvas + anatomy */
+
+.lab .eyebrow {
+  margin: 0 0 0.35rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.lab .eyebrow a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.lab .eyebrow a:hover {
+  text-decoration: underline;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+
+.chip {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.chip.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.profile-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 720px) {
+  .profile-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.stat-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.pill {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.45rem 0.7rem;
+  min-width: 5.5rem;
+}
+
+.pill span {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.pill strong {
+  font-size: 1rem;
+}
+
+.goals-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (min-width: 720px) {
+  .goals-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.goal-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.9rem;
+}
+
+.goal-card__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.goal-card h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.progress {
+  height: 8px;
+  background: var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 0.6rem 0 0.35rem;
+}
+
+.progress i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #22c55e, #3b82f6);
+}
+
+.weekend-plan {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.weekend-item {
+  display: grid;
+  grid-template-columns: 2.5rem 7rem 1fr;
+  gap: 0.5rem;
+  padding: 0.55rem 0.7rem;
+  background: var(--surface-2);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+.highlights {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.hl-item {
+  display: grid;
+  grid-template-columns: 7rem 1fr auto;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.5rem 0.65rem;
+  background: var(--surface-2);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-size: 0.85rem;
+}
+
+.hl-item--up {
+  border-color: rgba(34, 197, 94, 0.45);
+}
+
+.hl-date {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.timeline {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.tl-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.85rem;
+}
+
+.tl-card--pull { border-left: 3px solid #60a5fa; }
+.tl-card--push { border-left: 3px solid #f87171; }
+.tl-card--leg { border-left: 3px solid #c084fc; }
+.tl-card--run { border-left: 3px solid #34d399; }
+
+.tl-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.55rem;
+  font-size: 0.9rem;
+}
+
+.badge-cat {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.tl-ex-list {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.tl-ex {
+  padding: 0.4rem 0.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.tl-ex__name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.tl-ex__sets {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  word-break: break-word;
+}
+
+.tl-ex__sets em {
+  color: var(--success);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.up { color: var(--success); }
+
+.tl-meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Anatomy */
+.legend-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0.5rem 0;
+  font-size: 0.85rem;
+}
+
+.swatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  margin-right: 0.35rem;
+  vertical-align: middle;
+}
+
+.swatch-primary { background: #f87171; }
+.swatch-secondary { background: #fbbf24; }
+.swatch-muted { background: #3a4a63; }
+
+.exercise-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.exercise-card__top {
+  display: grid;
+  grid-template-columns: 1fr 110px;
+  gap: 0.75rem;
+  align-items: start;
+  margin-bottom: 0.75rem;
+}
+
+.exercise-card__top--wide {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 720px) {
+  .exercise-card__top--wide {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 1.25rem;
+    align-items: center;
+  }
+}
+
+.meta-row {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 0.85rem;
+}
+
+@media (min-width: 560px) {
+  .meta-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.meta-label {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.2rem;
+}
+
+.ex-plane,
+.ex-chain {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+.body-map--lg {
+  justify-self: center;
+  width: min(100%, 280px);
+}
+
+.body-map--lg .body-map-svg {
+  max-width: 280px;
+}
+
+.callout--exam {
+  background: rgba(34, 197, 94, 0.1);
+  border-color: rgba(34, 197, 94, 0.35);
+}
+
+.oi-list,
+.innervation-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+}
+
+.oi-list li {
+  margin-bottom: 0.45rem;
+}
+
+.ex-name {
+  margin: 0.35rem 0 0;
+  font-size: 1.25rem;
+}
+
+.ex-en {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.ex-pattern {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+  color: #93c5fd;
+}
+
+.split-2 {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0.75rem 0;
+}
+
+@media (min-width: 600px) {
+  .split-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.exercise-card h3 {
+  margin: 0.75rem 0 0.35rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.muscle-list,
+.joint-list,
+.cue-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+}
+
+.callout {
+  margin: 0.85rem 0;
+  padding: 0.75rem;
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  border-radius: 10px;
+}
+
+.callout p {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+}
+
+.level-note {
+  margin: 0.75rem 0 0;
+  font-size: 0.9rem;
+  color: #86efac;
+}
+
+.body-map-svg {
+  width: 100%;
+  max-width: 110px;
+}
+
+.body-map-svg svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.body-map-svg .m-off {
+  fill: #3a4a63;
+  opacity: 0.35;
+}
+
+.body-map-svg .m-on {
+  fill: #f87171;
+  opacity: 0.95;
+}
+
+.body-map-svg .m-sec {
+  fill: #fbbf24;
+  opacity: 0.85;
+}
+
+.nav-lab {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.nav-lab a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+}
+
+.nav-lab a:hover {
+  border-color: var(--accent);
+}
+
+/* Canvas panels reuse weightlifting tab panels */
+.lab main > .panel {
+  display: none;
+}
+
+.lab main > .panel.active {
+  display: block;
+}
+
+.split-panels {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 800px) {
+  .split-panels {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.week-checklist {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.check-item {
+  display: grid;
+  grid-template-columns: 2rem 1fr auto;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.7rem 0.85rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.check-item p {
+  margin: 0.15rem 0 0;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.check-item--done {
+  border-color: rgba(34, 197, 94, 0.45);
+  background: rgba(34, 197, 94, 0.08);
+}
+
+.check-box {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 999px;
+  border: 2px solid var(--border);
+  display: grid;
+  place-items: center;
+  font-size: 0.75rem;
+  color: #86efac;
+}
+
+.check-item--done .check-box {
+  border-color: #22c55e;
+  background: rgba(34, 197, 94, 0.2);
+}
+
+.check-status {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.week-skeleton {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.skel-day {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 0.15rem 0.75rem;
+  padding: 0.65rem 0.75rem;
+  background: var(--surface-2);
+  border-radius: 10px;
+  border-left: 3px solid var(--border);
+}
+
+.skel-day strong {
+  grid-row: span 2;
+  align-self: center;
+}
+
+.skel-focus {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.skel-day--snatch {
+  border-left-color: #34d399;
+}
+
+.roadmap {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.road-item {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 0.65rem;
+  padding: 0.7rem;
+  background: var(--surface-2);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.road-item p {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+}
+
+.road-phase {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: var(--border);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.road-item--active {
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+.road-item--active .road-phase {
+  background: var(--accent);
+  color: #fff;
+}
+
+.road-item--upcoming {
+  opacity: 0.75;
+}
+
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+@media (min-width: 700px) {
+  .kpi-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .kpi-row {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.kpi {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.65rem 0.75rem;
+}
+
+.kpi span {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.kpi strong {
+  font-size: 1.05rem;
+}
+
+.chart-box {
+  margin-top: 0.5rem;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.chart-box--sm {
+  max-width: 220px;
+}
+
+.chart-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.donut-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.85rem;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.donut-legend i {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  margin-right: 0.3rem;
+}
+
+.goal-gauges {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.gauge {
+  text-align: center;
+}
+
+.gauge .hint {
+  margin: 0.25rem 0 0;
+  font-size: 0.75rem;
+}
+
+.highlights--cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.5rem;
+}
+
+.hl-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.65rem 0.7rem;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.hl-card--up {
+  border-color: rgba(34, 197, 94, 0.45);
+}
+
+.hl-card .hl-date {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.hl-card .hl-val {
+  color: #86efac;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Real anatomy plates */
+.plate-pair {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+@media (min-width: 720px) {
+  .plate-pair {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.plate,
+.ex-plate,
+.detail-plate {
+  margin: 0;
+  background: #0b1018;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.plate img,
+.ex-plate img,
+.detail-plate img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #fff;
+}
+
+.plate figcaption,
+.ex-plate figcaption,
+.detail-plate figcaption {
+  padding: 0.45rem 0.65rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.plate-details {
+  margin-top: 0.85rem;
+}
+
+.plate-details summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.exercise-card__top--photo {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 800px) {
+  .exercise-card__top--photo {
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: start;
+  }
+}
+
+.focus-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.75rem;
+}
+
+.focus-chip {
+  background: rgba(248, 113, 113, 0.18);
+  border: 1px solid rgba(248, 113, 113, 0.45);
+  color: #fecaca;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+}
+
+.detail-plates {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0.5rem 0 1rem;
+}
+
+@media (min-width: 600px) {
+  .detail-plates {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.detail-plate.hidden,
+.hidden {
+  display: none !important;
+}
+
+.detail-plate img {
+  max-height: 280px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class=&quot;app lab&quot;>
+    <header class=&quot;header&quot;>
+      <div class=&quot;header__brand&quot;>
+        <p class=&quot;eyebrow&quot;><a href=&quot;canvas.html&quot;>트레이닝 캔버스</a> · <a href=&quot;index.html&quot;>역도 기록</a></p>
+        <h1>해부학 가이드</h1>
+        <p class=&quot;subtitle&quot;>OpenStax · Gray's Anatomy 원판으로 보는 기능해부</p>
+      </div>
+      <div class=&quot;chip-row&quot; id=&quot;category-filters&quot;>
+        <button class=&quot;chip active&quot; data-cat=&quot;all&quot;>전체</button>
+        <button class=&quot;chip&quot; data-cat=&quot;Pull&quot;>Pull</button>
+        <button class=&quot;chip&quot; data-cat=&quot;Push&quot;>Push</button>
+        <button class=&quot;chip&quot; data-cat=&quot;Leg&quot;>Leg</button>
+        <button class=&quot;chip&quot; data-cat=&quot;Olympic&quot;>역도</button>
+      </div>
+    </header>
+
+    <main>
+      <section class=&quot;card&quot;>
+        <h2>전신 근육 맵 (OpenStax)</h2>
+        <p class=&quot;hint&quot; id=&quot;meta-purpose&quot;></p>
+        <div class=&quot;plate-pair&quot;>
+          <figure class=&quot;plate&quot;>
+            <img src=&quot;https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/assets/anatomy/anterior-openstax.jpg&quot; alt=&quot;전면 골격근 — OpenStax&quot; loading=&quot;lazy&quot;>
+            <figcaption>Anterior · 전면</figcaption>
+          </figure>
+          <figure class=&quot;plate&quot;>
+            <img src=&quot;https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/assets/anatomy/posterior-openstax.jpg&quot; alt=&quot;후면 골격근 — OpenStax&quot; loading=&quot;lazy&quot;>
+            <figcaption>Posterior · 후면</figcaption>
+          </figure>
+        </div>
+        <details class=&quot;plate-details&quot;>
+          <summary>라벨 포함 Gray's 판 (Public Domain) 펼치기</summary>
+          <div class=&quot;plate-pair&quot;>
+            <figure class=&quot;plate&quot;>
+              <img src=&quot;https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/assets/anatomy/anterior-gray.png&quot; alt=&quot;전면 라벨 — Gray's Anatomy&quot; loading=&quot;lazy&quot;>
+              <figcaption>Gray's anterior labeled</figcaption>
+            </figure>
+            <figure class=&quot;plate&quot;>
+              <img src=&quot;https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/assets/anatomy/posterior-gray.png&quot; alt=&quot;후면 라벨 — Gray's Anatomy&quot; loading=&quot;lazy&quot;>
+              <figcaption>Gray's posterior labeled</figcaption>
+            </figure>
+          </div>
+        </details>
+        <p class=&quot;hint&quot; id=&quot;meta-disclaimer&quot;></p>
+        <p class=&quot;hint&quot; id=&quot;meta-attribution&quot;></p>
+      </section>
+
+      <div id=&quot;exercise-grid&quot; class=&quot;exercise-grid&quot;></div>
+    </main>
+  </div>
+
+  <template id=&quot;exercise-card-tpl&quot;>
+    <article class=&quot;card exercise-card&quot;>
+      <div class=&quot;exercise-card__top exercise-card__top--photo&quot;>
+        <div class=&quot;exercise-card__copy&quot;>
+          <span class=&quot;badge-cat&quot;></span>
+          <h2 class=&quot;ex-name&quot;></h2>
+          <p class=&quot;ex-en&quot;></p>
+          <p class=&quot;ex-pattern&quot;></p>
+          <div class=&quot;meta-row&quot;>
+            <div><span class=&quot;meta-label&quot;>운동면</span><p class=&quot;ex-plane&quot;></p></div>
+            <div><span class=&quot;meta-label&quot;>운동사슬</span><p class=&quot;ex-chain&quot;></p></div>
+          </div>
+          <div class=&quot;focus-chips primary-chips&quot;></div>
+        </div>
+        <figure class=&quot;ex-plate&quot;>
+          <img class=&quot;ex-plate-img&quot; alt=&quot;&quot; loading=&quot;lazy&quot;>
+          <figcaption class=&quot;ex-plate-cap&quot;></figcaption>
+        </figure>
+      </div>
+
+      <div class=&quot;detail-plates&quot;>
+        <figure class=&quot;detail-plate&quot;>
+          <img class=&quot;detail-img-1&quot; alt=&quot;&quot; loading=&quot;lazy&quot;>
+          <figcaption>Gray's detail</figcaption>
+        </figure>
+        <figure class=&quot;detail-plate detail-plate-2 hidden&quot;>
+          <img class=&quot;detail-img-2&quot; alt=&quot;&quot; loading=&quot;lazy&quot;>
+          <figcaption>Gray's detail</figcaption>
+        </figure>
+      </div>
+
+      <div class=&quot;split-2&quot;>
+        <div>
+          <h3>주동근</h3>
+          <ul class=&quot;muscle-list primary-list&quot;></ul>
+        </div>
+        <div>
+          <h3>협응근</h3>
+          <ul class=&quot;muscle-list secondary-list&quot;></ul>
+        </div>
+      </div>
+
+      <h3>기시 · 정지</h3>
+      <ul class=&quot;oi-list&quot;></ul>
+
+      <h3>신경지배</h3>
+      <ul class=&quot;innervation-list&quot;></ul>
+
+      <h3>관절 동작</h3>
+      <ul class=&quot;joint-list&quot;></ul>
+
+      <div class=&quot;callout&quot;>
+        <strong>왜 이 동작? (코칭)</strong>
+        <p class=&quot;why-text&quot;></p>
+      </div>
+
+      <div class=&quot;callout callout--exam&quot;>
+        <strong>자격증 포인트 (생리·역학)</strong>
+        <p class=&quot;exam-tip&quot;></p>
+      </div>
+
+      <h3>큐 (폼)</h3>
+      <ul class=&quot;cue-list&quot;></ul>
+
+      <p class=&quot;level-note&quot;></p>
+      <p class=&quot;machine-note hint&quot;></p>
+    </article>
+  </template>
+
+  
+
+  <script>
+async function loadJSON(path) {
+  const res = await fetch(path);
+  return res.json();
+}
+
+function fillList(ul, items) {
+  ul.innerHTML = '';
+  (items || []).forEach((t) => {
+    const li = document.createElement('li');
+    li.textContent = t;
+    ul.appendChild(li);
+  });
+}
+
+function renderExercises(exercises, manifest, category = 'all') {
+  const grid = document.getElementById('exercise-grid');
+  const tpl = document.getElementById('exercise-card-tpl');
+  grid.innerHTML = '';
+
+  exercises
+    .filter((ex) => category === 'all' || ex.category === category)
+    .forEach((ex) => {
+      const node = tpl.content.cloneNode(true);
+
+      node.querySelector('.badge-cat').textContent = ex.category;
+      node.querySelector('.ex-name').textContent = ex.name;
+      node.querySelector('.ex-en').textContent = ex.nameEn;
+      node.querySelector('.ex-pattern').textContent = ex.pattern;
+      node.querySelector('.ex-plane').textContent = ex.plane || '—';
+      node.querySelector('.ex-chain').textContent = ex.chain || '—';
+
+      const chips = node.querySelector('.primary-chips');
+      chips.innerHTML = (ex.primary || [])
+        .map((m) => `<span class=&quot;focus-chip&quot;>${m.split('(')[0].trim()}</span>`)
+        .join('');
+
+      const abs = (p) => (p.startsWith('http') ? p : 'https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/' + p.replace(/^\.\//, ''));
+      const viewSrc =
+        ex.view === 'anterior' ? manifest.files.anterior : manifest.files.posterior;
+      const plateImg = node.querySelector('.ex-plate-img');
+      plateImg.src = abs(viewSrc);
+      plateImg.alt = `${ex.name} — ${ex.view} overview`;
+      node.querySelector('.ex-plate-cap').textContent =
+        ex.view === 'anterior' ? 'OpenStax · Anterior' : 'OpenStax · Posterior';
+
+      const d1 = manifest.detail[ex.detailKey];
+      const img1 = node.querySelector('.detail-img-1');
+      if (d1) {
+        img1.src = abs(d1);
+        img1.alt = `${ex.name} detail`;
+      } else {
+        node.querySelector('.detail-plates').classList.add('hidden');
+      }
+
+      if (ex.detailKey2 &amp;&amp; manifest.detail[ex.detailKey2]) {
+        const wrap2 = node.querySelector('.detail-plate-2');
+        wrap2.classList.remove('hidden');
+        const img2 = node.querySelector('.detail-img-2');
+        img2.src = abs(manifest.detail[ex.detailKey2]);
+        img2.alt = `${ex.name} detail 2`;
+      }
+
+      fillList(node.querySelector('.primary-list'), ex.primary);
+      fillList(node.querySelector('.secondary-list'), ex.secondary);
+
+      const oi = node.querySelector('.oi-list');
+      oi.innerHTML = '';
+      if (ex.originInsertion &amp;&amp; ex.originInsertion.length) {
+        ex.originInsertion.forEach((row) => {
+          const li = document.createElement('li');
+          li.innerHTML = `<strong>${row.muscle}</strong><br><span class=&quot;hint&quot;>기시: ${row.origin}<br>정지: ${row.insertion}</span>`;
+          oi.appendChild(li);
+        });
+      } else {
+        const li = document.createElement('li');
+        li.className = 'hint';
+        li.textContent = '복합 동작 — 단일 기시/정지보다 운동사슬·타이밍이 핵심';
+        oi.appendChild(li);
+      }
+
+      fillList(
+        node.querySelector('.innervation-list'),
+        ex.innervation &amp;&amp; ex.innervation.length
+          ? ex.innervation
+          : ['(복합 — 주요 신경은 주동근 항목 참고)']
+      );
+
+      const joints = node.querySelector('.joint-list');
+      joints.innerHTML = '';
+      ex.joints.forEach((j) => {
+        const li = document.createElement('li');
+        li.innerHTML = `<strong>${j.joint}</strong> — ${j.action}`;
+        joints.appendChild(li);
+      });
+
+      node.querySelector('.why-text').textContent = ex.why;
+      node.querySelector('.exam-tip').textContent = ex.examTip || '';
+      fillList(node.querySelector('.cue-list'), ex.cues);
+      node.querySelector('.level-note').textContent = ex.levelNote || '';
+      const mn = node.querySelector('.machine-note');
+      if (ex.machineNote) mn.textContent = ex.machineNote;
+      else mn.remove();
+
+      grid.appendChild(node);
+    });
+}
+
+let allExercises = [];
+let manifest = null;
+
+document.getElementById('category-filters').addEventListener('click', (e) => {
+  const btn = e.target.closest('.chip');
+  if (!btn) return;
+  document.querySelectorAll('#category-filters .chip').forEach((c) => c.classList.remove('active'));
+  btn.classList.add('active');
+  renderExercises(allExercises, manifest, btn.dataset.cat);
+});
+
+Promise.all([
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/anatomy-exercises.json'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/assets/anatomy/manifest.json'),
+])
+  .then(([data, man]) => {
+    allExercises = data.exercises;
+    manifest = man;
+    if (data.meta) {
+      document.getElementById('meta-purpose').textContent = data.meta.purpose || '';
+      document.getElementById('meta-disclaimer').textContent = data.meta.disclaimer || '';
+    }
+    document.getElementById('meta-attribution').textContent =
+      (man.attribution || []).join(' · ');
+    renderExercises(allExercises, manifest);
+  })
+  .catch((err) => {
+    document.getElementById('exercise-grid').innerHTML =
+      `<div class=&quot;card&quot;><p>해부학 데이터를 불러오지 못했습니다.</p><pre>${err}</pre></div>`;
+  });
+
+  </script>
+</body>
+</html>
+"></iframe>
+  </foreignObject>
+</svg>

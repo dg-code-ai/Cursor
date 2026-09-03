@@ -1,0 +1,285 @@
+{
+  "name": "Athlete",
+  "updated": "2026-08-05",
+  "gear": {
+    "runningShoes": [
+      {
+        "brand": "Asics",
+        "model": "Superblast 3",
+        "role": "max-cushion / long"
+      },
+      {
+        "brand": "Nike",
+        "model": "Winflo 11 Wide",
+        "role": "daily / wide",
+        "note": "2026-08-04: 바닥에 착착 감김. 슈퍼블라스트 대비 접지감 선호."
+      },
+      {
+        "brand": "Hoka",
+        "model": "Mach X 3",
+        "role": "tempo / plated",
+        "note": "2026-08-01 토 5.55km · **2026-08-23** 일 저녁 3.13km — 본인: 발 구르기(턴오버) 빨라짐. 케이던스164·접지316ms."
+      },
+      {
+        "brand": "Mizuno",
+        "model": "Wave Rebellion Pro",
+        "role": "race / speed"
+      },
+      {
+        "brand": "Adidas",
+        "model": "Duramo",
+        "role": "easy / backup"
+      }
+    ],
+    "shoePreference": "일상 걷기·대충 조깅=듀라모. 본런 이지(심박 확인)=윈플로. 멀리/롱런=슈퍼블라스트. **템포·짧은 자극(≤5km)=마하X3**. 시합=리벨리온 프로.",
+    "shoeRotation": {
+      "easyOrWalk": "Adidas Duramo",
+      "mainRun": "Nike Winflo 11 Wide",
+      "longRun": "Asics Superblast 3",
+      "race": "Mizuno Wave Rebellion Pro",
+      "tempoOption": "Hoka Mach X 3"
+    }
+  },
+  "body": {
+    "weightKg": 106.4,
+    "skeletalMuscleKg": 50.3,
+    "bodyFatKg": 19.5,
+    "bodyFatPercent": 18.3,
+    "abdominalFatRatio": 0.91,
+    "note": "본인 예상: 한달 전과 유사. 오늘 인바디 재측정 예정."
+  },
+  "prs": {
+    "benchPress": 150,
+    "squat": 190,
+    "deadlift": 200,
+    "powerSnatch": 85,
+    "cleanAndJerk": 115,
+    "snatchGoal": 100,
+    "tenKBest": {
+      "timeMin": 69.1,
+      "timeDisplay": "1:09:06",
+      "date": "2026-05",
+      "distanceKm": 10.03
+    },
+    "hangSquatSnatch": 65,
+    "snatch": 91
+  },
+  "goals": [
+    {
+      "id": "snatch100",
+      "title": "스쿼트 스내치 100kg",
+      "deadline": "2026-09-30",
+      "current": "91 (2026-08-23)",
+      "phase": 1,
+      "target": 120,
+      "note": "메달 바 120 · 100은 중간 게이트",
+      "paired": "용상150"
+    },
+    {
+      "id": "tenk60",
+      "title": "10km 60분",
+      "deadline": "2026-12-31",
+      "current": "최근 3~4km / 5월 10k 68분",
+      "phase": "distance-build"
+    },
+    {
+      "id": "cj150",
+      "title": "용상 150",
+      "current": 115,
+      "target": 150,
+      "note": "Rise 공식110 출발"
+    }
+  ],
+  "notes": {
+    "split": "Leg / Pull / Push",
+    "weightlifting": "격주 일요일 08:00 2시간",
+    "gym": "평일 점심",
+    "injury": "왼발 족저근막염 (경미)",
+    "prUpdate": "공식 1RM=Rise. 스쿼트190 · 데드200 · **벤치150(8/24)** · 스내치91(8/23) · 용상115(8/23).",
+    "snatchDepth": "2026-08-09 스쿼트 스내치 90 성공(풀). 사다리 40-60-70-75-80-85-87-90. 92는 언더 공포·전방 드롭·락 미체결·피로.",
+    "bench": "150×1 달성 (2026-08-24, 역도 다음날). 이전 싱글 145 · 150 miss 기록. 다음 게이트=130×5.",
+    "squatStandard": "풀스쿼트만 인정 — 허벅지와 종아리가 닿아야 함. 하프/쿼터는 세트로 치지 않음.",
+    "runKneeAnterior": "거리 늘리면 무릎 앞이 덜렁거리는 느낌 보고(2026-08). 날카로운 통증·부종·계단 찌름이면 중단. 대응: 이지 페이스 유지, 보폭 과도↑ X, 케이던스 살짝↑, 질주/언덕 급증 X, 거리 +1km 계단. 스쿼트 깊이는 유지하되 런 직후 헤비 스쿼트 겹침 주의.",
+    "cj": "공식 용상 1RM 110(Rise). 2026-08-09: 스내치90 다음 풀용상 90 상한 후 60 콤보 — 당일 피로, PR 아님. 교정: 하이행 감김 · 저크 락. 용상110 재확인/여유는 클린 여유(+5~10) 목표.",
+    "cleanPullFeel": "수신(풀클린) 강점 · 당김 연결 약함. 2026-08-11: 행 파워로 풀 분리 연습 → 걸려서 감겨서 쇄골 딱. 다음=풀 이식 후 바닥에서 앉아받기(강점) 합체.",
+    "ambition": "11월 동호인 -110 · 스내치120+용상150=토탈270 동시. 지난 대회 금은권(274–275) 노림. 동은 251도 메달.",
+    "squatToSnatch": "본인 직감: 스내치100에 스쿼트200 필요. 코치: 200은 타당하나 필수 게이트는 아님. 현재 90/92에서 병목=언더 커밋·전방·락. 기립 실패 패턴 아님. 스쿼트는 170→180→190→200 계단, 스내치는 기술 계단 병렬.",
+    "profileSource": "본인 제공 프로필 블록 2026-08-11",
+    "handoff": "제미나이 인수인계는 신원/톤용. 공식 1RM은 Rise 기록으로 확정(2026-08-11 본인).",
+    "liftBias": "스내치: 출력↑ 연습 단계 진입 가능(본인). 용상: 풀 연결감 미흡 — 우선 과제. 행 파워클린 70–90 유효.",
+    "gymSafety": "클린=헬스장에서 상대적으로 무겁게 OK(랙 높이). 스내치=그립·세이프티바 겹침으로 드롭 리스크 → 보수적 중량/장소.",
+    "squatRecent": "2026-08-12: 풀스쿼트 160×3·170×2·175×2·180×1 (공식1RM 190). 200 경로 상단 접근 중.",
+    "pushStyle": "Push=하이브리드B. 워킹: 푸시프레스 80–95(100 소수) · OHP 60–75(80 소수) · 벤치 서브 115–125. 55kg PP 보호캡은 폐기(본인 피드백+8/13 실측)."
+  },
+  "nutrition": {
+    "phase": "maintain (스내치 Phase1)",
+    "goal": "체중 유지 · 골격근 유지 · 지방은 억지로 안 뺌",
+    "proteinG": "170-200",
+    "proteinPerKg": "1.6-1.9",
+    "carbs": "훈련일 넉넉 / 런·헬스 전후",
+    "fat": "극단적 제한 X",
+    "weightBandKg": "105-107",
+    "recheck": "인바디 나오면 숫자만 앨범/메시지로"
+  },
+  "updatedAt": "2026-08-24",
+  "pendingOfficialPR": null,
+  "lifts": {},
+  "personalRecords": {
+    "benchPress": {
+      "kg": 150,
+      "date": "2026-08-24",
+      "source": "Rise"
+    },
+    "squat": {
+      "kg": 190,
+      "date": "2026-07-07",
+      "source": "Rise",
+      "standard": "풀스쿼트"
+    },
+    "deadlift": {
+      "kg": 200,
+      "date": "2026-07-03",
+      "source": "Rise"
+    },
+    "snatch": {
+      "kg": 91,
+      "date": "2026-08-23",
+      "source": "역도장 영상"
+    },
+    "cleanAndJerk": {
+      "kg": 115,
+      "date": "2026-08-23",
+      "source": "역도장 영상",
+      "note": "8/23 2트 성공. Rise 110 갱신."
+    }
+  },
+  "competition": {
+    "federation": "대한역도연맹",
+    "observedClassesMen": [
+      "-95",
+      "-110",
+      "+110"
+    ],
+    "note": "국내 대회에서 본 상위 체급. 2026 체제와 맞음(95 / 110 / +110 포함).",
+    "plannedClass": "-110",
+    "bodyweightKg": 106.4,
+    "classLogic": "106.4 → -110(≤110)이 자연 체급. -95는 11kg+ 감량으로 스내치/스쿼트 엔진과 충돌. +110은 증량·더 무거운 경쟁자.",
+    "ambition": "메달",
+    "targetMeetWindow": "2026-11",
+    "likelyMeet": "대한역도연맹회장배 전국역도경기대회 (동호인/생활체육 포함 가능)",
+    "precedent": "2025회장배 11/18–25 양구 · 동호인 포함",
+    "status": "일정 공지 전 · 11월 윈도우로 피킹 시작",
+    "medalBar": {
+      "athleteSaid": "메달 따려면 120은 들어가야 돼",
+      "interpretedAs": "스쿼트 스내치 120 (시합 성공)",
+      "class": "-110",
+      "meetWindow": "2026-11",
+      "caveat": "일반부 -110 상위와 동호인부 메달선은 다름. 120 스내치가 어느 부/어느 메달인지 요강 확인 필요. 그래도 본인 기준선은 120으로 훈련."
+    },
+    "division": "동호인 남자 -110",
+    "totalTarget": 270,
+    "snatchTarget": 120,
+    "cjTarget": 150,
+    "bothLifts": true,
+    "evidence": "2026-05 제5회 회장배 생활체육 110: 금은 274–275, 동 251"
+  },
+  "identity": {
+    "employer": "삼성바이오로직스",
+    "role": "브랜드 마케팅 및 영상 콘텐츠",
+    "tenureYears": "10+",
+    "also": [
+      "사내 문화 활동",
+      "BCMS 담당 경력"
+    ]
+  },
+  "pets": [
+    {
+      "name": "체리",
+      "desc": "오드아이 먼치킨 롱레그"
+    },
+    {
+      "name": "마루",
+      "desc": "삼색 코숏"
+    }
+  ],
+  "martialArts": {
+    "bjj": {
+      "belt": "화이트",
+      "stripes": 4
+    }
+  },
+  "mediaStack": [
+    "Adobe Premiere Pro",
+    "After Effects",
+    "Cursor AI",
+    "Sony A7M3",
+    "DJI Osmo Pocket 3"
+  ],
+  "selfReported1RM": {
+    "asOf": "2026-08-11",
+    "benchPressKg": 145,
+    "squatKg": 180,
+    "deadliftKg": 190,
+    "note": "공식 아님. 공식 1RM은 Rise(official1RM).",
+    "status": "non-official-handoff-only"
+  },
+  "coachingPrinciples": {
+    "voice": "해당 분야 20년차 베테랑처럼 인과·체계·명확하게",
+    "analysis": "웨이트/러닝은 수치만이 아니라 컨디션·심박·목적(회복/본운동)을 복합 반영. 고중량 스트렝스 수준에 맞는 현실·안전 강도.",
+    "decisionLoop": "정보 부족 시 성급 결론 X → 가설 → 질문 → 피드백 반영 → 최종 결론",
+    "tone": "든든·신뢰 + 유머·생동감 있는 파트너십 (이모지/친근 호칭 가능, 과남발 X)",
+    "updated": "2026-08-11"
+  },
+  "profileHandoff": {
+    "source": "Gemini prior-coach summary (user handoff 2026-08-11)",
+    "useAs": "identity · pets · BJJ · media · coaching tone/principles",
+    "numbersPolicy": "제미나이 정리 1RM(스쿼트180·데드190)은 참고. 처방·PR 기준은 Training Lab/Rise 최근 로그 우선 (벤치145 · 스쿼트 Rise190·최근작업170×2 · 데드 Rise200·오늘160/180X · 스내치90)."
+  },
+  "official1RM": {
+    "source": "Rise 기록",
+    "policy": "공식 1RM = Rise에 기록된 값. 제미나이/체감치로 덮지 않음.",
+    "lifts": {
+      "benchPress": {
+        "kg": 150,
+        "date": "2026-08-24",
+        "note": "싱글 PR · 이전 145 / 150 miss"
+      },
+      "squat": {
+        "kg": 190,
+        "date": "2026-07-07",
+        "note": "풀스쿼트"
+      },
+      "deadlift": {
+        "kg": 200,
+        "date": "2026-07-03"
+      },
+      "snatch": {
+        "kg": 91,
+        "date": "2026-08-23",
+        "note": "풀스내치 · 4트 · 역도장 영상"
+      },
+      "cleanAndJerk": {
+        "kg": 115,
+        "date": "2026-08-23",
+        "note": "2트 · Rise 110 갱신"
+      }
+    }
+  },
+  "gymConstraints": {
+    "facility": "평일 점심 헬스장 (세이프티바·일반 랙)",
+    "clean": {
+      "canGoHeavier": true,
+      "why": "클린은 랙 높이 근처 — 실패 시 머리 위에서 떨구는 저크보다 상대적 안전. 본인: 헬스장에서 클린은 무겁게 해도 될 것 같음.",
+      "still": "범퍼·주변 확인 · 파워/행으로 실패 시 앞으로/아래로만"
+    },
+    "snatch": {
+      "dropRisk": true,
+      "why": "와이드 그립이 세이프티바 높이와 겹침 — 뒤로 떨구기 무섭. 오버헤드 드롭·실패 시 바·랙·세이프티 충돌 우려.",
+      "programming": "헬스장 스내치는 중량·실패 여유 보수. 가능하면 역도 플랫폼/여유 공간 · 실패 시 앞으로 드롭 연습. 무거운 스내치 chase는 플랫폼 있는 날/장소 우선."
+    },
+    "jerk": {
+      "note": "머리 위에서 떨구면 곤란 — 헬스장에서 헤비 저erk/드롭 주의"
+    },
+    "updated": "2026-08-11"
+  }
+}

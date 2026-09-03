@@ -1,0 +1,571 @@
+{
+  "meta": {
+    "purpose": "생활스포츠지도사 대비 — 운동생리학·운동역학 기초를 본인 루틴에 연결",
+    "disclaimer": "교육용 단순화. 임상 진단용이 아님."
+  },
+  "exercises": [
+    {
+      "id": "pullup",
+      "name": "풀 업",
+      "nameEn": "Pull-up",
+      "category": "Pull",
+      "pattern": "수직 당기기 (Vertical Pull)",
+      "plane": "시상면 + 이마면 혼합 (어깨 내전·신전)",
+      "chain": "닫힌 사슬 (Closed kinetic chain) — 손이 고정, 몸이 이동",
+      "primary": [
+        "광배근 (Latissimus dorsi)",
+        "대원근 (Teres major)"
+      ],
+      "secondary": [
+        "이두근",
+        "상완근",
+        "완요골근",
+        "하부·중부 승모",
+        "능형근",
+        "핵심(코어)"
+      ],
+      "originInsertion": [
+        {
+          "muscle": "광배근",
+          "origin": "흉요근막, T7~L5 극돌기, 장골능 등",
+          "insertion": "상완골 소결절능선"
+        }
+      ],
+      "innervation": [
+        "흉배신경 (Thoracodorsal n., C6–C8)"
+      ],
+      "joints": [
+        {
+          "joint": "어깨 (GH)",
+          "action": "내전 + 신전"
+        },
+        {
+          "joint": "팔꿈치",
+          "action": "굴곡"
+        },
+        {
+          "joint": "견갑흉곽",
+          "action": "하강 + 내전(retraction)"
+        }
+      ],
+      "why": "체중 상대근력·견갑 제어의 기준. 스내치 1·2풀의 상지 연결감을 키운다.",
+      "cues": [
+        "가슴을 바 쪽으로",
+        "어깨를 귀에서 멀리(하강)",
+        "골반 전방경사로 훔치지 않기"
+      ],
+      "examTip": "닫힌사슬 + 다관절. 주동은 광배(어깨 내전/신전), 이두는 협응. 견갑 안정은 승모·능형.",
+      "highlight": [
+        "lats",
+        "biceps",
+        "midBack"
+      ],
+      "levelNote": "BW 106kg에서 6×5~6(총 35)는 상급 상대근력.",
+      "view": "posterior",
+      "detailKey": "lat",
+      "detailKey2": "shoulderBack"
+    },
+    {
+      "id": "latpulldown",
+      "name": "랫 풀 다운",
+      "nameEn": "Lat Pulldown",
+      "category": "Pull",
+      "pattern": "수직 당기기 (부하 조절형)",
+      "plane": "이마면 우세 (어깨 내전)",
+      "chain": "열린 사슬 (Open kinetic chain) — 손/바가 이동",
+      "primary": [
+        "광배근",
+        "대원근"
+      ],
+      "secondary": [
+        "이두근",
+        "상완근",
+        "완요골근",
+        "하부 승모"
+      ],
+      "originInsertion": [
+        {
+          "muscle": "광배근",
+          "origin": "흉요근막 등",
+          "insertion": "상완골 소결절능선"
+        }
+      ],
+      "innervation": [
+        "흉배신경"
+      ],
+      "joints": [
+        {
+          "joint": "어깨",
+          "action": "내전"
+        },
+        {
+          "joint": "팔꿈치",
+          "action": "굴곡"
+        }
+      ],
+      "why": "풀업과 같은 패턴에 중량 과부하. 뉴트럴 그립은 내회전 스트레스를 줄여 어깨에 비교적 친절.",
+      "cues": [
+        "팔꿈치로 주머니를 찌른다",
+        "상체 과후경으로 무게 훔치지 않기",
+        "하단 광배 수축 1초"
+      ],
+      "examTip": "열린사슬·가변저항. 풀업(닫힌사슬)과 비교해 ‘손 고정 여부’로 사슬을 구분하는 문제가 자주 나옴.",
+      "highlight": [
+        "lats",
+        "biceps"
+      ],
+      "levelNote": "풀업 직후 85×5 = 작업세트 퀄리티 중상급~상급.",
+      "view": "posterior",
+      "detailKey": "lat"
+    },
+    {
+      "id": "seatedrow",
+      "name": "머신 시티드 로우",
+      "nameEn": "Seated Row",
+      "category": "Pull",
+      "pattern": "수평 당기기 (Horizontal Pull)",
+      "plane": "시상면 우세 (어깨 신전) + 견갑 내전",
+      "chain": "열린 사슬",
+      "primary": [
+        "광배근",
+        "능형근",
+        "중부 승모근"
+      ],
+      "secondary": [
+        "후면 삼각근",
+        "이두근",
+        "척추기립근(등척성 안정)"
+      ],
+      "originInsertion": [
+        {
+          "muscle": "능형근",
+          "origin": "C7–T5 극돌기",
+          "insertion": "견갑골 내측연"
+        },
+        {
+          "muscle": "중부 승모",
+          "origin": "T1–T5 극돌기",
+          "insertion": "견갑극"
+        }
+      ],
+      "innervation": [
+        "배측견갑신경(능형)",
+        "부신경·경신경총(승모)"
+      ],
+      "joints": [
+        {
+          "joint": "어깨",
+          "action": "신전 / 수평신전"
+        },
+        {
+          "joint": "견갑",
+          "action": "내전(retraction)"
+        },
+        {
+          "joint": "팔꿈치",
+          "action": "굴곡"
+        }
+      ],
+      "why": "등 ‘두께’와 견갑 후인. 스내치 셋업·오버헤드에서 흉곽 위에 어깨를 올리는 토대.",
+      "cues": [
+        "갈비 내리고 브레이싱",
+        "팔보다 견갑이 먼저",
+        "요추로 당기지 않기"
+      ],
+      "examTip": "견갑 내전 = 능형·중부승모. ‘어깨를 뒤로’와 ‘허리를 젖혀 반동’을 구분할 것.",
+      "highlight": [
+        "lats",
+        "midBack",
+        "rearDelt",
+        "biceps"
+      ],
+      "levelNote": "편측 50×9(플레이트 100kg+) = 상급 수평 당기기.",
+      "machineNote": "양쪽에 원판을 꽂는 머신. Rise 표기는 편측 중량.",
+      "view": "posterior",
+      "detailKey": "lat",
+      "detailKey2": "shoulderBack"
+    },
+    {
+      "id": "straightarm",
+      "name": "스트레이트 암 풀 다운",
+      "nameEn": "Straight-Arm Pulldown",
+      "category": "Pull",
+      "pattern": "어깨 신전 고립 (단관절에 가까움)",
+      "plane": "시상면",
+      "chain": "열린 사슬",
+      "primary": [
+        "광배근 (하부 섬유 강조)"
+      ],
+      "secondary": [
+        "대원근",
+        "삼두 장두",
+        "전거근(안정)"
+      ],
+      "originInsertion": [
+        {
+          "muscle": "광배근",
+          "origin": "흉요근막 등",
+          "insertion": "상완골 소결절능선"
+        }
+      ],
+      "innervation": [
+        "흉배신경"
+      ],
+      "joints": [
+        {
+          "joint": "어깨",
+          "action": "신전 (팔꿈치 거의 고정)"
+        }
+      ],
+      "why": "이두(팔꿈치 굴곡)를 빼고 광배만 길게 쓴다. 수직 당기기 후 연결감·펌핑.",
+      "cues": [
+        "팔 거의 신전 유지",
+        "손끝보다 상완을 몸통으로",
+        "요추 신전으로 훔치지 않기"
+      ],
+      "examTip": "단관절(어깨) 강조 예. 다관절 풀업/로우와 대비해 ‘주동 관절 수’ 문제에 쓰기 좋음.",
+      "highlight": [
+        "lats"
+      ],
+      "levelNote": "보조 고립. 본세트 2~3이면 충분.",
+      "view": "posterior",
+      "detailKey": "lat"
+    },
+    {
+      "id": "rearfiy",
+      "name": "덤벨 리어 플라이",
+      "nameEn": "Rear Delt Fly",
+      "category": "Pull",
+      "pattern": "수평 외전 고립",
+      "plane": "수평면 (Transverse)",
+      "chain": "열린 사슬",
+      "primary": [
+        "삼각근 후면 (Posterior deltoid)"
+      ],
+      "secondary": [
+        "중부 승모",
+        "능형근"
+      ],
+      "originInsertion": [
+        {
+          "muscle": "후면 삼각",
+          "origin": "견갑극",
+          "insertion": "상완골 삼각근조면"
+        }
+      ],
+      "innervation": [
+        "액와신경 (Axillary n., C5–C6)"
+      ],
+      "joints": [
+        {
+          "joint": "어깨",
+          "action": "수평 외전"
+        }
+      ],
+      "why": "벤치·푸시에 가려진 후면 보충. OH 안정에 간접 도움.",
+      "cues": [
+        "새끼손가락 약간 위",
+        "승모 으쓱 금지",
+        "반동 X"
+      ],
+      "examTip": "삼각근은 전·중·후 섬유가 기능이 다름. 후면 = 수평외전·신전.",
+      "highlight": [
+        "rearDelt",
+        "midBack"
+      ],
+      "levelNote": "작은 근군. 3세트면 충분.",
+      "view": "posterior",
+      "detailKey": "deltoid",
+      "detailKey2": "shoulderBack"
+    },
+    {
+      "id": "ezcurl",
+      "name": "이지 바 컬",
+      "nameEn": "EZ Bar Curl",
+      "category": "Pull",
+      "pattern": "팔꿈치 굴곡 고립",
+      "plane": "시상면",
+      "chain": "열린 사슬",
+      "primary": [
+        "이두근",
+        "상완근"
+      ],
+      "secondary": [
+        "완요골근"
+      ],
+      "originInsertion": [
+        {
+          "muscle": "이두 장두",
+          "origin": "견갑 관절와상 결절",
+          "insertion": "요골 조면"
+        },
+        {
+          "muscle": "상완근",
+          "origin": "상완골 전면",
+          "insertion": "척골 조면"
+        }
+      ],
+      "innervation": [
+        "근피신경 (Musculocutaneous n.)"
+      ],
+      "joints": [
+        {
+          "joint": "팔꿈치",
+          "action": "굴곡"
+        }
+      ],
+      "why": "당기기에서 이미 이두가 쓰이므로 마무리는 짧게.",
+      "cues": [
+        "팔꿈치 고정",
+        "어깨 전방 이동 금지",
+        "하단 스트레치"
+      ],
+      "examTip": "상완근은 전완 회내·회외에 덜 영향 → ‘진짜 팔꿈치 굴곡근’으로 자주 등장.",
+      "highlight": [
+        "biceps"
+      ],
+      "levelNote": "Pull 끝 2~3세트 권장.",
+      "view": "anterior",
+      "detailKey": "biceps"
+    },
+    {
+      "id": "bench",
+      "name": "벤치 프레스",
+      "nameEn": "Bench Press",
+      "category": "Push",
+      "pattern": "수평 밀기",
+      "plane": "시상면 + 수평면",
+      "chain": "열린 사슬",
+      "primary": [
+        "대흉근",
+        "전면 삼각근",
+        "삼두근"
+      ],
+      "secondary": [
+        "전거근",
+        "광배(안정)"
+      ],
+      "originInsertion": [
+        {
+          "muscle": "대흉근 흉골부",
+          "origin": "흉골·늑연골",
+          "insertion": "상완골 대결절능선"
+        }
+      ],
+      "innervation": [
+        "내·외측 흉신경",
+        "액와신경(전면삼각)",
+        "요골신경(삼두)"
+      ],
+      "joints": [
+        {
+          "joint": "어깨",
+          "action": "수평 내전 / 굴곡"
+        },
+        {
+          "joint": "팔꿈치",
+          "action": "신전"
+        }
+      ],
+      "why": "상체 밀기 메인. 고볼륨·헤비 싱글이 많으면 스내치 어깨 신선도↓.",
+      "cues": [
+        "견갑 고정",
+        "발바닥 압력",
+        "바 경로 약간 아치"
+      ],
+      "examTip": "밀기 = 수평내전(흉근)+신전(삼두). 안정화로 전거근·광배 언급 가능.",
+      "highlight": [
+        "chest",
+        "frontDelt",
+        "triceps"
+      ],
+      "levelNote": "145×1 @106kg ≈ 1.37×BW — 중상급~상급.",
+      "view": "anterior",
+      "detailKey": "pec",
+      "detailKey2": "chestShoulder"
+    },
+    {
+      "id": "squat",
+      "name": "백 스쿼트",
+      "nameEn": "Back Squat",
+      "category": "Leg",
+      "pattern": "스쿼트 (무릎+힙)",
+      "plane": "시상면",
+      "chain": "닫힌 사슬",
+      "primary": [
+        "대퇴사두",
+        "대둔근"
+      ],
+      "secondary": [
+        "내전근",
+        "척추기립근",
+        "코어",
+        "햄스트링"
+      ],
+      "originInsertion": [
+        {
+          "muscle": "대둔근",
+          "origin": "장골·천골·미골",
+          "insertion": "대퇴골 둔근조면 / ITB"
+        },
+        {
+          "muscle": "대퇴사두(대퇴직)",
+          "origin": "AIIS",
+          "insertion": "경골 조면(슬개건)"
+        }
+      ],
+      "innervation": [
+        "하둔신경(둔근)",
+        "대퇴신경(사두)"
+      ],
+      "joints": [
+        {
+          "joint": "고관절",
+          "action": "굴곡→신전"
+        },
+        {
+          "joint": "무릎",
+          "action": "굴곡→신전"
+        },
+        {
+          "joint": "발목",
+          "action": "배측굴곡"
+        }
+      ],
+      "why": "스내치 리시브·기립의 힘. 역도 시즌에도 유지할 하체 메인.",
+      "cues": [
+        "브레이싱",
+        "무릎이 발끝 방향",
+        "깊이 일관"
+      ],
+      "examTip": "닫힌사슬 다관절. 원심성(내려가기)→구심성(일어나기). 무릎 토크 vs 힙 토크는 바 위치·체간에 따라 변함.",
+      "highlight": [
+        "quads",
+        "glutes",
+        "core"
+      ],
+      "levelNote": "180×1 @106kg ≈ 1.70×BW — 상급.",
+      "view": "anterior",
+      "detailKey": "quad",
+      "detailKey2": "glute"
+    },
+    {
+      "id": "deadlift",
+      "name": "데드리프트",
+      "nameEn": "Deadlift",
+      "category": "Pull",
+      "pattern": "힙 힌지",
+      "plane": "시상면",
+      "chain": "닫힌 사슬",
+      "primary": [
+        "척추기립근",
+        "대둔근",
+        "햄스트링"
+      ],
+      "secondary": [
+        "광배",
+        "승모",
+        "전완",
+        "코어"
+      ],
+      "originInsertion": [
+        {
+          "muscle": "대둔근",
+          "origin": "장골·천골",
+          "insertion": "둔근조면 / ITB"
+        },
+        {
+          "muscle": "슬건(반건양 등)",
+          "origin": "좌골결절",
+          "insertion": "경골 내측 등"
+        }
+      ],
+      "innervation": [
+        "하둔신경",
+        "좌골신경 경골부"
+      ],
+      "joints": [
+        {
+          "joint": "고관절",
+          "action": "신전"
+        },
+        {
+          "joint": "무릎",
+          "action": "신전"
+        },
+        {
+          "joint": "척추",
+          "action": "등척성 중립"
+        }
+      ],
+      "why": "후방사슬·풀 힘. 당신 루틴에선 Pull day 메인. 역도 직전엔 세게 안 침.",
+      "cues": [
+        "바-정강이 근접",
+        "라트로 바를 몸쪽으로",
+        "힙이 먼저 열리지 않게"
+      ],
+      "examTip": "힌지 = 힙 신전 우세. 스쿼트(무릎 우세)와 대비. 척추는 ‘들어올리는’ 게 아니라 ‘중립 유지(등척성)’.",
+      "highlight": [
+        "hamstrings",
+        "glutes",
+        "erectors",
+        "lats"
+      ],
+      "levelNote": "190 ≈ 1.79×BW — 상급. 스내치 풀 여력 충분.",
+      "view": "posterior",
+      "detailKey": "glute",
+      "detailKey2": "lat"
+    },
+    {
+      "id": "snatch",
+      "name": "스내치 (스쿼트)",
+      "nameEn": "Squat Snatch",
+      "category": "Olympic",
+      "pattern": "삼중신전 풀 + 낮은 OH 리시브",
+      "plane": "시상면 우세",
+      "chain": "닫힌 사슬 (발이 지면) + 상지는 오버헤드 안정",
+      "primary": [
+        "후방사슬",
+        "승모",
+        "삼각근",
+        "광배",
+        "대퇴사두·둔근(리시브)"
+      ],
+      "secondary": [
+        "코어",
+        "전완",
+        "발목 가동성 구조"
+      ],
+      "originInsertion": [],
+      "innervation": [],
+      "joints": [
+        {
+          "joint": "고관절·무릎·발목",
+          "action": "폭발 신전 → 깊은 굴곡(리시브)"
+        },
+        {
+          "joint": "어깨",
+          "action": "굴곡 + 외회전 OH"
+        }
+      ],
+      "why": "3분기 목표. 힘(파워85)은 있음. 병목은 깊은 리시브와 OH 신뢰.",
+      "cues": [
+        "풀을 길게",
+        "발 밑으로 들어가기",
+        "파워로 높이 받지 않기"
+      ],
+      "examTip": "SSC(신장-단축 사이클), 삼중신전, 운동량 전달. ‘힘’과 ‘기술(타이밍)’을 분리해 설명하는 연습에 최적.",
+      "highlight": [
+        "lats",
+        "glutes",
+        "quads",
+        "shoulders",
+        "midBack"
+      ],
+      "levelNote": "파워 85 → 스쿼트 100. Phase1 = 리시브 개조.",
+      "view": "posterior",
+      "detailKey": "lat",
+      "detailKey2": "deltoid"
+    }
+  ]
+}

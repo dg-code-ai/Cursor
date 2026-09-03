@@ -1,0 +1,1133 @@
+{
+  "version": 1,
+  "sessions": [
+    {
+      "id": "run-2026-05-10k-race",
+      "date": "2026-05",
+      "type": "race",
+      "distanceKm": 10.03,
+      "timeSec": 4146,
+      "pacePerKm": "6'53\"",
+      "bestPace": "3'44\"",
+      "avgSpeedKmh": 8.71,
+      "maxSpeedKmh": 16.06,
+      "avgHr": 177,
+      "maxHr": 192,
+      "avgCadence": 166,
+      "maxCadence": 186,
+      "steps": 22782,
+      "stepsPerKm": 2269,
+      "altitudeMinM": 4,
+      "altitudeMaxM": 10,
+      "hrZones": {
+        "max_165plus": "1:04:56",
+        "anaerobic_147_164": "0:01:22",
+        "aerobic_129_146": "0:01:22",
+        "low_110_128": "0:00:00",
+        "warmup_91_109": "0:00:00"
+      },
+      "laps": [
+        {
+          "km": 1,
+          "pace": "6'13\"",
+          "delta": null
+        },
+        {
+          "km": 2,
+          "pace": "6'01\"",
+          "delta": "-0'12\""
+        },
+        {
+          "km": 3,
+          "pace": "6'32\"",
+          "delta": "+0'31\""
+        },
+        {
+          "km": 4,
+          "pace": "6'51\"",
+          "delta": "+0'19\""
+        },
+        {
+          "km": 5,
+          "pace": "7'01\"",
+          "delta": "+0'10\""
+        },
+        {
+          "km": 6,
+          "pace": "6'58\"",
+          "delta": "-0'03\""
+        },
+        {
+          "km": 7,
+          "pace": "7'31\"",
+          "delta": "+0'33\""
+        },
+        {
+          "km": 8,
+          "pace": "7'22\"",
+          "delta": "-0'09\""
+        },
+        {
+          "km": 9,
+          "pace": "7'14\"",
+          "delta": "-0'08\""
+        },
+        {
+          "km": 10,
+          "pace": "7'08\"",
+          "delta": "-0'06\""
+        },
+        {
+          "km": 10.03,
+          "pace": "5'19\"",
+          "delta": "-1'49\""
+        }
+      ],
+      "source": "RunDay",
+      "coachNote": "공식 기준 PR. 기억의 68분이 아니라 1:09:06. 초반 6분대 → 7km 붕괴 → 후반 리커버리. 시합 강도(HR177)."
+    },
+    {
+      "id": "run-2026-07-04",
+      "date": "2026-07-04",
+      "distanceKm": 7.02,
+      "timeSec": 3309,
+      "pacePerKm": "7'51\"",
+      "source": "RunDay",
+      "coachNote": "7km 이미 가능. 거리 복귀 기준점."
+    },
+    {
+      "id": "run-2026-07-08",
+      "date": "2026-07-08",
+      "distanceKm": 4.03,
+      "timeSec": 1911,
+      "pacePerKm": "7'54\"",
+      "avgHr": 157,
+      "avgCadence": 154,
+      "avgPower": 236,
+      "verticalOscCm": 10.2,
+      "groundContactMs": 320,
+      "coachNote": "단기·고강도 쪽. 케이던스 양호."
+    },
+    {
+      "id": "run-2026-07-09",
+      "date": "2026-07-09",
+      "distanceKm": 4.29,
+      "timeSec": 2405,
+      "pacePerKm": "9'20\"",
+      "avgHr": 140,
+      "avgCadence": 142,
+      "avgPower": 204,
+      "verticalOscCm": 10.2,
+      "groundContactMs": 356,
+      "coachNote": "쉬운 지구력. 케이던스↓ / 접지시간↑."
+    },
+    {
+      "id": "run-recent-315",
+      "date": "2026-07-11",
+      "distanceKm": 3.15,
+      "timeSec": 1470,
+      "pacePerKm": "7'47\"",
+      "avgHr": 158,
+      "avgCadence": 154,
+      "verticalOscCm": 10.6,
+      "groundContactMs": 326,
+      "coachNote": "짧은 런, 후반 심박·페이스 상승."
+    },
+    {
+      "id": "run-2026-07-12",
+      "date": "2026-07-12",
+      "distanceKm": 3.74,
+      "timeSec": 1814,
+      "pacePerKm": "8'05\"",
+      "avgHr": 151,
+      "avgCadence": 155,
+      "avgPower": 231,
+      "verticalOscCm": 10.1,
+      "groundContactMs": 317,
+      "coachNote": "후반 페이스업. 거리 빌드업 전 유지런."
+    },
+    {
+      "id": "run-2026-07-17",
+      "date": "2026-07-17",
+      "distanceKm": 8.03,
+      "timeSec": 4031,
+      "pacePerKm": "8'21\"",
+      "bestPace": "5'15\"",
+      "avgSpeedKmh": 7.17,
+      "maxSpeedKmh": 11.42,
+      "avgHr": 174,
+      "maxHr": 188,
+      "avgCadence": 153,
+      "maxCadence": 174,
+      "steps": 10178,
+      "stepsPerKm": 1266,
+      "altitudeMinM": 4,
+      "altitudeMaxM": 13,
+      "hrZones": {
+        "max_165plus": "1:00:27",
+        "anaerobic_147_164": "0:04:01",
+        "aerobic_129_146": "0:00:00",
+        "low_110_128": "0:00:00",
+        "warmup_91_109": "0:00:00"
+      },
+      "laps": [
+        {
+          "km": 1,
+          "pace": "7'33\"",
+          "delta": null
+        },
+        {
+          "km": 2,
+          "pace": "7'41\"",
+          "delta": "+0'08\""
+        },
+        {
+          "km": 3,
+          "pace": "8'26\"",
+          "delta": "+0'45\""
+        },
+        {
+          "km": 4,
+          "pace": "7'58\"",
+          "delta": "-0'28\""
+        },
+        {
+          "km": 5,
+          "pace": "9'09\"",
+          "delta": "+1'11\""
+        },
+        {
+          "km": 6,
+          "pace": "8'06\"",
+          "delta": "-1'03\""
+        },
+        {
+          "km": 7,
+          "pace": "8'50\"",
+          "delta": "+0'44\""
+        },
+        {
+          "km": 8,
+          "pace": "9'03\"",
+          "delta": "+0'13\""
+        },
+        {
+          "km": 8.03,
+          "pace": "10'49\"",
+          "delta": "+1'46\""
+        }
+      ],
+      "source": "RunDay",
+      "coachNote": "거리 목표 초과 달성(8km). 다만 평균심박 174·최대존 60분+로 이지런이 아님. 토 롱런은 쉬거나 초짧게."
+    },
+    {
+      "id": "run-2026-07-19",
+      "date": "2026-07-19",
+      "distanceKm": 4.16,
+      "timeSec": 2284,
+      "pacePerKm": "9'08\"",
+      "avgHr": 150,
+      "hrRange": [
+        121,
+        175
+      ],
+      "avgCadence": 144,
+      "cadenceRange": [
+        99,
+        172
+      ],
+      "avgPower": 212,
+      "powerRange": [
+        73,
+        272
+      ],
+      "verticalOscCm": 9.9,
+      "groundContactMs": 335,
+      "source": "Apple Fitness",
+      "coachNote": "이지 방향 성공. 8'21\"/HR174 → 9'08\"/HR150. 목표 145까지는 아직 한 단. 후반 페이스업으로 175 터치."
+    },
+    {
+      "id": "run-2026-07-25",
+      "date": "2026-07-25",
+      "type": "long-run-mixed",
+      "distanceKm": 8.45,
+      "timeSec": 4902,
+      "pacePerKm": "9'39\"",
+      "bestPace": "5'39\"",
+      "avgSpeedKmh": 6.21,
+      "maxSpeedKmh": 10.61,
+      "avgHr": 153,
+      "maxHr": 178,
+      "avgCadence": 138,
+      "maxCadence": 168,
+      "altitudeMinM": 4,
+      "altitudeMaxM": 13,
+      "structure": "5km run + ~3.45km walk",
+      "hrZones": {
+        "max_165plus": "0:22:52",
+        "anaerobic_147_164": "0:32:40",
+        "aerobic_129_146": "0:22:03",
+        "low_110_128": "0:02:27",
+        "warmup_91_109": "0:00:00"
+      },
+      "laps": [
+        {
+          "km": 1,
+          "pace": "8'48\"",
+          "delta": null
+        },
+        {
+          "km": 2,
+          "pace": "8'27\"",
+          "delta": "-0'21\""
+        },
+        {
+          "km": 3,
+          "pace": "7'56\"",
+          "delta": "-0'31\""
+        },
+        {
+          "km": 4,
+          "pace": "8'56\"",
+          "delta": "+1'00\""
+        },
+        {
+          "km": 5,
+          "pace": "9'10\"",
+          "delta": "+0'14\""
+        },
+        {
+          "km": 6,
+          "pace": "10'09\"",
+          "delta": "+0'59\"",
+          "note": "walk start"
+        },
+        {
+          "km": 7,
+          "pace": "10'49\"",
+          "delta": "+0'40\""
+        },
+        {
+          "km": 8,
+          "pace": "11'00\"",
+          "delta": "+0'11\""
+        },
+        {
+          "km": 8.45,
+          "pace": "14'00\"",
+          "delta": "+3'00\""
+        }
+      ],
+      "source": "RunDay/Fitness screenshot",
+      "coachNote": "거리 8.45 달성·후반 걷기로 볼륨 확보 — 좋음. 다만 전반 5km가 이지가 아님: 랩3 7'56\", 평균HR153, 165+ 약 23분·147+ 합 55분+. 7/17과 같은 패턴(거리OK·강도과다). 다음 롱런은 처음부터 9'20\"+ / HR140대."
+    },
+    {
+      "id": "run-2026-08-01",
+      "date": "2026-08-01",
+      "type": "long-run-attempt",
+      "timeOfDay": "morning",
+      "distanceKm": 5.55,
+      "timeSec": 2859,
+      "pacePerKm": "8'35\"",
+      "bestPace": "5'35\"",
+      "avgHr": 160,
+      "hrRange": [
+        102,
+        185
+      ],
+      "avgCadence": 145,
+      "cadenceRange": [
+        99,
+        177
+      ],
+      "avgPower": 213,
+      "powerRange": [
+        83,
+        412
+      ],
+      "verticalOscCm": 9.8,
+      "verticalOscRange": [
+        8.1,
+        11.5
+      ],
+      "groundContactMs": 323,
+      "groundContactRange": [
+        222,
+        384
+      ],
+      "location": "인천",
+      "shoe": "Hoka Mach X 3",
+      "source": "Apple Fitness",
+      "coachNote": "토 아침 호카 마하 X3. 5.55km · 8'35\" · HR160(최대185). 거리↓·강도↑ 패턴. 이후 기준: 9분대에서 심박 확인 후만 페이스 올리기."
+    },
+    {
+      "id": "run-2026-08-04",
+      "date": "2026-08-04",
+      "type": "easy-attempt",
+      "title": "자율 달리기",
+      "timeOfDay": "21:12",
+      "distanceKm": 4.06,
+      "timeSec": 1990,
+      "pacePerKm": "8'09\"",
+      "bestPace": "5'36\"",
+      "paceRange": [
+        "12'14\"",
+        "5'36\""
+      ],
+      "caloriesKcal": 442,
+      "avgHr": 163,
+      "hrRange": [
+        122,
+        189
+      ],
+      "avgCadence": 148,
+      "cadenceRange": [
+        82,
+        170
+      ],
+      "avgPower": 226,
+      "powerRange": [
+        91,
+        394
+      ],
+      "verticalOscCm": 9.9,
+      "verticalOscRange": [
+        8.8,
+        11.1
+      ],
+      "groundContactMs": 329,
+      "groundContactRange": [
+        224,
+        372
+      ],
+      "strideLengthM": 0.8,
+      "strideLengthRange": [
+        0.7,
+        1.3
+      ],
+      "altitudeMinM": 6,
+      "altitudeMaxM": 9,
+      "location": "인천 송도",
+      "shoe": "Nike Winflo 11 Wide",
+      "shoeNote": "본인: 슈퍼블라스트보다 쿠션은 덜하지만 바닥에 착착 감김. 어제 감각 좋았음.",
+      "source": "Apple Fitness / Watch",
+      "coachNote": "화 스내치 후 저녁 자율런. 4.06km·8'09\"·HR163 — 느린 구간↔서지 혼재로 심박 누적. 신발 윈플로: 접지감 선호. 다음엔 9분대에서 심박 가라앉은 뒤만 페이스 올리기."
+    },
+    {
+      "id": "run-2026-08-06",
+      "date": "2026-08-06",
+      "type": "easy-recovery",
+      "title": "실외 달리기",
+      "timeOfDay": "20:30–21:01",
+      "distanceKm": 3.65,
+      "timeSec": 1873,
+      "elapsedSec": 1874,
+      "pacePerKm": "8'32\"",
+      "paceRange": [
+        "29'30\"",
+        "6'02\""
+      ],
+      "caloriesKcal": 360,
+      "avgHr": 148,
+      "hrRange": [
+        102,
+        178
+      ],
+      "avgCadence": 144,
+      "cadenceRange": [
+        70,
+        176
+      ],
+      "avgPower": 232,
+      "powerRange": [
+        82,
+        309
+      ],
+      "verticalOscCm": 9.7,
+      "verticalOscRange": [
+        8.3,
+        11.1
+      ],
+      "groundContactMs": 329,
+      "groundContactRange": [
+        250,
+        378
+      ],
+      "source": "Apple Fitness / Watch",
+      "context": "목 오전 Push 라이트 + 햄 당김(좌식 후 기립) 있는 날 저녁",
+      "graphRead": {
+        "hr": "초반 낮음 → 구간 대부분 완만 상승 → 후반 피크(178) 후 쿨다운 하강",
+        "pace": "중반 비교적 일정 · 맨끝 급감속(워크/쿨다운)",
+        "vsAug04": "8'09\"/HR163·max189 → 8'32\"/HR148·max178. 서지 패턴↓, 평균 심박 목표대 진입"
+      },
+      "coachNote": "화 4.06km·8'09\"·HR163(서지 혼재) 대비 페이스↓·평균심박↓가 핵심. 그래프상 페이스는 중반 비교적 평탄하고 심박만 완만 누적 — 느린↔서지 파형보다 ‘일정 조깅에 심박이 천천히 쌓이는’ 쪽에 가깝다. 평균 148은 이지 창(150 전후)에 들어옴. 후반 178은 피크 터치일 뿐 세션 전체 성격은 아님. 케이던스 144·접지 329ms는 이지+체중+햄 조심 보폭과 일치. 햄 당긴 날 저녁에 3.65km로 혈류 돌린 선택은 좋음 — 단 기립 땡이 악화됐는지만 본인 확인."
+    },
+    {
+      "id": "run-2026-08-08-indoor",
+      "date": "2026-08-08",
+      "type": "indoor-run",
+      "title": "실내 달리기 (토 오전)",
+      "distanceKm": 6.02,
+      "distanceNote": "본인 보고 약 6km · 워치 상세 미첨부",
+      "source": "Apple Fitness / Watch",
+      "coachNote": "토 오전 단독 블록. 6.02km·45:52·7'37\"·HR152(122–182)·케이던스157·접지319·VO9.6·파워250. 케이던스/접지는 안정. 페이스 7'37\"는 이지 앵커(8'30\"–9'00\")보다 ~1분 빠름 + 후반 가속·max182. 평균 HR만 보면 창처럼 보이나 세션 성격은 자극 런. ※ 실외 3.5km는 일 저녁 세션으로 분리(토 연속 아님).",
+      "timeSec": 2752,
+      "elapsedSec": 2754,
+      "pacePerKm": "7'37\"",
+      "paceRange": [
+        "10'32\"",
+        "5'23\""
+      ],
+      "avgHr": 152,
+      "hrRange": [
+        122,
+        182
+      ],
+      "avgCadence": 157,
+      "cadenceRange": [
+        122,
+        176
+      ],
+      "avgPower": 250,
+      "powerRange": [
+        162,
+        350
+      ],
+      "verticalOscCm": 9.6,
+      "verticalOscRange": [
+        7.9,
+        11.7
+      ],
+      "groundContactMs": 319,
+      "groundContactRange": [
+        204,
+        373
+      ],
+      "graphRead": {
+        "hr": "초반→후반 완만 상승, 후반부 피크(최대182)",
+        "pace": "중반 비교적 유지 · 막판 가속(5'23\"대 터치)",
+        "power": "후반 파워↑ — 페이스 가속과 동행"
+      },
+      "timeOfDay": "오전"
+    },
+    {
+      "id": "run-2026-08-09-jog",
+      "date": "2026-08-09",
+      "type": "outdoor-jog",
+      "title": "실외 조깅 (일 저녁)",
+      "distanceKm": 3.54,
+      "pacePerKm": "7'59\"",
+      "bestPace": "3'34\"",
+      "bestPaceNote": "GPS/순간 스파이크 가능 — 세션 성격으로 쓰지 말 것",
+      "avgSpeedKmh": 7.5,
+      "maxSpeedKmh": 16.77,
+      "avgHr": 151,
+      "maxHr": 183,
+      "avgCadence": 155,
+      "maxCadence": 206,
+      "steps": 4060,
+      "stepsPerKm": 1147,
+      "hrZones": {
+        "max_165plus": "0:06:46",
+        "anaerobic_147_164": "0:15:14",
+        "aerobic_129_146": "0:03:40",
+        "low_110_128": "0:01:41",
+        "warmup_91_109": "0:00:16"
+      },
+      "altitudeMinM": 2,
+      "altitudeMaxM": 10,
+      "graphRead": {
+        "pace": "중반 요동 + 구간 감속 스파이크 후 후반·막판 가속",
+        "hr": "초반 상승 후 대부분 147+ · 막판 173–183대",
+        "finish": "종료 직전 속도 12.52km/h · 케이던스 max206 — 마감 서지"
+      },
+      "source": "Apple/삼성? 운동 상세 정보 스크린",
+      "partOfDay": "일 저녁",
+      "coachNote": "일 저녁 실외 ~3.5km·7'59\"·HR151(max183)·케이던스155. 존 147+ 비중 큼(~22분/27분)·막판 서지. 토 실내와 날짜 분리 — 같은 날 더블이 아님. 일 스내치 도전 다음 저녁 자극이면 회복 측면에서 아쉬움; 다음 역도일 저녁은 걷기/완전 이지만.",
+      "timeOfDay": "저녁"
+    },
+    {
+      "id": "run-2026-08-15-outdoor",
+      "date": "2026-08-15",
+      "type": "outdoor-run",
+      "title": "실외 달리기 (토 오전)",
+      "distanceKm": 5.06,
+      "timeSec": 2439,
+      "pacePerKm": "8'02\"",
+      "paceRange": [
+        "13'31\"",
+        "6'05\""
+      ],
+      "avgHr": 156,
+      "hrRange": [
+        118,
+        181
+      ],
+      "avgPower": 236,
+      "powerRange": [
+        85,
+        326
+      ],
+      "avgCadence": 151,
+      "cadenceRange": [
+        87,
+        166
+      ],
+      "verticalOscCm": 10.0,
+      "verticalOscRange": [
+        8.6,
+        11.4
+      ],
+      "groundContactMs": 332,
+      "groundContactRange": [
+        265,
+        378
+      ],
+      "activeKcal": 547,
+      "location": "인천광역시",
+      "routeNote": "해안/인천대교 인근 직선 구간",
+      "graphRead": {
+        "hr": "후반으로 갈수록 상승 · max181",
+        "pace": "중반 비교적 유지 · ~15·25분 부근 감속(휴식?) · 막판 가속"
+      },
+      "source": "Apple Fitness",
+      "timeOfDay": "오전",
+      "timeWindow": "06:44–07:25",
+      "coachNote": "금 하이록스 다음날 5km. 페이스 8'02\"=이지 앵커(8'30\"–9'00\")보다 빠름 · HR156·max181=평균은 창 근처 but 마무리 강도↑. 웨이트 X·런만=회복 겸 거리 — 방향 OK, 페이스 한 단만 더 내렸으면 A."
+    },
+    {
+      "id": "run-2026-08-16-outdoor",
+      "date": "2026-08-16",
+      "type": "outdoor-run",
+      "title": "실외 달리기 (일 오전)",
+      "distanceKm": 5.27,
+      "timeSec": 2550,
+      "elapsedSec": 3284,
+      "pacePerKm": "8'03\"",
+      "paceRange": [
+        "21'12\"",
+        "6'02\""
+      ],
+      "avgHr": 149,
+      "hrRange": [
+        99,
+        175
+      ],
+      "avgPower": 236,
+      "powerRange": [
+        78,
+        426
+      ],
+      "avgCadence": 151,
+      "cadenceRange": [
+        97,
+        183
+      ],
+      "verticalOscCm": 9.7,
+      "verticalOscRange": [
+        8.1,
+        11.7
+      ],
+      "groundContactMs": 336,
+      "groundContactRange": [
+        222,
+        378
+      ],
+      "activeKcal": 513,
+      "location": "인천광역시 · 송도",
+      "routeNote": "송도센트럴파크 인근",
+      "graphRead": {
+        "hr": "149 평균 · 완만 누적",
+        "pace": "케이던스 공백=걷기/휴식 구간 · 21'12\" 스파이크=워크",
+        "elapsed": "운동 42:30 vs 경과 54:44 → ~12분 휴식 포함"
+      },
+      "source": "Apple Fitness",
+      "timeOfDay": "오전",
+      "timeWindow": "08:02–08:56",
+      "coachNote": "3연속 둘째 날. 8'03\"·HR149=8/6(8'32\"/148)보다 페이스↑·심박 비슷 — 걷기 섞인 이지로 해석 가능. 경과 54분>운동 42분=솔직한 이지. 세 런 중 제일 ‘회복런’답다."
+    },
+    {
+      "id": "run-2026-08-17-outdoor",
+      "date": "2026-08-17",
+      "type": "outdoor-run",
+      "title": "실외 달리기 (월 오전)",
+      "distanceKm": 5.0,
+      "timeSec": 2196,
+      "elapsedSec": 2197,
+      "pacePerKm": "7'19\"",
+      "paceRange": [
+        "10'58\"",
+        "4'55\""
+      ],
+      "avgHr": 159,
+      "hrRange": [
+        108,
+        182
+      ],
+      "avgPower": 258,
+      "powerRange": [
+        95,
+        402
+      ],
+      "avgCadence": 158,
+      "cadenceRange": [
+        119,
+        182
+      ],
+      "verticalOscCm": 9.6,
+      "verticalOscRange": [
+        8.4,
+        11.0
+      ],
+      "groundContactMs": 323,
+      "groundContactRange": [
+        236,
+        372
+      ],
+      "activeKcal": 524,
+      "location": "인천광역시",
+      "routeNote": "인천대교 인근 직선",
+      "graphRead": {
+        "hr": "후반 상승 · max182",
+        "pace": "평균 7'19\" · 막판 케이던스·파워↑=마감 서지",
+        "cadence": "158 평균 · 종료 구간 182 SPM"
+      },
+      "source": "Apple Fitness",
+      "timeOfDay": "오전",
+      "timeWindow": "07:29–08:06",
+      "coachNote": "3연속 셋째 · 5km 딱. 7'19\"·HR159·max182=이지 아님 — 8/8 실내 7'37\" 패턴 재현(평균 HR만 보면 괜찮아 보이나 막판 서지). 웨이트 휴식 중 런만=OK but 내일 Pull+테크 전 회복런 아님. 오늘부터 페이스 내리거나 내일 헬스."
+    },
+    {
+      "id": "run-2026-08-18-evening",
+      "date": "2026-08-18",
+      "type": "outdoor-run",
+      "title": "실외 달리기 (화 저녁)",
+      "distanceKm": 5.03,
+      "timeSec": 2387,
+      "elapsedSec": 2388,
+      "pacePerKm": "7'54\"",
+      "paceRange": [
+        "10'38\"",
+        "6'24\""
+      ],
+      "avgHr": 147,
+      "hrRange": [
+        100,
+        176
+      ],
+      "avgPower": 239,
+      "avgCadence": 155,
+      "cadenceRange": [
+        124,
+        166
+      ],
+      "verticalOscCm": 9.9,
+      "verticalOscRange": [
+        8.6,
+        11.4
+      ],
+      "groundContactMs": 333,
+      "groundContactRange": [
+        270,
+        385
+      ],
+      "strideLengthM": 0.8,
+      "strideLengthRange": [
+        0.8,
+        0.9
+      ],
+      "activeKcal": 502,
+      "perceivedExertion": 7,
+      "perceivedExertionNote": "어려움",
+      "location": "인천광역시",
+      "graphRead": {
+        "hr": "초반부터 후반까지 완만 상승 · 평균147 · max176",
+        "pace": "전반 느림 · 20분 이후 가속(후반 서지)",
+        "cadence": "후반 안정↑ · 평균155"
+      },
+      "source": "Apple Fitness",
+      "timeOfDay": "저녁",
+      "timeWindow": "21:24–22:04",
+      "sameDayGym": "오전 Pull+스내치 테크",
+      "coachNote": "화 오전 테크 다음 저녁 5.03km. HR147=이지 창 안쪽(150–155보다 낮음) — 심박은 최근 제일 깨끗. 페이스 7'54\"는 앵커(8'30\"–9'00\")보다 빠름 + 후반 가속. 자각 7(어려움) vs HR147=테크 잔여로 체감↑. 수 Leg 전날 저녁런 — 하체 말짱 보고와 맞으면 진행하되 180 chase X."
+    },
+    {
+      "id": "run-2026-08-20-evening",
+      "date": "2026-08-20",
+      "type": "outdoor-run",
+      "title": "실외 달리기 (목 저녁)",
+      "distanceKm": 3.75,
+      "timeSec": 1807,
+      "elapsedSec": 1808,
+      "pacePerKm": "8'01\"",
+      "paceRange": [
+        "10'13\"",
+        "6'27\""
+      ],
+      "avgHr": 145,
+      "hrRange": [
+        100,
+        161
+      ],
+      "avgPower": 237,
+      "avgCadence": 155,
+      "cadenceRange": [
+        126,
+        164
+      ],
+      "verticalOscCm": 9.9,
+      "verticalOscRange": [
+        8.6,
+        11.3
+      ],
+      "groundContactMs": 336,
+      "groundContactRange": [
+        273,
+        381
+      ],
+      "strideLengthM": 0.8,
+      "strideLengthRange": [
+        0.7,
+        0.9
+      ],
+      "activeKcal": 371,
+      "location": "인천광역시",
+      "graphRead": {
+        "hr": "초반 상승 후 중후반 145 전후 유지 · max161",
+        "pace": "초반 느림 · 후반 다소 가속(6'27\" 터치)",
+        "cadence": "155 평균 · 비교적 평탄"
+      },
+      "source": "Apple Fitness",
+      "timeOfDay": "저녁",
+      "timeWindow": "21:58–22:28",
+      "sameDayGym": "오전 Push 하이브리드 B",
+      "coachNote": "목 Push 다음 저녁 3.75km. HR145·max161=최근 이지 중 제일 깨끗(180대 없음). 페이스 8'01\"는 앵커보다 약간 빠름·후반 가속 잔여 but 거리 짧아서 일 역도 전 부담은 작음. 토는 걷기/스킵 권장."
+    },
+    {
+      "id": "run-2026-08-22-outdoor",
+      "date": "2026-08-22",
+      "type": "outdoor-run",
+      "title": "실외 달리기 (토 오전)",
+      "distanceKm": 6.01,
+      "timeSec": 3185,
+      "elapsedSec": 3186,
+      "pacePerKm": "8'50\"",
+      "paceRange": [
+        "10'39\"",
+        "7'31\""
+      ],
+      "caloriesKcal": 617,
+      "activeKcal": 617,
+      "avgHr": 147,
+      "hrRange": [
+        102,
+        167
+      ],
+      "avgPower": 213,
+      "avgCadence": 151,
+      "cadenceRange": [
+        135,
+        162
+      ],
+      "verticalOscCm": 9.4,
+      "verticalOscRange": [
+        8.6,
+        10.8
+      ],
+      "groundContactMs": 351,
+      "groundContactRange": [
+        285,
+        380
+      ],
+      "strideLengthM": 0.8,
+      "strideLengthRange": [
+        0.7,
+        0.8
+      ],
+      "location": "인천광역시",
+      "graphRead": {
+        "hr": "초반 낮음 → 전 구간 완만 상승 · max167(180대 없음)",
+        "pace": "7'31\"–10'39\" 요동 · 평균 8'50\"=앵커(8'30\"–9'00\") 안쪽",
+        "cadence": "151 평균 · 135–162 비교적 안정",
+        "form": "접지 351ms=이지+체중(106kg) · 수직 9.4cm · 보폭 0.8m"
+      },
+      "source": "Apple Fitness",
+      "timeOfDay": "오전",
+      "timeWindow": "07:55–08:48",
+      "context": "금 테크(48분) 다음날 **아침** · 처방=걷기/휴식 · 일 역도(스내치90/92) 전날",
+      "coachNote": "처방은 토 휴식이었으나 **아침** 6.01km·8'50\"·HR147=8/16(8'03\"/149)보다 페이스↓·심박 비슷 — 이지 회복런. max167·180대 없음. 코치는 일 역도 방해 우려했으나 다음날 **인상+용상 듀얼 PR** — n=1이지만 ‘토 아침 이지=역도 망침’ 가설은 폐기."
+    },
+    {
+      "id": "run-2026-08-23-evening",
+      "date": "2026-08-23",
+      "type": "outdoor-run",
+      "title": "실외 달리기 (일 저녁)",
+      "distanceKm": 3.13,
+      "timeSec": 1371,
+      "elapsedSec": 1373,
+      "pacePerKm": "7'17\"",
+      "paceRange": [
+        "12'45\"",
+        "5'06\""
+      ],
+      "caloriesKcal": 301,
+      "activeKcal": 301,
+      "avgHr": 153,
+      "hrRange": [
+        101,
+        178
+      ],
+      "avgPower": 262,
+      "avgCadence": 164,
+      "cadenceRange": [
+        62,
+        179
+      ],
+      "verticalOscCm": 9.3,
+      "verticalOscRange": [
+        7.8,
+        10.7
+      ],
+      "groundContactMs": 316,
+      "groundContactRange": [
+        244,
+        365
+      ],
+      "strideLengthM": 0.9,
+      "strideLengthRange": [
+        0.7,
+        1.1
+      ],
+      "location": "인천광역시 · 인천대교 인근",
+      "shoe": "Hoka Mach X 3",
+      "athleteNote": "마하X3 — 발 구르는 게 확실히 빨라짐",
+      "routeNote": "직선 구간(해안/고속도로 인근)",
+      "graphRead": {
+        "hr": "초반→후반 완만 상승 · max178",
+        "pace": "초반 12'45\"대(워크?) → 후반 5'06\"–6'대 가속 · 평균 7'17\"",
+        "cadence": "164 평균 · 후반 안정",
+        "form": "접지 316ms(토 351↓) · 보폭 0.9m · 파워 262W=자극런"
+      },
+      "source": "Apple Fitness",
+      "timeOfDay": "저녁",
+      "timeWindow": "20:14–20:36",
+      "context": "격주 역도장 당일 · **오전/낮 인상+용상 PR** · 토 아침 6km 다음날 저녁",
+      "coachNote": "일 역도장 **듀얼 PR** 당일 저녁 3.13km · **마하X3**. 7'17\"·HR153·max178·**케이던스164**(이지런 151–155 대비↑) · 접지316ms(토351↓) · 파워262=자극런. 신발=턴오버↑ 체감과 수치 일치. 이지 날 마하=페이스·심박 같이 올라가기 쉬움 — **템포/짧은 자극용**. 롱·회복=윈플로/슈퍼블라스트."
+    },
+    {
+      "id": "run-2026-08-24-evening",
+      "date": "2026-08-24",
+      "type": "outdoor-run",
+      "title": "실외 달리기 (월 저녁)",
+      "distanceKm": 3.14,
+      "timeSec": 1611,
+      "elapsedSec": 1611,
+      "pacePerKm": "8'32\"",
+      "paceRange": [
+        "9'43\"",
+        "7'13\""
+      ],
+      "caloriesKcal": 289,
+      "activeKcal": 289,
+      "avgHr": 138,
+      "hrRange": [
+        95,
+        154
+      ],
+      "avgPower": 224,
+      "avgCadence": 152,
+      "cadenceRange": [
+        109,
+        164
+      ],
+      "verticalOscCm": 10.0,
+      "verticalOscRange": [
+        9.1,
+        11.0
+      ],
+      "groundContactMs": 348,
+      "groundContactRange": [
+        283,
+        388
+      ],
+      "strideLengthM": 0.8,
+      "location": "인천광역시",
+      "graphRead": {
+        "hr": "95→154 완만 상승 · 평균138 · max154(160 미달)",
+        "pace": "초반 느림 · 후반 7'13\" 터치 but 평균 8'32\"=앵커",
+        "cadence": "152 평균 · 이지 프로필(마하164와 대비)",
+        "form": "접지 348ms · 보폭 0.8m · 파워224=회복런"
+      },
+      "source": "Apple Fitness",
+      "timeOfDay": "저녁",
+      "timeWindow": "21:19–21:46",
+      "sameDayGym": "점심 Push · 벤치150 PR",
+      "context": "처방=월 런 X · 실제=벤치150 다음 저녁 이지 3.14km",
+      "coachNote": "**최근 이지 중 최상**. 8'32\"·HR138(max154)·케이던스152·접지348=8/6(8'32\"/148) 템플릿 재현 + 심박은 더 낮음. 일 마하 7'17\"/164와 완전 다른 프로필 — 이지 날 조절 성공. 처방은 런X였으나 강도·거리가 회복에 맞음. 화 숏테크 전 부담 작음."
+    },
+    {
+      "id": "run-2026-08-29-morning",
+      "date": "2026-08-29",
+      "type": "outdoor-run",
+      "title": "실외 달리기 (토 오전 · 송도)",
+      "distanceKm": 7.64,
+      "timeSec": 3724,
+      "elapsedSec": 4374,
+      "pacePerKm": "8'07\"",
+      "paceRange": [
+        "13'09\"",
+        "6'12\""
+      ],
+      "caloriesKcal": 790,
+      "activeKcal": 790,
+      "avgHr": 155,
+      "hrRange": [
+        98,
+        176
+      ],
+      "avgPower": 239,
+      "avgCadence": 148,
+      "cadenceRange": [
+        97,
+        176
+      ],
+      "verticalOscCm": 9.8,
+      "verticalOscRange": [
+        8.7,
+        11.1
+      ],
+      "groundContactMs": 336,
+      "groundContactRange": [
+        236,
+        378
+      ],
+      "strideLengthM": 0.8,
+      "strideLengthRange": [
+        0.7,
+        1.0
+      ],
+      "location": "인천광역시 · 송도 센트럴파크 일대",
+      "routeNote": "차드윅·센트럴파크 루프",
+      "graphRead": {
+        "hr": "6블록 워크·휴식 패턴 · 평균155 · max176",
+        "pace": "6'12\"–13'09\" · 평균8'07\"=앵커(8'30\"–9'00\") 안쪽",
+        "cadence": "148 평균 · 구간별 97–176",
+        "form": "접지336ms · 보폭0.8m · 파워239W=중강도·거리런"
+      },
+      "source": "Apple Fitness",
+      "timeOfDay": "오전",
+      "timeWindow": "08:13–09:26",
+      "context": "수 PT DOMS(사두·햄·둔근) 잔여 · **8월 마일리지 80km 목표 주** · 처방=5–6km 이지",
+      "coachNote": "7.64km·8'07\"·HR155(max176)=처방 거리↑·페이스는 앵커 안쪽 but 심박은 이지 상한(155). 그래프=워크/조깅 블록 6회(경과72분·이동62분). 80km 채우기용 **B+** — 거리 이득, max176·수 PT 잔여 고려 시 다음날 더 이지가 맞음."
+    },
+    {
+      "id": "run-2026-08-30-morning",
+      "date": "2026-08-30",
+      "type": "outdoor-run",
+      "title": "실외 달리기 (일 오전 · 해안)",
+      "distanceKm": 5.23,
+      "timeSec": 2835,
+      "elapsedSec": 2835,
+      "pacePerKm": "9'02\"",
+      "paceRange": [
+        "18'08\"",
+        "5'48\""
+      ],
+      "caloriesKcal": 460,
+      "activeKcal": 460,
+      "avgHr": 135,
+      "hrRange": [
+        100,
+        162
+      ],
+      "avgPower": 210,
+      "avgCadence": 147,
+      "cadenceRange": [
+        87,
+        176
+      ],
+      "verticalOscCm": 9.2,
+      "verticalOscRange": [
+        8.0,
+        10.6
+      ],
+      "groundContactMs": 354,
+      "groundContactRange": [
+        230,
+        383
+      ],
+      "strideLengthM": 0.8,
+      "strideLengthRange": [
+        0.7,
+        1.0
+      ],
+      "location": "인천광역시 · 인천대교·랜드마크로 해안",
+      "routeNote": "직선 해안 구간",
+      "graphRead": {
+        "hr": "100–162 · 평균135 · max162(160 근접 but 평균 깨끗)",
+        "pace": "18'08\"–5'48\" · 중후반 워크 구간 · 평균9'02\"=이지 앵커",
+        "cadence": "147 평균 · 이지 프로필",
+        "form": "접지354ms(피로·DOMS) · 보폭0.8m · 파워210=회복런"
+      },
+      "source": "Apple Fitness",
+      "timeOfDay": "오전",
+      "timeWindow": "07:04–07:51",
+      "context": "처방=격주 역도(92≤2) · 실제=역도 스킵·이지런 · 토 7.64km 다음날 · **8월 80km 달성**",
+      "coachNote": "**진짜 이지**. 9'02\"·HR135(max162)·케이던스147=8/24(8'32\"/138)와 같은 축. DOMS 낀 다리에 맞는 조절 — 토보다 한 단 낮춤 잘함. 역도 스킵=92 chase 다음 격주로. 80km 마일리지 **A**."
+    },
+    {
+      "id": "run-2026-09-02-evening",
+      "date": "2026-09-02",
+      "type": "indoor-run",
+      "title": "실내 달리기 (수 저녁 · NRC)",
+      "distanceKm": 3.58,
+      "timeSec": 1641,
+      "elapsedSec": 1643,
+      "pacePerKm": "7'38\"",
+      "paceRange": [
+        "10'16\"",
+        "6'02\""
+      ],
+      "caloriesKcal": 319,
+      "activeKcal": 319,
+      "avgHr": 146,
+      "hrRange": [
+        100,
+        174
+      ],
+      "source": "Nike Run Club → Apple Fitness",
+      "timeOfDay": "저녁",
+      "timeWindow": "21:51–22:18",
+      "sameDayGym": "낮 Leg · 스쿼트180×1 · 고블릿24×20×4",
+      "context": "9/6 역도 4일 전 · 수 바벨 Leg 당일 저녁 · 실내",
+      "metricsNote": "NRC→Fitness는 거리·페이스·심박·칼로리만. 케이던스·접지·수직진폭·보폭·파워는 런데이/워치 네이티브 대비 비어 있음.",
+      "coachNote": "3.58km·7'38\"·HR146(max174). 심박 평균은 이지 창(150–155) 안쪽 but 페이스는 앵커(8'30\"+)보다 빠름·max174·후반 가속=중강도 숏. 수 스쿼트180 당일치고 거리 짧아서 역도 전 치명적은 아님 — 토는 진짜 이지로."
+    }
+  ],
+  "monthlyMileage": {
+    "2026-08": {
+      "totalKm": 80,
+      "note": "8/29–30 주말 12.87km 포함 달성 · 선수 확인",
+      "coachRead": "거리 빌드업 목표 달성. 페이스는 8'30\"–9'00\"·HR150–155 앵커 유지가 다음 달(85–90km) 핵심."
+    }
+  },
+  "plan": {
+    "thisWeekend": [
+      {
+        "day": "토",
+        "date": "2026-07-25",
+        "target": "이지 롱런 HR140대",
+        "actual": "8.45km / 5km런+걷기 / HR153",
+        "done": true
+      },
+      {
+        "day": "일",
+        "date": "2026-07-26",
+        "target": "역도 주",
+        "actual": "인상80 · 용상90 · 밸런스·판다풀",
+        "done": true
+      }
+    ],
+    "principle": "거리 먼저 → 페이스 나중. 조깅 이지=HR150–155(상한160). HR140대는 걷기로 취급."
+  }
+}

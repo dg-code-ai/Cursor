@@ -1,0 +1,6844 @@
+{
+  "version": 1,
+  "note": "Rise 공유앨범 backfill · 51세션 · 앨범 1472장 · manual 39 + OCR 12",
+  "activeFrom": "2026-06-05",
+  "sessions": [
+    {
+      "id": "gym-2026-06-13",
+      "date": "2026-06-13",
+      "type": "Push",
+      "title": "아침 운동",
+      "durationMin": 53,
+      "totalSets": 29,
+      "totalVolumeKg": 8436,
+      "exercises": [
+        {
+          "name": "덤벨 인클라인 벤치 프레스",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 12
+            },
+            {
+              "kg": 80,
+              "reps": 7
+            },
+            {
+              "kg": 100,
+              "reps": 3
+            },
+            {
+              "kg": 100,
+              "reps": 3
+            },
+            {
+              "kg": 24,
+              "reps": 16
+            }
+          ],
+          "workingHighlight": "100×3"
+        },
+        {
+          "name": "벤치 프레스",
+          "sets": [
+            {
+              "kg": 26,
+              "reps": 16
+            },
+            {
+              "kg": 28,
+              "reps": 11
+            },
+            {
+              "kg": 28,
+              "reps": 10
+            },
+            {
+              "kg": 100,
+              "reps": 3
+            },
+            {
+              "kg": 28,
+              "reps": 8
+            }
+          ],
+          "workingHighlight": "100×3"
+        },
+        {
+          "name": "머신 인클라인 해머 벤치 프레스",
+          "sets": [
+            {
+              "kg": 45,
+              "reps": 21
+            },
+            {
+              "kg": 50,
+              "reps": 15
+            },
+            {
+              "kg": 55,
+              "reps": 13
+            },
+            {
+              "kg": 7.5,
+              "reps": 20
+            },
+            {
+              "kg": 10,
+              "reps": 15
+            }
+          ],
+          "workingHighlight": "55×13"
+        },
+        {
+          "name": "케이블 미들 플라이",
+          "sets": [
+            {
+              "kg": 10,
+              "reps": 14
+            },
+            {
+              "kg": 10,
+              "reps": 13
+            },
+            {
+              "kg": 60,
+              "reps": 9
+            },
+            {
+              "kg": 10,
+              "reps": 13
+            },
+            {
+              "kg": 7.5,
+              "reps": 11
+            },
+            {
+              "kg": 5,
+              "reps": 16
+            }
+          ],
+          "workingHighlight": "60×9"
+        },
+        {
+          "name": "덤벨 사이드 레터럴 레이즈",
+          "sets": [
+            {
+              "kg": 4,
+              "reps": 25
+            },
+            {
+              "kg": 6,
+              "reps": 24
+            },
+            {
+              "kg": 8,
+              "reps": 19
+            },
+            {
+              "kg": 10,
+              "reps": 15
+            },
+            {
+              "kg": 8,
+              "reps": 17
+            },
+            {
+              "kg": 6,
+              "reps": 15
+            },
+            {
+              "kg": 4,
+              "reps": 15
+            }
+          ],
+          "workingHighlight": "10×15"
+        }
+      ],
+      "source": "album-backfill",
+      "quality": "ocr-estimated",
+      "coachNote": "OCR 추정(6월) · 세트 혼입 가능",
+      "volumeNote": "OCR 총볼륨 9357 → 세트합 8436"
+    },
+    {
+      "id": "gym-2026-06-15",
+      "date": "2026-06-15",
+      "type": "Leg",
+      "title": "오후 운동",
+      "durationMin": 48,
+      "totalSets": 24,
+      "totalVolumeKg": 6435,
+      "exercises": [
+        {
+          "name": "스쿼트",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 5
+            },
+            {
+              "kg": 100,
+              "reps": 5
+            },
+            {
+              "kg": 120,
+              "reps": 4
+            }
+          ],
+          "workingHighlight": "120×4"
+        },
+        {
+          "name": "머신 레그 익스텐션",
+          "sets": [
+            {
+              "kg": 140,
+              "reps": 2
+            },
+            {
+              "kg": 50,
+              "reps": 16
+            },
+            {
+              "kg": 55,
+              "reps": 14
+            },
+            {
+              "kg": 60,
+              "reps": 12
+            },
+            {
+              "kg": 65,
+              "reps": 11
+            },
+            {
+              "kg": 160,
+              "reps": 1
+            },
+            {
+              "kg": 170,
+              "reps": 1
+            },
+            {
+              "kg": 140,
+              "reps": 3
+            },
+            {
+              "kg": 140,
+              "reps": 3
+            },
+            {
+              "kg": 70,
+              "reps": 10
+            }
+          ],
+          "workingHighlight": "170×1"
+        }
+      ],
+      "source": "album-backfill",
+      "quality": "ocr-estimated",
+      "coachNote": "OCR 추정(6월) · 세트 혼입 가능",
+      "volumeNote": "OCR 총볼륨 7009 → 세트합 6435"
+    },
+    {
+      "id": "gym-2026-06-16",
+      "date": "2026-06-16",
+      "type": "Pull",
+      "title": "오후 운동",
+      "durationMin": 53,
+      "totalSets": 32,
+      "totalVolumeKg": 5368,
+      "exercises": [
+        {
+          "name": "바벨 로우",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 20
+            }
+          ],
+          "workingHighlight": "20×20"
+        },
+        {
+          "name": "머신 시티드 로우",
+          "sets": [
+            {
+              "kg": 50,
+              "reps": 11
+            },
+            {
+              "kg": 55,
+              "reps": 12
+            },
+            {
+              "kg": 60,
+              "reps": 8
+            },
+            {
+              "kg": 65,
+              "reps": 6
+            },
+            {
+              "kg": 15,
+              "reps": 15
+            }
+          ],
+          "workingHighlight": "65×6"
+        },
+        {
+          "name": "이지 바 리버스 그립 컬",
+          "sets": [
+            {
+              "kg": 15,
+              "reps": 16
+            },
+            {
+              "kg": 15,
+              "reps": 15
+            },
+            {
+              "kg": 15,
+              "reps": 14
+            },
+            {
+              "kg": 70,
+              "reps": 6
+            },
+            {
+              "kg": 75,
+              "reps": 5
+            },
+            {
+              "kg": 80,
+              "reps": 5
+            },
+            {
+              "kg": 15,
+              "reps": 13
+            }
+          ],
+          "workingHighlight": "80×5"
+        },
+        {
+          "name": "덤벨 컬",
+          "sets": [
+            {
+              "kg": 8,
+              "reps": 15
+            },
+            {
+              "kg": 10,
+              "reps": 12
+            },
+            {
+              "kg": 12,
+              "reps": 9
+            },
+            {
+              "kg": 14,
+              "reps": 6
+            },
+            {
+              "kg": 16,
+              "reps": 4
+            },
+            {
+              "kg": 18,
+              "reps": 3
+            },
+            {
+              "kg": 6,
+              "reps": 8
+            }
+          ],
+          "workingHighlight": "18×3"
+        }
+      ],
+      "source": "album-backfill",
+      "quality": "ocr-estimated",
+      "coachNote": "OCR 추정(6월) · 세트 혼입 가능",
+      "volumeNote": "OCR 총볼륨 13088 → 세트합 5368"
+    },
+    {
+      "id": "gym-2026-06-18",
+      "date": "2026-06-18",
+      "type": "Push",
+      "title": "오후 운동",
+      "durationMin": 51,
+      "totalSets": 28,
+      "totalVolumeKg": 6110,
+      "exercises": [
+        {
+          "name": "머신 인클라인 체스트 프레스",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 15
+            },
+            {
+              "kg": 100,
+              "reps": 8
+            }
+          ],
+          "workingHighlight": "100×8"
+        },
+        {
+          "name": "벤치 프레스",
+          "sets": [
+            {
+              "kg": 120,
+              "reps": 4
+            },
+            {
+              "kg": 130,
+              "reps": 2
+            }
+          ],
+          "workingHighlight": "130×2"
+        },
+        {
+          "name": "바벨 숄더 프레스",
+          "sets": [
+            {
+              "kg": 5,
+              "reps": 25
+            },
+            {
+              "kg": 10,
+              "reps": 17
+            },
+            {
+              "kg": 10,
+              "reps": 20
+            },
+            {
+              "kg": 10,
+              "reps": 20
+            },
+            {
+              "kg": 60,
+              "reps": 2
+            },
+            {
+              "kg": 10,
+              "reps": 13
+            }
+          ],
+          "workingHighlight": "60×2"
+        },
+        {
+          "name": "케이블 로프 푸시 다운",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 30
+            },
+            {
+              "kg": 22.5,
+              "reps": 25
+            },
+            {
+              "kg": 25,
+              "reps": 13
+            },
+            {
+              "kg": 27.5,
+              "reps": 16
+            },
+            {
+              "kg": 30,
+              "reps": 12
+            },
+            {
+              "kg": 32.5,
+              "reps": 7
+            },
+            {
+              "kg": 35,
+              "reps": 6
+            }
+          ],
+          "workingHighlight": "35×6"
+        }
+      ],
+      "source": "album-backfill",
+      "quality": "ocr-estimated",
+      "coachNote": "OCR 추정(6월) · 세트 혼입 가능",
+      "volumeNote": "OCR 총볼륨 10990 → 세트합 6110"
+    },
+    {
+      "id": "gym-2026-06-22",
+      "date": "2026-06-22",
+      "type": "Leg",
+      "title": "오후 운동",
+      "durationMin": 34,
+      "totalSets": 19,
+      "totalVolumeKg": 5951,
+      "exercises": [
+        {
+          "name": "스쿼트",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 5
+            },
+            {
+              "kg": 100,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "100×3"
+        },
+        {
+          "name": "머신 레그 익스텐션",
+          "sets": [
+            {
+              "kg": 140,
+              "reps": 2
+            },
+            {
+              "kg": 160,
+              "reps": 1
+            },
+            {
+              "kg": 50,
+              "reps": 18
+            },
+            {
+              "kg": 55,
+              "reps": 13
+            },
+            {
+              "kg": 60,
+              "reps": 12
+            },
+            {
+              "kg": 65,
+              "reps": 9
+            },
+            {
+              "kg": 170,
+              "reps": 1
+            },
+            {
+              "kg": 180,
+              "reps": 0
+            },
+            {
+              "kg": 70,
+              "reps": 8
+            },
+            {
+              "kg": 75,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "170×1"
+        },
+        {
+          "name": "덤벨 사이드 레터럴 레이즈",
+          "sets": [
+            {
+              "kg": 4,
+              "reps": 26
+            },
+            {
+              "kg": 6,
+              "reps": 22
+            },
+            {
+              "kg": 8,
+              "reps": 19
+            },
+            {
+              "kg": 10,
+              "reps": 16
+            },
+            {
+              "kg": 12,
+              "reps": 11
+            },
+            {
+              "kg": 14,
+              "reps": 9
+            },
+            {
+              "kg": 8,
+              "reps": 10
+            }
+          ],
+          "workingHighlight": "14×9"
+        }
+      ],
+      "source": "album-backfill",
+      "quality": "ocr-estimated",
+      "coachNote": "OCR 추정(6월) · 세트 혼입 가능"
+    },
+    {
+      "id": "gym-2026-06-23",
+      "date": "2026-06-23",
+      "type": "Pull",
+      "title": "오후 운동",
+      "durationMin": 50,
+      "totalSets": 22,
+      "totalVolumeKg": 7212,
+      "exercises": [
+        {
+          "name": "랫 풀 다운",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 5
+            },
+            {
+              "kg": 100,
+              "reps": 5
+            },
+            {
+              "kg": 140,
+              "reps": 3
+            },
+            {
+              "kg": 160,
+              "reps": 3
+            },
+            {
+              "kg": 20,
+              "reps": 20
+            },
+            {
+              "kg": 30,
+              "reps": 16
+            },
+            {
+              "kg": 40,
+              "reps": 14
+            },
+            {
+              "kg": 50,
+              "reps": 7
+            },
+            {
+              "kg": 170,
+              "reps": 2
+            },
+            {
+              "kg": 180,
+              "reps": 1
+            },
+            {
+              "kg": 190,
+              "reps": 1
+            },
+            {
+              "kg": 195,
+              "reps": 1
+            },
+            {
+              "kg": 50,
+              "reps": 7
+            },
+            {
+              "kg": 50,
+              "reps": 7
+            },
+            {
+              "kg": 160,
+              "reps": 2
+            },
+            {
+              "kg": 160,
+              "reps": 2
+            },
+            {
+              "kg": 160,
+              "reps": 2
+            }
+          ],
+          "workingHighlight": "195×1"
+        },
+        {
+          "name": "케이블 로프 스트레이트 암 풀 다운",
+          "sets": [
+            {
+              "kg": 15,
+              "reps": 20
+            },
+            {
+              "kg": 17.5,
+              "reps": 14
+            },
+            {
+              "kg": 20,
+              "reps": 13
+            },
+            {
+              "kg": 22.5,
+              "reps": 9
+            },
+            {
+              "kg": 25,
+              "reps": 6
+            }
+          ],
+          "workingHighlight": "25×6"
+        }
+      ],
+      "source": "album-backfill",
+      "quality": "ocr-estimated",
+      "coachNote": "OCR 추정(6월) · 세트 혼입 가능",
+      "volumeNote": "OCR 총볼륨 7213 → 세트합 7212"
+    },
+    {
+      "id": "gym-2026-06-24",
+      "date": "2026-06-24",
+      "type": "Push",
+      "title": "오후 운동",
+      "durationMin": 49,
+      "totalSets": 25,
+      "totalVolumeKg": 7130,
+      "exercises": [
+        {
+          "name": "덤벨 인클라인 벤치 프레스",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 20
+            },
+            {
+              "kg": 100,
+              "reps": 5
+            },
+            {
+              "kg": 120,
+              "reps": 3
+            },
+            {
+              "kg": 140,
+              "reps": 1
+            },
+            {
+              "kg": 24,
+              "reps": 15
+            },
+            {
+              "kg": 24,
+              "reps": 16
+            }
+          ],
+          "workingHighlight": "140×1"
+        },
+        {
+          "name": "벤치 프레스",
+          "sets": [
+            {
+              "kg": 24,
+              "reps": 13
+            },
+            {
+              "kg": 24,
+              "reps": 11
+            },
+            {
+              "kg": 145,
+              "reps": 1
+            },
+            {
+              "kg": 120,
+              "reps": 3
+            },
+            {
+              "kg": 120,
+              "reps": 3
+            },
+            {
+              "kg": 120,
+              "reps": 3
+            },
+            {
+              "kg": 24,
+              "reps": 13
+            }
+          ],
+          "workingHighlight": "145×1"
+        },
+        {
+          "name": "케이블 미들 플라이",
+          "sets": [
+            {
+              "kg": 5,
+              "reps": 26
+            },
+            {
+              "kg": 7.5,
+              "reps": 18
+            },
+            {
+              "kg": 10,
+              "reps": 15
+            },
+            {
+              "kg": 12.5,
+              "reps": 13
+            },
+            {
+              "kg": 24,
+              "reps": 11
+            },
+            {
+              "kg": 24,
+              "reps": 10
+            },
+            {
+              "kg": 24,
+              "reps": 10
+            }
+          ],
+          "workingHighlight": "24×11"
+        },
+        {
+          "name": "덤벨 풀 오버",
+          "sets": [
+            {
+              "kg": 24,
+              "reps": 10
+            },
+            {
+              "kg": 10,
+              "reps": 14
+            },
+            {
+              "kg": 7.5,
+              "reps": 12
+            },
+            {
+              "kg": 5,
+              "reps": 13
+            },
+            {
+              "kg": 24,
+              "reps": 9
+            }
+          ],
+          "workingHighlight": "24×10"
+        }
+      ],
+      "source": "album-backfill",
+      "quality": "ocr-estimated",
+      "coachNote": "OCR 추정(6월) · 세트 혼입 가능"
+    },
+    {
+      "id": "gym-2026-06-25",
+      "date": "2026-06-25",
+      "type": "Leg",
+      "title": "오후 운동",
+      "durationMin": 51,
+      "totalSets": 25,
+      "totalVolumeKg": 24480,
+      "exercises": [
+        {
+          "name": "머신 힙 어덕션",
+          "sets": [
+            {
+              "kg": 160,
+              "reps": 15
+            },
+            {
+              "kg": 200,
+              "reps": 13
+            },
+            {
+              "kg": 240,
+              "reps": 13
+            },
+            {
+              "kg": 280,
+              "reps": 11
+            },
+            {
+              "kg": 320,
+              "reps": 10
+            },
+            {
+              "kg": 360,
+              "reps": 8
+            },
+            {
+              "kg": 400,
+              "reps": 5
+            },
+            {
+              "kg": 400,
+              "reps": 5
+            },
+            {
+              "kg": 60,
+              "reps": 23
+            },
+            {
+              "kg": 65,
+              "reps": 22
+            }
+          ],
+          "workingHighlight": "400×5"
+        },
+        {
+          "name": "케이블 리어 델트 플라이",
+          "sets": [
+            {
+              "kg": 5,
+              "reps": 16
+            },
+            {
+              "kg": 5,
+              "reps": 18
+            },
+            {
+              "kg": 5,
+              "reps": 18
+            },
+            {
+              "kg": 5,
+              "reps": 13
+            },
+            {
+              "kg": 5,
+              "reps": 13
+            }
+          ],
+          "workingHighlight": "5×18"
+        }
+      ],
+      "source": "album-backfill",
+      "quality": "ocr-estimated",
+      "coachNote": "OCR 추정(6월) · 세트 혼입 가능",
+      "volumeNote": "OCR 총볼륨 43970 → 세트합 24480"
+    },
+    {
+      "id": "gym-2026-06-30",
+      "date": "2026-06-30",
+      "type": "Push",
+      "title": "오후 운동",
+      "durationMin": 54,
+      "totalSets": 23,
+      "totalVolumeKg": 7390,
+      "exercises": [
+        {
+          "name": "머신 인클라인 해머 벤치 프레스",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 20
+            },
+            {
+              "kg": 100,
+              "reps": 10
+            },
+            {
+              "kg": 120,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "120×3"
+        },
+        {
+          "name": "벤치 프레스",
+          "sets": [
+            {
+              "kg": 130,
+              "reps": 1
+            },
+            {
+              "kg": 60,
+              "reps": 19
+            },
+            {
+              "kg": 65,
+              "reps": 14
+            }
+          ],
+          "workingHighlight": "130×1"
+        },
+        {
+          "name": "케이블 로프 푸시 다운",
+          "sets": [
+            {
+              "kg": 15,
+              "reps": 27
+            },
+            {
+              "kg": 20,
+              "reps": 20
+            },
+            {
+              "kg": 25,
+              "reps": 13
+            },
+            {
+              "kg": 30,
+              "reps": 9
+            },
+            {
+              "kg": 35,
+              "reps": 6
+            },
+            {
+              "kg": 40,
+              "reps": 6
+            },
+            {
+              "kg": 45,
+              "reps": 5
+            },
+            {
+              "kg": 50,
+              "reps": 4
+            },
+            {
+              "kg": 25,
+              "reps": 7
+            },
+            {
+              "kg": 20,
+              "reps": 10
+            }
+          ],
+          "workingHighlight": "50×4"
+        }
+      ],
+      "source": "album-backfill",
+      "quality": "ocr-estimated",
+      "coachNote": "OCR 추정(6월) · 세트 혼입 가능",
+      "volumeNote": "OCR 총볼륨 10380 → 세트합 7390"
+    },
+    {
+      "id": "gym-2026-07-01",
+      "date": "2026-07-01",
+      "type": "Leg",
+      "title": "오전 운동",
+      "durationMin": 53,
+      "totalSets": 24,
+      "totalVolumeKg": 8091,
+      "exercises": [
+        {
+          "name": "스쿼트",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 5
+            },
+            {
+              "kg": 100,
+              "reps": 4
+            },
+            {
+              "kg": 140,
+              "reps": 2
+            },
+            {
+              "kg": 160,
+              "reps": 1
+            },
+            {
+              "kg": 170,
+              "reps": 1
+            },
+            {
+              "kg": 180,
+              "reps": 1
+            },
+            {
+              "kg": 185,
+              "reps": 0
+            },
+            {
+              "kg": 60,
+              "reps": 4
+            }
+          ],
+          "workingHighlight": "180×1"
+        },
+        {
+          "name": "머신 힙 쓰러스트",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 15
+            },
+            {
+              "kg": 40,
+              "reps": 15
+            },
+            {
+              "kg": 60,
+              "reps": 12
+            },
+            {
+              "kg": 80,
+              "reps": 7
+            },
+            {
+              "kg": 40,
+              "reps": 8
+            }
+          ]
+        },
+        {
+          "name": "머신 시티드 레그 컬",
+          "sets": [
+            {
+              "kg": 40,
+              "reps": 17
+            },
+            {
+              "kg": 45,
+              "reps": 17
+            },
+            {
+              "kg": 50,
+              "reps": 11
+            },
+            {
+              "kg": 55,
+              "reps": 10
+            },
+            {
+              "kg": 60,
+              "reps": 7
+            }
+          ]
+        },
+        {
+          "name": "덤벨 사이드 레터럴 레이즈",
+          "sets": [
+            {
+              "kg": 4,
+              "reps": 26
+            },
+            {
+              "kg": 6,
+              "reps": 23
+            },
+            {
+              "kg": 8,
+              "reps": 20
+            },
+            {
+              "kg": 10,
+              "reps": 17
+            },
+            {
+              "kg": 12,
+              "reps": 13
+            },
+            {
+              "kg": 14,
+              "reps": 12
+            }
+          ]
+        }
+      ],
+      "coachNote": "스쿼트 180×1, 185 실패. 하체 힘 상급."
+    },
+    {
+      "id": "gym-2026-07-03",
+      "date": "2026-07-03",
+      "type": "Pull",
+      "title": "오전 운동",
+      "durationMin": 55,
+      "totalSets": 22,
+      "totalVolumeKg": 4780,
+      "calories": 312,
+      "exercises": [
+        {
+          "name": "데드리프트",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 5
+            },
+            {
+              "kg": 100,
+              "reps": 5
+            },
+            {
+              "kg": 140,
+              "reps": 4
+            },
+            {
+              "kg": 160,
+              "reps": 3
+            },
+            {
+              "kg": 180,
+              "reps": 1
+            },
+            {
+              "kg": 190,
+              "reps": 1
+            },
+            {
+              "kg": 195,
+              "reps": 1
+            },
+            {
+              "kg": 200,
+              "reps": 1
+            }
+          ],
+          "workingHighlight": "200×1 PR",
+          "overload": true
+        },
+        {
+          "name": "이지 바 리버스 그립 컬",
+          "sets": [
+            {
+              "kg": 15,
+              "reps": 20
+            },
+            {
+              "kg": 15,
+              "reps": 20
+            },
+            {
+              "kg": 15,
+              "reps": 18
+            },
+            {
+              "kg": 15,
+              "reps": 17
+            }
+          ]
+        },
+        {
+          "name": "풀 업",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 6
+            },
+            {
+              "kg": 0,
+              "reps": 7
+            },
+            {
+              "kg": 0,
+              "reps": 6
+            },
+            {
+              "kg": 0,
+              "reps": 9
+            },
+            {
+              "kg": 0,
+              "reps": 6
+            }
+          ],
+          "workingHighlight": "총 34회"
+        },
+        {
+          "name": "이지 바 프리처 컬",
+          "sets": [
+            {
+              "kg": 15,
+              "reps": 16
+            },
+            {
+              "kg": 15,
+              "reps": 15
+            },
+            {
+              "kg": 15,
+              "reps": 14
+            },
+            {
+              "kg": 15,
+              "reps": 14
+            },
+            {
+              "kg": 15,
+              "reps": 11
+            }
+          ]
+        }
+      ],
+      "coachNote": "데드 200×1 — 기존 PR(190) 갱신. 앨범에서 확인."
+    },
+    {
+      "id": "gym-2026-07-06",
+      "date": "2026-07-06",
+      "type": "Push",
+      "title": "오전 운동",
+      "durationMin": 61,
+      "totalSets": 32,
+      "totalVolumeKg": 10113,
+      "exercises": [
+        {
+          "name": "벤치 프레스",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 10
+            },
+            {
+              "kg": 100,
+              "reps": 5
+            },
+            {
+              "kg": 120,
+              "reps": 3
+            },
+            {
+              "kg": 130,
+              "reps": 2
+            },
+            {
+              "kg": 140,
+              "reps": 1
+            },
+            {
+              "kg": 145,
+              "reps": 1
+            },
+            {
+              "kg": 150,
+              "reps": 0
+            },
+            {
+              "kg": 120,
+              "reps": 3
+            },
+            {
+              "kg": 120,
+              "reps": 3
+            },
+            {
+              "kg": 120,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "145×1"
+        },
+        {
+          "name": "머신 인클라인 체스트 프레스",
+          "sets": [
+            {
+              "kg": 40,
+              "reps": 20
+            },
+            {
+              "kg": 60,
+              "reps": 15
+            },
+            {
+              "kg": 70,
+              "reps": 13
+            },
+            {
+              "kg": 80,
+              "reps": 10
+            },
+            {
+              "kg": 90,
+              "reps": 5
+            },
+            {
+              "kg": 90,
+              "reps": 4
+            }
+          ]
+        },
+        {
+          "name": "케이블 미들 플라이",
+          "sets": [
+            {
+              "kg": 5,
+              "reps": 21
+            },
+            {
+              "kg": 7.5,
+              "reps": 20
+            },
+            {
+              "kg": 10,
+              "reps": 17
+            },
+            {
+              "kg": 10,
+              "reps": 12
+            },
+            {
+              "kg": 7.5,
+              "reps": 17
+            },
+            {
+              "kg": 7.5,
+              "reps": 16
+            },
+            {
+              "kg": 5,
+              "reps": 17
+            }
+          ]
+        },
+        {
+          "name": "바벨 숄더 프레스",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 3
+            },
+            {
+              "kg": 70,
+              "reps": 2
+            },
+            {
+              "kg": 80,
+              "reps": 1
+            }
+          ]
+        },
+        {
+          "name": "케이블 로프 푸시 다운",
+          "sets": [
+            {
+              "kg": 15,
+              "reps": 20
+            },
+            {
+              "kg": 20,
+              "reps": 19
+            },
+            {
+              "kg": 25,
+              "reps": 13
+            },
+            {
+              "kg": 30,
+              "reps": 5
+            },
+            {
+              "kg": 30,
+              "reps": 9
+            },
+            {
+              "kg": 35,
+              "reps": 3
+            }
+          ]
+        }
+      ],
+      "coachNote": "벤치 145 성공, 150 실패. Push 볼륨 큼."
+    },
+    {
+      "id": "gym-2026-07-07",
+      "date": "2026-07-07",
+      "type": "Leg",
+      "title": "오전 운동",
+      "durationMin": 59,
+      "totalSets": 27,
+      "totalVolumeKg": 12657,
+      "calories": 451,
+      "exercises": [
+        {
+          "name": "스쿼트",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 5
+            },
+            {
+              "kg": 100,
+              "reps": 3
+            },
+            {
+              "kg": 120,
+              "reps": 3
+            },
+            {
+              "kg": 140,
+              "reps": 2
+            },
+            {
+              "kg": 160,
+              "reps": 1
+            },
+            {
+              "kg": 180,
+              "reps": 1
+            },
+            {
+              "kg": 190,
+              "reps": 1
+            },
+            {
+              "kg": 140,
+              "reps": 2
+            },
+            {
+              "kg": 140,
+              "reps": 2
+            },
+            {
+              "kg": 60,
+              "reps": 10
+            }
+          ],
+          "workingHighlight": "190×1 PR",
+          "overload": true
+        },
+        {
+          "name": "머신 힙 어덕션",
+          "sets": [
+            {
+              "kg": 70,
+              "reps": 20
+            },
+            {
+              "kg": 70,
+              "reps": 20
+            },
+            {
+              "kg": 70,
+              "reps": 16
+            },
+            {
+              "kg": 70,
+              "reps": 17
+            },
+            {
+              "kg": 70,
+              "reps": 16
+            }
+          ]
+        },
+        {
+          "name": "머신 시티드 레그 컬",
+          "sets": [
+            {
+              "kg": 45,
+              "reps": 11
+            },
+            {
+              "kg": 50,
+              "reps": 12
+            },
+            {
+              "kg": 55,
+              "reps": 11
+            },
+            {
+              "kg": 60,
+              "reps": 8
+            },
+            {
+              "kg": 65,
+              "reps": 7
+            },
+            {
+              "kg": 70,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "70×5"
+        },
+        {
+          "name": "덤벨 사이드 레터럴 레이즈",
+          "sets": [
+            {
+              "kg": 4,
+              "reps": 27
+            },
+            {
+              "kg": 4,
+              "reps": 23
+            },
+            {
+              "kg": 4,
+              "reps": 22
+            },
+            {
+              "kg": 4,
+              "reps": 20
+            },
+            {
+              "kg": 4,
+              "reps": 20
+            },
+            {
+              "kg": 4,
+              "reps": 16
+            }
+          ]
+        }
+      ],
+      "coachNote": "스쿼트 190×1 — 기존 PR(180) 갱신. 힙어덕션 볼륨 큼."
+    },
+    {
+      "id": "gym-2026-07-08",
+      "date": "2026-07-08",
+      "type": "Pull",
+      "title": "오전 운동",
+      "durationMin": 58,
+      "totalSets": 28,
+      "totalVolumeKg": 11409,
+      "calories": 424,
+      "exercises": [
+        {
+          "name": "데드리프트",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 5
+            },
+            {
+              "kg": 100,
+              "reps": 5
+            },
+            {
+              "kg": 140,
+              "reps": 3
+            },
+            {
+              "kg": 160,
+              "reps": 2
+            },
+            {
+              "kg": 180,
+              "reps": 1
+            },
+            {
+              "kg": 190,
+              "reps": 0
+            },
+            {
+              "kg": 140,
+              "reps": 3
+            },
+            {
+              "kg": 140,
+              "reps": 4
+            }
+          ],
+          "workingHighlight": "180×1 / 190 실패"
+        },
+        {
+          "name": "바벨 로우",
+          "sets": [
+            {
+              "kg": 100,
+              "reps": 8
+            },
+            {
+              "kg": 100,
+              "reps": 9
+            },
+            {
+              "kg": 100,
+              "reps": 7
+            },
+            {
+              "kg": 100,
+              "reps": 7
+            },
+            {
+              "kg": 60,
+              "reps": 8
+            },
+            {
+              "kg": 60,
+              "reps": 11
+            },
+            {
+              "kg": 60,
+              "reps": 9
+            },
+            {
+              "kg": 60,
+              "reps": 6
+            }
+          ],
+          "workingHighlight": "100×9"
+        },
+        {
+          "name": "랫 풀 다운",
+          "sets": [
+            {
+              "kg": 50,
+              "reps": 14
+            },
+            {
+              "kg": 55,
+              "reps": 12
+            },
+            {
+              "kg": 60,
+              "reps": 10
+            },
+            {
+              "kg": 65,
+              "reps": 7
+            },
+            {
+              "kg": 70,
+              "reps": 6
+            },
+            {
+              "kg": 75,
+              "reps": 4
+            }
+          ],
+          "workingHighlight": "75×4"
+        },
+        {
+          "name": "덤벨 리어 플라이",
+          "sets": [
+            {
+              "kg": 4,
+              "reps": 23
+            },
+            {
+              "kg": 6,
+              "reps": 17
+            },
+            {
+              "kg": 8,
+              "reps": 11
+            },
+            {
+              "kg": 8,
+              "reps": 9
+            },
+            {
+              "kg": 6,
+              "reps": 8
+            },
+            {
+              "kg": 4,
+              "reps": 8
+            }
+          ]
+        }
+      ],
+      "coachNote": "전날 스쿼트 190 후. 데드 190 실패는 합리적. 로우 100 작업세트 양호. 저녁 런 병행일."
+    },
+    {
+      "id": "gym-2026-07-09",
+      "date": "2026-07-09",
+      "type": "Push",
+      "title": "오전 운동",
+      "durationMin": 57,
+      "totalSets": 26,
+      "totalVolumeKg": 7165,
+      "exercises": [
+        {
+          "name": "벤치 프레스",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 20
+            },
+            {
+              "kg": 100,
+              "reps": 8
+            },
+            {
+              "kg": 120,
+              "reps": 4
+            },
+            {
+              "kg": 130,
+              "reps": 3
+            },
+            {
+              "kg": 140,
+              "reps": 1
+            },
+            {
+              "kg": 145,
+              "reps": 1
+            },
+            {
+              "kg": 140,
+              "reps": 1
+            },
+            {
+              "kg": 140,
+              "reps": 1
+            }
+          ],
+          "workingHighlight": "145×1"
+        },
+        {
+          "name": "덤벨 인클라인 벤치 프레스",
+          "sets": [
+            {
+              "kg": 24,
+              "reps": 15
+            },
+            {
+              "kg": 26,
+              "reps": 13
+            },
+            {
+              "kg": 28,
+              "reps": 13
+            },
+            {
+              "kg": 30,
+              "reps": 10
+            },
+            {
+              "kg": 32,
+              "reps": 9
+            }
+          ]
+        },
+        {
+          "name": "케이블 미들 플라이",
+          "sets": [
+            {
+              "kg": 7.5,
+              "reps": 20
+            },
+            {
+              "kg": 10,
+              "reps": 20
+            },
+            {
+              "kg": 12.5,
+              "reps": 16
+            },
+            {
+              "kg": 15,
+              "reps": 11
+            },
+            {
+              "kg": 7.5,
+              "reps": 23
+            }
+          ]
+        },
+        {
+          "name": "덤벨 숄더 프레스",
+          "sets": [
+            {
+              "kg": 16,
+              "reps": 16
+            },
+            {
+              "kg": 20,
+              "reps": 12
+            },
+            {
+              "kg": 24,
+              "reps": 7
+            },
+            {
+              "kg": 24,
+              "reps": 6
+            },
+            {
+              "kg": 24,
+              "reps": 4
+            },
+            {
+              "kg": 20,
+              "reps": 4
+            },
+            {
+              "kg": 16,
+              "reps": 6
+            },
+            {
+              "kg": 14,
+              "reps": 8
+            }
+          ]
+        }
+      ],
+      "coachNote": "벤치 145 유지. 저녁 러닝 병행일."
+    },
+    {
+      "id": "gym-2026-07-10",
+      "date": "2026-07-10",
+      "type": "Leg",
+      "title": "오후 운동",
+      "durationMin": 46,
+      "totalSets": 10,
+      "totalVolumeKg": 7030,
+      "exercises": [
+        {
+          "name": "머신 레그 익스텐션",
+          "sets": [
+            {
+              "kg": 40,
+              "reps": 21
+            },
+            {
+              "kg": 45,
+              "reps": 17
+            },
+            {
+              "kg": 50,
+              "reps": 14
+            },
+            {
+              "kg": 55,
+              "reps": 13
+            },
+            {
+              "kg": 60,
+              "reps": 13
+            }
+          ]
+        },
+        {
+          "name": "머신 시티드 레그 컬",
+          "sets": [
+            {
+              "kg": 40,
+              "reps": 20
+            },
+            {
+              "kg": 45,
+              "reps": 17
+            },
+            {
+              "kg": 50,
+              "reps": 14
+            },
+            {
+              "kg": 55,
+              "reps": 11
+            },
+            {
+              "kg": 60,
+              "reps": 6
+            }
+          ]
+        }
+      ],
+      "coachNote": "고립 하체. 복합(스쿼트) 없음."
+    },
+    {
+      "id": "gym-2026-07-13",
+      "date": "2026-07-13",
+      "type": "Pull",
+      "title": "오전 운동",
+      "durationMin": 54,
+      "totalSets": 28,
+      "totalVolumeKg": 6929,
+      "exercises": [
+        {
+          "name": "풀 업",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 5
+            },
+            {
+              "kg": 0,
+              "reps": 6
+            },
+            {
+              "kg": 0,
+              "reps": 6
+            },
+            {
+              "kg": 0,
+              "reps": 6
+            },
+            {
+              "kg": 0,
+              "reps": 6
+            },
+            {
+              "kg": 0,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "총 34회"
+        },
+        {
+          "name": "뉴트럴 그립 랫 풀 다운",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 13
+            },
+            {
+              "kg": 65,
+              "reps": 12
+            },
+            {
+              "kg": 75,
+              "reps": 7
+            },
+            {
+              "kg": 80,
+              "reps": 5
+            },
+            {
+              "kg": 85,
+              "reps": 4
+            }
+          ],
+          "workingHighlight": "85×4"
+        },
+        {
+          "name": "머신 시티드 로우",
+          "note": "편측 플레이트",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 15
+            },
+            {
+              "kg": 30,
+              "reps": 15
+            },
+            {
+              "kg": 40,
+              "reps": 12
+            },
+            {
+              "kg": 45,
+              "reps": 10
+            },
+            {
+              "kg": 45,
+              "reps": 10
+            },
+            {
+              "kg": 45,
+              "reps": 7
+            }
+          ],
+          "workingHighlight": "편측 45×10"
+        },
+        {
+          "name": "케이블 로프 스트레이트 암 풀 다운",
+          "sets": [
+            {
+              "kg": 15,
+              "reps": 20
+            },
+            {
+              "kg": 17.5,
+              "reps": 14
+            },
+            {
+              "kg": 20,
+              "reps": 9
+            },
+            {
+              "kg": 20,
+              "reps": 10
+            },
+            {
+              "kg": 20,
+              "reps": 8
+            },
+            {
+              "kg": 20,
+              "reps": 7
+            }
+          ]
+        },
+        {
+          "name": "덤벨 리어 플라이",
+          "sets": [
+            {
+              "kg": 4,
+              "reps": 22
+            },
+            {
+              "kg": 6,
+              "reps": 16
+            },
+            {
+              "kg": 8,
+              "reps": 13
+            },
+            {
+              "kg": 8,
+              "reps": 10
+            },
+            {
+              "kg": 6,
+              "reps": 11
+            }
+          ]
+        }
+      ],
+      "coachNote": "기준 Pull. 이후 작업세트 과부하 비교용."
+    },
+    {
+      "id": "gym-2026-07-14",
+      "date": "2026-07-14",
+      "type": "Push",
+      "title": "오전 운동",
+      "durationMin": 59,
+      "totalSets": 28,
+      "totalVolumeKg": 11155,
+      "exercises": [
+        {
+          "name": "바벨 인클라인 벤치 프레스",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 8
+            },
+            {
+              "kg": 80,
+              "reps": 7
+            },
+            {
+              "kg": 90,
+              "reps": 4
+            },
+            {
+              "kg": 100,
+              "reps": 3
+            },
+            {
+              "kg": 110,
+              "reps": 2
+            },
+            {
+              "kg": 115,
+              "reps": 1
+            },
+            {
+              "kg": 60,
+              "reps": 7
+            }
+          ],
+          "workingHighlight": "115×1"
+        },
+        {
+          "name": "머신 인클라인 해머 벤치 프레스",
+          "sets": [
+            {
+              "kg": 70,
+              "reps": 12
+            },
+            {
+              "kg": 75,
+              "reps": 11
+            },
+            {
+              "kg": 80,
+              "reps": 9
+            },
+            {
+              "kg": 85,
+              "reps": 8
+            },
+            {
+              "kg": 90,
+              "reps": 5
+            },
+            {
+              "kg": 95,
+              "reps": 6
+            },
+            {
+              "kg": 100,
+              "reps": 3
+            }
+          ]
+        },
+        {
+          "name": "머신 펙 덱 플라이",
+          "sets": [
+            {
+              "kg": 40,
+              "reps": 17
+            },
+            {
+              "kg": 45,
+              "reps": 14
+            },
+            {
+              "kg": 50,
+              "reps": 10
+            },
+            {
+              "kg": 50,
+              "reps": 10
+            },
+            {
+              "kg": 50,
+              "reps": 8
+            },
+            {
+              "kg": 50,
+              "reps": 7
+            },
+            {
+              "kg": 40,
+              "reps": 10
+            },
+            {
+              "kg": 30,
+              "reps": 7
+            }
+          ]
+        },
+        {
+          "name": "바벨 숄더 프레스",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 3
+            },
+            {
+              "kg": 70,
+              "reps": 3
+            },
+            {
+              "kg": 80,
+              "reps": 1
+            },
+            {
+              "kg": 85,
+              "reps": 1
+            },
+            {
+              "kg": 90,
+              "reps": 1
+            },
+            {
+              "kg": 95,
+              "reps": 0
+            }
+          ],
+          "workingHighlight": "90×1 / 95 실패"
+        }
+      ],
+      "coachNote": "가슴 고볼륨. 어깨 잔여피로 → 스내치에 불리할 수 있음."
+    },
+    {
+      "id": "gym-2026-07-15",
+      "date": "2026-07-15",
+      "type": "Leg",
+      "title": "오전 운동",
+      "durationMin": 57,
+      "totalSets": 32,
+      "totalVolumeKg": 41220,
+      "calories": 487,
+      "exercises": [
+        {
+          "name": "점프박스",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 5
+            },
+            {
+              "kg": 0,
+              "reps": 5
+            },
+            {
+              "kg": 0,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "5×3 (총 15)"
+        },
+        {
+          "name": "바벨 행 스내치",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 1
+            },
+            {
+              "kg": 40,
+              "reps": 1
+            },
+            {
+              "kg": 50,
+              "reps": 1
+            },
+            {
+              "kg": 60,
+              "reps": 1
+            },
+            {
+              "kg": 70,
+              "reps": 1
+            },
+            {
+              "kg": 70,
+              "reps": 0
+            }
+          ],
+          "workingHighlight": "70×1 / 70 실패",
+          "overload": false
+        },
+        {
+          "name": "바벨 스내치 풀",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 2
+            },
+            {
+              "kg": 40,
+              "reps": 2
+            },
+            {
+              "kg": 50,
+              "reps": 2
+            },
+            {
+              "kg": 60,
+              "reps": 2
+            },
+            {
+              "kg": 70,
+              "reps": 2
+            },
+            {
+              "kg": 70,
+              "reps": 3
+            },
+            {
+              "kg": 80,
+              "reps": 3
+            },
+            {
+              "kg": 90,
+              "reps": 3
+            },
+            {
+              "kg": 100,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "100×3",
+          "overload": true
+        },
+        {
+          "name": "레그 프레스",
+          "sets": [
+            {
+              "kg": 200,
+              "reps": 15
+            },
+            {
+              "kg": 240,
+              "reps": 14
+            },
+            {
+              "kg": 280,
+              "reps": 13
+            },
+            {
+              "kg": 320,
+              "reps": 12
+            },
+            {
+              "kg": 360,
+              "reps": 8
+            },
+            {
+              "kg": 400,
+              "reps": 7
+            },
+            {
+              "kg": 440,
+              "reps": 6
+            },
+            {
+              "kg": 480,
+              "reps": 3
+            },
+            {
+              "kg": 400,
+              "reps": 5
+            },
+            {
+              "kg": 320,
+              "reps": 10
+            },
+            {
+              "kg": 240,
+              "reps": 12
+            },
+            {
+              "kg": 200,
+              "reps": 15
+            },
+            {
+              "kg": 160,
+              "reps": 18
+            },
+            {
+              "kg": 160,
+              "reps": 12
+            }
+          ],
+          "workingHighlight": "480×3 · 14세트 피라미드",
+          "overload": true
+        }
+      ],
+      "coachNote": "레그프레스 초고볼륨(41k 중 대부분). 행스내치 70 터치 후 실패. 다음날 Pull에서 데드 스킵한 판단이 맞음. 다음 Leg는 프레스 세트 절반으로."
+    },
+    {
+      "id": "gym-2026-07-16",
+      "date": "2026-07-16",
+      "type": "Pull",
+      "title": "오전 운동",
+      "durationMin": 52,
+      "totalSets": 26,
+      "totalVolumeKg": 6747,
+      "grade": "A-",
+      "exercises": [
+        {
+          "name": "풀 업",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 6
+            },
+            {
+              "kg": 0,
+              "reps": 6
+            },
+            {
+              "kg": 0,
+              "reps": 6
+            },
+            {
+              "kg": 0,
+              "reps": 6
+            },
+            {
+              "kg": 0,
+              "reps": 6
+            },
+            {
+              "kg": 0,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "총 35회",
+          "overload": true
+        },
+        {
+          "name": "랫 풀 다운",
+          "sets": [
+            {
+              "kg": 65,
+              "reps": 11
+            },
+            {
+              "kg": 75,
+              "reps": 8
+            },
+            {
+              "kg": 80,
+              "reps": 7
+            },
+            {
+              "kg": 85,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "85×5",
+          "overload": true
+        },
+        {
+          "name": "머신 시티드 로우",
+          "note": "편측 플레이트 (한쪽 50 = 플레이트 100kg)",
+          "sets": [
+            {
+              "kg": 40,
+              "reps": 14
+            },
+            {
+              "kg": 45,
+              "reps": 10
+            },
+            {
+              "kg": 45,
+              "reps": 10
+            },
+            {
+              "kg": 50,
+              "reps": 9
+            }
+          ],
+          "workingHighlight": "편측 50×9",
+          "overload": true
+        },
+        {
+          "name": "케이블 로프 스트레이트 암 풀 다운",
+          "sets": [
+            {
+              "kg": 17.5,
+              "reps": 15
+            },
+            {
+              "kg": 20,
+              "reps": 12
+            },
+            {
+              "kg": 20,
+              "reps": 12
+            },
+            {
+              "kg": 22.5,
+              "reps": 9
+            }
+          ],
+          "workingHighlight": "22.5×9",
+          "overload": true
+        },
+        {
+          "name": "덤벨 리어 플라이",
+          "sets": [
+            {
+              "kg": 8,
+              "reps": 16
+            },
+            {
+              "kg": 8,
+              "reps": 15
+            },
+            {
+              "kg": 8,
+              "reps": 10
+            },
+            {
+              "kg": 8,
+              "reps": 8
+            }
+          ],
+          "workingHighlight": "8kg 고정"
+        },
+        {
+          "name": "이지 바 컬",
+          "sets": [
+            {
+              "kg": 25,
+              "reps": 14
+            },
+            {
+              "kg": 25,
+              "reps": 13
+            },
+            {
+              "kg": 25,
+              "reps": 11
+            },
+            {
+              "kg": 25,
+              "reps": 10
+            }
+          ],
+          "workingHighlight": "25×10~14"
+        }
+      ],
+      "coachNote": "총볼륨↓ / 작업세트 과부하↑. 묵직한 자극. 워밍업 힘 소모 자각."
+    },
+    {
+      "id": "gym-2026-07-20",
+      "date": "2026-07-20",
+      "type": "Push",
+      "title": "오전 운동",
+      "durationMin": 46,
+      "totalSets": 26,
+      "totalVolumeKg": 10607,
+      "calories": 423,
+      "exercises": [
+        {
+          "name": "벤치 프레스",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 10
+            },
+            {
+              "kg": 100,
+              "reps": 7
+            },
+            {
+              "kg": 120,
+              "reps": 5
+            },
+            {
+              "kg": 130,
+              "reps": 3
+            },
+            {
+              "kg": 140,
+              "reps": 2
+            },
+            {
+              "kg": 120,
+              "reps": 6
+            }
+          ],
+          "workingHighlight": "140×2 · 백오프 120×6",
+          "overload": false
+        },
+        {
+          "name": "덤벨 인클라인 벤치 프레스",
+          "sets": [
+            {
+              "kg": 24,
+              "reps": 15
+            },
+            {
+              "kg": 26,
+              "reps": 15
+            },
+            {
+              "kg": 28,
+              "reps": 12
+            },
+            {
+              "kg": 28,
+              "reps": 11
+            }
+          ],
+          "workingHighlight": "28×12 / 28×11"
+        },
+        {
+          "name": "케이블 미들 플라이",
+          "sets": [
+            {
+              "kg": 7.5,
+              "reps": 20
+            },
+            {
+              "kg": 10,
+              "reps": 15
+            },
+            {
+              "kg": 10,
+              "reps": 14
+            },
+            {
+              "kg": 10,
+              "reps": 13
+            }
+          ],
+          "workingHighlight": "10×15"
+        },
+        {
+          "name": "덤벨 스탠딩 오버헤드 프레스",
+          "sets": [
+            {
+              "kg": 16,
+              "reps": 15
+            },
+            {
+              "kg": 18,
+              "reps": 15
+            },
+            {
+              "kg": 20,
+              "reps": 11
+            },
+            {
+              "kg": 20,
+              "reps": 11
+            }
+          ],
+          "workingHighlight": "20×11"
+        },
+        {
+          "name": "케이블 로프 푸시 다운",
+          "sets": [
+            {
+              "kg": 15,
+              "reps": 20
+            },
+            {
+              "kg": 20,
+              "reps": 20
+            },
+            {
+              "kg": 22.5,
+              "reps": 19
+            },
+            {
+              "kg": 25,
+              "reps": 17
+            }
+          ],
+          "workingHighlight": "25×17"
+        },
+        {
+          "name": "케이블 시티드 로우",
+          "sets": [
+            {
+              "kg": 50,
+              "reps": 16
+            },
+            {
+              "kg": 50,
+              "reps": 15
+            },
+            {
+              "kg": 50,
+              "reps": 16
+            },
+            {
+              "kg": 50,
+              "reps": 10
+            }
+          ],
+          "workingHighlight": "50×16"
+        }
+      ],
+      "coachNote": "Rise 원본 확정. 벤치 60→100→120→130→140×2→120×6. 인클 24/26/28×12/28×11. 3일 휴업 후 재개 합격."
+    },
+    {
+      "id": "gym-2026-07-21",
+      "date": "2026-07-21",
+      "type": "Pull",
+      "title": "오전 운동 · 스내치 테크",
+      "durationMin": 60,
+      "totalSets": 30,
+      "totalVolumeKg": 7225,
+      "calories": 481,
+      "grade": "B+",
+      "exercises": [
+        {
+          "name": "바벨 오버헤드 스쿼트",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 5
+            },
+            {
+              "kg": 30,
+              "reps": 3
+            },
+            {
+              "kg": 40,
+              "reps": 3
+            },
+            {
+              "kg": 40,
+              "reps": 3
+            },
+            {
+              "kg": 40,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "40×3×3 (깊이 제한 — 본인 보고)",
+          "overload": true,
+          "depthNote": "앉는 게 잘 안 됨"
+        },
+        {
+          "name": "바벨 스내치 밸런스",
+          "sets": [
+            {
+              "kg": 40,
+              "reps": 3
+            },
+            {
+              "kg": 60,
+              "reps": 3
+            },
+            {
+              "kg": 60,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "60×3×2",
+          "overload": true
+        },
+        {
+          "name": "바벨 행 스내치",
+          "sets": [
+            {
+              "kg": 50,
+              "reps": 4
+            },
+            {
+              "kg": 50,
+              "reps": 4
+            },
+            {
+              "kg": 60,
+              "reps": 4
+            }
+          ],
+          "workingHighlight": "60×4 (깊이 실패 — 본인 보고)",
+          "overload": true,
+          "depthNote": "깊게 받기 어려움"
+        },
+        {
+          "name": "데드리프트",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 5
+            },
+            {
+              "kg": 100,
+              "reps": 5
+            },
+            {
+              "kg": 140,
+              "reps": 5
+            },
+            {
+              "kg": 160,
+              "reps": 3
+            },
+            {
+              "kg": 170,
+              "reps": 3
+            },
+            {
+              "kg": 180,
+              "reps": 0
+            }
+          ],
+          "workingHighlight": "170×3 / 180 실패",
+          "overload": false
+        },
+        {
+          "name": "풀 업",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 7
+            },
+            {
+              "kg": 0,
+              "reps": 7
+            },
+            {
+              "kg": 0,
+              "reps": 5
+            },
+            {
+              "kg": 0,
+              "reps": 6
+            },
+            {
+              "kg": 0,
+              "reps": 6
+            },
+            {
+              "kg": 0,
+              "reps": 6
+            }
+          ],
+          "workingHighlight": "총 37회",
+          "overload": true
+        },
+        {
+          "name": "랫 풀 다운",
+          "sets": [
+            {
+              "kg": 65,
+              "reps": 12
+            },
+            {
+              "kg": 75,
+              "reps": 8
+            },
+            {
+              "kg": 80,
+              "reps": 6
+            },
+            {
+              "kg": 85,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "85×5",
+          "overload": true
+        },
+        {
+          "name": "케이블 로프 스트레이트 암 풀 다운",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 14
+            },
+            {
+              "kg": 20,
+              "reps": 13
+            },
+            {
+              "kg": 20,
+              "reps": 12
+            }
+          ],
+          "workingHighlight": "20×12~14"
+        }
+      ],
+      "coachNote": "OH 직립은 됨(본인 보고). 다만 유지 비용 큼 — 전방 어깨·무릎 부담. 병목=직립 불가 X / 직립 안정성·조직 여유·버리기 신뢰 O. 행 깊은 리시브 어려움과 동일 축. 다음: 20~30에서 비용↓ 확인 후 40."
+    },
+    {
+      "id": "gym-2026-07-22",
+      "date": "2026-07-22",
+      "type": "Leg",
+      "title": "오전 운동",
+      "durationMin": 56,
+      "totalSets": 13,
+      "totalVolumeKg": 6055,
+      "calories": 197,
+      "grade": "A-",
+      "exercises": [
+        {
+          "name": "스쿼트",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 5
+            },
+            {
+              "kg": 80,
+              "reps": 5
+            },
+            {
+              "kg": 100,
+              "reps": 5
+            },
+            {
+              "kg": 120,
+              "reps": 3
+            },
+            {
+              "kg": 130,
+              "reps": 3
+            },
+            {
+              "kg": 140,
+              "reps": 2
+            },
+            {
+              "kg": 150,
+              "reps": 1
+            },
+            {
+              "kg": 160,
+              "reps": 1
+            },
+            {
+              "kg": 170,
+              "reps": 1
+            }
+          ],
+          "workingHighlight": "170×1 (190 도전 X)",
+          "overload": false
+        },
+        {
+          "name": "워킹 런지 (불가리안백)",
+          "note": "Rise 미기록 · 본인 보고. 스쿼트↔익스텐션 사이. 발걸음·세트 미기억.",
+          "sets": [
+            {
+              "kg": 17,
+              "reps": null,
+              "note": "워킹런지 (횟수 미기록)"
+            },
+            {
+              "kg": 12,
+              "reps": null,
+              "note": "워킹런지 (횟수 미기록)"
+            },
+            {
+              "kg": 8,
+              "reps": null,
+              "note": "워킹런지 (횟수 미기록)"
+            }
+          ],
+          "workingHighlight": "17 · 12 · 8 kg (세트/보 미기록)"
+        },
+        {
+          "name": "머신 레그 익스텐션",
+          "sets": [
+            {
+              "kg": 55,
+              "reps": 15
+            },
+            {
+              "kg": 60,
+              "reps": 15
+            },
+            {
+              "kg": 65,
+              "reps": 12
+            },
+            {
+              "kg": 70,
+              "reps": 12
+            }
+          ],
+          "workingHighlight": "70×12"
+        }
+      ],
+      "coachNote": "스쿼트 170×1, 190 X. 불가리안백 런지 17/12/8kg — 세트·보 미기록. 세션 직후 계단 내려가기 힘들었으나 수시간 후 크게 이상 없음 → 당일 과부하·피로 신호. 익스텐션 70×12. 프레스 생략 OK. 다음 Leg: 런지는 가볍게 또는 생략.",
+      "kneeNote": "직후 계단↓ 불편 → 현재 회복. 관찰."
+    },
+    {
+      "id": "gym-2026-07-23",
+      "date": "2026-07-23",
+      "type": "Push",
+      "title": "오전 운동 · Push 라이트",
+      "durationMin": 50,
+      "totalSets": 22,
+      "totalVolumeKg": 9356,
+      "calories": 356,
+      "grade": "A",
+      "exercises": [
+        {
+          "name": "벤치 프레스",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 10
+            },
+            {
+              "kg": 100,
+              "reps": 8
+            },
+            {
+              "kg": 120,
+              "reps": 4
+            },
+            {
+              "kg": 130,
+              "reps": 3
+            },
+            {
+              "kg": 135,
+              "reps": 2
+            },
+            {
+              "kg": 135,
+              "reps": 2
+            },
+            {
+              "kg": 135,
+              "reps": 2
+            }
+          ],
+          "workingHighlight": "135×2×3 (145 X · 서브맥스)",
+          "overload": false
+        },
+        {
+          "name": "덤벨 인클라인 벤치 프레스",
+          "sets": [
+            {
+              "kg": 26,
+              "reps": 16
+            },
+            {
+              "kg": 28,
+              "reps": 14
+            },
+            {
+              "kg": 30,
+              "reps": 12
+            }
+          ],
+          "workingHighlight": "30×12"
+        },
+        {
+          "name": "머신 펙 덱 플라이",
+          "sets": [
+            {
+              "kg": 45,
+              "reps": 16
+            },
+            {
+              "kg": 50,
+              "reps": 11
+            },
+            {
+              "kg": 50,
+              "reps": 11
+            }
+          ],
+          "workingHighlight": "50×11×2"
+        },
+        {
+          "name": "덤벨 숄더 프레스",
+          "sets": [
+            {
+              "kg": 14,
+              "reps": 18
+            },
+            {
+              "kg": 16,
+              "reps": 15
+            },
+            {
+              "kg": 18,
+              "reps": 12
+            }
+          ],
+          "workingHighlight": "18×12 (라이트)"
+        },
+        {
+          "name": "케이블 로프 푸시 다운",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 21
+            },
+            {
+              "kg": 25,
+              "reps": 14
+            },
+            {
+              "kg": 25,
+              "reps": 13
+            }
+          ],
+          "workingHighlight": "25×13~14"
+        },
+        {
+          "name": "케이블 시티드 로우",
+          "sets": [
+            {
+              "kg": 30,
+              "reps": 16
+            },
+            {
+              "kg": 35,
+              "reps": 15
+            },
+            {
+              "kg": 40,
+              "reps": 12
+            }
+          ],
+          "workingHighlight": "40×12"
+        }
+      ],
+      "coachNote": "Push 라이트 처방 준수. 벤치 135×2×3까지, 145 도전 X — 서브맥스 볼륨 원칙과 일치. 인클 26→30 회수 양호, OHP 라이트, 플라이·푸시다운·로우 깔끔. 50분 22세트."
+    },
+    {
+      "id": "gym-2026-07-24",
+      "date": "2026-07-24",
+      "type": "Pull",
+      "title": "오전 운동 · Pull 라이트 + 스내치 테크",
+      "durationMin": 58,
+      "totalSets": 26,
+      "totalVolumeKg": 7315,
+      "calories": 447,
+      "grade": "A-",
+      "exercises": [
+        {
+          "name": "바벨 오버헤드 스쿼트",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 5
+            },
+            {
+              "kg": 30,
+              "reps": 5
+            },
+            {
+              "kg": 40,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "20×5 · 30×5 · 40×3 (외회전·깊이 피드백 대기)",
+          "overload": false
+        },
+        {
+          "name": "바벨 스내치 밸런스",
+          "sets": [
+            {
+              "kg": 50,
+              "reps": 3
+            },
+            {
+              "kg": 60,
+              "reps": 3
+            },
+            {
+              "kg": 60,
+              "reps": 2
+            }
+          ],
+          "workingHighlight": "60×3 / 60×2"
+        },
+        {
+          "name": "바벨 행 스내치",
+          "sets": [
+            {
+              "kg": 50,
+              "reps": 3
+            },
+            {
+              "kg": 60,
+              "reps": 3
+            },
+            {
+              "kg": 60,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "50×3 · 60×3×2 (회수↓ 처방 준수 · 깊이 확인)",
+          "overload": true
+        },
+        {
+          "name": "풀 업",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 8
+            },
+            {
+              "kg": 0,
+              "reps": 6
+            },
+            {
+              "kg": 0,
+              "reps": 7
+            },
+            {
+              "kg": 0,
+              "reps": 6
+            },
+            {
+              "kg": 0,
+              "reps": 7
+            }
+          ],
+          "workingHighlight": "총 34회"
+        },
+        {
+          "name": "랫 풀 다운",
+          "sets": [
+            {
+              "kg": 65,
+              "reps": 12
+            },
+            {
+              "kg": 70,
+              "reps": 10
+            },
+            {
+              "kg": 75,
+              "reps": 7
+            },
+            {
+              "kg": 80,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "80×5"
+        },
+        {
+          "name": "바벨 로우",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 10
+            },
+            {
+              "kg": 60,
+              "reps": 10
+            },
+            {
+              "kg": 100,
+              "reps": 7
+            },
+            {
+              "kg": 100,
+              "reps": 7
+            },
+            {
+              "kg": 100,
+              "reps": 6
+            }
+          ],
+          "workingHighlight": "100×7 / 100×7 / 100×6",
+          "overload": true
+        },
+        {
+          "name": "케이블 로프 스트레이트 암 풀 다운",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 14
+            },
+            {
+              "kg": 20,
+              "reps": 13
+            },
+            {
+              "kg": 20,
+              "reps": 12
+            }
+          ],
+          "workingHighlight": "20×12~14"
+        }
+      ],
+      "coachNote": "선택 A 준수. OH20/30/40 · 밸런스60 · 행60×3 · 풀34 · 로우100 · 데드X. 본인 피드백: OH 후 측면삼각 피로(안정근). 스내치밸런스 1-2세트 후 오른쪽 햄스트링·엉덩이 쪽 강한 땡김 — 편측 리시브/급하강 부하 가능. 토 런 이지·찌르면 중단.",
+      "sideNotes": {
+        "lateralDelt": "OH 후 측면삼각 아픔 — 안정근 피로로 해석",
+        "rightHamGlute": "밸런스 초반 오른쪽 햄·엉덩이 땡김 — 관찰"
+      }
+    },
+    {
+      "id": "oly-2026-07-26",
+      "date": "2026-07-26",
+      "type": "Olympic",
+      "title": "역도장 · 인상/용상 + 보조",
+      "grade": "B+",
+      "exercises": [
+        {
+          "name": "스내치(인상)",
+          "sets": [
+            {
+              "kg": 80,
+              "reps": null,
+              "note": "상한 80 · 세트 상세 미기록"
+            }
+          ],
+          "workingHighlight": "80까지",
+          "overload": false
+        },
+        {
+          "name": "클린앤저크(용상)",
+          "sets": [
+            {
+              "kg": 90,
+              "reps": null,
+              "note": "상한 90 · 세트 상세 미기록"
+            }
+          ],
+          "workingHighlight": "90까지"
+        },
+        {
+          "name": "스내치 밸런스",
+          "sets": [
+            {
+              "note": "훈련함 · 무게 미기록"
+            }
+          ],
+          "workingHighlight": "본인 보고"
+        },
+        {
+          "name": "판다 풀",
+          "sets": [
+            {
+              "note": "훈련함 · 무게 미기록"
+            }
+          ],
+          "workingHighlight": "본인 보고"
+        }
+      ],
+      "coachNote": "격주 역도 세션. 인상 80(파워PR 85 근접) · 용상 90(PR 110 대비 보수적). 밸런스·판다풀 = 리시브/풀 보조로 Phase1과 맞음. 금 햄 땡김 후라 밸런스 볼륨은 과하지 않았는지 확인 필요. 월은 Push 라이트·회복 여유.",
+      "totalVolumeKg": 0
+    },
+    {
+      "id": "gym-2026-07-28",
+      "date": "2026-07-28",
+      "type": "Pull",
+      "title": "오전 운동 · Pull + 스내치 테크",
+      "durationMin": 57,
+      "totalSets": 26,
+      "totalVolumeKg": 7690,
+      "calories": 448,
+      "grade": "A",
+      "exercises": [
+        {
+          "name": "바벨 오버헤드 스쿼트",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 5
+            },
+            {
+              "kg": 30,
+              "reps": 5
+            },
+            {
+              "kg": 40,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "40×5",
+          "overload": true
+        },
+        {
+          "name": "바벨 스내치 밸런스",
+          "sets": [
+            {
+              "kg": 50,
+              "reps": 3
+            },
+            {
+              "kg": 60,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "60×3"
+        },
+        {
+          "name": "바벨 행 스내치",
+          "sets": [
+            {
+              "kg": 40,
+              "reps": 3
+            },
+            {
+              "kg": 40,
+              "reps": 3
+            },
+            {
+              "kg": 40,
+              "reps": 3
+            },
+            {
+              "kg": 45,
+              "reps": 2
+            },
+            {
+              "kg": 45,
+              "reps": 2
+            }
+          ],
+          "workingHighlight": "40×3×3 · 45×2×2 (본인: 45 가벼움 · 승모 연결 OK)",
+          "overload": true,
+          "feel": "45 light; trap pull-under helped float + receive"
+        },
+        {
+          "name": "풀 업",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 9
+            },
+            {
+              "kg": 0,
+              "reps": 7
+            },
+            {
+              "kg": 0,
+              "reps": 7
+            },
+            {
+              "kg": 0,
+              "reps": 6
+            },
+            {
+              "kg": 0,
+              "reps": 4
+            }
+          ],
+          "workingHighlight": "총 33회"
+        },
+        {
+          "name": "바벨 로우",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 11
+            },
+            {
+              "kg": 80,
+              "reps": 8
+            },
+            {
+              "kg": 100,
+              "reps": 7
+            },
+            {
+              "kg": 100,
+              "reps": 8
+            },
+            {
+              "kg": 100,
+              "reps": 7
+            }
+          ],
+          "workingHighlight": "100×7/8/7",
+          "overload": true
+        },
+        {
+          "name": "랫 풀 다운",
+          "sets": [
+            {
+              "kg": 65,
+              "reps": 13
+            },
+            {
+              "kg": 70,
+              "reps": 10
+            },
+            {
+              "kg": 75,
+              "reps": 7
+            }
+          ],
+          "workingHighlight": "75×7"
+        },
+        {
+          "name": "케이블 로프 스트레이트 암 풀 다운",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 15
+            },
+            {
+              "kg": 20,
+              "reps": 14
+            },
+            {
+              "kg": 20,
+              "reps": 11
+            }
+          ],
+          "workingHighlight": "20×11~15"
+        }
+      ],
+      "coachNote": "상세 처방 수행. OH40×5 · 행40×3×3+45×2×2 · 밸런스50/60 · 로우100. 본인 피드백: 45가 가벼웠음. 풀 이후 승모로 당겨주니 바가 훨씬 가볍게 뜨고 리시브 진입도 편함 — 3차 풀 타이밍 정착 신호. 다음 테크 상한 50 시험."
+    },
+    {
+      "id": "gym-2026-07-29",
+      "date": "2026-07-29",
+      "type": "Leg",
+      "title": "오전 운동 · Leg 서브맥스",
+      "durationMin": 59,
+      "totalSets": 29,
+      "totalVolumeKg": 17665,
+      "calories": 505,
+      "grade": "A",
+      "exercises": [
+        {
+          "name": "스쿼트",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 5
+            },
+            {
+              "kg": 100,
+              "reps": 5
+            },
+            {
+              "kg": 140,
+              "reps": 3
+            },
+            {
+              "kg": 150,
+              "reps": 3
+            },
+            {
+              "kg": 150,
+              "reps": 3
+            },
+            {
+              "kg": 160,
+              "reps": 2
+            },
+            {
+              "kg": 160,
+              "reps": 2
+            }
+          ],
+          "workingHighlight": "150×3×2 · 160×2×2 (처방 그대로 · 190 X)",
+          "overload": true
+        },
+        {
+          "name": "머신 수평 레그 프레스",
+          "sets": [
+            {
+              "kg": 160,
+              "reps": 10
+            },
+            {
+              "kg": 180,
+              "reps": 12
+            },
+            {
+              "kg": 190,
+              "reps": 10
+            },
+            {
+              "kg": 190,
+              "reps": 9
+            }
+          ],
+          "workingHighlight": "190×10 / 190×9 · 탑 4세트 (Junk 드롭 X)",
+          "note": "수평 머신 — 이전 판로드 480대와 스케일 다름"
+        },
+        {
+          "name": "머신 레그 익스텐션",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 14
+            },
+            {
+              "kg": 65,
+              "reps": 13
+            },
+            {
+              "kg": 70,
+              "reps": 12
+            },
+            {
+              "kg": 70,
+              "reps": 12
+            }
+          ],
+          "workingHighlight": "70×12×2",
+          "note": "처방은 레그컬이었으나 익스텐션으로 수행"
+        },
+        {
+          "name": "머신 힙 어덕션",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 20
+            },
+            {
+              "kg": 70,
+              "reps": 15
+            },
+            {
+              "kg": 70,
+              "reps": 10
+            },
+            {
+              "kg": 70,
+              "reps": 10
+            }
+          ],
+          "workingHighlight": "70×10~15"
+        },
+        {
+          "name": "덤벨 사이드 레터럴 레이즈",
+          "sets": [
+            {
+              "kg": 4,
+              "reps": 26
+            },
+            {
+              "kg": 4,
+              "reps": 24
+            },
+            {
+              "kg": 4,
+              "reps": 22
+            },
+            {
+              "kg": 4,
+              "reps": 21
+            },
+            {
+              "kg": 4,
+              "reps": 18
+            },
+            {
+              "kg": 4,
+              "reps": 19
+            }
+          ],
+          "workingHighlight": "4kg ×6세트"
+        },
+        {
+          "name": "행잉 레그 힙 레이즈",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 20
+            },
+            {
+              "kg": 0,
+              "reps": 18
+            },
+            {
+              "kg": 0,
+              "reps": 19
+            },
+            {
+              "kg": 0,
+              "reps": 14
+            }
+          ],
+          "workingHighlight": "총 71회"
+        }
+      ],
+      "coachNote": "스쿼트 150×3×2·160×2×2 처방 수행. 본인: 160 첫세트 힘들었으나 두번째 할만 — 워밍업·신경적응 신호. 평소 프레스·레그컬 자리 없어 수평프레스·익스텐션으로 대체. 수평프레스 190·어덕션 70이 머신 상한이라 아쉬움 보고 — 실패 아님. 다음 Leg: 자리 되면 판로드 프레스 탑 / 컬 우선, 상한이면 템포·일시정지·편측으로 자극.",
+      "constraints": {
+        "busy": [
+          "레그프레스(평소)",
+          "레그컬"
+        ],
+        "machineCap": [
+          "수평프레스 190 max",
+          "어덕션 70 max"
+        ],
+        "squatFeel": "160 first hard, second manageable"
+      }
+    },
+    {
+      "id": "gym-2026-07-30",
+      "date": "2026-07-30",
+      "type": "Push",
+      "title": "오전 운동 · Push",
+      "durationMin": 54,
+      "totalSets": 22,
+      "totalVolumeKg": 10227,
+      "calories": 358,
+      "grade": "A",
+      "exercises": [
+        {
+          "name": "벤치 프레스",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 10
+            },
+            {
+              "kg": 100,
+              "reps": 8
+            },
+            {
+              "kg": 120,
+              "reps": 5
+            },
+            {
+              "kg": 130,
+              "reps": 4
+            },
+            {
+              "kg": 130,
+              "reps": 4
+            },
+            {
+              "kg": 135,
+              "reps": 1
+            }
+          ],
+          "workingHighlight": "130×4 ×2 (로그상 첫 기록) · 135×1",
+          "overload": true
+        },
+        {
+          "name": "덤벨 인클라인 벤치 프레스",
+          "sets": [
+            {
+              "kg": 26,
+              "reps": 15
+            },
+            {
+              "kg": 28,
+              "reps": 13
+            },
+            {
+              "kg": 30,
+              "reps": 12
+            }
+          ],
+          "workingHighlight": "30×12"
+        },
+        {
+          "name": "머신 펙 덱 플라이",
+          "sets": [
+            {
+              "kg": 50,
+              "reps": 17
+            },
+            {
+              "kg": 55,
+              "reps": 13
+            },
+            {
+              "kg": 55,
+              "reps": 12
+            }
+          ],
+          "workingHighlight": "55×12~13"
+        },
+        {
+          "name": "덤벨 스탠딩 오버헤드 프레스",
+          "sets": [
+            {
+              "kg": 18,
+              "reps": 20
+            },
+            {
+              "kg": 20,
+              "reps": 16
+            },
+            {
+              "kg": 22,
+              "reps": 14
+            }
+          ],
+          "workingHighlight": "22×14"
+        },
+        {
+          "name": "케이블 오버헤드 트라이셉스 익스텐션",
+          "sets": [
+            {
+              "kg": 17.5,
+              "reps": 17
+            },
+            {
+              "kg": 20,
+              "reps": 15
+            },
+            {
+              "kg": 22.5,
+              "reps": 13
+            },
+            {
+              "kg": 25,
+              "reps": 11
+            }
+          ],
+          "workingHighlight": "25×11"
+        },
+        {
+          "name": "케이블 시티드 로우",
+          "sets": [
+            {
+              "kg": 40,
+              "reps": 15
+            },
+            {
+              "kg": 40,
+              "reps": 12
+            },
+            {
+              "kg": 40,
+              "reps": 12
+            }
+          ],
+          "workingHighlight": "40×12~15"
+        }
+      ],
+      "coachNote": "벤치 130×4×2 — 기존 로그에 없던 과부하(이전 최고 130×3). 135×1로 마무리, 145 X. 인클·플라이 양호. OHP는 처방(14-18)보다 무거웠으나 회수 많아 서브맥스 볼륨 쪽."
+    },
+    {
+      "id": "gym-2026-07-31",
+      "date": "2026-07-31",
+      "type": "Pull",
+      "title": "오후 운동 · 숏테크 + Pull 라이트",
+      "durationMin": 54,
+      "totalSets": 31,
+      "totalVolumeKg": 6583,
+      "calories": 484,
+      "grade": "A+",
+      "exercises": [
+        {
+          "name": "바벨 오버헤드 스쿼트",
+          "sets": [
+            {
+              "kg": 30,
+              "reps": 5
+            },
+            {
+              "kg": 40,
+              "reps": 3
+            },
+            {
+              "kg": 50,
+              "reps": 2
+            },
+            {
+              "kg": 50,
+              "reps": 2
+            }
+          ],
+          "workingHighlight": "50×2×2 (이전 상한 40에서 점프)",
+          "overload": true
+        },
+        {
+          "name": "바벨 스내치 밸런스",
+          "sets": [
+            {
+              "kg": 50,
+              "reps": 3
+            },
+            {
+              "kg": 60,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "60×3"
+        },
+        {
+          "name": "바벨 행 스내치",
+          "sets": [
+            {
+              "kg": 40,
+              "reps": 2
+            },
+            {
+              "kg": 45,
+              "reps": 3
+            },
+            {
+              "kg": 50,
+              "reps": 3
+            },
+            {
+              "kg": 55,
+              "reps": 2
+            },
+            {
+              "kg": 60,
+              "reps": 2
+            }
+          ],
+          "workingHighlight": "50×3 · 55×2 · 60×2 (전부 스쿼트 리시브 · 본인 확인)",
+          "overload": true,
+          "depthNote": "55·60 완전 스쿼트 스내치"
+        },
+        {
+          "name": "풀 업",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 9
+            },
+            {
+              "kg": 0,
+              "reps": 7
+            },
+            {
+              "kg": 0,
+              "reps": 5
+            },
+            {
+              "kg": 0,
+              "reps": 6
+            },
+            {
+              "kg": 0,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "총 32회"
+        },
+        {
+          "name": "뉴트럴 그립 랫 풀 다운",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 13
+            },
+            {
+              "kg": 65,
+              "reps": 12
+            },
+            {
+              "kg": 70,
+              "reps": 9
+            }
+          ],
+          "workingHighlight": "70×9"
+        },
+        {
+          "name": "케이블 시티드 로우",
+          "sets": [
+            {
+              "kg": 50,
+              "reps": 15
+            },
+            {
+              "kg": 60,
+              "reps": 12
+            },
+            {
+              "kg": 70,
+              "reps": 8
+            }
+          ],
+          "workingHighlight": "70×8"
+        },
+        {
+          "name": "인클라인 덤벨 컬",
+          "sets": [
+            {
+              "kg": 6,
+              "reps": 21
+            },
+            {
+              "kg": 8,
+              "reps": 12
+            },
+            {
+              "kg": 8,
+              "reps": 14
+            },
+            {
+              "kg": 8,
+              "reps": 12
+            }
+          ]
+        },
+        {
+          "name": "덤벨 얼터네이트 해머 컬",
+          "sets": [
+            {
+              "kg": 8,
+              "reps": 10
+            },
+            {
+              "kg": 10,
+              "reps": 10
+            },
+            {
+              "kg": 12,
+              "reps": 10
+            },
+            {
+              "kg": 14,
+              "reps": 9
+            },
+            {
+              "kg": 16,
+              "reps": 7
+            }
+          ],
+          "workingHighlight": "16×7"
+        }
+      ],
+      "coachNote": "선택 A. OH50×2×2. 행 50×3·55×2·60×2 — 본인 확인: 55·60도 완전 스쿼트 스내치 리시브 (파워 아님). Phase1 핵심 돌파. 7/21 60 깊이 실패 → 10일 만에 60 깊은 리시브. 다음: 55-60 반복 숙련, 급점프 X."
+    },
+    {
+      "id": "gym-2026-08-03",
+      "date": "2026-08-03",
+      "type": "Push",
+      "title": "오전 운동 · Push (보조 로테이션 B)",
+      "durationMin": 49,
+      "totalSets": 25,
+      "totalVolumeKg": 10940,
+      "calories": 386,
+      "grade": "A",
+      "exercises": [
+        {
+          "name": "벤치 프레스",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 10
+            },
+            {
+              "kg": 100,
+              "reps": 8
+            },
+            {
+              "kg": 120,
+              "reps": 5
+            },
+            {
+              "kg": 130,
+              "reps": 4
+            },
+            {
+              "kg": 130,
+              "reps": 4
+            },
+            {
+              "kg": 140,
+              "reps": 2
+            }
+          ],
+          "workingHighlight": "130×4×2 유지 · 140×2",
+          "overload": true
+        },
+        {
+          "name": "머신 인클라인 체스트 프레스",
+          "sets": [
+            {
+              "kg": 40,
+              "reps": 20
+            },
+            {
+              "kg": 80,
+              "reps": 10
+            },
+            {
+              "kg": 80,
+              "reps": 9
+            },
+            {
+              "kg": 80,
+              "reps": 7
+            }
+          ],
+          "workingHighlight": "80×10/9/7"
+        },
+        {
+          "name": "머신 플라이",
+          "sets": [
+            {
+              "kg": 15,
+              "reps": 12
+            },
+            {
+              "kg": 15,
+              "reps": 12
+            },
+            {
+              "kg": 15,
+              "reps": 10
+            }
+          ],
+          "workingHighlight": "15×10~12"
+        },
+        {
+          "name": "바벨 오버헤드 프레스",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 15
+            },
+            {
+              "kg": 40,
+              "reps": 12
+            },
+            {
+              "kg": 50,
+              "reps": 9
+            },
+            {
+              "kg": 60,
+              "reps": 6
+            }
+          ],
+          "workingHighlight": "60×6"
+        },
+        {
+          "name": "케이블 오버헤드 트라이셉스 익스텐션",
+          "sets": [
+            {
+              "kg": 17.5,
+              "reps": 24
+            },
+            {
+              "kg": 20,
+              "reps": 17
+            },
+            {
+              "kg": 22.5,
+              "reps": 14
+            },
+            {
+              "kg": 25,
+              "reps": 11
+            }
+          ],
+          "workingHighlight": "25×11"
+        },
+        {
+          "name": "로프 페이스 풀",
+          "sets": [
+            {
+              "kg": 15,
+              "reps": 20
+            },
+            {
+              "kg": 17.5,
+              "reps": 20
+            },
+            {
+              "kg": 20,
+              "reps": 17
+            },
+            {
+              "kg": 20,
+              "reps": 15
+            }
+          ],
+          "workingHighlight": "20×15~17"
+        }
+      ],
+      "coachNote": "보조 B 적용: 머신인클·머신플라이·바벨OHP·오버헤드삼두·페이스풀. 벤치 130×4×2 유지 후 140×2 — 과부하. 팔로프/파머스 캐리는 미실시(페이스풀로 대체 가능). 바벨OHP 60×6은 화 테크 전날치곤 약간 셈 — OH 스택만 보면 됨."
+    },
+    {
+      "id": "gym-2026-08-04",
+      "date": "2026-08-04",
+      "type": "Pull",
+      "title": "오전 운동 · Pull + 스내치 테크",
+      "durationMin": 61,
+      "totalSets": 30,
+      "totalVolumeKg": 8163,
+      "calories": 499,
+      "grade": "A+",
+      "exercises": [
+        {
+          "name": "바벨 오버헤드 스쿼트",
+          "sets": [
+            {
+              "kg": 30,
+              "reps": 5
+            },
+            {
+              "kg": 40,
+              "reps": 4
+            },
+            {
+              "kg": 50,
+              "reps": 4
+            },
+            {
+              "kg": 60,
+              "reps": 2
+            }
+          ],
+          "workingHighlight": "50×4 · 60×2",
+          "overload": true
+        },
+        {
+          "name": "바벨 스내치 밸런스",
+          "sets": [
+            {
+              "kg": 50,
+              "reps": 3
+            },
+            {
+              "kg": 60,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "60×3"
+        },
+        {
+          "name": "바벨 행 스내치",
+          "sets": [
+            {
+              "kg": 50,
+              "reps": 3
+            },
+            {
+              "kg": 55,
+              "reps": 2
+            },
+            {
+              "kg": 60,
+              "reps": 2
+            },
+            {
+              "kg": 65,
+              "reps": 2
+            },
+            {
+              "kg": 65,
+              "reps": 2
+            }
+          ],
+          "workingHighlight": "65×2×2 (4회 전부 스쿼트 리시브)",
+          "overload": true,
+          "depthNote": "완전 앉음. 1장째 중심 흔들림 → 이후 안정"
+        },
+        {
+          "name": "풀 업",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 9
+            },
+            {
+              "kg": 0,
+              "reps": 7
+            },
+            {
+              "kg": 0,
+              "reps": 7
+            },
+            {
+              "kg": 0,
+              "reps": 6
+            },
+            {
+              "kg": 0,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "총 34회",
+          "overload": true
+        },
+        {
+          "name": "케이블 시티드 로우",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 13
+            },
+            {
+              "kg": 65,
+              "reps": 13
+            },
+            {
+              "kg": 70,
+              "reps": 9
+            }
+          ],
+          "workingHighlight": "70×9"
+        },
+        {
+          "name": "뉴트럴 그립 랫 풀 다운",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 12
+            },
+            {
+              "kg": 65,
+              "reps": 11
+            },
+            {
+              "kg": 70,
+              "reps": 8
+            },
+            {
+              "kg": 75,
+              "reps": 7
+            }
+          ],
+          "workingHighlight": "75×7"
+        },
+        {
+          "name": "덤벨 리어 플라이",
+          "sets": [
+            {
+              "kg": 8,
+              "reps": 15
+            },
+            {
+              "kg": 8,
+              "reps": 14
+            },
+            {
+              "kg": 8,
+              "reps": 12
+            },
+            {
+              "kg": 8,
+              "reps": 10
+            }
+          ],
+          "workingHighlight": "8×10~15"
+        },
+        {
+          "name": "데드리프트",
+          "sets": [
+            {
+              "kg": 140,
+              "reps": 3
+            },
+            {
+              "kg": 160,
+              "reps": 3
+            },
+            {
+              "kg": 160,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "160×3×2 (라이트 허용 범위)",
+          "overload": false
+        }
+      ],
+      "coachNote": "OH60×2 · 행65×2×2 전부 스쿼트 리시브(본인 확인). 65 첫 장 중심 살짝 흔들림 → 이후 안정 — 신경적응. 워밍업(데드버그·바텀홀드) 스킵. 러닝으로 코어·균형 안정감 보고. 풀34 · 데드160×3×2."
+    },
+    {
+      "id": "gym-2026-08-05",
+      "date": "2026-08-05",
+      "type": "Leg",
+      "title": "오전 운동",
+      "durationMin": 53,
+      "totalSets": 22,
+      "totalVolumeKg": 13485,
+      "caloriesKcal": 362,
+      "exercises": [
+        {
+          "name": "스쿼트",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 5
+            },
+            {
+              "kg": 100,
+              "reps": 5
+            },
+            {
+              "kg": 140,
+              "reps": 3
+            },
+            {
+              "kg": 150,
+              "reps": 3
+            },
+            {
+              "kg": 150,
+              "reps": 3
+            },
+            {
+              "kg": 160,
+              "reps": 2,
+              "note": "느낌 좋음 — 들고 일어서기가 아니라 바닥을 미는 감각"
+            },
+            {
+              "kg": 170,
+              "reps": 2,
+              "note": "2번째: 헙 하고 살짝 갈리며 기립 · 그라인드 겨우 아님"
+            }
+          ],
+          "workingHighlight": "150×3×2 · 160×2 · 170×2 (풀스쿼트 · 허벅지-종아리 접촉)",
+          "depthStandard": "풀스쿼트만 인정 (허벅지·종아리 접촉)",
+          "coachNote": "본인 기준 풀스쿼트(허벅지-종아리 접촉). 160에서 ‘바닥 밀기’ 큐 잡힘(들고 일어서기 아님). 170×2 두 번째도 겨우 올라온 그라인드가 아니라 의도적 드라이브(헙) + 살짝 갈리며 기립."
+        },
+        {
+          "name": "바벨 루마니안 데드리프트",
+          "sets": [
+            {
+              "kg": 100,
+              "reps": 9
+            },
+            {
+              "kg": 100,
+              "reps": 9
+            },
+            {
+              "kg": 100,
+              "reps": 9
+            }
+          ],
+          "workingHighlight": "100×9×3"
+        },
+        {
+          "name": "머신 시티드 레그 컬",
+          "sets": [
+            {
+              "kg": 45,
+              "reps": 17
+            },
+            {
+              "kg": 50,
+              "reps": 16
+            },
+            {
+              "kg": 55,
+              "reps": 12
+            },
+            {
+              "kg": 60,
+              "reps": 9
+            }
+          ],
+          "workingHighlight": "60×9"
+        },
+        {
+          "name": "머신 레그 익스텐션",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 15
+            },
+            {
+              "kg": 65,
+              "reps": 12
+            },
+            {
+              "kg": 70,
+              "reps": 10
+            },
+            {
+              "kg": 70,
+              "reps": 10
+            }
+          ],
+          "workingHighlight": "70×10×2"
+        },
+        {
+          "name": "머신 힙 쓰러스트",
+          "sets": [
+            {
+              "kg": 40,
+              "reps": 12
+            },
+            {
+              "kg": 40,
+              "reps": 12
+            },
+            {
+              "kg": 60,
+              "reps": 11
+            },
+            {
+              "kg": 60,
+              "reps": 9
+            }
+          ],
+          "workingHighlight": "60×11 / 60×9"
+        }
+      ],
+      "source": "Rise album",
+      "coachNote": "본인 스쿼트 기준=풀스쿼트(허벅지·종아리 접촉). 핵심 큐: 160에서 바닥을 미는 감각 — 바를 들고 일어서기가 아님. 어제 스내치65+저녁런 다음인데 150×3×2·160×2·170×2까지 — 하체 컨디션 신호. 170 두 번째도 ‘겨우’가 아니라 헙 하고 살짝 갈리며 기립(의도적 드라이브). 7/22 170×1(싱글 탐색)과 질이 다름. RDL 100×9×3·컬·익스텐션·힙쓰러스트로 국소 채움, 프레스 Junk/런지 없음. 총볼륨 13.5k < 지난주 17.7k라 일 스내치 여유. 주의: 오늘 170 자신감이 190 유혹으로 안 가게. 일 스내치 수신 후 드라이브도 같은 언어(바닥 밀기)로."
+    },
+    {
+      "id": "gym-2026-08-06",
+      "date": "2026-08-06",
+      "type": "Push",
+      "title": "오전 운동 · Push 라이트",
+      "durationMin": 55,
+      "totalSets": 19,
+      "totalVolumeKg": 7782,
+      "caloriesKcal": 274,
+      "exercises": [
+        {
+          "name": "벤치 프레스",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 12
+            },
+            {
+              "kg": 100,
+              "reps": 9
+            },
+            {
+              "kg": 120,
+              "reps": 5
+            },
+            {
+              "kg": 120,
+              "reps": 5
+            },
+            {
+              "kg": 120,
+              "reps": 4
+            },
+            {
+              "kg": 130,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "120×5/5/4 · 130×3 (140 X)",
+          "coachNote": "처방(125–130×3–4×2)에 가깝게 준수. 월 140×2 다음 라이트 유지 성공."
+        },
+        {
+          "name": "바벨 인클라인 벤치 프레스",
+          "sets": [
+            {
+              "kg": 40,
+              "reps": 10
+            },
+            {
+              "kg": 60,
+              "reps": 10
+            },
+            {
+              "kg": 70,
+              "reps": 8
+            },
+            {
+              "kg": 80,
+              "reps": 6
+            }
+          ],
+          "workingHighlight": "80×6",
+          "coachNote": "머신 대신 바벨 인클. 각도 분리 목적은 달성. 80×6은 보조치곤 약간 센 편이나 실패 아님."
+        },
+        {
+          "name": "바벨 오버헤드 프레스",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 15
+            },
+            {
+              "kg": 40,
+              "reps": 15
+            },
+            {
+              "kg": 60,
+              "reps": 6
+            },
+            {
+              "kg": 70,
+              "reps": 4
+            },
+            {
+              "kg": 80,
+              "reps": 1
+            }
+          ],
+          "workingHighlight": "70×4 · 80×1",
+          "coachNote": "처방은 40–50×6–8×2 라이트 터치. 실제는 60·70·80까지 — 오버헤드 경로 확인은 됐으나 일 스내치 앞 어깨 피로 리스크. 다음엔 라이트 유지."
+        },
+        {
+          "name": "덤벨 리어 플라이",
+          "sets": [
+            {
+              "kg": 8,
+              "reps": 16
+            },
+            {
+              "kg": 8,
+              "reps": 14
+            },
+            {
+              "kg": 8,
+              "reps": 12
+            },
+            {
+              "kg": 8,
+              "reps": 12
+            }
+          ],
+          "workingHighlight": "8×12–16×4",
+          "coachNote": "페이스풀 대체로 적절. 후면 밸런스."
+        }
+      ],
+      "source": "Rise album",
+      "vsPrescription": {
+        "bench": "준수 (140 X, 워킹 120–130)",
+        "incline": "바벨로 수행 · 중량 약간↑",
+        "ohp": "처방보다 무거움 (80×1까지)",
+        "rear": "리어플라이로 수행 · OK",
+        "lowerBody": "없음 · OK"
+      },
+      "coachNote": "하체·힌지 없이 Push만 — 햄 잔여 관리 성공. 벤치가 핵심 준수(120대 유지 + 130×3, 140 X). OHP만 처방(라이트 터치)보다 세게 올라감(70×4·80×1) — 오버헤드 감각 확인은 이득, 금·토·일 어깨 여유는 조금 깎임. 금은 테크여도 OH 소량·가벼운 쪽, 헤비 OHP/푸시프레스 반복 X. 총볼륨 7.8k < 월 Push 10.9k라 주간 Push 과부하 아님."
+    },
+    {
+      "id": "gym-2026-08-07",
+      "date": "2026-08-07",
+      "type": "RecoveryTech",
+      "title": "오전 운동 · 무드 유지 저자극 (+테크)",
+      "durationMin": 47,
+      "totalSets": 28,
+      "totalVolumeKg": 3315,
+      "caloriesKcal": 433,
+      "exercises": [
+        {
+          "name": "데드버그",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 12
+            },
+            {
+              "kg": 0,
+              "reps": 10
+            },
+            {
+              "kg": 0,
+              "reps": 10
+            },
+            {
+              "kg": 0,
+              "reps": 10
+            }
+          ],
+          "workingHighlight": "총 42회",
+          "coachNote": "항신전 코어 — 처방 그대로. 스내치 수신 시 갈비 열림 방지와 같은 언어."
+        },
+        {
+          "name": "덤벨 사이드 레터럴 레이즈",
+          "sets": [
+            {
+              "kg": 4,
+              "reps": 30
+            },
+            {
+              "kg": 4,
+              "reps": 26
+            },
+            {
+              "kg": 6,
+              "reps": 19
+            },
+            {
+              "kg": 6,
+              "reps": 20
+            },
+            {
+              "kg": 6,
+              "reps": 12
+            }
+          ],
+          "workingHighlight": "6×19/20 · 530kg",
+          "coachNote": "소홀했던 측면 메움. 고반복 펌프 — 저피로로 적절. 2세트 예정이었으나 5세트까지 간 건 볼륨↑(허용 범위)."
+        },
+        {
+          "name": "케이블 스탠딩 크로스오버 하이 리버스 플라이",
+          "sets": [
+            {
+              "kg": 10,
+              "reps": 15
+            },
+            {
+              "kg": 15,
+              "reps": 15
+            },
+            {
+              "kg": 20,
+              "reps": 10
+            },
+            {
+              "kg": 20,
+              "reps": 11
+            },
+            {
+              "kg": 20,
+              "reps": 11
+            }
+          ],
+          "workingHighlight": "20×10/11/11",
+          "coachNote": "페이스풀/리어 대체. 후면·수평외전 — 목 OHP 잔여 균형."
+        },
+        {
+          "name": "케이블 팔로프 프레스",
+          "sets": [
+            {
+              "kg": 5,
+              "reps": 16
+            },
+            {
+              "kg": 5,
+              "reps": 21
+            },
+            {
+              "kg": 5,
+              "reps": 19
+            },
+            {
+              "kg": 5,
+              "reps": 16
+            },
+            {
+              "kg": 5,
+              "reps": 16
+            }
+          ],
+          "workingHighlight": "5×16–21×5",
+          "coachNote": "항회전 코어. 데드버그와 짝으로 오늘 코어 구멍 제대로 채움."
+        },
+        {
+          "name": "바벨 오버헤드 스쿼트",
+          "sets": [
+            {
+              "kg": 40,
+              "reps": 5
+            },
+            {
+              "kg": 40,
+              "reps": 6
+            },
+            {
+              "kg": 40,
+              "reps": 6
+            }
+          ],
+          "workingHighlight": "40×5/6/6",
+          "coachNote": "오버헤드 경로·깊이 터치. 중량 라이트 — 처방 ‘감각만’에 맞음."
+        },
+        {
+          "name": "바벨 행 스내치",
+          "sets": [
+            {
+              "kg": 40,
+              "reps": 3
+            },
+            {
+              "kg": 50,
+              "reps": 2
+            },
+            {
+              "kg": 60,
+              "reps": 2
+            },
+            {
+              "kg": 60,
+              "reps": 2
+            },
+            {
+              "kg": 60,
+              "reps": 2
+            },
+            {
+              "kg": 70,
+              "reps": 1
+            }
+          ],
+          "workingHighlight": "60×2×3 · 70×1 (전부 풀스내치)",
+          "depthNote": "본인 확인: 전 세트 완벽한 풀스내치(깊은 수신)",
+          "coachNote": "본인: 완벽한 풀스내치. 코치 ‘3–5장’ 표현이 모호했음 — 5장 사다리면 50→…→70이 자연스러운 해석. 70×1 풀은 처방 범위로 인정. 다만 60×2가 세 번인 건 사다리보다 반복 볼륨↑(다음엔 각 단 1–2장으로)."
+        }
+      ],
+      "source": "Rise album",
+      "vsPrescription": {
+        "walk": "Rise 미기록 (했을 수도)",
+        "deadBug": "수행 · OK",
+        "lateral": "수행 · 세트 수↑",
+        "rear": "하이 리버스 플라이로 수행 · OK",
+        "pallof": "추가 수행 · 코어 보강 OK",
+        "ohOptional": "OH스쿼트 라이트 OK. 행스내치 70=‘5장 사다리’로 해석 가능 → 초과로 깎지 않음. 60×2×3만 반복 볼륨 여분.",
+        "hardNo": "런·힌지·벤치/헤비OHP 없음 · OK"
+      },
+      "coachNote": "무드 세션 + 코어·레터럴·후면 메움 성공. 행 60×2×3·70×1 전부 풀스내치. 코치 정정: ‘3–5장’을 사다리로 읽으면 70은 5장 경로 — 처방 초과로 잘못 깎았음. 인정. 다음부터는 ‘워밍 포함 워킹 시도 N장·각 단 몇 장’을 숫자로 명시. 일요는 70 풀 게이트 후 상단."
+    },
+    {
+      "id": "gym-2026-08-09",
+      "date": "2026-08-09",
+      "type": "Olympic",
+      "title": "스쿼트 스내치 기록 도전",
+      "exercises": [
+        {
+          "name": "스쿼트 스내치",
+          "sets": [
+            {
+              "kg": 40,
+              "reps": 1
+            },
+            {
+              "kg": 60,
+              "reps": 1
+            },
+            {
+              "kg": 70,
+              "reps": 1
+            },
+            {
+              "kg": 75,
+              "reps": 1
+            },
+            {
+              "kg": 80,
+              "reps": 1
+            },
+            {
+              "kg": 85,
+              "reps": 1
+            },
+            {
+              "kg": 87,
+              "reps": 1
+            },
+            {
+              "kg": 90,
+              "reps": 1,
+              "note": "성공 · 풀스내치"
+            },
+            {
+              "kg": 92,
+              "reps": 0,
+              "attempts": 4,
+              "missNotes": [
+                "1: 쫄아서 언더 미진입",
+                "2: 앉아 머리 위까지 → 앞으로 드롭",
+                "3: 앉아 머리 위까지 → 락 미체결",
+                "4: 힘 고갈"
+              ]
+            }
+          ],
+          "workingHighlight": "90 성공 · 92 miss×4",
+          "ladder": "40→60→70→75→80→85→87→90",
+          "depthStandard": "풀스내치"
+        },
+        {
+          "name": "클린 앤 저크 (풀용상)",
+          "sets": [
+            {
+              "kg": 90,
+              "reps": 1,
+              "note": "풀용상 상한 — 본인 보고 여기까지"
+            }
+          ],
+          "workingHighlight": "90 풀용상",
+          "coachNote": "당일 스내치90 후 풀용상 상한 90. 공식 Rise 용상 1RM은 110 — 이날 90은 PR이 아니라 피로 세션 컷."
+        },
+        {
+          "name": "파워클린 → 푸시프레스 → 푸시저크 콤보",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 1,
+              "note": "콤보 (파워클린+푸시프레스+푸시저크)"
+            }
+          ],
+          "workingHighlight": "60 콤보",
+          "coachNote": "풀용상 상한 후 다운해서 경로 분리 연습 — 적절. 파워클린=당김·래크, 푸시프레스=다리→바 연결, 푸시저크=딥·드라이브·수신. 다음 일요일 교정은 하이행 클린(감김)을 콤보 앞에 두어도 좋음."
+        }
+      ],
+      "source": "athlete report",
+      "cjDrills": "풀용상 90 상한 → 60 파워클린+푸시프레스+푸시저크 콤보",
+      "eveningAfter": "실외 조깅 ~3.5km (별도 run-log)",
+      "coachNote": "스쿼트 스내치 90 성공 · 92 miss×4(커밋/전방/락/고갈). 용상: 풀용상 90까지 → 이후 60으로 파워클린>푸시프레스>푸시저크 콤보. 기록일 우선순위(스내치) 지킨 뒤, 용상은 PR 안 하고 경로 연습으로 마무리 — 계획과 맞음. 스내치90=용상90 동률은 ‘당일 스내치 피로 위 용상’이라 용상 실력 천장으로 단정 X. 다음 역도: 스내치 90 고정·92 2시도 / 용상은 하이행 감김 + 라이트 저크 경로. 저녁 런 3.5km는 아쉬움. 공식 용상 1RM=110(Rise). 당일 90은 피로 상한."
+    },
+    {
+      "id": "gym-2026-08-10",
+      "date": "2026-08-10",
+      "type": "Push",
+      "title": "오전 운동 · Push (역도 다음날 어깨 라이트)",
+      "durationMin": 64,
+      "totalSets": 28,
+      "totalVolumeKg": 9687,
+      "caloriesKcal": 436,
+      "exercises": [
+        {
+          "name": "벤치 프레스",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 12
+            },
+            {
+              "kg": 100,
+              "reps": 8
+            },
+            {
+              "kg": 120,
+              "reps": 5
+            },
+            {
+              "kg": 130,
+              "reps": 4
+            },
+            {
+              "kg": 130,
+              "reps": 4
+            },
+            {
+              "kg": 130,
+              "reps": 4
+            }
+          ],
+          "workingHighlight": "130×4×3 (140 X)",
+          "coachNote": "처방 130×3–4×2보다 1세트↑. 140 안 간 건 준수. 역도 다음날 메인 유지 성공."
+        },
+        {
+          "name": "데드버그",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 15
+            },
+            {
+              "kg": 0,
+              "reps": 17
+            },
+            {
+              "kg": 0,
+              "reps": 13
+            }
+          ],
+          "workingHighlight": "총 45회"
+        },
+        {
+          "name": "머신 인클라인 체스트 프레스",
+          "sets": [
+            {
+              "kg": 40,
+              "reps": 12
+            },
+            {
+              "kg": 60,
+              "reps": 12
+            },
+            {
+              "kg": 70,
+              "reps": 12
+            },
+            {
+              "kg": 80,
+              "reps": 9
+            },
+            {
+              "kg": 80,
+              "reps": 7
+            }
+          ],
+          "workingHighlight": "80×9/7 · 3320kg",
+          "coachNote": "처방 2–3세트보다 볼륨↑. 머신이라 리스크는 낮음."
+        },
+        {
+          "name": "덤벨 사이드 레터럴 레이즈",
+          "sets": [
+            {
+              "kg": 4,
+              "reps": 27
+            },
+            {
+              "kg": 6,
+              "reps": 22
+            },
+            {
+              "kg": 6,
+              "reps": 23
+            },
+            {
+              "kg": 6,
+              "reps": 20
+            },
+            {
+              "kg": 6,
+              "reps": 16
+            }
+          ],
+          "workingHighlight": "6×16–23"
+        },
+        {
+          "name": "덤벨 리어 플라이",
+          "sets": [
+            {
+              "kg": 6,
+              "reps": 16
+            },
+            {
+              "kg": 8,
+              "reps": 14
+            },
+            {
+              "kg": 8,
+              "reps": 11
+            },
+            {
+              "kg": 8,
+              "reps": 12
+            },
+            {
+              "kg": 8,
+              "reps": 11
+            }
+          ],
+          "workingHighlight": "8×11–14",
+          "coachNote": "페이스풀 대체. 어제 락/전방 잔여 받침 — 적절."
+        },
+        {
+          "name": "케이블 하이 풀리 오버헤드 트라이셉스 익스텐션",
+          "sets": [
+            {
+              "kg": 17.5,
+              "reps": 28
+            },
+            {
+              "kg": 20,
+              "reps": 22
+            },
+            {
+              "kg": 22.5,
+              "reps": 17
+            },
+            {
+              "kg": 25,
+              "reps": 12
+            }
+          ],
+          "workingHighlight": "25×12 · 1612.5kg",
+          "coachNote": "팔로프 대신 OH 삼두. 헤비 OHP는 아님. 다만 오버헤드 경로 볼륨이 길어짐 — 다음엔 삼두 짧게 or 팔로프."
+        }
+      ],
+      "source": "Rise album",
+      "vsPrescription": {
+        "bench": "130×4×3 · 140 X — 준수(세트만 +1)",
+        "incline": "수행 · 볼륨↑",
+        "lateral": "수행 · 세트↑",
+        "rear": "리어플라이로 수행 · OK",
+        "core": "데드버그 OK · 팔로프는 삼두로 대체",
+        "hardNo": "헤비 OHP·스내치/클린·하체 헤비 없음 · OK",
+        "duration": "64분 > 45–55 목표"
+      },
+      "coachNote": "일 스내치90 다음날 Push — 핵심 준수: 벤치 130 유지·140 X·오버헤드 헤비 X. 리어·레터럴·데드버그로 구멍도 메움. 어긋남: 총볼륨 9.7k·64분·인클/레터럴/삼두 세트가 길어 ‘라이트’보다 풀 Push에 가까움. 케이블 OH 삼두는 금지 항목은 아니나 어깨 경로를 더 씀. 화 하이행 감김은 어깨만 괜찮으면 예정대로 · 묵직하면 등/로우만."
+    },
+    {
+      "id": "gym-2026-08-11",
+      "date": "2026-08-11",
+      "type": "Pull",
+      "title": "오전 운동 · Pull + 행 파워클린/풀",
+      "durationMin": 51,
+      "totalSets": 22,
+      "totalVolumeKg": 7635,
+      "caloriesKcal": 355,
+      "exercises": [
+        {
+          "name": "바벨 행 파워클린",
+          "sets": [
+            {
+              "kg": 40,
+              "reps": 5
+            },
+            {
+              "kg": 60,
+              "reps": 4
+            },
+            {
+              "kg": 70,
+              "reps": 3
+            },
+            {
+              "kg": 80,
+              "reps": 3
+            },
+            {
+              "kg": 90,
+              "reps": 2
+            }
+          ],
+          "workingHighlight": "80×3 · 90×2 (전부 행 파워클린)",
+          "coachNote": "돌파: 행 파워클린에서 감김·쇄골 래크 감각 확보(본인). 유효 부하 70–90 검증. 다음=같은 느낌 재현 → 슬개 아래 → 바닥.",
+          "loggedAs": "Rise에 행 파워클린 없어 행클린으로 기록 · 실제 전부 파워클린",
+          "feel": "본인: 걸려서 감겨서 쇄골 위로 딱 — 풀 연결감 확보",
+          "whyPower": "풀 연결·쇄골 래크 감각 분리 연습. 수신은 이미 강점 — 오늘은 당김 단계만."
+        },
+        {
+          "name": "바벨 클린 풀",
+          "sets": [
+            {
+              "kg": 90,
+              "reps": 3
+            },
+            {
+              "kg": 90,
+              "reps": 3
+            },
+            {
+              "kg": 90,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "90×3×3",
+          "coachNote": "행 파워클린 90과 같은 단 풀. 연결감 찾기용으로 70–90이 본인에게 유효 부하."
+        },
+        {
+          "name": "머신 로우",
+          "sets": [
+            {
+              "kg": 55,
+              "reps": 17
+            },
+            {
+              "kg": 65,
+              "reps": 15
+            },
+            {
+              "kg": 75,
+              "reps": 12
+            },
+            {
+              "kg": 85,
+              "reps": 10
+            },
+            {
+              "kg": 95,
+              "reps": 9
+            }
+          ],
+          "workingHighlight": "95×9 · 4515kg"
+        },
+        {
+          "name": "풀업",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 7
+            },
+            {
+              "kg": 0,
+              "reps": 7
+            },
+            {
+              "kg": 0,
+              "reps": 6
+            },
+            {
+              "kg": 0,
+              "reps": 5
+            },
+            {
+              "kg": 0,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "총 30회"
+        },
+        {
+          "name": "데드리프트",
+          "sets": [
+            {
+              "kg": 100,
+              "reps": 5
+            },
+            {
+              "kg": 140,
+              "reps": 3
+            },
+            {
+              "kg": 160,
+              "reps": 2
+            },
+            {
+              "kg": 180,
+              "reps": 0,
+              "note": "실패"
+            }
+          ],
+          "workingHighlight": "160×2 · 180 X",
+          "coachNote": "처방 상한 140×3×2 또는 스킵. 160까지 간 뒤 180 실패 — 저조 데이에 데드 상단은 수 Leg·햄에 잔여 남김."
+        }
+      ],
+      "source": "Rise album",
+      "vsPrescription": {
+        "hangPowerClean": "로그명 행클린 · 실제 행 파워클린 40–90",
+        "load": "코치 40–60 과소 → 본인 70–90이 연결감 구간",
+        "cleanPull": "90×3×3",
+        "dead": "160×2 · 180X — 상한 초과",
+        "duration": "51분"
+      },
+      "coachNote": "의도 명확: 풀스쿼트 수신은 강점, 병목은 당김 연결. 행 파워클린으로 「걸려서 감겨서 쇄골 위로 딱」 확보 — 파워 선택은 실수가 아니라 분리 훈련. 다음: 같은 풀 느낌을 슬개 아래→바닥 풀클린으로 이식(수신은 본인 강점). 데드 160/180X는 수 잔여. 약(OTC) 맥락은 재현 시 약 없이 확인.",
+      "athleteFeelAsk": "행 70–90에서 풀에 붙는 느낌이 왔는지",
+      "grade": "A- (파워클린 감김 구간 탐색 타당 / 데드만 과함)",
+      "breakthrough": "hang power clean wrap → clavicle rack",
+      "contextMeds": {
+        "athleteReport": "오전 근이완제 1 + 나프록센 1 (아침 컨디션 저조 후)",
+        "coachNote": "돌파(감김)와 데드 상단 시도는 진통·이완 영향 가능. 기술 고정 여부는 약 없이 같은 부하에서 재현으로 확인. 상비약 의존 트레이닝 X. 의료 조언 아님."
+      },
+      "trainingIntent": "본인: 클린은 원래 앉아받기(풀) 잘 함. 오늘 행 파워클린은 수신 깊이가 아니라 「풀에 맞아서 올라오는 느낌」만 잡기 위한 의도적 선택."
+    },
+    {
+      "id": "gym-2026-08-12",
+      "date": "2026-08-12",
+      "type": "Leg",
+      "title": "오전 운동 · Leg 풀스쿼트",
+      "durationMin": 51,
+      "totalSets": 20,
+      "totalVolumeKg": 11955,
+      "caloriesKcal": 333,
+      "exercises": [
+        {
+          "name": "스쿼트",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 5
+            },
+            {
+              "kg": 100,
+              "reps": 5
+            },
+            {
+              "kg": 140,
+              "reps": 3
+            },
+            {
+              "kg": 160,
+              "reps": 3
+            },
+            {
+              "kg": 170,
+              "reps": 2
+            },
+            {
+              "kg": 175,
+              "reps": 2
+            },
+            {
+              "kg": 180,
+              "reps": 1,
+              "note": "완벽한 풀스쿼트. 무게감은 있으나 끊김 없이 쭉 — 그라인드/겨우 아님"
+            }
+          ],
+          "workingHighlight": "160×3 · 170×2 · 175×2 · 180×1 (완벽 풀 · 끊김無)",
+          "depthStandard": "풀스쿼트만 인정",
+          "coachNote": "본인: 180=완벽한 풀깊이. 엄청 긁으며 올라온 그라인드 아님 — 무게감 있지만 끊김 없이 쭉. 8/5 160 바닥밀기·170 헙 드라이브 연장선. 190 직전 품질 확인."
+        },
+        {
+          "name": "바벨 루마니안 데드리프트",
+          "sets": [
+            {
+              "kg": 80,
+              "reps": 10
+            },
+            {
+              "kg": 90,
+              "reps": 9
+            },
+            {
+              "kg": 90,
+              "reps": 10
+            }
+          ],
+          "workingHighlight": "90×9/10",
+          "coachNote": "처방 80–90×8 밴드 준수(횟수만↑). 100+ 안 감 — 화 데드 관리 OK."
+        },
+        {
+          "name": "머신 시티드 레그 컬",
+          "sets": [
+            {
+              "kg": 50,
+              "reps": 17
+            },
+            {
+              "kg": 55,
+              "reps": 14
+            },
+            {
+              "kg": 60,
+              "reps": 11
+            }
+          ],
+          "workingHighlight": "60×11"
+        },
+        {
+          "name": "머신 힙 쓰러스트",
+          "sets": [
+            {
+              "kg": 40,
+              "reps": 15
+            },
+            {
+              "kg": 60,
+              "reps": 11
+            },
+            {
+              "kg": 60,
+              "reps": 9
+            }
+          ],
+          "workingHighlight": "60×11/9"
+        },
+        {
+          "name": "머신 레그 익스텐션",
+          "sets": [
+            {
+              "kg": 65,
+              "reps": 12
+            },
+            {
+              "kg": 70,
+              "reps": 10
+            },
+            {
+              "kg": 75,
+              "reps": 9
+            },
+            {
+              "kg": 80,
+              "reps": 8
+            }
+          ],
+          "workingHighlight": "80×8",
+          "coachNote": "처방 70×10×2보다 75·80까지 — 국소 과욕 소폭."
+        }
+      ],
+      "source": "Rise album",
+      "vsPrescription": {
+        "squat": "150 워킹 스킵 · 160×3·170×2·175×2·180×1 — 상단↑ / 190 X 준수",
+        "rdl": "80–90 준수 · 횟수↑",
+        "curl": "밴드 준수 · 횟수↑",
+        "hip": "준수",
+        "extension": "70 넘어 80까지 — 소폭 초과",
+        "duration": "51분 · OK"
+      },
+      "coachNote": "180×1 완벽 풀스쿼트 — 그라인드 아님, 무게감+연속 기립. 화 데드 잔여 위 품질 상단. 다음 Leg는 150–160 볼륨과 상단 데이 분리 추천. RDL 80–90 관리 우수. 익스텐션 80은 사족.",
+      "grade": "A (180 품질 풀 · 엔진 데이)"
+    },
+    {
+      "id": "gym-2026-08-13",
+      "date": "2026-08-13",
+      "type": "Push",
+      "title": "오전 운동 · Push 하이브리드 B (역도식 메인)",
+      "durationMin": 59,
+      "totalSets": 28,
+      "totalVolumeKg": 8418,
+      "caloriesKcal": 396,
+      "exercises": [
+        {
+          "name": "푸시 프레스",
+          "sets": [
+            {
+              "kg": 40,
+              "reps": 10
+            },
+            {
+              "kg": 60,
+              "reps": 5
+            },
+            {
+              "kg": 80,
+              "reps": 3
+            },
+            {
+              "kg": 90,
+              "reps": 2
+            },
+            {
+              "kg": 100,
+              "reps": 1
+            }
+          ],
+          "workingHighlight": "90×2 · 100×1",
+          "coachNote": "세션 주연으로 배치 — B 구조 성공. 등 보호 처방(55 전후)보다 훨씬 상단. 아침 등 OK였다면 가능했으나, 딥·과신전만 본인 확인."
+        },
+        {
+          "name": "바벨 숄더 프레스",
+          "sets": [
+            {
+              "kg": 40,
+              "reps": 10
+            },
+            {
+              "kg": 60,
+              "reps": 8
+            },
+            {
+              "kg": 70,
+              "reps": 5
+            },
+            {
+              "kg": 80,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "70×5 · 80×3",
+          "coachNote": "엄격 OHP. 처방 40–50대보다 상단 — 오버헤드 근력 데이."
+        },
+        {
+          "name": "케이블 팔로프 프레스",
+          "sets": [
+            {
+              "kg": 15,
+              "reps": 15
+            },
+            {
+              "kg": 15,
+              "reps": 15
+            },
+            {
+              "kg": 17.5,
+              "reps": 14
+            },
+            {
+              "kg": 17.5,
+              "reps": 13
+            },
+            {
+              "kg": 20,
+              "reps": 10
+            },
+            {
+              "kg": 20,
+              "reps": 9
+            }
+          ],
+          "workingHighlight": "20×10/9"
+        },
+        {
+          "name": "케이블 리어 델트 플라이",
+          "sets": [
+            {
+              "kg": 5,
+              "reps": 15
+            },
+            {
+              "kg": 5,
+              "reps": 21
+            },
+            {
+              "kg": 5,
+              "reps": 20
+            },
+            {
+              "kg": 5,
+              "reps": 19
+            },
+            {
+              "kg": 5,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "5×15–21",
+          "coachNote": "페이스풀 대체. 후면 OK."
+        },
+        {
+          "name": "케이블 로프 푸시다운",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 26
+            },
+            {
+              "kg": 25,
+              "reps": 20
+            },
+            {
+              "kg": 27.5,
+              "reps": 18
+            },
+            {
+              "kg": 30,
+              "reps": 16
+            },
+            {
+              "kg": 32.5,
+              "reps": 12
+            }
+          ],
+          "workingHighlight": "32.5×12",
+          "coachNote": "아래쪽 삼두 — OH 삼두 길게 안 간 선택 좋음."
+        },
+        {
+          "name": "벤치 프레스",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 9
+            },
+            {
+              "kg": 100,
+              "reps": 5
+            },
+            {
+              "kg": 120,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "120×5 (서브)",
+          "coachNote": "후반 조연으로 짧게 — B 약속 준수. 130/140 chase 없음."
+        }
+      ],
+      "source": "Rise album",
+      "style": "B-hybrid",
+      "vsPrescription": {
+        "structure": "푸시프레스→OHP→후면/팔로프→삼두→벤치 서브 · B 순서 합격",
+        "pushPress": "처방 55전후 보호 → 실제 100×1 · 상단↑",
+        "ohp": "40–50 예정 → 70–80 · 상단↑",
+        "bench": "120×5 짧게 · 조연 OK",
+        "lowerBody": "없음 · OK",
+        "backContext": "수 밤 가운뎃등 묵직 → 아침 OK 보고 후 세션"
+      },
+      "coachNote": "하이브리드 B 첫날 — 구조가 맞음: 주연 푸시프레스, 조연 벤치. 상체 강력함(벤치120×5)도 남김. 다만 등 보호 모드 중량은 무시하고 푸시프레스 100·OHP 80까지 — 아침 등이 괜찮았다면 ‘가능’, 밤에 가운뎃등 재발하면 과했음. 다음 Push는 푸시프레스 워킹을 80–90대에 두고 100은 소수. 금: 스내치 출력 + 행 감김(약 없이 쇄골 딱 재현)."
+    },
+    {
+      "id": "hyrox-2026-08-14",
+      "date": "2026-08-14",
+      "type": "Hyrox",
+      "title": "하이록스 세미나 · 듀오 컨디셔닝",
+      "format": "duo · 파트너 50/50 분담 · ~13분/라운드",
+      "durationMinEst": "~52",
+      "roundsPerBlock": 2,
+      "venue": "실내",
+      "blocks": [
+        {
+          "name": "블록 A — 로잉·런·런지",
+          "sequence": [
+            "로잉 40 kcal",
+            "달리기 420m",
+            "런지 80",
+            "달리기 420m"
+          ],
+          "rounds": 2,
+          "roundTimeMin": "~13"
+        },
+        {
+          "name": "블록 B — 파머스·런·버피점프",
+          "sequence": [
+            "파머스 워크 32kg × 80m",
+            "달리기 420m",
+            "버피 브로드 점프 40m",
+            "달리기 420m"
+          ],
+          "rounds": 2,
+          "roundTimeMin": "~13"
+        }
+      ],
+      "volumeEst": {
+        "teamRunMeters": 3360,
+        "teamRunKm": 3.36,
+        "teamLunges": 160,
+        "teamRowKcal": 80,
+        "farmersKg": 32,
+        "teamFarmersMeters": 160,
+        "teamBbjMeters": 80,
+        "individualNote": "50/50 분담 → 본인 런 ~1.7km · 런지 ~80 · 로잉 ~40kcal · 파머스 ~80m · BBJ ~40m (추정)"
+      },
+      "runFeedback": {
+        "surface": "실내",
+        "pace": "정확 측정 불가",
+        "last420mMaxHr": 180
+      },
+      "postSession": {
+        "feel": "그냥 힘듦",
+        "localizedSoreness": false,
+        "stiffness": false,
+        "specificPain": false
+      },
+      "context": {
+        "sameDay": "하이록스 세미나 — 예정 스내치 테크 대체",
+        "partner": "듀오 · 역할 반반"
+      },
+      "coachNote": "금 세미나+듀오 2×2. 마지막 420m HR180=마무리 강도↑ but 국소 불편·묵직 없음=깨끗한 회복 신호. 50/50 분담이라 절대 볼륨은 절반 — 106kg 기준 충분히 소화 가능. 스내치 출력+행 감김은 이번 주 화–금 중 재배치.",
+      "grade": "A- (세미나 day 대체 · 회복 양호 · HR180은 마지막 한 방만)"
+    },
+    {
+      "id": "tech-2026-08-18",
+      "date": "2026-08-18",
+      "type": "Pull",
+      "title": "Pull + 스내치 테크",
+      "grade": "A-",
+      "focus": "행 파워클린(의도) · 스내치 80 상단 확인",
+      "exercises": [
+        {
+          "name": "행 파워클린",
+          "sets": [
+            {
+              "note": "처방대로 파워 수신 — ‘올리는 느낌’ 모를 때 풀·래크 감각 분리용"
+            },
+            {
+              "note": "상단 중량에서 바가 파워 높이까지 안 올라와 스쿼트클린으로 자연 수신"
+            }
+          ],
+          "workingHighlight": "파워(의도) → 중량↑ 시 스쿼트",
+          "coachNote": "8/11부터 파워클린=의도적 드릴(수신 분리·감김 연습). 가벼운~중간 중량은 파워 OK. 무거워지면 바 높이가 파워 랙 아래 → 몸이 알아서 내려가 받음. ‘언더 늦음’이 아니라 중량-바궤도에 따른 자연 전환."
+        },
+        {
+          "name": "스내치",
+          "sets": [
+            {
+              "kg": 80,
+              "reps": 1,
+              "note": "딱 얹히지 않고 팔이 덜 펴져 마지막에 밀어 올림"
+            }
+          ],
+          "workingHighlight": "80 프레스아웃",
+          "coachNote": "오늘 상한은 80 확인까지만. 85+로 올리면 숫자만 커지고 락 품질은 더 흐려질 가능성 높아 중단 판단이 맞음."
+        }
+      ],
+      "source": "athlete report",
+      "vsPrescription": {
+        "clean": "행 파워클린 의도대로 · 상단 중량에서 스쿼트 수신=바 높이 한계",
+        "snatch": "80에서 턴오버-락 타이밍 이슈(프레스아웃)",
+        "decision": "스내치 상향 중단 · 적절"
+      },
+      "coachNote": "클린: 파워는 처방(8/11 ‘올리는 느낌’ 분리). 무거워지면 파워 높이 미달→스쿼트 수신은 정상 궤적, 타이밍 결함 아님. 스내치: 80 프레스아웃=락 한 박 늦음 — 본인 피드백과 일치. 다음 클린은 파워/스쿼트 혼재를 실패로 읽지 말 것."
+    },
+    {
+      "id": "gym-2026-08-19",
+      "date": "2026-08-19",
+      "type": "Leg",
+      "title": "오전 운동 · Leg",
+      "durationMin": 52,
+      "totalSets": 23,
+      "totalVolumeKg": 13115,
+      "caloriesKcal": 384,
+      "volumeDeltaKg": -690,
+      "exercises": [
+        {
+          "name": "스쿼트",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 5
+            },
+            {
+              "kg": 100,
+              "reps": 5
+            },
+            {
+              "kg": 140,
+              "reps": 3
+            },
+            {
+              "kg": 160,
+              "reps": 1
+            },
+            {
+              "kg": 170,
+              "reps": 1
+            },
+            {
+              "kg": 175,
+              "reps": 1
+            },
+            {
+              "kg": 180,
+              "reps": 1
+            },
+            {
+              "kg": 185,
+              "reps": 0,
+              "note": "실패 · 바닥에서 대퇴 수평 통과 후 조금 위까지 올라옴 (하프+, 쿼터는 아님)"
+            }
+          ],
+          "workingHighlight": "180×1 · 185×0",
+          "depthStandard": "풀스쿼트만 인정",
+          "coachNote": "8/12 180×1 재확인. 160은 ×2 예정이다가 대퇴직근(허벅지 위) 자극으로 싱글 전환 — 컨디션 셀프컷. 185 miss는 홀에서 죽은 게 아님 — 패러럴 통과 후 조금 위(하프+)에서 멈춤. RF+싱글 사다리 위 하이 스틱."
+        },
+        {
+          "name": "바벨 루마니안 데드리프트",
+          "sets": [
+            {
+              "kg": 100,
+              "reps": 8
+            },
+            {
+              "kg": 100,
+              "reps": 8
+            },
+            {
+              "kg": 100,
+              "reps": 8
+            },
+            {
+              "kg": 100,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "100×8×3 · 100×5",
+          "coachNote": "처방 80–90 · 100+ X 였으나 100×8 볼륨. 8/5 100×9×3 재진입. 햄·가운뎃등 목 아침 체크."
+        },
+        {
+          "name": "머신 레그 익스텐션",
+          "sets": [
+            {
+              "kg": 65,
+              "reps": 13
+            },
+            {
+              "kg": 70,
+              "reps": 11
+            },
+            {
+              "kg": 75,
+              "reps": 10
+            },
+            {
+              "kg": 80,
+              "reps": 9
+            }
+          ],
+          "workingHighlight": "80×9",
+          "coachNote": "8/12 워킹 80 유지·상단 확인."
+        },
+        {
+          "name": "머신 시티드 레그 컬",
+          "sets": [
+            {
+              "kg": 55,
+              "reps": 13
+            },
+            {
+              "kg": 60,
+              "reps": 13
+            },
+            {
+              "kg": 65,
+              "reps": 10
+            },
+            {
+              "kg": 70,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "65×10 · 70×5"
+        },
+        {
+          "name": "머신 힙 어덕션",
+          "sets": [
+            {
+              "kg": 70,
+              "reps": 13
+            },
+            {
+              "kg": 70,
+              "reps": 14
+            },
+            {
+              "kg": 70,
+              "reps": 12
+            }
+          ],
+          "workingHighlight": "70×14"
+        }
+      ],
+      "source": "Rise album",
+      "vsPrescription": {
+        "squat": "처방 160–175·180 X 는 PR190 대비 낮음. 실제 180×1·185×0 = 190 근처 복귀 시도(방향 맞음)",
+        "rdl": "80–90 · 100+ X → 실제 100×8×3+5 (이건 별개 초과)",
+        "jumpLunge": "없음 · OK"
+      },
+      "coachNote": "하체 말짱 보고대로 Leg 진행. 공식 PR 190(7/7)이라 180은 천장 아님 — 워킹/재확인. 185 miss는 ‘아직 네 무게 아님’이 아니라 화 저녁런+싱글 사다리 위 프로브 실패. 다음 Leg: 180 워킹 후 fresh 185, 붙으면 190 터치. RDL 100 볼륨은 햄·등만 따로 관리. 목 Push 과신전 주의.",
+      "grade": "B+ (190 경로로 올라감 / 185는 컨디션 이슈 · RDL100 볼륨 큼)"
+    },
+    {
+      "id": "gym-2026-08-20",
+      "date": "2026-08-20",
+      "type": "Push",
+      "title": "아침 운동 · Push 하이브리드 B",
+      "durationMin": 53,
+      "totalSets": 21,
+      "totalVolumeKg": 6080,
+      "caloriesKcal": 294,
+      "volumeDeltaKg": -992.5,
+      "exercises": [
+        {
+          "name": "푸시 프레스",
+          "sets": [
+            {
+              "kg": 40,
+              "reps": 7
+            },
+            {
+              "kg": 60,
+              "reps": 5
+            },
+            {
+              "kg": 80,
+              "reps": 3
+            },
+            {
+              "kg": 90,
+              "reps": 2
+            },
+            {
+              "kg": 95,
+              "reps": 1
+            }
+          ],
+          "workingHighlight": "90×2 · 95×1",
+          "coachNote": "주연 유지. 100 안 감 — 수 Leg(RDL100) 다음날 상단 컷 적절. 8/13은 100×1, 오늘은 95에서 멈춤."
+        },
+        {
+          "name": "바벨 오버헤드 프레스",
+          "sets": [
+            {
+              "kg": 50,
+              "reps": 7
+            },
+            {
+              "kg": 60,
+              "reps": 5
+            },
+            {
+              "kg": 70,
+              "reps": 3
+            },
+            {
+              "kg": 80,
+              "reps": 1
+            }
+          ],
+          "workingHighlight": "70×3 · 80×1",
+          "coachNote": "처방 75 워킹·80 X였으나 80은 싱글 터치만. 8/13 80×3보다 보수적."
+        },
+        {
+          "name": "로프 페이스 풀",
+          "sets": [
+            {
+              "kg": 15,
+              "reps": 20
+            },
+            {
+              "kg": 17.5,
+              "reps": 20
+            },
+            {
+              "kg": 20,
+              "reps": 17
+            },
+            {
+              "kg": 22.5,
+              "reps": 16
+            }
+          ],
+          "workingHighlight": "22.5×16"
+        },
+        {
+          "name": "케이블 팔로프 프레스",
+          "sets": [
+            {
+              "kg": 15,
+              "reps": 15
+            },
+            {
+              "kg": 17.5,
+              "reps": 12
+            },
+            {
+              "kg": 20,
+              "reps": 12
+            },
+            {
+              "kg": 20,
+              "reps": 10
+            }
+          ],
+          "workingHighlight": "20×12/10"
+        },
+        {
+          "name": "벤치 프레스",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 10
+            },
+            {
+              "kg": 100,
+              "reps": 5
+            },
+            {
+              "kg": 120,
+              "reps": 3
+            },
+            {
+              "kg": 120,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "120×3×2 (서브)",
+          "coachNote": "조연 짧게 · 130 chase 없음. 처방 120×5보다 횟수↓ — Leg 다음날 선택 OK."
+        }
+      ],
+      "source": "Rise album",
+      "style": "B-hybrid",
+      "vsPrescription": {
+        "structure": "PP→OHP→페이스풀→팔로프→벤치 서브 · B 순서 합격",
+        "pushPress": "워킹 80–90 · 상단 95 · 100 X · OK",
+        "ohp": "80×1 터치 (처방 80 X) — 싱글만",
+        "bench": "120×3×2 서브 · 130 X · OK",
+        "lowerBody": "없음 · OK"
+      },
+      "coachNote": "하이브리드 B 둘째날 — 8/13보다 상단을 한 단 내린 게 수 Leg 다음날답다. PP 95·OHP 80 싱글·벤치 120×3. 하체 0. 금: 스내치 70–85 락 타이밍 + 행 파워클린 감김. 헬스장 스내치 상한은 안전감.",
+      "grade": "A (B 구조 · 100/130 chase 없음 · Leg 다음날 보수)"
+    },
+    {
+      "id": "tech-2026-08-21",
+      "date": "2026-08-21",
+      "type": "Pull",
+      "title": "오전 운동 · 숏테크 (일 역도 전 감김)",
+      "durationMin": 48,
+      "totalSets": 20,
+      "totalVolumeKg": 6070,
+      "caloriesKcal": 315,
+      "volumeDeltaKg": 750,
+      "exercises": [
+        {
+          "name": "바벨 행 클린",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 5
+            },
+            {
+              "kg": 70,
+              "reps": 3
+            },
+            {
+              "kg": 80,
+              "reps": 3
+            },
+            {
+              "kg": 90,
+              "reps": 1
+            },
+            {
+              "kg": 80,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "80×3 · 90×1 · 80×3",
+          "loggedAs": "Rise 행클린 · 의도=감김(파워/행)",
+          "coachNote": "처방 80상한 → 90×1 터치 후 80으로 복귀. 감김 경로 유지 · 일 전 상단은 한 장만."
+        },
+        {
+          "name": "바벨 클린 풀",
+          "sets": [
+            {
+              "kg": 100,
+              "reps": 2
+            },
+            {
+              "kg": 100,
+              "reps": 3
+            },
+            {
+              "kg": 100,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "100×3×2",
+          "coachNote": "처방 70–80 → 실제 100. 수신 X라 부담은 덜하나 일 전 풀 자극은 있음."
+        },
+        {
+          "name": "바벨 스내치",
+          "sets": [
+            {
+              "kg": 40,
+              "reps": 3
+            },
+            {
+              "kg": 60,
+              "reps": 2
+            },
+            {
+              "kg": 60,
+              "reps": 2
+            },
+            {
+              "kg": 70,
+              "reps": 2
+            }
+          ],
+          "workingHighlight": "70×2",
+          "coachNote": "80 재시도 없음 — 핵심 하드노 준수. 70은 경계선이나 출력 chase 아님."
+        },
+        {
+          "name": "케이블 시티드 로우",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 11
+            },
+            {
+              "kg": 60,
+              "reps": 13
+            },
+            {
+              "kg": 60,
+              "reps": 10
+            },
+            {
+              "kg": 60,
+              "reps": 8
+            }
+          ],
+          "workingHighlight": "60×13"
+        },
+        {
+          "name": "머신 앱 스윙",
+          "sets": [
+            {
+              "kg": 15,
+              "reps": 25
+            },
+            {
+              "kg": 15,
+              "reps": 17
+            },
+            {
+              "kg": 15,
+              "reps": 18
+            },
+            {
+              "kg": 15,
+              "reps": 18
+            }
+          ],
+          "workingHighlight": "15×25"
+        }
+      ],
+      "source": "Rise album",
+      "vsPrescription": {
+        "hangClean": "80 워킹 + 90×1 · 처방보다 상단 한 장",
+        "cleanPull": "100×3 · 처방 70–80보다 ↑",
+        "snatch": "70×2 · 80 X · 핵심 OK",
+        "time": "48분 (목표 35–45)"
+      },
+      "coachNote": "일 역도 전 금 — 감김 메인·스내치 80 X. 본인: 클린 세컨풀 맞는 느낌 / 스내치 파워습관 재발 → 상향 안 함. 행90·풀100·시간은 숏테크보다 ↑. 토 완전 휴식. 일: 스내치는 깊이 게이트부터 · 용상은 금 세컨풀 감각 복제.",
+      "athleteFeedback": {
+        "clean": "느낌 괜찮음 · 세컨풀(2차) 맞는 감각 옴",
+        "snatch": "파워 습관 재발 느낌 → 상향 안 함"
+      },
+      "grade": "A- (감김 돌파 재현 / 스내치 자기진단 후 컷)"
+    },
+    {
+      "id": "oly-2026-08-23",
+      "date": "2026-08-23",
+      "type": "Olympic",
+      "title": "역도장 · 인상 91 / 용상 115 PR",
+      "location": "역도장(플랫폼)",
+      "timeOfDay": "오전/낮",
+      "durationMin": 132,
+      "source": "iCloud RISE 앨범 영상 + 프레임 분석",
+      "mediaId": "7452C152-2C88-4A08-8945-15230A01DD67",
+      "exercises": [
+        {
+          "name": "스내치",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 1,
+              "note": "풀스내치 · 깊은 수신"
+            },
+            {
+              "kg": 80,
+              "reps": 1
+            },
+            {
+              "kg": 85,
+              "reps": 1
+            },
+            {
+              "kg": 89,
+              "reps": 1,
+              "note": "OH 스쿼트 수신 · 여유"
+            },
+            {
+              "kg": 91,
+              "reps": 1,
+              "attempts": 4,
+              "note": "PR · 4트 성공 · 풀스내치"
+            }
+          ],
+          "workingHighlight": "91 PR (4트)",
+          "depthStandard": "풀스내치"
+        },
+        {
+          "name": "클린앤저크",
+          "sets": [
+            {
+              "kg": 110,
+              "reps": 1,
+              "note": "클린 수신 · 프론트 랙"
+            },
+            {
+              "kg": 115,
+              "reps": 1,
+              "attempts": 2,
+              "note": "PR · 2트 성공"
+            }
+          ],
+          "workingHighlight": "115 PR (2트)"
+        }
+      ],
+      "prUpdate": {
+        "snatch": {
+          "previousKg": 90,
+          "previousDate": "2026-08-09",
+          "newKg": 91,
+          "attempts": 4,
+          "confirmed": true
+        },
+        "cleanAndJerk": {
+          "previousKg": 110,
+          "previousSource": "Rise",
+          "newKg": 115,
+          "attempts": 2,
+          "confirmed": true
+        }
+      },
+      "formReview": {
+        "snatch": {
+          "good": [
+            "60–89 전 구간 풀스내치 · OH 스쿼트 깊이",
+            "91 PR도 파워 도망 없이 깊은 수신",
+            "8/9 92 miss(언더·락) 대비 커밋 개선"
+          ],
+          "fix": [
+            "91=4트 — 훈련 OK · 시합은 3트 내 opener/2nd 설계",
+            "90–92 구간 다음엔 2트 상한 유지"
+          ]
+        },
+        "cj": {
+          "good": [
+            "110·115 클린 = 깊은 스쿼트 수신 · 팔꿈치 전방",
+            "115 2트 성공 후 확실한 리커버리"
+          ],
+          "fix": [
+            "115 1트 영상 구간 있음 — 2트 전략(1트=커밋·2트=정리) 유지"
+          ]
+        }
+      },
+      "context": {
+        "priorDayRun": "토 08/22 아침 6.01km 8'50\" HR147",
+        "priorWeekTech": "금 세컨풀 OK · 헬스장 스내치 파워 자기컷"
+      },
+      "athleteFeedback": "토 아침런 맞음 · 인상·용상 PR",
+      "eveningAfter": "실외 3.13km 7'17\" HR153",
+      "coachNote": "앨범 영상(2:12) 확인 — **인상 91(4트) · 용상 115(2트)** 듀얼 PR. 60→89 풀스내치 사다리·깊이 게이트 성공. 91=8/9 90 다음 +1 · 파워습관 없이 수신. 용상 110 통과→115 2트. 토 아침 6km 후에도 PR = 플랫폼·기술 우선. 저녁 7'17\"런은 역도일 패턴(회복 X).",
+      "grade": "A+ (듀얼 PR · 풀스내치 확인)"
+    },
+    {
+      "id": "gym-2026-08-24",
+      "date": "2026-08-24",
+      "type": "Push",
+      "title": "점심 운동 · Push 하이브리드 B (역도 다음날)",
+      "timeOfDay": "12:35",
+      "durationMin": 46,
+      "totalSets": 24,
+      "totalVolumeKg": 5715,
+      "caloriesKcal": 321,
+      "volumeDeltaKg": 510,
+      "exercises": [
+        {
+          "name": "푸시 프레스",
+          "sets": [
+            {
+              "kg": 40,
+              "reps": 7
+            },
+            {
+              "kg": 60,
+              "reps": 5
+            },
+            {
+              "kg": 70,
+              "reps": 3
+            },
+            {
+              "kg": 80,
+              "reps": 2
+            }
+          ],
+          "workingHighlight": "80×2",
+          "coachNote": "처방 상한 80×2 준수 · 90/95 X — 어제 OH 잔여 관리 OK"
+        },
+        {
+          "name": "바벨 오버헤드 프레스",
+          "sets": [
+            {
+              "kg": 40,
+              "reps": 6
+            },
+            {
+              "kg": 50,
+              "reps": 5
+            },
+            {
+              "kg": 60,
+              "reps": 4
+            },
+            {
+              "kg": 70,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "70×3",
+          "coachNote": "처방 60 워킹·80 X → 실제 70×3. 한 단만 위. 치명적 X"
+        },
+        {
+          "name": "벤치 프레스",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 10
+            },
+            {
+              "kg": 100,
+              "reps": 7
+            },
+            {
+              "kg": 120,
+              "reps": 4
+            },
+            {
+              "kg": 130,
+              "reps": 2
+            },
+            {
+              "kg": 140,
+              "reps": 1
+            },
+            {
+              "kg": 145,
+              "reps": 1
+            },
+            {
+              "kg": 150,
+              "reps": 1,
+              "note": "싱글 PR · 이전 145 / 150 miss 기록"
+            }
+          ],
+          "workingHighlight": "150×1 PR",
+          "coachNote": "처방=120×4×2 · 130+ X. 실제=싱글 사다리→150 — 역도 다음날 회복 Push가 아닌 PR 데이. 실력 신호는 A, 타이밍은 C."
+        },
+        {
+          "name": "로프 페이스 풀",
+          "sets": [
+            {
+              "kg": 15,
+              "reps": 20
+            },
+            {
+              "kg": 17.5,
+              "reps": 20
+            },
+            {
+              "kg": 20,
+              "reps": 19
+            },
+            {
+              "kg": 20,
+              "reps": 16
+            }
+          ],
+          "workingHighlight": "20×19"
+        },
+        {
+          "name": "데드버그",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 10
+            },
+            {
+              "kg": 0,
+              "reps": 10
+            },
+            {
+              "kg": 0,
+              "reps": 10
+            },
+            {
+              "kg": 0,
+              "reps": 10
+            },
+            {
+              "kg": 0,
+              "reps": 10
+            }
+          ],
+          "workingHighlight": "총 50회"
+        }
+      ],
+      "source": "Rise album",
+      "albumGuids": [
+        "C1DA3871",
+        "A93BB1EB"
+      ],
+      "vsPrescription": {
+        "pushPress": "80×2 상한 · OK",
+        "ohp": "60→70×3 · 약간↑",
+        "bench": "120 유지 → 실제 150 PR · 하드노 위반",
+        "hardNo": "런·스내치·데드 X · OK",
+        "time": "46분 (목표 ~45)"
+      },
+      "coachNote": "구조(PP→OHP→벤치→페이스풀→데드버그)는 하이브리드 B 유지. PP 80 컷=어제 스내치 잔여 배려. **벤치 150×1** = 싱글 PR(기존 145·150 miss). 다만 처방은 역도 다음날 라이트(120×4×2)였음 — 신경계·어깨 여유를 깎아 화 Pull/수 Leg에 영향 가능. 다음 Push는 다시 서브맥스(130×4–5)로 복귀.",
+      "grade": "B+ (150 PR · 타이밍/처방 위반)",
+      "athleteSignal": "역도 PR 다음날에도 벤치 150 가능 — 상체 여력 강함"
+    },
+    {
+      "id": "gym-2026-08-25",
+      "date": "2026-08-25",
+      "type": "Pull",
+      "title": "오전 운동 · Pull (데드 헤비 · 테크 스킵)",
+      "timeOfDay": "12:43",
+      "durationMin": 49,
+      "totalSets": 23,
+      "totalVolumeKg": 8400,
+      "caloriesKcal": 357,
+      "volumeDeltaKg": 1370,
+      "exercises": [
+        {
+          "name": "데드리프트",
+          "sets": [
+            {
+              "kg": 100,
+              "reps": 5
+            },
+            {
+              "kg": 140,
+              "reps": 5
+            },
+            {
+              "kg": 160,
+              "reps": 3
+            },
+            {
+              "kg": 180,
+              "reps": 2
+            },
+            {
+              "kg": 190,
+              "reps": 1
+            },
+            {
+              "kg": 195,
+              "reps": 0,
+              "note": "miss"
+            }
+          ],
+          "workingHighlight": "190×1 · 195×0",
+          "coachNote": "공식 PR 200 대비 190 재확인. 처방 hardNo 데드160+ 위반 — 숏테크 날 헤비 데드."
+        },
+        {
+          "name": "풀 업",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 6
+            },
+            {
+              "kg": 0,
+              "reps": 2
+            },
+            {
+              "kg": 0,
+              "reps": 5
+            },
+            {
+              "kg": 0,
+              "reps": 5
+            },
+            {
+              "kg": 0,
+              "reps": 4
+            }
+          ],
+          "workingHighlight": "총 22회"
+        },
+        {
+          "name": "케이블 시티드 로우",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 13
+            },
+            {
+              "kg": 65,
+              "reps": 12
+            },
+            {
+              "kg": 70,
+              "reps": 10
+            },
+            {
+              "kg": 75,
+              "reps": 8
+            }
+          ],
+          "workingHighlight": "75×8"
+        },
+        {
+          "name": "랫 풀 다운",
+          "sets": [
+            {
+              "kg": 65,
+              "reps": 11
+            },
+            {
+              "kg": 70,
+              "reps": 9
+            },
+            {
+              "kg": 75,
+              "reps": 7
+            },
+            {
+              "kg": 80,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "80×3"
+        },
+        {
+          "name": "이지 바 컬",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 16
+            },
+            {
+              "kg": 20,
+              "reps": 16
+            },
+            {
+              "kg": 20,
+              "reps": 15
+            },
+            {
+              "kg": 20,
+              "reps": 13
+            }
+          ],
+          "workingHighlight": "20×16"
+        }
+      ],
+      "source": "Rise album",
+      "albumGuids": [
+        "867DAA44",
+        "A4F656B8"
+      ],
+      "vsPrescription": {
+        "hangClean": "없음 · 처방 메인 스킵",
+        "snatch": "없음 · 숏테크 스킵",
+        "deadlift": "190×1 · 처방 데드160+ X 위반",
+        "back": "로우·랫·풀업 · OK (볼륨↑)",
+        "time": "49분"
+      },
+      "coachNote": "처방=행 감김+스내치65+등 라이트. 실제=**풀 Pull + 데드 190**. 등·이두는 깔끔. 190 make/195 miss=데드 엔진 살아 있음(PR200). 다만 일 역도(8/30) 전 주 화에 테크 0·헤비 힌지 = 후사슬·신경계를 수 Leg·금 테크 전에 소모. 수: 스쿼트 보수·RDL↓. 금에 감김 반드시.",
+      "grade": "B (데드190 · 테크 스킵)"
+    },
+    {
+      "id": "gym-2026-08-31",
+      "date": "2026-08-31",
+      "type": "Push",
+      "title": "오전 운동",
+      "durationMin": 54,
+      "totalSets": 26,
+      "totalVolumeKg": 7939,
+      "exercises": [
+        {
+          "name": "프레스",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 10
+            },
+            {
+              "kg": 100,
+              "reps": 7
+            },
+            {
+              "kg": 120,
+              "reps": 4
+            },
+            {
+              "kg": 140,
+              "reps": 1
+            },
+            {
+              "kg": 24,
+              "reps": 17
+            },
+            {
+              "kg": 26,
+              "reps": 16
+            },
+            {
+              "kg": 28,
+              "reps": 15
+            },
+            {
+              "kg": 30,
+              "reps": 12
+            },
+            {
+              "kg": 145,
+              "reps": 1
+            },
+            {
+              "kg": 150,
+              "reps": 1
+            },
+            {
+              "kg": 155,
+              "reps": 0
+            },
+            {
+              "kg": 120,
+              "reps": 4
+            },
+            {
+              "kg": 32,
+              "reps": 10
+            },
+            {
+              "kg": 120,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "150×1"
+        },
+        {
+          "name": "바벨 바벨 바벨 오버헤드 프레스",
+          "sets": [
+            {
+              "kg": 50,
+              "reps": 7
+            },
+            {
+              "kg": 60,
+              "reps": 3
+            },
+            {
+              "kg": 70,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "70×3"
+        },
+        {
+          "name": "케이블 미들 플라이",
+          "sets": [
+            {
+              "kg": 7.5,
+              "reps": 20
+            },
+            {
+              "kg": 7.5,
+              "reps": 20
+            },
+            {
+              "kg": 7.5,
+              "reps": 20
+            },
+            {
+              "kg": 7.5,
+              "reps": 20
+            }
+          ],
+          "workingHighlight": "7.5×20×4"
+        },
+        {
+          "name": "로프 페이스 풀",
+          "sets": [
+            {
+              "kg": 15,
+              "reps": 20
+            },
+            {
+              "kg": 17.5,
+              "reps": 20
+            },
+            {
+              "kg": 20,
+              "reps": 14
+            },
+            {
+              "kg": 20,
+              "reps": 15
+            }
+          ],
+          "workingHighlight": "20×15"
+        }
+      ],
+      "source": "album-backfill",
+      "coachNote": "처방=Push 라이트(150 X). 실제=벤치 150×1·155×0 · OHP 70×3 · 미들플라이 7.5×20×4(선수 확인) · 페이스풀. PP 없음."
+    },
+    {
+      "id": "gym-2026-09-01",
+      "date": "2026-09-01",
+      "type": "Olympic",
+      "title": "오전 운동",
+      "durationMin": 51,
+      "totalSets": 21,
+      "totalVolumeKg": 4645,
+      "exercises": [
+        {
+          "name": "행 파워클린",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 3
+            },
+            {
+              "kg": 70,
+              "reps": 2
+            },
+            {
+              "kg": 80,
+              "reps": 3
+            },
+            {
+              "kg": 90,
+              "reps": 2
+            },
+            {
+              "kg": 95,
+              "reps": 1
+            }
+          ],
+          "workingHighlight": "95×1"
+        },
+        {
+          "name": "바벨 스내치",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 2
+            },
+            {
+              "kg": 60,
+              "reps": 2
+            },
+            {
+              "kg": 65,
+              "reps": 2
+            },
+            {
+              "kg": 70,
+              "reps": 1
+            }
+          ],
+          "workingHighlight": "70×1"
+        },
+        {
+          "name": "풀 업",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 5
+            }
+          ],
+          "workingHighlight": "총 5회"
+        },
+        {
+          "name": "머신 시티드 로우",
+          "note": "편측 플레이트",
+          "sets": [
+            {
+              "kg": 0,
+              "reps": 5
+            },
+            {
+              "kg": 40,
+              "reps": 15
+            },
+            {
+              "kg": 50,
+              "reps": 12
+            },
+            {
+              "kg": 60,
+              "reps": 9
+            },
+            {
+              "kg": 60,
+              "reps": 6
+            }
+          ],
+          "workingHighlight": "편측 60×9"
+        },
+        {
+          "name": "로프 페이스 풀",
+          "sets": [
+            {
+              "kg": 15,
+              "reps": 20
+            },
+            {
+              "kg": 17.5,
+              "reps": 20
+            },
+            {
+              "kg": 20,
+              "reps": 16
+            },
+            {
+              "kg": 20,
+              "reps": 15
+            }
+          ],
+          "workingHighlight": "20×16"
+        }
+      ],
+      "source": "album-backfill",
+      "coachNote": "처방=행감김·스내치65·데드X. 행파워클린 **95×1**(선수 확인·스내치 오분류 수정). 스내치 70×1=터치만. 시티드로우=편측. 데드 없음."
+    },
+    {
+      "id": "gym-2026-09-02",
+      "date": "2026-09-02",
+      "type": "Leg",
+      "title": "낮 운동 + 저녁 런",
+      "durationMin": 53,
+      "totalSets": 19,
+      "totalVolumeKg": 8800,
+      "exercises": [
+        {
+          "name": "바벨 스쿼트",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 5
+            },
+            {
+              "kg": 100,
+              "reps": 5
+            },
+            {
+              "kg": 140,
+              "reps": 2
+            },
+            {
+              "kg": 150,
+              "reps": 2
+            },
+            {
+              "kg": 160,
+              "reps": 1
+            },
+            {
+              "kg": 170,
+              "reps": 1
+            },
+            {
+              "kg": 175,
+              "reps": 1
+            },
+            {
+              "kg": 180,
+              "reps": 1
+            }
+          ],
+          "workingHighlight": "180×1"
+        },
+        {
+          "name": "덤벨 고블릿 스쿼트",
+          "sets": [
+            {
+              "kg": 24,
+              "reps": 20
+            },
+            {
+              "kg": 24,
+              "reps": 20
+            },
+            {
+              "kg": 24,
+              "reps": 20
+            },
+            {
+              "kg": 24,
+              "reps": 20
+            }
+          ],
+          "workingHighlight": "24×20×4",
+          "note": "holdingStrength · 템플릿 12–15 대비 rep↑"
+        },
+        {
+          "name": "머신 힙 쓰러스트",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 15
+            }
+          ],
+          "workingHighlight": "20×15",
+          "note": "OCR 1세트만 — 추가 세트 있으면 보정"
+        },
+        {
+          "name": "머신 시티드 레그 컬",
+          "sets": [
+            {
+              "kg": 50,
+              "reps": 15
+            },
+            {
+              "kg": 55,
+              "reps": 15
+            },
+            {
+              "kg": 60,
+              "reps": 14
+            },
+            {
+              "kg": 65,
+              "reps": 12
+            }
+          ],
+          "workingHighlight": "65×12"
+        }
+      ],
+      "eveningRun": {
+        "distanceKm": 3,
+        "note": "선수 보고 ~3km · Health 세부 대기"
+      },
+      "source": "album-backfill",
+      "coachNote": "바벨 스쿼트 180×1=처방 상단 달성 · 185 X. 고블릿 24×20×4=버티는힘 병행 but rep 과다(템플릿12–15). 힙쓰러스트 OCR 빈약. 저녁 ~3km. 9/6 역도 4일 전 — 목 휴식이 맞음."
+    }
+  ]
+}

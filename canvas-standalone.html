@@ -1,0 +1,3699 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#eef2f6">
+  <title>트레이닝 캔버스</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Sora:wght@600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --bg: #0f1419;
+  --surface: #1a2332;
+  --surface-2: #243044;
+  --border: #2d3a4f;
+  --text: #e8edf4;
+  --text-muted: #8b9cb3;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --success: #22c55e;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --radius: 12px;
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 1rem 3rem;
+}
+
+.header {
+  margin-bottom: 1.5rem;
+}
+
+.header__brand h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin: 0.25rem 0 1rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tab {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.15s;
+}
+
+.tab:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.tab.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.nav-lab {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.nav-lab a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+}
+
+.nav-lab a:hover {
+  border-color: var(--accent);
+}
+
+.panel {
+  display: none;
+}
+
+.panel.active {
+  display: block;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.card h2 {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card-header h2 {
+  margin: 0;
+}
+
+.session-meta {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+input,
+select,
+textarea,
+output {
+  font: inherit;
+  color: var(--text);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.6rem 0.75rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.full-width {
+  margin-bottom: 0.75rem;
+}
+
+.computed output {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.1rem;
+  font: inherit;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+
+.btn-ghost {
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-ghost:hover {
+  border-color: var(--accent);
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: #fff;
+}
+
+.file-btn {
+  display: inline-flex;
+  align-items: center;
+}
+
+.session-preview {
+  font-size: 0.9rem;
+}
+
+.session-preview.empty {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.session-entry {
+  padding: 0.75rem;
+  background: var(--surface-2);
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.session-entry__meta {
+  flex: 1;
+}
+
+.session-entry__lift {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+}
+
+.session-entry__detail {
+  margin-top: 0.25rem;
+}
+
+.session-entry__memo {
+  margin-top: 0.25rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge-success {
+  background: rgba(34, 197, 94, 0.2);
+  color: var(--success);
+}
+
+.badge-fail {
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--danger);
+}
+
+.badge-partial {
+  background: rgba(245, 158, 11, 0.2);
+  color: var(--warning);
+}
+
+.btn-remove {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 0.25rem;
+}
+
+.btn-remove:hover {
+  color: var(--danger);
+}
+
+.filters {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.history-day {
+  margin-bottom: 1.25rem;
+}
+
+.history-day__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.history-day__date {
+  font-weight: 600;
+}
+
+.history-day__condition {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.stat-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.weekly-prs,
+.weekly-conditions {
+  font-size: 0.9rem;
+}
+
+.weekly-prs p,
+.weekly-conditions p {
+  margin: 0.35rem 0;
+}
+
+.guide-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.guide-list li {
+  margin-bottom: 0.35rem;
+}
+
+.hint {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin: 0 0 1rem;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 2rem;
+}
+
+@media (max-width: 600px) {
+  .session-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+/* Training Lab — light athletic editorial theme */
+
+body:has(.lab) {
+  --bg: #eef2f6;
+  --bg-accent: #dfe8f1;
+  --surface: #ffffff;
+  --surface-2: #f7f9fc;
+  --border: #d5dde8;
+  --text: #12151c;
+  --text-muted: #5a6573;
+  --accent: #0f766e;
+  --accent-hover: #0d9488;
+  --accent-soft: rgba(15, 118, 110, 0.12);
+  --success: #047857;
+  --danger: #be123c;
+  --warning: #b45309;
+  --radius: 14px;
+  --shadow: 0 1px 0 rgba(18, 21, 28, 0.04);
+  --font-display: "Syne", "Outfit", sans-serif;
+  --font-body: "Outfit", system-ui, sans-serif;
+  --font-number: "Sora", "Outfit", system-ui, sans-serif;
+  font-family: var(--font-body);
+  background:
+    radial-gradient(1200px 500px at 10% -10%, #d9ebe8 0%, transparent 55%),
+    radial-gradient(900px 420px at 100% 0%, #dce6f4 0%, transparent 50%),
+    linear-gradient(180deg, #f5f7fa 0%, #eef2f6 45%, #e8eef5 100%);
+  color: var(--text);
+  background-attachment: fixed;
+}
+
+body:has(.lab) .app { max-width: 960px; }
+
+body:has(.lab) .header__brand h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 4vw, 2.35rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+body:has(.lab) .canvas-tabs {
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+}
+body:has(.lab) .tab {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  color: var(--text-muted);
+  padding: 0.65rem 0.9rem;
+  margin-bottom: -1px;
+  font-weight: 600;
+}
+body:has(.lab) .tab:hover { color: var(--text); border-color: transparent; }
+body:has(.lab) .tab.active {
+  background: transparent;
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+body:has(.lab) .card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+body:has(.lab) .card h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+body:has(.lab) .chip { border-radius: 8px; }
+body:has(.lab) .chip.active { background: var(--accent); border-color: var(--accent); }
+
+/* Dashboard hierarchy */
+.dash-hero { display: grid; gap: 0.85rem; margin-bottom: 0.25rem; }
+@media (min-width: 720px) {
+  .dash-hero { grid-template-columns: 1.35fr 1fr 1fr; }
+}
+.hero-metric {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.15rem 1rem;
+  animation: dash-rise 0.55s ease both;
+}
+.hero-metric:nth-child(2) { animation-delay: 0.07s; }
+.hero-metric:nth-child(3) { animation-delay: 0.14s; }
+@keyframes dash-rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-metric, .story-card, .support-card { animation: none; }
+}
+.hero-metric--primary {
+  background: linear-gradient(145deg, rgba(15, 118, 110, 0.11) 0%, #fff 48%), var(--surface);
+  border-color: #b7d6d2;
+}
+.hero-metric__label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+.hero-metric__value {
+  font-family: var(--font-number);
+  font-size: clamp(2.15rem, 5.2vw, 2.7rem);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "ss01" 1;
+}
+.hero-metric__unit {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-left: 0.15rem;
+}
+.hero-metric__delta {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.86rem;
+  font-weight: 650;
+}
+.hero-metric__delta.up { color: var(--success); }
+.hero-metric__delta.down { color: var(--danger); }
+.hero-metric__delta.flat { color: var(--text-muted); }
+.hero-metric__note {
+  margin: 0.4rem 0 0;
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+}
+.dash-section-title {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 1.4rem 0 0.65rem;
+}
+.dash-section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.35rem 1rem;
+  margin: 1.4rem 0 0.65rem;
+}
+.dash-section-head .dash-section-title { margin: 0; }
+.dash-section-hint {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+.hero-metric__pick {
+  display: block;
+  margin: -0.15rem 0 0.45rem;
+}
+.hero-metric__pick select {
+  width: 100%;
+  appearance: none;
+  background: transparent
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%235a6573' d='M1 1l4 4 4-4'/%3E%3C/svg%3E")
+    no-repeat right 0.1rem center;
+  border: none;
+  border-bottom: 1px dashed var(--border);
+  border-radius: 0;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.15rem 1.1rem 0.25rem 0;
+  cursor: pointer;
+}
+.hero-metric__pick select:focus {
+  outline: none;
+  border-bottom-color: var(--accent);
+  color: var(--accent);
+}
+.progress-dual {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 0.65rem;
+}
+@media (min-width: 720px) {
+  .progress-dual { grid-template-columns: 1fr 1fr; }
+}
+.progress-pane h3 {
+  margin: 0 0 0.15rem;
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+.progress-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+@media (min-width: 560px) {
+  .progress-stats { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+.progress-stat {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.55rem 0.65rem;
+}
+.progress-stat span {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+.progress-stat strong {
+  display: block;
+  margin-top: 0.15rem;
+  font-family: var(--font-number);
+  font-size: 1.05rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+.progress-stat em {
+  display: block;
+  margin-top: 0.15rem;
+  font-style: normal;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+.progress-stat em.up { color: var(--success); }
+.progress-stat em.down { color: var(--danger); }
+.progress-explorer {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.05rem 1.1rem;
+  animation: dash-rise 0.55s ease both;
+}
+.progress-explorer__head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.progress-select {
+  display: grid;
+  gap: 0.3rem;
+  flex: 1 1 220px;
+  min-width: 0;
+}
+.progress-select span {
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.progress-select select {
+  width: 100%;
+  appearance: none;
+  background: var(--surface-2)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%235a6573' d='M1 1l5 5 5-5'/%3E%3C/svg%3E")
+    no-repeat right 0.85rem center;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1.02rem;
+  font-weight: 600;
+  padding: 0.75rem 2.2rem 0.75rem 0.9rem;
+  cursor: pointer;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
+}
+.progress-select select:focus {
+  outline: 2px solid var(--accent-soft);
+  border-color: var(--accent);
+}
+.progress-select select option {
+  font-weight: 500;
+}
+.progress-explorer__hint {
+  margin: 0.35rem 0 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+.metric-toggle {
+  display: inline-flex;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.2rem;
+  gap: 0.15rem;
+}
+.metric-btn {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.45rem 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.metric-btn.active {
+  background: var(--surface);
+  color: var(--accent);
+  box-shadow: var(--shadow);
+}
+.progress-presets {
+  margin-top: 0.75rem;
+  margin-bottom: 0.15rem;
+}
+.progress-presets .chip {
+  font-size: 0.78rem;
+  padding: 0.3rem 0.7rem;
+}
+.progress-meta {
+  margin: 0.65rem 0 0;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+.progress-meta strong {
+  color: var(--text);
+  font-family: var(--font-display);
+}
+.chart-box--tall .chart-svg {
+  min-height: 210px;
+}
+.dash-story { display: grid; gap: 0.85rem; }
+@media (min-width: 800px) {
+  .dash-story { grid-template-columns: 1.35fr 0.65fr; }
+}
+.story-card, .support-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.05rem 1.05rem;
+  animation: dash-rise 0.6s ease both;
+  animation-delay: 0.18s;
+}
+.support-card { animation-delay: 0.28s; }
+.support-card:nth-child(2) { animation-delay: 0.34s; }
+.story-card h2, .support-card h3 {
+  margin: 0 0 0.15rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+.support-card h3 { font-size: 0.95rem; }
+.story-card .verdict {
+  margin: 0.6rem 0 0;
+  padding: 0.55rem 0.7rem;
+  background: var(--accent-soft);
+  border-radius: 8px;
+  color: #0f4f4a;
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.story-card .verdict--warn {
+  background: rgba(190, 18, 60, 0.08);
+  color: #9f1239;
+}
+.support-grid { display: grid; gap: 0.85rem; }
+@media (min-width: 720px) {
+  .support-grid { grid-template-columns: 1fr 1fr; }
+}
+.coach-strip {
+  margin-top: 0.85rem;
+  padding: 0.9rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.coach-strip strong { font-family: var(--font-display); }
+.archive-panel { margin-top: 0.85rem; }
+.archive-panel > summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 0.5rem 0;
+}
+body:has(.lab) .kpi { background: var(--surface-2); }
+body:has(.lab) .kpi strong { font-family: var(--font-number); font-variant-numeric: tabular-nums; }
+body:has(.lab) .tl-card--pull { border-left-color: #1d4ed8; }
+body:has(.lab) .tl-card--push { border-left-color: #be123c; }
+body:has(.lab) .tl-card--leg { border-left-color: #0f766e; }
+body:has(.lab) .tl-card--run { border-left-color: #b45309; }
+body:has(.lab) .insight-trend { border-left-color: var(--accent); }
+body:has(.lab) .album-month { background: var(--surface-2); }
+body:has(.lab) .album-month strong { color: var(--text); }
+
+
+/* Training Lab — canvas + anatomy */
+
+.lab .eyebrow {
+  margin: 0 0 0.35rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.lab .eyebrow a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.lab .eyebrow a:hover {
+  text-decoration: underline;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+
+.chip {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.chip.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.profile-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 720px) {
+  .profile-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.stat-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.pill {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.45rem 0.7rem;
+  min-width: 5.5rem;
+}
+
+.pill span {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.pill strong {
+  font-size: 1rem;
+}
+
+.goals-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (min-width: 720px) {
+  .goals-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.goal-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.9rem;
+}
+
+.goal-card__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.goal-card h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.progress {
+  height: 8px;
+  background: var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 0.6rem 0 0.35rem;
+}
+
+.progress i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #22c55e, #3b82f6);
+}
+
+.weekend-plan {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.weekend-item {
+  display: grid;
+  grid-template-columns: 2.5rem 7rem 1fr;
+  gap: 0.5rem;
+  padding: 0.55rem 0.7rem;
+  background: var(--surface-2);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+.highlights {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.hl-item {
+  display: grid;
+  grid-template-columns: 7rem 1fr auto;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.5rem 0.65rem;
+  background: var(--surface-2);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-size: 0.85rem;
+}
+
+.hl-item--up {
+  border-color: rgba(34, 197, 94, 0.45);
+}
+
+.hl-date {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.timeline {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.tl-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.85rem;
+}
+
+.tl-card--pull { border-left: 3px solid #60a5fa; }
+.tl-card--push { border-left: 3px solid #f87171; }
+.tl-card--leg { border-left: 3px solid #c084fc; }
+.tl-card--run { border-left: 3px solid #34d399; }
+
+.tl-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.55rem;
+  font-size: 0.9rem;
+}
+
+.badge-cat {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.tl-ex-list {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.tl-ex {
+  padding: 0.4rem 0.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.tl-ex__name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.tl-ex__sets {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  word-break: break-word;
+}
+
+.tl-ex__sets em {
+  color: var(--success);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.up { color: var(--success); }
+
+.tl-meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Anatomy */
+.legend-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0.5rem 0;
+  font-size: 0.85rem;
+}
+
+.swatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  margin-right: 0.35rem;
+  vertical-align: middle;
+}
+
+.swatch-primary { background: #f87171; }
+.swatch-secondary { background: #fbbf24; }
+.swatch-muted { background: #3a4a63; }
+
+.exercise-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.exercise-card__top {
+  display: grid;
+  grid-template-columns: 1fr 110px;
+  gap: 0.75rem;
+  align-items: start;
+  margin-bottom: 0.75rem;
+}
+
+.exercise-card__top--wide {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 720px) {
+  .exercise-card__top--wide {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 1.25rem;
+    align-items: center;
+  }
+}
+
+.meta-row {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 0.85rem;
+}
+
+@media (min-width: 560px) {
+  .meta-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.meta-label {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.2rem;
+}
+
+.ex-plane,
+.ex-chain {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+.body-map--lg {
+  justify-self: center;
+  width: min(100%, 280px);
+}
+
+.body-map--lg .body-map-svg {
+  max-width: 280px;
+}
+
+.callout--exam {
+  background: rgba(34, 197, 94, 0.1);
+  border-color: rgba(34, 197, 94, 0.35);
+}
+
+.oi-list,
+.innervation-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+}
+
+.oi-list li {
+  margin-bottom: 0.45rem;
+}
+
+.ex-name {
+  margin: 0.35rem 0 0;
+  font-size: 1.25rem;
+}
+
+.ex-en {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.ex-pattern {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+  color: #93c5fd;
+}
+
+.split-2 {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0.75rem 0;
+}
+
+@media (min-width: 600px) {
+  .split-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.exercise-card h3 {
+  margin: 0.75rem 0 0.35rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.muscle-list,
+.joint-list,
+.cue-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+}
+
+.callout {
+  margin: 0.85rem 0;
+  padding: 0.75rem;
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  border-radius: 10px;
+}
+
+.callout p {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+}
+
+.level-note {
+  margin: 0.75rem 0 0;
+  font-size: 0.9rem;
+  color: #86efac;
+}
+
+.body-map-svg {
+  width: 100%;
+  max-width: 110px;
+}
+
+.body-map-svg svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.body-map-svg .m-off {
+  fill: #3a4a63;
+  opacity: 0.35;
+}
+
+.body-map-svg .m-on {
+  fill: #f87171;
+  opacity: 0.95;
+}
+
+.body-map-svg .m-sec {
+  fill: #fbbf24;
+  opacity: 0.85;
+}
+
+.nav-lab {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.nav-lab a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+}
+
+.nav-lab a:hover {
+  border-color: var(--accent);
+}
+
+/* Canvas panels reuse weightlifting tab panels */
+.lab main > .panel {
+  display: none;
+}
+
+.lab main > .panel.active {
+  display: block;
+}
+
+.split-panels {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 800px) {
+  .split-panels {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.week-checklist {
+  display: grid;
+  gap: 0.55rem;
+  margin-top: 0.75rem;
+}
+
+.check-item {
+  display: grid;
+  grid-template-columns: 2rem 1fr auto;
+  gap: 0.75rem;
+  align-items: start;
+  padding: 0.85rem 0.9rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.check-item p,
+.check-item .check-plan {
+  margin: 0.2rem 0 0;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.check-item--todo {
+  border-color: #b7d6d2;
+  background: linear-gradient(145deg, rgba(15, 118, 110, 0.06), var(--surface-2));
+}
+
+.check-item--done {
+  border-color: rgba(4, 120, 87, 0.35);
+  background: rgba(4, 120, 87, 0.06);
+  opacity: 0.92;
+}
+
+.check-item--skip {
+  opacity: 0.7;
+}
+
+.check-box {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 0.15rem;
+  border-radius: 999px;
+  border: 2px solid var(--border);
+  display: grid;
+  place-items: center;
+  font-size: 0.75rem;
+  color: var(--success);
+}
+
+.check-item--todo .check-box {
+  border-color: var(--accent);
+}
+
+.check-item--done .check-box {
+  border-color: var(--success);
+  background: rgba(4, 120, 87, 0.15);
+}
+
+.check-status {
+  font-size: 0.75rem;
+  font-weight: 650;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+.check-item--todo .check-status {
+  color: var(--accent);
+}
+
+.check-points {
+  list-style: none;
+  margin: 0.55rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.28rem;
+}
+
+.check-point {
+  display: flex;
+  gap: 0.4rem;
+  align-items: flex-start;
+  font-size: 0.84rem;
+  color: var(--text);
+  line-height: 1.35;
+}
+
+.check-point__mark {
+  color: var(--accent);
+  font-weight: 700;
+  min-width: 0.9rem;
+}
+
+.check-point.is-done {
+  color: var(--text-muted);
+}
+
+.check-point.is-done .check-point__mark {
+  color: var(--success);
+}
+
+.check-actual {
+  margin: 0.45rem 0 0 !important;
+  font-size: 0.8rem !important;
+  color: var(--text-muted);
+}
+
+.week-skeleton {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.skel-day {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 0.15rem 0.75rem;
+  padding: 0.65rem 0.75rem;
+  background: var(--surface-2);
+  border-radius: 10px;
+  border-left: 3px solid var(--border);
+}
+
+.skel-day strong {
+  grid-row: span 2;
+  align-self: center;
+}
+
+.skel-focus {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.skel-day--snatch {
+  border-left-color: #34d399;
+}
+
+.roadmap {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.road-item {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 0.65rem;
+  padding: 0.7rem;
+  background: var(--surface-2);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.road-item p {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+}
+
+.road-phase {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: var(--border);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.road-item--active {
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+.road-item--active .road-phase {
+  background: var(--accent);
+  color: #fff;
+}
+
+.road-item--upcoming {
+  opacity: 0.75;
+}
+
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+@media (min-width: 700px) {
+  .kpi-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .kpi-row {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.kpi {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.65rem 0.75rem;
+}
+
+.kpi span {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.kpi strong {
+  font-size: 1.05rem;
+}
+
+.chart-box {
+  margin-top: 0.5rem;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.chart-box--sm {
+  max-width: 220px;
+}
+
+.chart-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.donut-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.85rem;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.donut-legend i {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  margin-right: 0.3rem;
+}
+
+.goal-tracker {
+  display: grid;
+  gap: 0.75rem;
+}
+@media (min-width: 720px) {
+  .goal-tracker { grid-template-columns: 1fr 1fr; }
+}
+.goal-track {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.05rem;
+  animation: dash-rise 0.55s ease both;
+}
+.goal-track:nth-child(2) { animation-delay: 0.06s; }
+.goal-track:nth-child(3) { animation-delay: 0.12s; }
+.goal-track:nth-child(4) { animation-delay: 0.18s; }
+.goal-track--done {
+  border-color: rgba(4, 120, 87, 0.4);
+  background: linear-gradient(145deg, rgba(4, 120, 87, 0.06), var(--surface));
+}
+.goal-track--late {
+  border-color: rgba(190, 18, 60, 0.35);
+}
+.goal-track__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  align-items: flex-start;
+  margin-bottom: 0.35rem;
+}
+.goal-track__head h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.goal-track__badge {
+  flex-shrink: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+.goal-track__badge--ok { color: var(--success); border-color: rgba(4, 120, 87, 0.35); background: rgba(4, 120, 87, 0.08); }
+.goal-track__badge--warn { color: var(--warning); border-color: rgba(180, 83, 9, 0.35); background: rgba(180, 83, 9, 0.08); }
+.goal-track__badge--late { color: var(--danger); border-color: rgba(190, 18, 60, 0.35); background: rgba(190, 18, 60, 0.08); }
+.goal-track__badge--done { color: var(--success); border-color: rgba(4, 120, 87, 0.45); }
+.goal-track__values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  align-items: baseline;
+  margin: 0.15rem 0 0.65rem;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+.goal-track__values strong {
+  font-family: var(--font-number);
+  font-size: 1.15rem;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+.goal-track__deadline {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+.goal-bar-row {
+  margin-top: 0.45rem;
+}
+.goal-bar-row span {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  font-weight: 650;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+.goal-bar {
+  height: 8px;
+  background: var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.goal-bar i {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.35s ease;
+}
+.goal-bar--achieve i { background: linear-gradient(90deg, #0f766e, #14b8a6); }
+.goal-bar--time i { background: linear-gradient(90deg, #64748b, #94a3b8); }
+.goal-track__note {
+  margin: 0.55rem 0 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+}
+.goal-form-panel { margin-top: 0.65rem; padding: 0.85rem 1rem; }
+.goal-form-panel > summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+.goal-form { margin-top: 0.75rem; }
+.goal-form__grid {
+  display: grid;
+  gap: 0.65rem;
+}
+@media (min-width: 560px) {
+  .goal-form__grid { grid-template-columns: 1fr 1fr; }
+}
+.goal-form__wide { grid-column: 1 / -1; }
+.goal-form label span {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+.goal-form input,
+.goal-form select {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.6rem 0.75rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  background: var(--surface-2);
+  color: var(--text);
+}
+.goal-form input:focus,
+.goal-form select:focus {
+  outline: 2px solid var(--accent-soft);
+  border-color: var(--accent);
+}
+.goal-form__actions {
+  margin-top: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem 1rem;
+}
+.btn-primary {
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 650;
+  font-size: 0.9rem;
+  padding: 0.55rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn-primary:hover { background: var(--accent-hover); }
+
+.highlights--cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.5rem;
+}
+
+.hl-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.65rem 0.7rem;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.hl-card--up {
+  border-color: rgba(34, 197, 94, 0.45);
+}
+
+.hl-card .hl-date {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.hl-card .hl-val {
+  color: #86efac;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Real anatomy plates */
+.plate-pair {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+@media (min-width: 720px) {
+  .plate-pair {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.plate,
+.ex-plate,
+.detail-plate {
+  margin: 0;
+  background: #0b1018;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.plate img,
+.ex-plate img,
+.detail-plate img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #fff;
+}
+
+.plate figcaption,
+.ex-plate figcaption,
+.detail-plate figcaption {
+  padding: 0.45rem 0.65rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.plate-details {
+  margin-top: 0.85rem;
+}
+
+.plate-details summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.exercise-card__top--photo {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 800px) {
+  .exercise-card__top--photo {
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: start;
+  }
+}
+
+.focus-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.75rem;
+}
+
+.focus-chip {
+  background: rgba(248, 113, 113, 0.18);
+  border: 1px solid rgba(248, 113, 113, 0.45);
+  color: #fecaca;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+}
+
+.detail-plates {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0.5rem 0 1rem;
+}
+
+@media (min-width: 600px) {
+  .detail-plates {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.detail-plate.hidden,
+.hidden {
+  display: none !important;
+}
+
+.detail-plate img {
+  max-height: 280px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/* Coaching insights */
+.insights { display: grid; gap: 0.75rem; }
+.insight-latest { padding: 0.75rem; border-radius: 10px; background: #151b24; border: 1px solid #243044; }
+.insight-ex { margin-top: 0.5rem; padding: 0.5rem 0.65rem; border-radius: 8px; background: #0f1419; }
+.insight-ex summary { cursor: pointer; color: #e2e8f0; }
+.insight-ex p { margin: 0.35rem 0 0; font-size: 0.9rem; color: #94a3b8; line-height: 1.45; }
+.insight-ex em { color: #60a5fa; font-style: normal; margin-right: 0.35rem; }
+.insight-trends { display: grid; gap: 0.5rem; margin-top: 0.75rem; }
+.insight-trend { padding: 0.6rem 0.75rem; border-left: 3px solid #34d399; background: #151b24; border-radius: 0 8px 8px 0; }
+.insight-trend p { margin: 0.25rem 0 0; color: #94a3b8; font-size: 0.9rem; }
+.insight-chart { width: 100%; height: auto; border-radius: 10px; border: 1px solid #243044; display: block; }
+
+.album-months {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+.album-month {
+  background: #151b24;
+  border: 1px solid #243044;
+  border-radius: 8px;
+  padding: 0.55rem 0.65rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+.album-month strong { color: #e2e8f0; }
+.album-month span { color: #94a3b8; }
+
+  </style>
+</head>
+<body>
+  <div class="app lab">
+    <header class="header">
+      <div class="header__brand">
+        <p class="eyebrow"><a href="anatomy.html">해부학 가이드</a> · <a href="index.html">역도 기록</a></p>
+        <h1>트레이닝 캔버스</h1>
+        <p class="subtitle">대시보드 · 계획 · 코칭 인사이트</p>
+      </div>
+      <nav class="tabs canvas-tabs" role="tablist">
+        <button class="tab active" data-panel="dashboard" role="tab">대시보드</button>
+        <button class="tab" data-panel="plan" role="tab">계획</button>
+        <button class="tab" data-panel="results" role="tab">로그</button>
+        <button class="tab" data-panel="profile" role="tab">프로필</button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- DASHBOARD -->
+      <section id="panel-dashboard" class="panel active">
+        <div class="dash-section-head">
+          <p class="dash-section-title" style="margin:0">지금 중요한 것</p>
+          <p class="dash-section-hint">카드마다 지표를 바꿀 수 있습니다</p>
+        </div>
+        <div class="dash-hero" id="dash-hero"></div>
+        <p class="hint" id="dash-updated" style="margin:0.25rem 0 0"></p>
+
+        <p class="dash-section-title">종목 프로그레스</p>
+        <div class="progress-explorer">
+          <div class="progress-explorer__head">
+            <label class="progress-select">
+              <span>부위별 · 내가 한 종목</span>
+              <select id="dash-lift-select" aria-label="운동 종목 선택"></select>
+            </label>
+          </div>
+          <p class="progress-explorer__hint" id="dash-lift-count"></p>
+          <div class="chip-row progress-presets" id="dash-lift-presets"></div>
+          <div class="progress-stats" id="dash-lift-stats"></div>
+          <div class="progress-dual">
+            <div class="progress-pane">
+              <h3 id="dash-lift-top-title">상한 kg</h3>
+              <div id="dash-lift-chart-top" class="chart-box"></div>
+            </div>
+            <div class="progress-pane">
+              <h3 id="dash-lift-vol-title">세션 볼륨</h3>
+              <div id="dash-lift-chart-vol" class="chart-box"></div>
+            </div>
+          </div>
+          <p class="progress-meta" id="dash-lift-meta"></p>
+        </div>
+
+        <p class="dash-section-title">핵심 추세</p>
+        <div class="dash-story">
+          <div class="story-card">
+            <h2>스내치 · 깊은 리시브</h2>
+            <p class="hint">행 스쿼트 상한 kg · 점선 = 목표 100</p>
+            <div id="dash-hang-snatch" class="chart-box"></div>
+            <p class="verdict" id="dash-hang-verdict"></p>
+          </div>
+          <div class="story-card">
+            <h2>OH 스쿼트</h2>
+            <p class="hint">오버헤드 안정 상한</p>
+            <div id="dash-oh-squat" class="chart-box"></div>
+          </div>
+        </div>
+
+        <p class="dash-section-title">보조 지표</p>
+        <div class="support-grid">
+          <div class="support-card">
+            <h3>벤치 130 작업횟수</h3>
+            <p class="hint">서브맥스 · 점선 = 4회</p>
+            <div id="dash-bench-130" class="chart-box"></div>
+            <p class="hint" id="dash-bench-verdict"></p>
+          </div>
+          <div class="support-card">
+            <h3>이지 런 심박</h3>
+            <p class="hint">초록 밴드 = 135–145</p>
+            <div id="dash-run-hr" class="chart-box"></div>
+            <p class="hint" id="dash-run-verdict"></p>
+          </div>
+        </div>
+
+        <div class="coach-strip" id="dash-latest-coach"></div>
+
+        <p class="dash-section-title">목표 · 기한 · 진행</p>
+        <div class="goal-tracker" id="dash-goals"></div>
+        <details class="goal-form-panel card" id="goal-form-panel">
+          <summary>목표 추가 · 수정</summary>
+          <form id="goal-form" class="goal-form">
+            <div class="goal-form__grid">
+              <label>
+                <span>목표 이름</span>
+                <input type="text" name="title" required placeholder="예: 스쿼트 200kg" />
+              </label>
+              <label>
+                <span>종류</span>
+                <select name="kind" required>
+                  <option value="lift_kg">중량 (kg) — 높을수록 좋음</option>
+                  <option value="run_distance_km">러닝 거리 (km)</option>
+                  <option value="run_time_sec">러닝 시간 (초) — 낮을수록 좋음</option>
+                  <option value="bench_reps">벤치 반복 (reps @ kg)</option>
+                  <option value="custom">직접 입력 (현재값 수동)</option>
+                </select>
+              </label>
+              <label>
+                <span>목표값</span>
+                <input type="number" name="targetValue" required step="any" />
+              </label>
+              <label>
+                <span>달성 기한</span>
+                <input type="date" name="deadline" required />
+              </label>
+              <label>
+                <span>시작값 (선택)</span>
+                <input type="number" name="baselineValue" step="any" placeholder="비우면 오늘 기준" />
+              </label>
+              <label>
+                <span>시작일 (선택)</span>
+                <input type="date" name="baselineDate" />
+              </label>
+              <label class="goal-form__wide" data-show="lift_kg">
+                <span>추적 종목 (중량)</span>
+                <input type="text" name="exerciseMatch" placeholder="예: 행 스내치, 스쿼트" />
+              </label>
+              <label data-show="bench_reps">
+                <span>기준 중량 (kg)</span>
+                <input type="number" name="weightKg" value="130" step="1" />
+              </label>
+              <label class="goal-form__wide">
+                <span>메모 (선택)</span>
+                <input type="text" name="note" placeholder="왜 이 목표인지" />
+              </label>
+            </div>
+            <div class="goal-form__actions">
+              <button type="submit" class="btn-primary">목표 저장</button>
+              <p class="hint">폰·브라우저에 저장됩니다. JSON 기본 목표는 그대로 유지됩니다.</p>
+            </div>
+          </form>
+        </details>
+
+        <details class="archive-panel card" style="padding:0.85rem 1rem">
+          <summary>앨범 아카이브 · 과거 기록 정리</summary>
+          <div class="kpi-row" id="dash-album-kpi" style="margin-top:0.75rem"></div>
+          <div id="dash-album-months" class="album-months"></div>
+        </details>
+      </section>
+
+      <!-- PLAN -->
+      <section id="panel-plan" class="panel">
+        <div class="card">
+          <h2>이번 주 계획</h2>
+          <p class="hint" id="week-note"></p>
+          <div id="week-checklist" class="week-checklist"></div>
+        </div>
+
+        <div class="card">
+          <h2>다음 헬스 처방</h2>
+          <p class="hint" id="next-gym-when"></p>
+          <ul class="guide-list" id="next-gym-items"></ul>
+        </div>
+
+        <div class="card">
+          <h2>주간 골격</h2>
+          <div id="week-skeleton" class="week-skeleton"></div>
+          <ul class="guide-list" id="principles"></ul>
+        </div>
+
+        <div class="split-panels">
+          <div class="card">
+            <h2>스내치 로드맵</h2>
+            <div id="snatch-roadmap" class="roadmap"></div>
+          </div>
+          <div class="card">
+            <h2>러닝 로드맵</h2>
+            <div id="run-roadmap" class="roadmap"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESULTS / LOG -->
+      <section id="panel-results" class="panel">
+        <div class="split-panels">
+          <div class="card">
+            <h2>헬스 볼륨 추이</h2>
+            <div id="chart-gym-volume" class="chart-box"></div>
+          </div>
+          <div class="card">
+            <h2>러닝 거리</h2>
+            <div id="chart-run-distance" class="chart-box"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>핵심 작업세트</h2>
+          <div id="highlights" class="highlights highlights--cards"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2>세션 타임라인</h2>
+            <div class="chip-row" id="result-filters">
+              <button class="chip active" data-type="all">전체</button>
+              <button class="chip" data-type="Pull">Pull</button>
+              <button class="chip" data-type="Push">Push</button>
+              <button class="chip" data-type="Leg">Leg</button>
+              <button class="chip" data-type="Run">러닝</button>
+              <button class="chip" data-type="Olympic">역도</button>
+            </div>
+          </div>
+          <div class="kpi-row" id="kpi-row"></div>
+          <span class="hint" id="session-count"></span>
+          <div id="timeline" class="timeline"></div>
+        </div>
+
+        <div class="card">
+          <h2>코칭 인사이트 (세션 상세)</h2>
+          <p class="hint">왜 · 회고 · 다음</p>
+          <div id="coaching-insights" class="insights"></div>
+        </div>
+      </section>
+
+      <!-- PROFILE -->
+      <section id="panel-profile" class="panel">
+        <div class="card profile-card">
+          <div class="profile-grid">
+            <div>
+              <h2>바디컴포</h2>
+              <div class="stat-inline" id="body-stats"></div>
+              <div id="chart-bodycomp" class="chart-box chart-box--sm"></div>
+            </div>
+            <div>
+              <h2>메인 PR</h2>
+              <div id="chart-prs" class="chart-box"></div>
+              <div class="stat-inline" id="pr-stats"></div>
+            </div>
+          </div>
+          <p class="hint" id="profile-notes"></p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+/** Lightweight SVG charts — no external deps */
+
+const ChartTheme = {
+  grid: '#d8dee8',
+  axis: '#6b7280',
+  value: '#12151c',
+  muted: '#5a6573',
+  target: '#0f766e',
+  band: '#0f766e',
+};
+
+function el(tag, attrs = {}, children = []) {
+  const node = document.createElementNS('http://www.w3.org/2000/svg', tag);
+  Object.entries(attrs).forEach(([k, v]) => node.setAttribute(k, v));
+  children.forEach((c) => node.appendChild(typeof c === 'string' ? document.createTextNode(c) : c));
+  return node;
+}
+
+function maxOf(arr, fallback = 1) {
+  return Math.max(fallback, ...arr);
+}
+
+/** Vertical bar chart */
+function barChart(container, { labels, values, colors, targetLine, unit = '' }) {
+  container.innerHTML = '';
+  const w = 380;
+  const h = 190;
+  const pad = { t: 18, r: 12, b: 36, l: 40 };
+  const innerW = w - pad.l - pad.r;
+  const innerH = h - pad.t - pad.b;
+  const max = maxOf([...values, targetLine || 0]);
+  const n = values.length || 1;
+  const gap = 8;
+  const barW = Math.max(10, (innerW - gap * (n - 1)) / n);
+
+  const svg = el('svg', { viewBox: `0 0 ${w} ${h}`, class: 'chart-svg', role: 'img' });
+
+  for (let i = 0; i <= 3; i++) {
+    const y = pad.t + (innerH * i) / 3;
+    const val = Math.round(max * (1 - i / 3));
+    svg.appendChild(el('line', { x1: pad.l, y1: y, x2: w - pad.r, y2: y, stroke: ChartTheme.grid, 'stroke-width': '1' }));
+    svg.appendChild(el('text', { x: pad.l - 6, y: y + 3, fill: ChartTheme.axis, 'font-size': '9', 'text-anchor': 'end' }, [String(val)]));
+  }
+
+  if (targetLine) {
+    const ty = pad.t + innerH * (1 - targetLine / max);
+    svg.appendChild(
+      el('line', {
+        x1: pad.l,
+        y1: ty,
+        x2: w - pad.r,
+        y2: ty,
+        stroke: ChartTheme.target,
+        'stroke-width': '1.5',
+        'stroke-dasharray': '4 3',
+      })
+    );
+  }
+
+  values.forEach((v, i) => {
+    const x = pad.l + i * (barW + gap);
+    const bh = (v / max) * innerH;
+    const y = pad.t + innerH - bh;
+    svg.appendChild(
+      el('rect', {
+        x,
+        y,
+        width: barW,
+        height: Math.max(bh, 1),
+        rx: 5,
+        fill: colors?.[i] || '#0f766e',
+      })
+    );
+    svg.appendChild(
+      el('text', {
+        x: x + barW / 2,
+        y: h - 12,
+        fill: ChartTheme.muted,
+        'font-size': '9',
+        'text-anchor': 'middle',
+      }, [labels[i] || ''])
+    );
+  });
+
+  if (unit) {
+    svg.appendChild(el('text', { x: pad.l, y: 12, fill: ChartTheme.muted, 'font-size': '9' }, [unit]));
+  }
+
+  container.appendChild(svg);
+}
+
+/** Horizontal bar for PRs */
+function hBarChart(container, { labels, values, maxRef, colors }) {
+  container.innerHTML = '';
+  const w = 360;
+  const rowH = 28;
+  const h = labels.length * rowH + 16;
+  const padL = 72;
+  const padR = 48;
+  const max = maxRef || maxOf(values);
+  const svg = el('svg', { viewBox: `0 0 ${w} ${h}`, class: 'chart-svg' });
+
+  labels.forEach((label, i) => {
+    const y = 12 + i * rowH;
+    const bw = ((values[i] / max) * (w - padL - padR));
+    svg.appendChild(el('text', { x: 4, y: y + 12, fill: ChartTheme.muted, 'font-size': '11' }, [label]));
+    svg.appendChild(el('rect', { x: padL, y: y, width: Math.max(bw, 2), height: 16, rx: 4, fill: colors?.[i] || '#0f766e' }));
+    svg.appendChild(
+      el('text', { x: padL + bw + 6, y: y + 12, fill: ChartTheme.value, 'font-size': '11' }, [String(values[i])])
+    );
+  });
+
+  container.appendChild(svg);
+}
+
+/** Donut for body comp */
+function donutChart(container, segments) {
+  container.innerHTML = '';
+  const size = 140;
+  const cx = 70;
+  const cy = 70;
+  const r = 48;
+  const stroke = 18;
+  const total = segments.reduce((a, s) => a + s.value, 0) || 1;
+  const c = 2 * Math.PI * r;
+  const svg = el('svg', { viewBox: `0 0 ${size} ${size}`, class: 'chart-svg chart-svg--donut' });
+
+  let offset = 0;
+  segments.forEach((seg) => {
+    const len = (seg.value / total) * c;
+    svg.appendChild(
+      el('circle', {
+        cx,
+        cy,
+        r,
+        fill: 'none',
+        stroke: seg.color,
+        'stroke-width': stroke,
+        'stroke-dasharray': `${len} ${c - len}`,
+        'stroke-dashoffset': -offset,
+        transform: `rotate(-90 ${cx} ${cy})`,
+      })
+    );
+    offset += len;
+  });
+
+  svg.appendChild(el('text', { x: cx, y: cy - 2, fill: ChartTheme.value, 'font-size': '13', 'text-anchor': 'middle', 'font-weight': '700' }, ['106']));
+  svg.appendChild(el('text', { x: cx, y: cy + 14, fill: ChartTheme.muted, 'font-size': '9', 'text-anchor': 'middle' }, ['kg']));
+  container.appendChild(svg);
+
+  const legend = document.createElement('div');
+  legend.className = 'donut-legend';
+  legend.innerHTML = segments
+    .map((s) => `<span><i style="background:${s.color}"></i>${s.label} ${s.value}kg</span>`)
+    .join('');
+  container.appendChild(legend);
+}
+
+/** Circular gauge 0-100 */
+function gauge(container, { label, pct, sub }) {
+  const wrap = document.createElement('div');
+  wrap.className = 'gauge';
+  const size = 120;
+  const r = 46;
+  const c = 2 * Math.PI * r;
+  const clamped = Math.max(0, Math.min(100, pct));
+  const filled = (clamped / 100) * c;
+  wrap.innerHTML = `
+    <svg viewBox="0 0 ${size} ${size}" class="chart-svg">
+      <circle cx="60" cy="60" r="${r}" fill="none" stroke="#d8dee8" stroke-width="10"/>
+      <circle cx="60" cy="60" r="${r}" fill="none" stroke="#0f766e" stroke-width="10"
+        stroke-linecap="round"
+        stroke-dasharray="${filled} ${c - filled}"
+        transform="rotate(-90 60 60)"/>
+      <text x="60" y="56" text-anchor="middle" fill="#12151c" font-size="18" font-weight="700">${Math.round(clamped)}%</text>
+      <text x="60" y="74" text-anchor="middle" fill="#5a6573" font-size="9">${label}</text>
+    </svg>
+    <p class="hint">${sub || ''}</p>
+  `;
+  container.appendChild(wrap);
+}
+
+/** Line chart with optional band and target */
+function lineChart(container, { labels, series, yMin, yMax, band, targetLine, unit = '' }) {
+  container.innerHTML = '';
+  const w = 400;
+  const h = 200;
+  const pad = { t: 20, r: 14, b: 36, l: 40 };
+  const innerW = w - pad.l - pad.r;
+  const innerH = h - pad.t - pad.b;
+  const allVals = series.flatMap((s) => s.values.filter((v) => v != null));
+  const minV = yMin != null ? yMin : Math.min(...allVals, targetLine || Infinity, band?.[0] ?? Infinity);
+  const maxV = yMax != null ? yMax : Math.max(...allVals, targetLine || 0, band?.[1] ?? 0);
+  const span = Math.max(maxV - minV, 1);
+  const n = Math.max(labels.length, 1);
+  const xAt = (i) => pad.l + (n === 1 ? innerW / 2 : (i / (n - 1)) * innerW);
+  const yAt = (v) => pad.t + innerH * (1 - (v - minV) / span);
+
+  const svg = el('svg', { viewBox: `0 0 ${w} ${h}`, class: 'chart-svg', role: 'img' });
+
+  for (let i = 0; i <= 3; i++) {
+    const y = pad.t + (innerH * i) / 3;
+    const val = Math.round(maxV - (span * i) / 3);
+    svg.appendChild(el('line', { x1: pad.l, y1: y, x2: w - pad.r, y2: y, stroke: ChartTheme.grid, 'stroke-width': '1' }));
+    svg.appendChild(el('text', { x: pad.l - 6, y: y + 3, fill: ChartTheme.axis, 'font-size': '9', 'text-anchor': 'end' }, [String(val)]));
+  }
+
+  if (band && band.length === 2) {
+    const y1 = yAt(band[1]);
+    const y2 = yAt(band[0]);
+    svg.appendChild(
+      el('rect', {
+        x: pad.l,
+        y: y1,
+        width: innerW,
+        height: Math.max(y2 - y1, 1),
+        fill: ChartTheme.band,
+        opacity: '0.12',
+      })
+    );
+  }
+
+  if (targetLine != null) {
+    const ty = yAt(targetLine);
+    svg.appendChild(
+      el('line', {
+        x1: pad.l,
+        y1: ty,
+        x2: w - pad.r,
+        y2: ty,
+        stroke: ChartTheme.target,
+        'stroke-width': '1.5',
+        'stroke-dasharray': '4 3',
+      })
+    );
+  }
+
+  series.forEach((s) => {
+    const pts = s.values
+      .map((v, i) => (v == null ? null : `${xAt(i)},${yAt(v)}`))
+      .filter(Boolean)
+      .join(' ');
+    if (pts) {
+      svg.appendChild(
+        el('polyline', {
+          points: pts,
+          fill: 'none',
+          stroke: s.color || '#0f766e',
+          'stroke-width': '2.5',
+          'stroke-linejoin': 'round',
+          'stroke-linecap': 'round',
+        })
+      );
+    }
+    s.values.forEach((v, i) => {
+      if (v == null) return;
+      svg.appendChild(el('circle', { cx: xAt(i), cy: yAt(v), r: 4.5, fill: s.color || '#0f766e' }));
+      svg.appendChild(
+        el('text', {
+          x: xAt(i),
+          y: yAt(v) - 9,
+          fill: ChartTheme.value,
+          'font-size': '9',
+          'font-weight': '600',
+          'text-anchor': 'middle',
+        }, [String(v)])
+      );
+    });
+  });
+
+  labels.forEach((lab, i) => {
+    svg.appendChild(
+      el('text', {
+        x: xAt(i),
+        y: h - 12,
+        fill: ChartTheme.muted,
+        'font-size': '9',
+        'text-anchor': 'middle',
+      }, [lab])
+    );
+  });
+
+  if (unit) {
+    svg.appendChild(el('text', { x: pad.l, y: 12, fill: ChartTheme.muted, 'font-size': '9' }, [unit]));
+  }
+
+  container.appendChild(svg);
+}
+
+window.Charts = { barChart, hBarChart, donutChart, gauge, lineChart };
+
+
+const TYPE_COLOR = {
+  Pull: '#1d4ed8',
+  Push: '#be123c',
+  Leg: '#0f766e',
+  Run: '#b45309',
+};
+
+function formatSets(sets) {
+  if (!sets || !sets.length) return '—';
+  return sets.map((s) => (s.kg === 0 ? `${s.reps}회` : `${s.kg}×${s.reps}`)).join(' · ');
+}
+
+function paceFromSec(distanceKm, timeSec) {
+  if (!distanceKm || !timeSec) return '—';
+  const secPerKm = timeSec / distanceKm;
+  const m = Math.floor(secPerKm / 60);
+  const s = Math.round(secPerKm % 60);
+  return `${m}'${String(s).padStart(2, '0')}"`;
+}
+
+function formatDuration(sec) {
+  const m = Math.floor(sec / 60);
+  const s = sec % 60;
+  return `${m}:${String(s).padStart(2, '0')}`;
+}
+
+async function loadJSON(path) {
+  const res = await fetch(path);
+  return res.json();
+}
+
+/* ---- Tabs ---- */
+document.querySelectorAll('.canvas-tabs .tab').forEach((tab) => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.canvas-tabs .tab').forEach((t) => t.classList.remove('active'));
+    document.querySelectorAll('main > .panel').forEach((p) => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById(`panel-${tab.dataset.panel}`).classList.add('active');
+  });
+});
+
+/* ---- PLAN ---- */
+function renderPlan(plan) {
+  const week = plan.thisWeek;
+  document.getElementById('week-note').textContent = `${week.label} — ${week.note}`;
+  document.getElementById('week-checklist').innerHTML = week.sessions
+    .map((s) => {
+      const checks = (s.checkpoints || [])
+        .map(
+          (c) =>
+            `<li class="check-point ${s.done ? 'is-done' : ''}"><span class="check-point__mark">${s.done ? '✓' : '○'}</span>${c}</li>`
+        )
+        .join('');
+      const actual = s.actual
+        ? `<p class="check-actual">기록: ${s.actual}</p>`
+        : '';
+      const status = s.skipped ? '스킵' : s.done ? '완료' : '예정';
+      return `
+    <div class="check-item ${s.done ? 'check-item--done' : 'check-item--todo'} ${s.skipped ? 'check-item--skip' : ''}">
+      <span class="check-box">${s.done && !s.skipped ? '✓' : ''}</span>
+      <div>
+        <strong>${s.day} · ${s.date.slice(5)}${s.focus ? ` · ${s.focus}` : ''}</strong>
+        <p class="check-plan">${s.plan}</p>
+        ${checks ? `<ul class="check-points">${checks}</ul>` : ''}
+        ${actual}
+      </div>
+      <span class="check-status">${status}</span>
+    </div>`;
+    })
+    .join('');
+
+  document.getElementById('week-skeleton').innerHTML = plan.weeklySkeleton
+    .map(
+      (d) => `
+    <div class="skel-day ${d.snatch ? 'skel-day--snatch' : ''}">
+      <strong>${d.day}</strong>
+      <span class="skel-focus">${d.focus}</span>
+      <span class="hint">${d.detail}</span>
+    </div>`
+    )
+    .join('');
+
+  document.getElementById('principles').innerHTML = plan.principles.map((p) => `<li>${p}</li>`).join('');
+
+  const road = (items) =>
+    items
+      .map(
+        (p, idx) => `
+      <div class="road-item road-item--${p.status}">
+        <div class="road-phase">${typeof p.phase === 'number' ? p.phase : idx + 1}</div>
+        <div>
+          <strong>${p.title || p.phase}</strong>
+          <span class="hint">${p.window}</span>
+          <p>${p.target}</p>
+        </div>
+      </div>`
+      )
+      .join('');
+
+  document.getElementById('snatch-roadmap').innerHTML = road(plan.snatchRoadmap);
+  document.getElementById('run-roadmap').innerHTML = road(plan.runRoadmap);
+
+  document.getElementById('next-gym-when').textContent = plan.nextGymPrescription.when;
+  const ng = plan.nextGymPrescription;
+  let items = ng.items;
+  if (!items) {
+    items = [];
+    if (ng.session) {
+      items = ng.session.map((s) =>
+        typeof s === 'string' ? s : `${s.name}: ${s.scheme}${s.note ? ' — ' + s.note : ''}`
+      );
+    }
+    if (ng.B_tech) items = items.concat(ng.B_tech.map((s) => `[테크] ${s.name}: ${s.scheme}`));
+    if (ng.C_pull_rotation_B) items = items.concat(ng.C_pull_rotation_B.map((s) => `[등] ${s.name}: ${s.scheme}`));
+    if (ng.A_warmup_functional) items = ng.A_warmup_functional.map((s) => `[워밍업] ${s}`).concat(items);
+    if (ng.avoid) items.push('피하기: ' + ng.avoid.join(', '));
+  }
+  document.getElementById('next-gym-items').innerHTML = items.map((i) => `<li>${i}</li>`).join('');
+}
+
+function renderInsights(insights) {
+  const root = document.getElementById('coaching-insights');
+  if (!root || !insights) return;
+  const dates = Object.keys(insights.sessionReviews || {}).sort().reverse();
+  const latest = dates[0];
+  const rev = latest ? insights.sessionReviews[latest] : null;
+  const trendHtml = Object.values(insights.trends || {})
+    .map(
+      (t) => `
+      <div class="insight-trend">
+        <strong>${t.title}</strong>
+        <p>${t.verdict}</p>
+      </div>`
+    )
+    .join('');
+  const exHtml = (rev?.exercises || [])
+    .slice(0, 4)
+    .map(
+      (ex) => `
+      <details class="insight-ex">
+        <summary><strong>${ex.name}</strong> — 왜?</summary>
+        <p><em>원리</em> ${ex.why}</p>
+        <p><em>오늘</em> ${ex.whatHappened}</p>
+        <p><em>아쉬운 점</em> ${ex.couldImprove}</p>
+        <p><em>다음</em> ${ex.next}</p>
+      </details>`
+    )
+    .join('');
+  root.innerHTML = `
+    <p class="hint">기준: ${(insights.coachingStandard || []).join(' · ')}</p>
+    ${
+      rev
+        ? `<div class="insight-latest">
+      <strong>최근 세션 ${latest}</strong> · ${rev.grade}
+      <p>${rev.direction}</p>
+      ${exHtml}
+      ${rev.missedFunctional ? `<p class="hint">${rev.missedFunctional}</p>` : ''}
+    </div>`
+        : ''
+    }
+    <div class="insight-trends">${trendHtml}</div>
+  `;
+}
+
+/* ---- PROFILE ---- */
+function renderProfile(profile) {
+  document.getElementById('body-stats').innerHTML = `
+    <div class="pill"><span>체중</span><strong>${profile.body.weightKg} kg</strong></div>
+    <div class="pill"><span>골격근</span><strong>${profile.body.skeletalMuscleKg} kg</strong></div>
+    <div class="pill"><span>체지방</span><strong>${profile.body.bodyFatKg} kg</strong></div>
+    <div class="pill"><span>체지방률</span><strong>${profile.body.bodyFatPercent}%</strong></div>
+  `;
+
+  const other = Math.max(
+    0,
+    profile.body.weightKg - profile.body.skeletalMuscleKg - profile.body.bodyFatKg
+  );
+  Charts.donutChart(document.getElementById('chart-bodycomp'), [
+    { label: '골격근', value: profile.body.skeletalMuscleKg, color: '#0f766e' },
+    { label: '체지방', value: profile.body.bodyFatKg, color: '#b45309' },
+    { label: '기타', value: Math.round(other * 10) / 10, color: '#94a3b8' },
+  ]);
+
+  Charts.hBarChart(document.getElementById('chart-prs'), {
+    labels: ['벤치', '스쿼트', '데드', 'P.스내치', 'C&J'],
+    values: [
+      profile.prs.benchPress,
+      profile.prs.squat,
+      profile.prs.deadlift,
+      profile.prs.powerSnatch,
+      profile.prs.cleanAndJerk,
+    ],
+    maxRef: 200,
+    colors: ['#be123c', '#0f766e', '#1d4ed8', '#0d9488', '#b45309'],
+  });
+
+  document.getElementById('pr-stats').innerHTML = `
+    <div class="pill"><span>10k 베스트</span><strong>${(profile.prs.tenKBest.timeDisplay || (profile.prs.tenKBest.timeMin + '분'))}</strong></div>
+    <div class="pill"><span>스내치 목표</span><strong>${profile.prs.snatchGoal}kg</strong></div>
+  `;
+
+  document.getElementById('profile-notes').textContent =
+    `${profile.notes.split} · 헬스 ${profile.notes.gym} · 역도 ${profile.notes.weightlifting} · ${profile.notes.injury}`;
+}
+
+/* ---- RESULTS ---- */
+function collectHighlights(gymLog) {
+  const items = [];
+  gymLog.sessions
+    .slice()
+    .reverse()
+    .forEach((s) => {
+      (s.exercises || []).forEach((ex) => {
+        if (ex.workingHighlight) {
+          items.push({
+            date: s.date,
+            type: s.type,
+            name: ex.name,
+            highlight: ex.workingHighlight,
+            overload: !!ex.overload,
+          });
+        }
+      });
+    });
+  return items.slice(0, 8);
+}
+
+function renderHighlights(items) {
+  document.getElementById('highlights').innerHTML = items
+    .map(
+      (i) => `
+    <div class="hl-card ${i.overload ? 'hl-card--up' : ''}">
+      <span class="hl-date">${i.date.slice(5)} · ${i.type}</span>
+      <strong>${i.name}</strong>
+      <span class="hl-val">${i.highlight}${i.overload ? ' ↑' : ''}</span>
+    </div>`
+    )
+    .join('');
+}
+
+function renderKpis(gymLog, runLog, profile) {
+  const gymSessions = gymLog.sessions.length;
+  const runSessions = runLog.sessions.length;
+  const lastPull = [...gymLog.sessions].reverse().find((s) => s.type === 'Pull');
+  const pullUps = lastPull?.exercises?.find((e) => e.name.includes('풀'));
+  const longestRun = Math.max(...runLog.sessions.map((r) => r.distanceKm), 0);
+
+  document.getElementById('kpi-row').innerHTML = `
+    <div class="kpi"><span>헬스 세션</span><strong>${gymSessions}</strong></div>
+    <div class="kpi"><span>러닝 세션</span><strong>${runSessions}</strong></div>
+    <div class="kpi"><span>최근 풀업</span><strong>${pullUps?.workingHighlight || '—'}</strong></div>
+    <div class="kpi"><span>최장 런</span><strong>${longestRun} km</strong></div>
+    <div class="kpi"><span>파워스내치</span><strong>${profile.prs.powerSnatch}</strong></div>
+    <div class="kpi"><span>10k 베스트</span><strong>${(profile.prs.tenKBest.timeDisplay || (profile.prs.tenKBest.timeMin + '분'))}</strong></div>
+  `;
+}
+
+function shortDate(d) {
+  return d.slice(5).replace('-', '/');
+}
+
+const LIFT_PRESETS = [
+  '바벨 행 스내치',
+  '바벨 오버헤드 스쿼트',
+  '벤치 프레스',
+  '스쿼트',
+  '데드리프트',
+  '풀 업',
+  '바벨 로우',
+  '바벨 오버헤드 프레스',
+];
+
+const LIFT_STORAGE_KEY = 'lab-lift-progress';
+const HERO_STORAGE_KEY = 'lab-hero-slots';
+const DEFAULT_HERO_SLOTS = ['hangSnatch', 'bench130', 'easyRunHr'];
+const BODY_PART_ORDER = ['역도', '하체', '가슴', '등', '어깨', '팔', '코어', '기타'];
+
+function bodyPartForExercise(name) {
+  const n = name || '';
+  if (/스내치|클린|저크|오버헤드 스쿼트|스내치 밸런스|판다|인상|용상/.test(n)) return '역도';
+  if (/풀 업|랫|로우|풀 다운|스트레이트 암|리어 플라이|페이스 풀/.test(n)) return '등';
+  if (/벤치|체스트|플라이|펙|딥스/.test(n)) return '가슴';
+  if (/스쿼트|레그|데드|힙|런지|카프|수평 레그|점프/.test(n)) return '하체';
+  if (/숄더|오버헤드 프레스|레터럴|사이드/.test(n)) return '어깨';
+  if (/컬|푸시 다운|트라이|해머|킥백|스컬/.test(n)) return '팔';
+  if (/행잉|코어|플랭크|캐리/.test(n)) return '코어';
+  return '기타';
+}
+
+function listExercises(gymLog) {
+  const map = new Map();
+  gymLog.sessions.forEach((s) => {
+    (s.exercises || []).forEach((ex) => {
+      const name = ex.name;
+      if (!name) return;
+      const cur = map.get(name) || { name, count: 0, lastDate: '', types: {} };
+      cur.count += 1;
+      if (s.date > cur.lastDate) cur.lastDate = s.date;
+      const t = s.type || '기타';
+      cur.types[t] = (cur.types[t] || 0) + 1;
+      map.set(name, cur);
+    });
+  });
+  return [...map.values()]
+    .map((e) => {
+      const primary =
+        Object.entries(e.types).sort((a, b) => b[1] - a[1])[0]?.[0] || '기타';
+      return { ...e, primary, bodyPart: bodyPartForExercise(e.name) };
+    })
+    .sort((a, b) => b.count - a.count || (a.name > b.name ? 1 : -1));
+}
+
+function topKgFromExercise(ex) {
+  const kgs = (ex.sets || [])
+    .filter((s) => (s.kg || 0) > 0 && (s.reps || 0) > 0)
+    .map((s) => s.kg);
+  if (kgs.length) return Math.max(...kgs);
+  const any = (ex.sets || []).map((s) => s.kg || 0).filter((k) => k > 0);
+  return any.length ? Math.max(...any) : null;
+}
+
+function volumeFromExercise(ex) {
+  const vol = (ex.sets || []).reduce((sum, s) => sum + (s.kg || 0) * (s.reps || 0), 0);
+  return vol > 0 ? Math.round(vol) : null;
+}
+
+function bestRepsFromExercise(ex) {
+  const reps = (ex.sets || []).map((s) => s.reps || 0).filter((r) => r > 0);
+  return reps.length ? Math.max(...reps) : null;
+}
+
+function totalRepsFromExercise(ex) {
+  const total = (ex.sets || []).reduce((sum, s) => sum + (s.reps || 0), 0);
+  return total > 0 ? total : null;
+}
+
+function exerciseHasLoad(gymLog, name) {
+  return gymLog.sessions.some((s) =>
+    (s.exercises || []).some(
+      (ex) => ex.name === name && (ex.sets || []).some((set) => (set.kg || 0) > 0)
+    )
+  );
+}
+
+function seriesForExercise(gymLog, name, metric, hasLoad) {
+  let pick;
+  if (metric === 'volume') {
+    pick = hasLoad ? volumeFromExercise : totalRepsFromExercise;
+  } else {
+    pick = hasLoad ? topKgFromExercise : bestRepsFromExercise;
+  }
+  return extractLiftSeries(gymLog, (n) => n === name, pick);
+}
+
+function formatLiftDelta(rows, unit) {
+  if (rows.length < 2) return null;
+  const last = rows[rows.length - 1].value;
+  const prev = rows[rows.length - 2].value;
+  const d = last - prev;
+  if (d > 0) return { text: `▲ +${d}${unit}`, cls: 'up' };
+  if (d < 0) return { text: `▼ ${d}${unit}`, cls: 'down' };
+  return { text: '→ 유지', cls: 'flat' };
+}
+
+function seriesBounds(values) {
+  if (!values.length) return { yMin: 0, yMax: 1 };
+  const yPad = Math.max(...values) * 0.08 || 1;
+  return {
+    yMin: Math.max(0, Math.floor(Math.min(...values) - yPad)),
+    yMax: Math.ceil(Math.max(...values) + yPad),
+  };
+}
+
+function renderLiftProgress(gymLog, name) {
+  const select = document.getElementById('dash-lift-select');
+  const topEl = document.getElementById('dash-lift-chart-top');
+  const volEl = document.getElementById('dash-lift-chart-vol');
+  const statsEl = document.getElementById('dash-lift-stats');
+  const metaEl = document.getElementById('dash-lift-meta');
+  const topTitle = document.getElementById('dash-lift-top-title');
+  const volTitle = document.getElementById('dash-lift-vol-title');
+  if (!select || !topEl || !volEl || !metaEl) return;
+
+  if (select.value !== name) select.value = name;
+  document.querySelectorAll('#dash-lift-presets .chip').forEach((c) => {
+    c.classList.toggle('active', c.dataset.lift === name);
+  });
+
+  const hasLoad = exerciseHasLoad(gymLog, name);
+  const topRows = seriesForExercise(gymLog, name, 'topKg', hasLoad);
+  const volRows = seriesForExercise(gymLog, name, 'volume', hasLoad);
+  const part = bodyPartForExercise(name);
+
+  if (topTitle) topTitle.textContent = hasLoad ? '상한 kg' : '최고 횟수';
+  if (volTitle) volTitle.textContent = hasLoad ? '세션 볼륨 (kg×reps)' : '총 횟수';
+
+  if (!topRows.length && !volRows.length) {
+    topEl.innerHTML = '<p class="hint">이 종목 기록이 아직 없습니다.</p>';
+    volEl.innerHTML = '';
+    if (statsEl) statsEl.innerHTML = '';
+    metaEl.textContent = '';
+    return;
+  }
+
+  if (topRows.length) {
+    const values = topRows.map((r) => r.value);
+    const { yMin, yMax } = seriesBounds(values);
+    Charts.lineChart(topEl, {
+      labels: topRows.map((r) => shortDate(r.date)),
+      series: [{ values, color: '#0f766e' }],
+      yMin,
+      yMax,
+      unit: hasLoad ? 'kg' : 'reps',
+    });
+  } else {
+    topEl.innerHTML = '<p class="hint">상한 기록 없음</p>';
+  }
+
+  if (volRows.length) {
+    Charts.barChart(volEl, {
+      labels: volRows.map((r) => shortDate(r.date)),
+      values: volRows.map((r) => r.value),
+      colors: volRows.map(() => '#1d4ed8'),
+      unit: hasLoad ? 'kg·reps' : 'reps',
+    });
+  } else {
+    volEl.innerHTML = '<p class="hint">볼륨 기록 없음</p>';
+  }
+
+  const topLast = topRows[topRows.length - 1];
+  const volLast = volRows[volRows.length - 1];
+  const topBest = topRows.length ? Math.max(...topRows.map((r) => r.value)) : null;
+  const volBest = volRows.length ? Math.max(...volRows.map((r) => r.value)) : null;
+  const topDelta = formatLiftDelta(topRows, hasLoad ? 'kg' : '');
+  const volDelta = formatLiftDelta(volRows, '');
+  const topUnit = hasLoad ? ' kg' : '회';
+  const volFmt = (v) => (hasLoad ? Number(v).toLocaleString() : `${v}회`);
+
+  if (statsEl) {
+    statsEl.innerHTML = `
+      <div class="progress-stat">
+        <span>최근 ${hasLoad ? '상한' : '최고'}</span>
+        <strong>${topLast ? `${topLast.value}${topUnit}` : '—'}</strong>
+        <em class="${topDelta?.cls || ''}">${topDelta?.text || '—'}</em>
+      </div>
+      <div class="progress-stat">
+        <span>최고 ${hasLoad ? '상한' : '세트'}</span>
+        <strong>${topBest != null ? `${topBest}${topUnit}` : '—'}</strong>
+        <em>${topLast ? shortDate(topLast.date) : ''}</em>
+      </div>
+      <div class="progress-stat">
+        <span>최근 볼륨</span>
+        <strong>${volLast ? volFmt(volLast.value) : '—'}</strong>
+        <em class="${volDelta?.cls || ''}">${volDelta?.text || '—'}</em>
+      </div>
+      <div class="progress-stat">
+        <span>최고 볼륨</span>
+        <strong>${volBest != null ? volFmt(volBest) : '—'}</strong>
+        <em>${volLast ? shortDate(volLast.date) : ''}</em>
+      </div>
+    `;
+  }
+
+  metaEl.innerHTML = `
+    <strong>${name}</strong> · ${part} · ${Math.max(topRows.length, volRows.length)}회 기록
+    ${hasLoad ? ' · 상한 + 세션 볼륨' : ' · 횟수 기준 (체중 종목)'}
+  `;
+}
+
+function setupLiftProgress(gymLog) {
+  const exercises = listExercises(gymLog);
+  const select = document.getElementById('dash-lift-select');
+  const presetsEl = document.getElementById('dash-lift-presets');
+  const countEl = document.getElementById('dash-lift-count');
+  if (!select || !presetsEl) return;
+
+  const names = new Set(exercises.map((e) => e.name));
+  const byPart = {};
+  exercises.forEach((e) => {
+    (byPart[e.bodyPart] ||= []).push(e);
+  });
+  select.innerHTML = BODY_PART_ORDER.filter((g) => byPart[g]?.length)
+    .map((g) => {
+      const opts = byPart[g]
+        .map((e) => `<option value="${e.name}">${e.name} · ${e.count}회</option>`)
+        .join('');
+      return `<optgroup label="${g}">${opts}</optgroup>`;
+    })
+    .join('');
+
+  if (countEl) {
+    const parts = BODY_PART_ORDER.filter((g) => byPart[g]?.length)
+      .map((g) => `${g} ${byPart[g].length}`)
+      .join(' · ');
+    countEl.textContent = `총 ${exercises.length}종목 · ${parts}`;
+  }
+
+  const presetNames = LIFT_PRESETS.filter((n) => names.has(n));
+  presetsEl.innerHTML = presetNames
+    .map((n) => {
+      const short = n.replace(/^바벨 |^머신 |^덤벨 |^케이블 /, '');
+      return `<button type="button" class="chip" data-lift="${n}">${short}</button>`;
+    })
+    .join('');
+
+  let selected =
+    localStorage.getItem(LIFT_STORAGE_KEY) ||
+    (names.has('벤치 프레스') ? '벤치 프레스' : exercises[0]?.name);
+  if (!names.has(selected)) selected = exercises[0]?.name;
+
+  const paint = () => {
+    localStorage.setItem(LIFT_STORAGE_KEY, selected);
+    renderLiftProgress(gymLog, selected);
+  };
+
+  select.onchange = () => {
+    selected = select.value;
+    paint();
+  };
+  presetsEl.onclick = (e) => {
+    const chip = e.target.closest('[data-lift]');
+    if (!chip) return;
+    selected = chip.dataset.lift;
+    paint();
+  };
+
+  paint();
+}
+
+function liftTopSeries(gymLog, nameExact) {
+  return extractLiftSeries(gymLog, (n) => n === nameExact, topKgFromExercise);
+}
+
+function liftNameIncludesSeries(gymLog, needle) {
+  return extractLiftSeries(
+    gymLog,
+    (n) => n.includes(needle),
+    (ex) => topKgFromExercise(ex) ?? bestRepsFromExercise(ex)
+  );
+}
+
+function bench130Series(gymLog) {
+  const rows = [];
+  gymLog.sessions
+    .slice()
+    .sort((a, b) => (a.date > b.date ? 1 : -1))
+    .forEach((s) => {
+      (s.exercises || []).forEach((ex) => {
+        if (ex.name !== '벤치 프레스') return;
+        const at130 = (ex.sets || []).filter((x) => (x.kg || 0) >= 130 && (x.reps || 0) > 0);
+        if (!at130.length) return;
+        const bestReps = Math.max(...at130.filter((x) => x.kg === 130).map((x) => x.reps || 0), 0);
+        rows.push({
+          date: s.date,
+          value: bestReps || Math.max(...at130.map((x) => x.reps || 0)),
+        });
+      });
+    });
+  return rows;
+}
+
+function pullupTotalSeries(gymLog) {
+  return extractLiftSeries(gymLog, (n) => n === '풀 업', totalRepsFromExercise);
+}
+
+function buildHeroCatalog(profile, gymLog, runLog) {
+  const goal = profile.prs.snatchGoal || 100;
+  const hang = liftNameIncludesSeries(gymLog, '행 스내치');
+  const oh = liftNameIncludesSeries(gymLog, '오버헤드 스쿼트');
+  const squat = liftTopSeries(gymLog, '스쿼트');
+  const dead = liftTopSeries(gymLog, '데드리프트');
+  const bench = liftTopSeries(gymLog, '벤치 프레스');
+  const bench130 = bench130Series(gymLog);
+  const pull = pullupTotalSeries(gymLog);
+  const row = liftTopSeries(gymLog, '바벨 로우');
+  const runs = [...runLog.sessions]
+    .filter((r) => r.avgHr)
+    .sort((a, b) => (a.date > b.date ? 1 : -1));
+  const lastRun = runs[runs.length - 1];
+  const longest = Math.max(...runLog.sessions.map((r) => r.distanceKm || 0), 0);
+  const hangPr = profile.prs.hangSquatSnatch || hang[hang.length - 1]?.value || null;
+
+  const fromSeries = (rows, unit, note, opts = {}) => {
+    const last = opts.lastOverride != null ? opts.lastOverride : rows[rows.length - 1]?.value ?? null;
+    const prev = rows.length >= 2 ? rows[rows.length - 2].value : null;
+    const delta = last != null && prev != null ? last - prev : null;
+    return { value: last, unit, delta, deltaUnit: opts.deltaUnit ?? unit, note, suffix: opts.suffix };
+  };
+
+  return [
+    {
+      id: 'hangSnatch',
+      label: '행 스쿼트 스내치',
+      ...fromSeries(hang, 'kg', '깊이 있는 리시브가 목표의 핵심 지표입니다.', {
+        lastOverride: hangPr,
+        suffix: `/ ${goal}`,
+      }),
+    },
+    {
+      id: 'ohSquat',
+      label: 'OH 스쿼트',
+      ...fromSeries(oh, 'kg', '오버헤드 안정 상한'),
+    },
+    {
+      id: 'bench130',
+      label: '벤치 130 작업',
+      ...fromSeries(bench130, 'reps', '서브맥스 반복 · 4회가 최근 목표선', { deltaUnit: '' }),
+    },
+    {
+      id: 'benchTop',
+      label: '벤치 상한',
+      ...fromSeries(bench, 'kg', '세션 최고 중량'),
+    },
+    {
+      id: 'squatTop',
+      label: '스쿼트 상한',
+      ...fromSeries(squat, 'kg', '세션 최고 중량'),
+    },
+    {
+      id: 'deadTop',
+      label: '데드 상한',
+      ...fromSeries(dead, 'kg', '세션 최고 중량'),
+    },
+    {
+      id: 'pullupTotal',
+      label: '풀업 총횟수',
+      ...fromSeries(pull, '회', '세션 총 반복', { deltaUnit: '' }),
+    },
+    {
+      id: 'rowTop',
+      label: '바벨 로우 상한',
+      ...fromSeries(row, 'kg', '등 메인 상한'),
+    },
+    {
+      id: 'easyRunHr',
+      label: '최근 이지 런',
+      value: lastRun?.avgHr ?? null,
+      unit: 'bpm',
+      delta: null,
+      deltaUnit: '',
+      note: lastRun
+        ? `${lastRun.distanceKm}km · ${lastRun.pacePerKm || ''}`
+        : '다음 런부터 HR이 점수',
+      status:
+        lastRun == null ? null : lastRun.avgHr <= 145 ? '이지 밴드 안' : '너무 높음 · 135–145 목표',
+      statusOk: lastRun == null ? null : lastRun.avgHr <= 145,
+    },
+    {
+      id: 'longestRun',
+      label: '최장 런',
+      value: longest || null,
+      unit: 'km',
+      delta: null,
+      deltaUnit: '',
+      note: '시즌 최장 거리',
+    },
+    {
+      id: 'bodyWeight',
+      label: '체중',
+      value: profile.body?.weightKg ?? null,
+      unit: 'kg',
+      delta: null,
+      deltaUnit: '',
+      note: '유지 구간 105–107 참고',
+    },
+    {
+      id: 'snatchGoal',
+      label: '스내치 목표 진행',
+      value: hangPr != null ? Math.round((hangPr / goal) * 100) : null,
+      unit: '%',
+      delta: null,
+      deltaUnit: '',
+      note: `${hangPr ?? '—'} → ${goal} kg`,
+      suffix: '',
+    },
+  ];
+}
+
+function loadHeroSlots(catalog) {
+  let slots;
+  try {
+    slots = JSON.parse(localStorage.getItem(HERO_STORAGE_KEY) || 'null');
+  } catch {
+    slots = null;
+  }
+  if (!Array.isArray(slots) || slots.length !== 3) slots = [...DEFAULT_HERO_SLOTS];
+  const ids = new Set(catalog.map((c) => c.id));
+  return slots.map((id, i) => (ids.has(id) ? id : DEFAULT_HERO_SLOTS[i]));
+}
+
+function setupHeroMetrics(profile, gymLog, runLog) {
+  const root = document.getElementById('dash-hero');
+  if (!root) return;
+  const catalog = buildHeroCatalog(profile, gymLog, runLog);
+  const byId = Object.fromEntries(catalog.map((c) => [c.id, c]));
+
+  const paint = () => {
+    const slots = loadHeroSlots(catalog);
+    const options = catalog
+      .map((c) => `<option value="${c.id}">${c.label}</option>`)
+      .join('');
+
+    root.innerHTML = slots
+      .map((id, i) => {
+        const m = byId[id] || catalog[0];
+        let deltaHtml;
+        if (m.status != null) {
+          const cls = m.statusOk === true ? 'up' : m.statusOk === false ? 'down' : 'flat';
+          deltaHtml = `<span class="hero-metric__delta ${cls}">${m.status}</span>`;
+        } else if (m.delta == null) {
+          deltaHtml = `<span class="hero-metric__delta flat">기준점 수집 중</span>`;
+        } else if (m.delta > 0) {
+          deltaHtml = `<span class="hero-metric__delta up">▲ +${m.delta}${m.deltaUnit || ''} 상승</span>`;
+        } else if (m.delta < 0) {
+          deltaHtml = `<span class="hero-metric__delta down">▼ ${m.delta}${m.deltaUnit || ''}</span>`;
+        } else {
+          deltaHtml = `<span class="hero-metric__delta flat">→ 유지</span>`;
+        }
+
+        const unitBits = [
+          m.suffix ? `<span class="hero-metric__unit">${m.suffix}</span>` : '',
+          m.unit ? `<span class="hero-metric__unit">${m.unit}</span>` : '',
+        ].join(' ');
+
+        return `
+      <article class="hero-metric ${i === 0 ? 'hero-metric--primary' : ''}">
+        <label class="hero-metric__pick">
+          <select data-slot="${i}" aria-label="지표 ${i + 1} 선택">${options}</select>
+        </label>
+        <div><span class="hero-metric__value">${m.value ?? '—'}</span>${unitBits}</div>
+        ${deltaHtml}
+        <p class="hero-metric__note">${m.note || ''}</p>
+      </article>`;
+      })
+      .join('');
+
+    root.querySelectorAll('select[data-slot]').forEach((sel) => {
+      sel.value = slots[Number(sel.dataset.slot)];
+      sel.onchange = () => {
+        const next = loadHeroSlots(catalog);
+        next[Number(sel.dataset.slot)] = sel.value;
+        localStorage.setItem(HERO_STORAGE_KEY, JSON.stringify(next));
+        paint();
+      };
+    });
+  };
+
+  paint();
+}
+
+/** Keep dashboard on recent window (gym-log.activeFrom, default ~2 months). */
+function scopeActiveSessions(log, activeFrom) {
+  if (!log) return log;
+  const from = activeFrom || log.activeFrom;
+  if (!from) return log;
+  return {
+    ...log,
+    activeFrom: from,
+    sessions: (log.sessions || []).filter((s) => (s.date || '') >= from),
+  };
+}
+
+function extractLiftSeries(gymLog, nameMatch, pick) {
+  const rows = [];
+  gymLog.sessions
+    .slice()
+    .sort((a, b) => (a.date > b.date ? 1 : -1))
+    .forEach((s) => {
+      (s.exercises || []).forEach((ex) => {
+        if (!nameMatch(ex.name || '')) return;
+        const v = pick(ex, s);
+        if (v != null) rows.push({ date: s.date, value: v, ex });
+      });
+    });
+  return rows;
+}
+
+const GOALS_STORAGE_KEY = 'lab-goals-custom';
+
+function todayISO() {
+  return new Date().toISOString().slice(0, 10);
+}
+
+function parseISODate(s) {
+  if (!s) return null;
+  const d = new Date(`${s}T12:00:00`);
+  return Number.isNaN(d.getTime()) ? null : d;
+}
+
+function daysBetween(a, b) {
+  const ms = 86400000;
+  return Math.round((b - a) / ms);
+}
+
+function formatRunTime(sec) {
+  if (sec == null) return '—';
+  const m = Math.floor(sec / 60);
+  const s = Math.round(sec % 60);
+  return `${m}:${String(s).padStart(2, '0')}`;
+}
+
+function formatGoalValue(goal, value) {
+  if (value == null) return '—';
+  const k = goal.kind;
+  if (k === 'run_time_sec') return formatRunTime(value);
+  if (k === 'run_distance_km') return `${value} km`;
+  if (k === 'bench_reps') return `${value}회`;
+  if (k === 'lift_kg') return `${value} kg`;
+  return String(value);
+}
+
+function loadGoalOverrides() {
+  try {
+    return JSON.parse(localStorage.getItem(GOALS_STORAGE_KEY) || '{}');
+  } catch {
+    return {};
+  }
+}
+
+function saveCustomGoals(customList) {
+  const store = loadGoalOverrides();
+  store.custom = customList;
+  localStorage.setItem(GOALS_STORAGE_KEY, JSON.stringify(store));
+}
+
+function mergeGoals(goalsData) {
+  const base = (goalsData?.goals || []).map((g) => ({ ...g, source: 'default' }));
+  const store = loadGoalOverrides();
+  const byId = Object.fromEntries(base.map((g) => [g.id, { ...g }]));
+  Object.entries(store.overrides || {}).forEach(([id, patch]) => {
+    if (byId[id]) Object.assign(byId[id], patch);
+  });
+  (store.custom || []).forEach((g) => {
+    byId[g.id] = { ...g, source: 'custom' };
+  });
+  return Object.values(byId).sort((a, b) => (a.deadline > b.deadline ? 1 : -1));
+}
+
+function currentForGoal(goal, profile, gymLog, runLog) {
+  const store = loadGoalOverrides();
+  const manual = store.current?.[goal.id];
+  if (manual != null && goal.kind === 'custom') return manual;
+
+  const k = goal.kind;
+  if (k === 'lift_kg') {
+    const match = goal.track?.exerciseMatch || '';
+    const rows = extractLiftSeries(gymLog, (n) => n.includes(match), topKgFromExercise);
+    if (rows.length) return rows[rows.length - 1].value;
+    if (match.includes('행') && profile.prs?.hangSquatSnatch) return profile.prs.hangSquatSnatch;
+    return null;
+  }
+  if (k === 'bench_reps') {
+    const w = goal.track?.weightKg || 130;
+    const rows = extractLiftSeries(
+      gymLog,
+      (n) => n === '벤치 프레스',
+      (ex) => {
+        const at = (ex.sets || []).filter((s) => (s.kg || 0) >= w && (s.reps || 0) > 0);
+        if (!at.length) return null;
+        const atW = at.filter((s) => s.kg === w);
+        return Math.max(...(atW.length ? atW : at).map((s) => s.reps || 0));
+      }
+    );
+    return rows.length ? rows[rows.length - 1].value : null;
+  }
+  if (k === 'run_distance_km') {
+    return Math.max(...runLog.sessions.map((r) => r.distanceKm || 0), 0) || null;
+  }
+  if (k === 'run_time_sec') {
+    const best = profile.prs?.tenKBest;
+    if (best?.timeMin) return Math.round(best.timeMin * 60);
+    if (best?.timeSec) return best.timeSec;
+    return null;
+  }
+  if (k === 'custom') {
+    return manual ?? goal.currentValue ?? null;
+  }
+  return null;
+}
+
+function computeGoalProgress(goal, profile, gymLog, runLog) {
+  const current = currentForGoal(goal, profile, gymLog, runLog);
+  const baseline = goal.baseline?.value ?? current ?? 0;
+  const target = goal.target?.value;
+  const startDate = parseISODate(goal.baseline?.date || goal.startDate || todayISO());
+  const deadline = parseISODate(goal.deadline);
+  const today = parseISODate(todayISO());
+
+  let achievePct = 0;
+  const lowerBetter = goal.kind === 'run_time_sec';
+  if (current != null && target != null && baseline != null) {
+    if (lowerBetter) {
+      const span = baseline - target;
+      achievePct = span > 0 ? ((baseline - current) / span) * 100 : current <= target ? 100 : 0;
+    } else {
+      const span = target - baseline;
+      achievePct = span > 0 ? ((current - baseline) / span) * 100 : current >= target ? 100 : 0;
+    }
+  }
+  achievePct = Math.max(0, Math.min(100, Math.round(achievePct)));
+
+  let timePct = 0;
+  let daysLeft = null;
+  if (startDate && deadline && today) {
+    const total = daysBetween(startDate, deadline);
+    const elapsed = daysBetween(startDate, today);
+    daysLeft = daysBetween(today, deadline);
+    timePct = total > 0 ? Math.round((elapsed / total) * 100) : 0;
+    timePct = Math.max(0, Math.min(100, timePct));
+  }
+
+  const done = lowerBetter
+    ? current != null && target != null && current <= target
+    : current != null && target != null && current >= target;
+  const overdue = deadline && today && today > deadline && !done;
+
+  let status = '순조';
+  let statusClass = 'ok';
+  if (done) {
+    status = '달성';
+    statusClass = 'done';
+  } else if (overdue) {
+    status = '기한 지남';
+    statusClass = 'late';
+  } else if (achievePct + 8 < timePct) {
+    status = '지연';
+    statusClass = 'late';
+  } else if (achievePct + 15 < timePct) {
+    status = '주의';
+    statusClass = 'warn';
+  }
+
+  const deadlineLabel = goal.deadline ? goal.deadline.replace(/-/g, '.').slice(2) : '';
+  const daysLabel =
+    daysLeft == null
+      ? ''
+      : daysLeft < 0
+        ? `${Math.abs(daysLeft)}일 지남`
+        : daysLeft === 0
+          ? '오늘까지'
+          : `${daysLeft}일 남음`;
+
+  return {
+    current,
+    baseline,
+    target,
+    achievePct,
+    timePct,
+    done,
+    overdue,
+    status,
+    statusClass,
+    deadlineLabel,
+    daysLabel,
+    currentLabel: formatGoalValue(goal, current),
+    targetLabel: goal.target?.label || formatGoalValue(goal, target),
+    baselineLabel: goal.baseline?.label || formatGoalValue(goal, baseline),
+  };
+}
+
+function renderGoalTracker(goalsData, profile, gymLog, runLog) {
+  const root = document.getElementById('dash-goals');
+  if (!root) return;
+  const goals = mergeGoals(goalsData);
+  if (!goals.length) {
+    root.innerHTML = '<p class="hint">등록된 목표가 없습니다.</p>';
+    return;
+  }
+
+  root.innerHTML = goals
+    .map((g) => {
+      const p = computeGoalProgress(g, profile, gymLog, runLog);
+      return `
+    <article class="goal-track ${p.done ? 'goal-track--done' : p.statusClass === 'late' ? 'goal-track--late' : ''}">
+      <div class="goal-track__head">
+        <h3>${g.title}</h3>
+        <span class="goal-track__badge goal-track__badge--${p.statusClass}">${p.status}</span>
+      </div>
+      <div class="goal-track__values">
+        <span>현재 <strong>${p.currentLabel}</strong></span>
+        <span>→ 목표 <strong>${p.targetLabel}</strong></span>
+      </div>
+      <p class="goal-track__deadline">기한 ${p.deadlineLabel}${p.daysLabel ? ` · ${p.daysLabel}` : ''}</p>
+      <div class="goal-bar-row">
+        <span><em>달성</em><em>${p.achievePct}%</em></span>
+        <div class="goal-bar goal-bar--achieve"><i style="width:${p.achievePct}%"></i></div>
+      </div>
+      <div class="goal-bar-row">
+        <span><em>기간 경과</em><em>${p.timePct}%</em></span>
+        <div class="goal-bar goal-bar--time"><i style="width:${p.timePct}%"></i></div>
+      </div>
+      ${g.note ? `<p class="goal-track__note">${g.note}</p>` : ''}
+    </article>`;
+    })
+    .join('');
+}
+
+function setupGoalForm(goalsData, profile, gymLog, runLog, onUpdate) {
+  const form = document.getElementById('goal-form');
+  const kindSel = form?.querySelector('[name="kind"]');
+  if (!form) return;
+
+  const toggleFields = () => {
+    const kind = kindSel.value;
+    form.querySelectorAll('[data-show]').forEach((el) => {
+      el.style.display = el.dataset.show === kind ? '' : 'none';
+    });
+  };
+  kindSel?.addEventListener('change', toggleFields);
+  toggleFields();
+
+  if (!form.dataset.defaultDeadline) {
+    const d = new Date();
+    d.setMonth(d.getMonth() + 3);
+    form.querySelector('[name="deadline"]').value = d.toISOString().slice(0, 10);
+    form.dataset.defaultDeadline = '1';
+  }
+
+  form.onsubmit = (e) => {
+    e.preventDefault();
+    const fd = new FormData(form);
+    const kind = fd.get('kind');
+    const title = String(fd.get('title')).trim();
+    const targetValue = Number(fd.get('targetValue'));
+    const deadline = fd.get('deadline');
+    const baselineValue = fd.get('baselineValue');
+    const baselineDate = fd.get('baselineDate') || todayISO();
+    const note = String(fd.get('note') || '').trim();
+    const id = `custom-${Date.now()}`;
+
+    const goal = {
+      id,
+      title,
+      kind,
+      baseline: {
+        value: baselineValue !== '' ? Number(baselineValue) : 0,
+        date: baselineDate,
+      },
+      target: { value: targetValue },
+      deadline,
+      note,
+    };
+
+    if (kind === 'lift_kg') {
+      goal.track = { exerciseMatch: String(fd.get('exerciseMatch') || title).trim() };
+      goal.target.unit = 'kg';
+    } else if (kind === 'run_distance_km') {
+      goal.track = { type: 'longest' };
+      goal.target.unit = 'km';
+    } else if (kind === 'run_time_sec') {
+      goal.track = { distanceKm: 10 };
+      goal.target.unit = 'sec';
+      goal.target.label = formatRunTime(targetValue);
+    } else if (kind === 'bench_reps') {
+      goal.track = { weightKg: Number(fd.get('weightKg') || 130) };
+      goal.target.unit = 'reps';
+    } else if (kind === 'custom') {
+      goal.currentValue = baselineValue !== '' ? Number(baselineValue) : 0;
+    }
+
+    const store = loadGoalOverrides();
+    const custom = store.custom || [];
+    custom.push(goal);
+    saveCustomGoals(custom);
+    form.reset();
+    toggleFields();
+    if (onUpdate) onUpdate();
+    document.getElementById('goal-form-panel')?.removeAttribute('open');
+  };
+}
+
+function renderDashboard(profile, gymLog, runLog, insights, album, goalsData) {
+  const hangSq = profile.prs.hangSquatSnatch || 0;
+  const goal = profile.prs.snatchGoal || 100;
+  const updated = insights?.updated || profile.updated || '';
+  document.getElementById('dash-updated').textContent = updated ? `데이터 ${updated}` : '';
+
+  setupHeroMetrics(profile, gymLog, runLog);
+  setupLiftProgress(gymLog);
+
+  const hang = extractLiftSeries(
+    gymLog,
+    (n) => n.includes('행 스내치'),
+    (ex) => {
+      const kgs = (ex.sets || []).map((s) => s.kg || 0).filter((k) => k > 0);
+      return kgs.length ? Math.max(...kgs) : null;
+    }
+  );
+  const oh = extractLiftSeries(
+    gymLog,
+    (n) => n.includes('오버헤드 스쿼트'),
+    (ex) => {
+      const kgs = (ex.sets || []).map((s) => s.kg || 0).filter((k) => k > 0);
+      return kgs.length ? Math.max(...kgs) : null;
+    }
+  );
+
+  const benchRows = bench130Series(gymLog).map((r) => ({ date: r.date, reps: r.value }));
+  const runs = [...runLog.sessions]
+    .filter((r) => r.avgHr)
+    .sort((a, b) => (a.date > b.date ? 1 : -1));
+
+  Charts.lineChart(document.getElementById('dash-hang-snatch'), {
+    labels: hang.map((h) => shortDate(h.date)),
+    series: [{ values: hang.map((h) => h.value), color: '#0f766e' }],
+    yMin: 30,
+    yMax: 110,
+    targetLine: 100,
+    unit: 'kg',
+  });
+  const hangVerdict = document.getElementById('dash-hang-verdict');
+  hangVerdict.textContent = insights?.trends?.hangSnatchDeep?.verdict || '행 깊은 리시브 추세';
+  hangVerdict.className = 'verdict';
+
+  Charts.barChart(document.getElementById('dash-oh-squat'), {
+    labels: oh.map((h) => shortDate(h.date)),
+    values: oh.map((h) => h.value),
+    colors: oh.map(() => '#148f86'),
+    unit: 'kg',
+  });
+
+  Charts.barChart(document.getElementById('dash-bench-130'), {
+    labels: benchRows.map((b) => shortDate(b.date)),
+    values: benchRows.map((b) => b.reps),
+    colors: benchRows.map((b) => (b.reps >= 4 ? '#047857' : '#1d4ed8')),
+    targetLine: 4,
+    unit: 'reps @ 130',
+  });
+  document.getElementById('dash-bench-verdict').textContent =
+    insights?.trends?.bench130?.verdict || '';
+
+  Charts.lineChart(document.getElementById('dash-run-hr'), {
+    labels: runs.map((r) => shortDate(r.date)),
+    series: [{ values: runs.map((r) => r.avgHr), color: '#be123c' }],
+    yMin: 120,
+    yMax: 190,
+    band: [135, 145],
+    unit: 'avg HR',
+  });
+  const runVerdict = document.getElementById('dash-run-verdict');
+  runVerdict.textContent = insights?.trends?.easyRun?.verdict || '';
+  if (insights?.trends?.easyRun?.verdict?.includes('실패')) {
+    runVerdict.style.color = '#9f1239';
+  }
+
+  const longest = Math.max(...runLog.sessions.map((r) => r.distanceKm || 0), 0);
+
+  const refreshGoals = () => renderGoalTracker(goalsData, profile, gymLog, runLog);
+  refreshGoals();
+  setupGoalForm(goalsData, profile, gymLog, runLog, refreshGoals);
+
+  const dates = Object.keys(insights?.sessionReviews || {}).sort().reverse();
+  const latest = dates[0];
+  const rev = latest ? insights.sessionReviews[latest] : null;
+  document.getElementById('dash-latest-coach').innerHTML = rev
+    ? `<strong>최근 코칭 · ${latest}</strong> · ${rev.grade}<div style="margin-top:0.35rem;color:var(--text-muted)">${rev.direction}</div>`
+    : '<strong>최근 코칭</strong><div style="margin-top:0.35rem;color:var(--text-muted)">세션 리뷰 없음</div>';
+
+  if (album) {
+    document.getElementById('dash-album-kpi').innerHTML = `
+      <div class="kpi"><span>사진</span><strong>${album.totalPhotos}</strong></div>
+      <div class="kpi"><span>촬영일</span><strong>${album.uniqueDates}</strong></div>
+      <div class="kpi"><span>로그 세션</span><strong>${album.gymLogSessions}</strong></div>
+    `;
+    const months = Object.entries(album.byMonth || {}).slice(-12);
+    document.getElementById('dash-album-months').innerHTML = months
+      .map(([m, n]) => `<div class="album-month"><strong>${m}</strong><span>${n}장</span></div>`)
+      .join('');
+  }
+}
+
+function renderCharts(gymLog, runLog, profile) {
+  const gymSorted = [...gymLog.sessions]
+    .filter((s) => s.totalVolumeKg)
+    .sort((a, b) => (a.date > b.date ? 1 : -1));
+
+  const volEl = document.getElementById('chart-gym-volume');
+  if (volEl) {
+    Charts.barChart(volEl, {
+      labels: gymSorted.map((s) => s.date.slice(5)),
+      values: gymSorted.map((s) => Math.round(s.totalVolumeKg / 1000)),
+      colors: gymSorted.map((s) => TYPE_COLOR[s.type] || '#3b82f6'),
+      unit: '단위: 천 kg',
+    });
+  }
+
+  const runEl = document.getElementById('chart-run-distance');
+  if (runEl) {
+    const runs = [...runLog.sessions].sort((a, b) => (a.date > b.date ? 1 : -1));
+    Charts.barChart(runEl, {
+      labels: runs.map((s) => s.date.slice(5)),
+      values: runs.map((s) => s.distanceKm),
+      colors: runs.map(() => TYPE_COLOR.Run),
+      targetLine: 7,
+      unit: 'km',
+    });
+  }
+}
+
+function buildTimeline(gymLog, runLog) {
+  const gym = gymLog.sessions.map((s) => ({ kind: 'gym', ...s }));
+  const run = runLog.sessions.map((s) => ({ kind: 'run', type: 'Run', ...s }));
+  return [...gym, ...run].sort((a, b) => (a.date < b.date ? 1 : -1));
+}
+
+function renderTimeline(items, filter = 'all') {
+  const filtered = items.filter((i) => filter === 'all' || i.type === filter);
+  const countEl = document.getElementById('session-count');
+  if (countEl) countEl.textContent = `${filtered.length}세션`;
+
+  document.getElementById('timeline').innerHTML = filtered
+    .map((s) => {
+      if (s.kind === 'run') {
+        return `
+        <article class="tl-card tl-card--run">
+          <div class="tl-head">
+            <span class="badge-cat">Run</span>
+            <strong>${s.date}</strong>
+            <span>${s.distanceKm} km · ${formatDuration(s.timeSec)} · ${s.pacePerKm || paceFromSec(s.distanceKm, s.timeSec)}</span>
+          </div>
+          <p class="hint">${s.coachNote || ''}</p>
+        </article>`;
+      }
+
+      const exHtml = (s.exercises || [])
+        .map(
+          (ex) => `
+        <div class="tl-ex">
+          <div class="tl-ex__name">${ex.name}${ex.overload ? ' <span class="up">↑</span>' : ''}</div>
+          <div class="tl-ex__sets">${ex.workingHighlight ? `<em>${ex.workingHighlight}</em>` : formatSets(ex.sets)}</div>
+        </div>`
+        )
+        .join('');
+
+      return `
+      <article class="tl-card tl-card--${(s.type || '').toLowerCase()}">
+        <div class="tl-head">
+          <span class="badge-cat">${s.type}</span>
+          <strong>${s.date}</strong>
+          <span>${s.durationMin ? s.durationMin + '분' : ''} ${s.totalVolumeKg ? '· ' + s.totalVolumeKg.toLocaleString() + 'kg' : ''} ${s.grade ? '· ' + s.grade : ''}</span>
+        </div>
+        <div class="tl-ex-list">${exHtml}</div>
+        <p class="hint">${s.coachNote || ''}</p>
+      </article>`;
+    })
+    .join('');
+}
+
+let timelineItems = [];
+
+document.getElementById('result-filters')?.addEventListener('click', (e) => {
+  const btn = e.target.closest('.chip');
+  if (!btn) return;
+  document.querySelectorAll('#result-filters .chip').forEach((c) => c.classList.remove('active'));
+  btn.classList.add('active');
+  renderTimeline(timelineItems, btn.dataset.type);
+});
+
+Promise.all([
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/athlete-profile.json?v=dash15'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/sessions/gym-log.json?v=dash15'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/sessions/run-log.json?v=dash15'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/plan.json?v=dash15'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/coaching-insights.json?v=dash15'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/goals.json?v=dash15'),
+  loadJSON('https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@cursor/training-canvas-anatomy-5c6f/data/album-inventory.json?v=dash15').catch(() => null),
+])
+  .then(([profile, gymLog, runLog, plan, insights, goalsData, album]) => {
+    const from = gymLog.activeFrom || '2026-06-05';
+    gymLog = scopeActiveSessions(gymLog, from);
+    runLog = scopeActiveSessions(runLog, from);
+    renderDashboard(profile, gymLog, runLog, insights, album, goalsData);
+    renderPlan(plan);
+    renderProfile(profile);
+    renderKpis(gymLog, runLog, profile);
+    renderCharts(gymLog, runLog, profile);
+    renderHighlights(collectHighlights(gymLog));
+    renderInsights(insights);
+    timelineItems = buildTimeline(gymLog, runLog);
+    renderTimeline(timelineItems);
+  })
+  .catch((err) => {
+    document.body.insertAdjacentHTML(
+      'beforeend',
+      `<pre style="color:#f87171;padding:1rem">로드 실패: ${err}\npython3 -m http.server 8080 으로 열어주세요.</pre>`
+    );
+  });
+
+  </script>
+</body>
+</html>
