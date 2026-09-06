@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "note": "Rise 공유앨범 backfill · 51세션 · 앨범 1472장 · manual 39 + OCR 12",
+  "note": "Rise 공유앨범 backfill · 52세션 · 앨범 1474장 · manual 39 + OCR 13",
   "activeFrom": "2026-06-05",
   "sessions": [
     {
@@ -6839,6 +6839,87 @@
       },
       "source": "album-backfill",
       "coachNote": "바벨 스쿼트 180×1=처방 상단 달성 · 185 X. 고블릿 24×20×4=버티는힘 병행 but rep 과다(템플릿12–15). 힙쓰러스트 OCR 빈약. 저녁 ~3km. 9/6 역도 4일 전 — 목 휴식이 맞음."
+    },
+    {
+      "id": "gym-2026-09-04",
+      "date": "2026-09-04",
+      "type": "Olympic",
+      "title": "숏테크 (금 · 역도 전)",
+      "durationMin": null,
+      "totalSets": 19,
+      "totalVolumeKg": 4364,
+      "exercises": [
+        {
+          "name": "행 파워클린",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 3
+            },
+            {
+              "kg": 70,
+              "reps": 3
+            },
+            {
+              "kg": 80,
+              "reps": 3
+            },
+            {
+              "kg": 90,
+              "reps": 2
+            }
+          ],
+          "workingHighlight": "90×2"
+        },
+        {
+          "name": "바벨 데드리프트 or 클린풀",
+          "note": "OCR이 클린과 혼입 · 180–195 싱글 — 데드 vs 클린풀 선수 확인 필요",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 10
+            },
+            {
+              "kg": 100,
+              "reps": 5
+            },
+            {
+              "kg": 140,
+              "reps": 5
+            },
+            {
+              "kg": 160,
+              "reps": 3
+            },
+            {
+              "kg": 180,
+              "reps": 1
+            },
+            {
+              "kg": 190,
+              "reps": 1
+            },
+            {
+              "kg": 195,
+              "reps": 0
+            }
+          ],
+          "workingHighlight": "190×1 · 195×0"
+        },
+        {
+          "name": "바벨 스내치",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 2
+            }
+          ],
+          "workingHighlight": "60×2",
+          "note": "OCR 1세트만 — 추가 세트 있으면 보정"
+        }
+      ],
+      "source": "album-backfill",
+      "coachNote": "처방=행70–80·스내치≤65·70+X. 행 90×2=감김 재현 OK. 190×1/195×0=OCR상 데드/클린풀 혼입 — 일 역도 이틀 전 데드면 부담↑, 클린풀이면 허용. 스내치 OCR 60×2만(부족 가능)."
     }
   ]
 }
