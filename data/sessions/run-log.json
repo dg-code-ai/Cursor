@@ -1102,6 +1102,60 @@
       "context": "9/6 역도 4일 전 · 수 바벨 Leg 당일 저녁 · 실내",
       "metricsNote": "NRC→Fitness는 거리·페이스·심박·칼로리만. 케이던스·접지·수직진폭·보폭·파워는 런데이/워치 네이티브 대비 비어 있음.",
       "coachNote": "3.58km·7'38\"·HR146(max174). 심박 평균은 이지 창(150–155) 안쪽 but 페이스는 앵커(8'30\"+)보다 빠름·max174·후반 가속=중강도 숏. 수 스쿼트180 당일치고 거리 짧아서 역도 전 치명적은 아님 — 토는 진짜 이지로."
+    },
+    {
+      "id": "run-2026-09-05-morning",
+      "date": "2026-09-05",
+      "type": "outdoor-run",
+      "title": "실외 달리기 (토 아침 · 런데이)",
+      "distanceKm": 6.25,
+      "timeSec": 2932,
+      "elapsedSec": 2933,
+      "pacePerKm": "7'49\"",
+      "paceRange": [
+        "9'03\"",
+        "6'43\""
+      ],
+      "caloriesKcal": 624,
+      "activeKcal": 624,
+      "avgHr": 154,
+      "hrRange": [
+        106,
+        167
+      ],
+      "avgPower": 237,
+      "avgCadence": 158,
+      "cadenceRange": [
+        121,
+        171
+      ],
+      "verticalOscCm": 9.4,
+      "verticalOscRange": [
+        8.1,
+        11.0
+      ],
+      "groundContactMs": 342,
+      "groundContactRange": [
+        281,
+        370
+      ],
+      "strideLengthM": 0.8,
+      "strideLengthRange": [
+        0.7,
+        0.9
+      ],
+      "location": "인천광역시",
+      "source": "Runday → Apple Fitness",
+      "timeOfDay": "오전",
+      "timeWindow": "08:05–08:54",
+      "context": "일 9/6 역도 **전날** · 처방=4–5km·9'00\"+·HR150–155",
+      "graphRead": {
+        "hr": "106→167 초반 상승 후 평탄 · 평균154 · max167",
+        "pace": "9'03\"–6'43\" · 평균7'49\"=이지 앵커(8'30\"–9'00\")보다 빠름",
+        "cadence": "158 평균 · 런데이 폼 지표 포함",
+        "form": "접지342ms · 보폭0.8m · 수직9.4cm · 파워237"
+      },
+      "coachNote": "런데이라 폼 지표까지 남음(좋음). 거리 6.25=처방4–5↑ · 페이스7'49\"=이지 아님 · HR154는 창 안쪽이지만 페이스·케이던스158=중강도. 역도 전날치고 살짝 세게 감. 일 역도는 다리 감각만 보고 오프너 보수."
     }
   ],
   "monthlyMileage": {
