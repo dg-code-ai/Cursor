@@ -275,9 +275,20 @@
         "day": "일",
         "focus": "격주 역도장",
         "plan": "스내치 85–89 고정 → 92 ≤2 · 용상 110–115 · 120 터치 선택",
-        "done": false,
+        "done": true,
         "rescheduledFrom": "2026-08-30",
-        "athleteScheduled": true
+        "athleteScheduled": true,
+        "eveningRun": {
+          "distanceKm": 5.11,
+          "pace": "7'52\"",
+          "avgHr": 151,
+          "maxHr": 162,
+          "cadence": 160,
+          "timeWindow": "21:20–22:00"
+        },
+        "actual": "저녁 실외 5.11km · 7'52\" · HR151(max162) · 케이던스160 · 역도 결과 대기",
+        "grade": "저녁런 B (중강도) · 역도=미확인",
+        "coachRead": "저녁런은 토와 비슷한 프로필(7'5x\"/HR150대). 역도장 갔는지·스내치/용상 결과는 아직 미보고 — 알려주면 반영."
       }
     ]
   },
