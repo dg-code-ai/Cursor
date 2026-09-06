@@ -6920,6 +6920,73 @@
       ],
       "source": "album-backfill",
       "coachNote": "처방=행70–80·스내치≤65·70+X. 행 90×2=감김 재현 OK. 190×1/195×0=OCR상 데드/클린풀 혼입 — 일 역도 이틀 전 데드면 부담↑, 클린풀이면 허용. 스내치 OCR 60×2만(부족 가능)."
+    },
+    {
+      "id": "gym-2026-09-06-olympic",
+      "date": "2026-09-06",
+      "type": "Olympic",
+      "title": "지엘짐 프로그램 훈련",
+      "venue": "지엘짐",
+      "mode": "program",
+      "exercises": [
+        {
+          "name": "스내치 — 중간 허벅지 정지 3초 → 풀 · 하프스내치",
+          "sets": [
+            {
+              "note": "2개씩 ×3세트",
+              "reps": 2,
+              "setsCount": 3
+            }
+          ],
+          "workingHighlight": "하프스내치 2×3"
+        },
+        {
+          "name": "스내치 — 스내치 데드 3초 → 풀 · 파워스내치",
+          "sets": [
+            {
+              "note": "2개씩 ×3세트",
+              "reps": 2,
+              "setsCount": 3
+            }
+          ],
+          "workingHighlight": "파워스내치 2×3"
+        },
+        {
+          "name": "스내치 2 + 오버헤드 스쿼트",
+          "sets": [
+            {
+              "note": "×3세트",
+              "setsCount": 3
+            }
+          ],
+          "workingHighlight": "스내치2+OHS ×3"
+        },
+        {
+          "name": "용상 — 동일 구조 (저크 세트당 1)",
+          "sets": [
+            {
+              "note": "스내치 블록과 동일 패턴 · 저크×1/세트"
+            }
+          ],
+          "workingHighlight": "용상 프로그램 · 저크×1"
+        },
+        {
+          "name": "클린 + 프론트스쿼트 + 저크",
+          "sets": [
+            {
+              "note": "마무리 콤플렉스"
+            }
+          ],
+          "workingHighlight": "클린+FS+저크"
+        }
+      ],
+      "eveningRun": {
+        "distanceKm": 5.11,
+        "pace": "7'52\"",
+        "avgHr": 151
+      },
+      "source": "athlete-report",
+      "coachNote": "맥스 chase X · 프로그램 데이. 정지 3초·하프·파워·OHS=풀/리시브 분리. 용상 저크 절제. 92는 다음 격주. 중량 미보고."
     }
   ]
 }
