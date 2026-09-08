@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "note": "Rise 공유앨범 backfill · 52세션 · 앨범 1474장 · manual 39 + OCR 13",
+  "note": "Rise 공유앨범 backfill · 54세션 · 앨범 1476장 · manual 40 + OCR 14",
   "activeFrom": "2026-06-05",
   "sessions": [
     {
@@ -6990,6 +6990,126 @@
       },
       "source": "athlete-report",
       "coachNote": "맥스 chase X · 프로그램 데이. 정지 3초·하프·파워·OHS=풀/리시브 분리. 용상 저크 절제. 92는 다음 격주. 중량 미보고."
+    },
+    {
+      "id": "gym-2026-09-07",
+      "date": "2026-09-07",
+      "type": "Push",
+      "title": "오전 운동 (역도 다음날 라이트)",
+      "durationMin": 52,
+      "totalSets": 20,
+      "totalVolumeKg": 6420,
+      "exercises": [
+        {
+          "name": "푸시프레스",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 5
+            },
+            {
+              "kg": 70,
+              "reps": 3
+            },
+            {
+              "kg": 80,
+              "reps": 3
+            },
+            {
+              "kg": 80,
+              "reps": 3
+            },
+            {
+              "kg": 80,
+              "reps": 3
+            }
+          ],
+          "workingHighlight": "80×3"
+        },
+        {
+          "name": "바벨 오버헤드 프레스",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 7
+            },
+            {
+              "kg": 60,
+              "reps": 7
+            },
+            {
+              "kg": 60,
+              "reps": 6
+            }
+          ],
+          "workingHighlight": "60×7"
+        },
+        {
+          "name": "벤치 프레스",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 10
+            },
+            {
+              "kg": 100,
+              "reps": 5
+            },
+            {
+              "kg": 120,
+              "reps": 4
+            },
+            {
+              "kg": 120,
+              "reps": 4
+            }
+          ],
+          "workingHighlight": "120×4×2"
+        },
+        {
+          "name": "로프 페이스 풀",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 17
+            },
+            {
+              "kg": 20,
+              "reps": 17
+            },
+            {
+              "kg": 20,
+              "reps": 15
+            }
+          ],
+          "workingHighlight": "20×17"
+        },
+        {
+          "name": "케이블 미들 플라이",
+          "sets": [
+            {
+              "kg": 7.5,
+              "reps": 20
+            },
+            {
+              "kg": 10,
+              "reps": 14
+            },
+            {
+              "kg": 10,
+              "reps": 13
+            },
+            {
+              "kg": 10,
+              "reps": 13
+            }
+          ],
+          "workingHighlight": "10×14",
+          "note": "OCR 75×20→7.5×20 추정(8/31 동일 오인)"
+        }
+      ],
+      "source": "album-backfill",
+      "coachNote": "역도 다음날 Push 라이트 준수. PP 80×3 · OHP 60×7 · 벤치 120×4×2 · 150 X. OCR: PP/OHP·벤치/페이스풀·플라이7.5 혼입 분리."
     }
   ]
 }
