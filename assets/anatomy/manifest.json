@@ -1,0 +1,25 @@
+{
+  "source": "OpenStax Anatomy & Physiology (CC BY 4.0) + Gray's Anatomy 1918 (Public Domain) via Wikimedia Commons",
+  "files": {
+    "overviewBoth": "assets/anatomy/openstax-both.jpg",
+    "anterior": "assets/anatomy/anterior-openstax.jpg",
+    "posterior": "assets/anatomy/posterior-openstax.jpg",
+    "anteriorLabeled": "assets/anatomy/anterior-gray.png",
+    "posteriorLabeled": "assets/anatomy/posterior-gray.png"
+  },
+  "detail": {
+    "lat": "assets/anatomy/gray-lat.png",
+    "deltoid": "assets/anatomy/gray-deltoid.png",
+    "pec": "assets/anatomy/gray-pec.png",
+    "triceps": "assets/anatomy/gray-triceps.png",
+    "glute": "assets/anatomy/gray-glute.png",
+    "quad": "assets/anatomy/gray-quad.png",
+    "biceps": "assets/anatomy/gray-biceps.png",
+    "shoulderBack": "assets/anatomy/gray-shoulder-back.png",
+    "chestShoulder": "assets/anatomy/gray-chest-shoulder.png"
+  },
+  "attribution": [
+    "OpenStax College, Anatomy and Physiology — CC BY 4.0",
+    "Gray's Anatomy plates (1918) — Public Domain"
+  ]
+}

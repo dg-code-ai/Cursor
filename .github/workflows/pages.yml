@@ -1,38 +1,66 @@
-name: Deploy GitHub Pages
+name: Validate Training Lab site
+
+# GitHub Pages is not enabled on this repo (deploy-pages → 404).
+# Validate the static site on push/PR instead of failing deploy.
 
 on:
   push:
-    branches: [main, cursor/weightlifting-log-3169]
+    branches:
+      - main
+      - cursor/training-canvas-anatomy-5c6f
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: validate-site-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  deploy:
+  validate:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
 
-      - name: Prepare static site
+      - name: Prepare static site bundle
         run: |
           mkdir -p deploy
-          cp index.html deploy/
-          cp -r css js deploy/
+          cp index.html canvas.html anatomy.html deploy/
+          cp -r css js data assets deploy/
           touch deploy/.nojekyll
+          test -f deploy/canvas.html
+          test -f deploy/js/canvas.js
+          test -f deploy/js/charts.js
+          test -d deploy/data
+          test -f deploy/data/sessions/gym-log.json
+          test -f deploy/data/album-inventory.json
+          ls -la deploy
 
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: deploy
+      - name: Validate JSON data files
+        run: |
+          python3 << 'PY'
+          import json, sys
+          from pathlib import Path
+          root = Path('deploy/data')
+          files = list(root.rglob('*.json'))
+          if not files:
+              print('No JSON files found', file=sys.stderr)
+              sys.exit(1)
+          for path in sorted(files):
+              with path.open() as f:
+                  json.load(f)
+              print('OK', path)
+          print(f'Validated {len(files)} JSON files')
+          PY
 
-      - uses: actions/deploy-pages@v4
-        id: deployment
+      - name: Check dashboard hooks exist
+        run: |
+          grep -q 'panel-dashboard' deploy/canvas.html
+          grep -q 'renderDashboard' deploy/js/canvas.js
+          grep -q 'lineChart' deploy/js/charts.js
+          grep -q 'dash-hang-snatch' deploy/canvas.html
+          echo 'Dashboard hooks OK'

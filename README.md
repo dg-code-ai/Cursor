@@ -3,14 +3,16 @@
 역도(올림픽 역도) 훈련을 위한 **메인 리프트 중심 기록 도구**입니다.  
 헬스 앱과 달리 **TM 기준 % 자동 계산**, **성공/실패 rep**, **주간 80%+ 볼륨**에 맞춰 설계했습니다.
 
-## 아이폰만으로 사용하기 (추천)
+## 트레이닝 캔버스 (대시보드) — 아이폰 한 번에 열기
 
-### 바로 시작 (PC·설정 불필요)
+Safari에서 **이 주소만** 탭하세요:
 
-1. Safari에서 아래 주소 열기  
-   **https://cdn.jsdelivr.net/gh/dg-code-ai/Cursor@main/index.html**
-2. 공유 버튼(□↑) → **홈 화면에 추가** → 이름: `역도 기록`
-3. 홈 화면 아이콘으로 실행
+**https://raw.githack.com/dg-code-ai/Cursor/cursor/training-canvas-anatomy-5c6f/canvas-standalone.html**
+
+(공유 → 홈 화면에 추가 하면 다음에 더 편합니다.)
+
+jsDelivr가 소스 텍스트로만 보이면 위 raw.githack 주소를 쓰세요.
+
 
 ### 사용 순서
 
@@ -38,11 +40,45 @@ python3 -m http.server 8080
 
 | 경로 | 설명 |
 |---|---|
+| [canvas.html](canvas.html) | **트레이닝 캔버스** — 웨이트·러닝·목표 누적 보드 |
+| [anatomy.html](anatomy.html) | **해부학 가이드** — 동작별 주동근·관절·큐 |
 | [index.html](index.html) | 역도 전용 웹 로거 (localStorage) |
+| [data/sessions/](data/sessions/) | Rise/러닝 시드 기록 (JSON) |
 | [templates/daily-log-template.csv](templates/daily-log-template.csv) | Google Sheets용 CSV 템플릿 |
 | [templates/google-sheets-formulas.md](templates/google-sheets-formulas.md) | 시트 자동 계산 수식 |
 | [docs/method-choice.md](docs/method-choice.md) | 기록 방식 선택 가이드 |
 | [docs/weekly-review-guide.md](docs/weekly-review-guide.md) | 주간 리뷰 체크리스트 |
+
+### 트레이닝 캔버스 / 해부학
+
+**아이폰에서 여는 방법 (중요)**
+
+CDN(jsDelivr) 링크는 HTML을 텍스트로 보여줍니다. 아래 중 하나를 쓰세요.
+
+### A) 파일 저장 후 열기 (지금 바로)
+1. 아래 **standalone** 파일 페이지 열기
+2. 오른쪽 `...` 또는 Raw → **공유 → 파일에 저장**
+3. 파일앱에서 해당 `.html` 탭 → Safari로 열기
+
+- 캔버스: https://github.com/dg-code-ai/Cursor/blob/cursor/training-canvas-anatomy-5c6f/canvas-standalone.html
+- 해부학: https://github.com/dg-code-ai/Cursor/blob/cursor/training-canvas-anatomy-5c6f/anatomy-standalone.html
+
+### B) GitHub Pages 켜기 (한 번만, 추천)
+저장소 **Settings → Pages → Source: GitHub Actions** 활성화.
+이후 주소:
+- https://dg-code-ai.github.io/Cursor/canvas.html
+- https://dg-code-ai.github.io/Cursor/anatomy.html
+
+
+로컬:
+
+```bash
+python3 -m http.server 8080
+# http://localhost:8080/canvas.html
+# http://localhost:8080/anatomy.html
+```
+
+Rise 기록·러닝 스크린샷이 쌓이면 `data/sessions/gym-log.json`, `run-log.json`에 반영합니다.
 
 ## 기록 형식 (최소)
 

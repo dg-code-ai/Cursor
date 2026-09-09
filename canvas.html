@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#eef2f6">
+  <title>트레이닝 캔버스 — Training Lab</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/lab.css">
+</head>
+<body>
+  <div class="app lab">
+    <header class="header">
+      <div class="header__brand">
+        <p class="eyebrow"><a href="anatomy.html">해부학 가이드</a> · <a href="index.html">역도 기록</a></p>
+        <h1>트레이닝 캔버스</h1>
+        <p class="subtitle">대시보드 · 계획 · 코칭 인사이트</p>
+      </div>
+      <nav class="tabs canvas-tabs" role="tablist">
+        <button class="tab active" data-panel="dashboard" role="tab">대시보드</button>
+        <button class="tab" data-panel="plan" role="tab">계획</button>
+        <button class="tab" data-panel="results" role="tab">로그</button>
+        <button class="tab" data-panel="profile" role="tab">프로필</button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- DASHBOARD -->
+      <section id="panel-dashboard" class="panel active">
+        <div class="dash-section-head">
+          <p class="dash-section-title" style="margin:0">지금 중요한 것</p>
+          <p class="dash-section-hint">카드마다 지표를 바꿀 수 있습니다</p>
+        </div>
+        <div class="dash-hero" id="dash-hero"></div>
+        <p class="hint" id="dash-updated" style="margin:0.25rem 0 0"></p>
+
+        <p class="dash-section-title">종목 프로그레스</p>
+        <div class="progress-explorer">
+          <div class="progress-explorer__head">
+            <label class="progress-select">
+              <span>부위별 · 내가 한 종목</span>
+              <select id="dash-lift-select" aria-label="운동 종목 선택"></select>
+            </label>
+          </div>
+          <p class="progress-explorer__hint" id="dash-lift-count"></p>
+          <div class="chip-row progress-presets" id="dash-lift-presets"></div>
+          <div class="progress-stats" id="dash-lift-stats"></div>
+          <div class="progress-dual">
+            <div class="progress-pane">
+              <h3 id="dash-lift-top-title">상한 kg</h3>
+              <div id="dash-lift-chart-top" class="chart-box"></div>
+            </div>
+            <div class="progress-pane">
+              <h3 id="dash-lift-vol-title">세션 볼륨</h3>
+              <div id="dash-lift-chart-vol" class="chart-box"></div>
+            </div>
+          </div>
+          <p class="progress-meta" id="dash-lift-meta"></p>
+        </div>
+
+        <p class="dash-section-title">핵심 추세</p>
+        <div class="dash-story">
+          <div class="story-card">
+            <h2>스내치 · 깊은 리시브</h2>
+            <p class="hint">행 스쿼트 상한 kg · 점선 = 목표 100</p>
+            <div id="dash-hang-snatch" class="chart-box"></div>
+            <p class="verdict" id="dash-hang-verdict"></p>
+          </div>
+          <div class="story-card">
+            <h2>OH 스쿼트</h2>
+            <p class="hint">오버헤드 안정 상한</p>
+            <div id="dash-oh-squat" class="chart-box"></div>
+          </div>
+        </div>
+
+        <p class="dash-section-title">보조 지표</p>
+        <div class="support-grid">
+          <div class="support-card">
+            <h3>벤치 130 작업횟수</h3>
+            <p class="hint">서브맥스 · 점선 = 4회</p>
+            <div id="dash-bench-130" class="chart-box"></div>
+            <p class="hint" id="dash-bench-verdict"></p>
+          </div>
+          <div class="support-card">
+            <h3>이지 런 심박</h3>
+            <p class="hint">초록 밴드 = 135–145</p>
+            <div id="dash-run-hr" class="chart-box"></div>
+            <p class="hint" id="dash-run-verdict"></p>
+          </div>
+        </div>
+
+        <div class="coach-strip" id="dash-latest-coach"></div>
+
+        <p class="dash-section-title">목표 · 기한 · 진행</p>
+        <div class="goal-tracker" id="dash-goals"></div>
+        <details class="goal-form-panel card" id="goal-form-panel">
+          <summary>목표 추가 · 수정</summary>
+          <form id="goal-form" class="goal-form">
+            <div class="goal-form__grid">
+              <label>
+                <span>목표 이름</span>
+                <input type="text" name="title" required placeholder="예: 스쿼트 200kg" />
+              </label>
+              <label>
+                <span>종류</span>
+                <select name="kind" required>
+                  <option value="lift_kg">중량 (kg) — 높을수록 좋음</option>
+                  <option value="run_distance_km">러닝 거리 (km)</option>
+                  <option value="run_time_sec">러닝 시간 (초) — 낮을수록 좋음</option>
+                  <option value="bench_reps">벤치 반복 (reps @ kg)</option>
+                  <option value="custom">직접 입력 (현재값 수동)</option>
+                </select>
+              </label>
+              <label>
+                <span>목표값</span>
+                <input type="number" name="targetValue" required step="any" />
+              </label>
+              <label>
+                <span>달성 기한</span>
+                <input type="date" name="deadline" required />
+              </label>
+              <label>
+                <span>시작값 (선택)</span>
+                <input type="number" name="baselineValue" step="any" placeholder="비우면 오늘 기준" />
+              </label>
+              <label>
+                <span>시작일 (선택)</span>
+                <input type="date" name="baselineDate" />
+              </label>
+              <label class="goal-form__wide" data-show="lift_kg">
+                <span>추적 종목 (중량)</span>
+                <input type="text" name="exerciseMatch" placeholder="예: 행 스내치, 스쿼트" />
+              </label>
+              <label data-show="bench_reps">
+                <span>기준 중량 (kg)</span>
+                <input type="number" name="weightKg" value="130" step="1" />
+              </label>
+              <label class="goal-form__wide">
+                <span>메모 (선택)</span>
+                <input type="text" name="note" placeholder="왜 이 목표인지" />
+              </label>
+            </div>
+            <div class="goal-form__actions">
+              <button type="submit" class="btn-primary">목표 저장</button>
+              <p class="hint">폰·브라우저에 저장됩니다. JSON 기본 목표는 그대로 유지됩니다.</p>
+            </div>
+          </form>
+        </details>
+
+        <details class="archive-panel card" style="padding:0.85rem 1rem">
+          <summary>앨범 아카이브 · 과거 기록 정리</summary>
+          <div class="kpi-row" id="dash-album-kpi" style="margin-top:0.75rem"></div>
+          <div id="dash-album-months" class="album-months"></div>
+        </details>
+      </section>
+
+      <!-- PLAN -->
+      <section id="panel-plan" class="panel">
+        <div class="card">
+          <h2>이번 주 계획</h2>
+          <p class="hint" id="week-note"></p>
+          <div id="week-checklist" class="week-checklist"></div>
+        </div>
+
+        <div class="card">
+          <h2>다음 헬스 처방</h2>
+          <p class="hint" id="next-gym-when"></p>
+          <ul class="guide-list" id="next-gym-items"></ul>
+        </div>
+
+        <div class="card">
+          <h2>주간 골격</h2>
+          <div id="week-skeleton" class="week-skeleton"></div>
+          <ul class="guide-list" id="principles"></ul>
+        </div>
+
+        <div class="split-panels">
+          <div class="card">
+            <h2>스내치 로드맵</h2>
+            <div id="snatch-roadmap" class="roadmap"></div>
+          </div>
+          <div class="card">
+            <h2>러닝 로드맵</h2>
+            <div id="run-roadmap" class="roadmap"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESULTS / LOG -->
+      <section id="panel-results" class="panel">
+        <div class="split-panels">
+          <div class="card">
+            <h2>헬스 볼륨 추이</h2>
+            <div id="chart-gym-volume" class="chart-box"></div>
+          </div>
+          <div class="card">
+            <h2>러닝 거리</h2>
+            <div id="chart-run-distance" class="chart-box"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>핵심 작업세트</h2>
+          <div id="highlights" class="highlights highlights--cards"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2>세션 타임라인</h2>
+            <div class="chip-row" id="result-filters">
+              <button class="chip active" data-type="all">전체</button>
+              <button class="chip" data-type="Pull">Pull</button>
+              <button class="chip" data-type="Push">Push</button>
+              <button class="chip" data-type="Leg">Leg</button>
+              <button class="chip" data-type="Run">러닝</button>
+              <button class="chip" data-type="Olympic">역도</button>
+            </div>
+          </div>
+          <div class="kpi-row" id="kpi-row"></div>
+          <span class="hint" id="session-count"></span>
+          <div id="timeline" class="timeline"></div>
+        </div>
+
+        <div class="card">
+          <h2>코칭 인사이트 (세션 상세)</h2>
+          <p class="hint">왜 · 회고 · 다음</p>
+          <div id="coaching-insights" class="insights"></div>
+        </div>
+      </section>
+
+      <!-- PROFILE -->
+      <section id="panel-profile" class="panel">
+        <div class="card profile-card">
+          <div class="profile-grid">
+            <div>
+              <h2>바디컴포</h2>
+              <div class="stat-inline" id="body-stats"></div>
+              <div id="chart-bodycomp" class="chart-box chart-box--sm"></div>
+            </div>
+            <div>
+              <h2>메인 PR</h2>
+              <div id="chart-prs" class="chart-box"></div>
+              <div class="stat-inline" id="pr-stats"></div>
+            </div>
+          </div>
+          <p class="hint" id="profile-notes"></p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/charts.js"></script>
+  <script src="js/canvas.js"></script>
+</body>
+</html>
