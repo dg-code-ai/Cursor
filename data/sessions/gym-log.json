@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "note": "Rise 공유앨범 backfill · 54세션 · 앨범 1476장 · manual 40 + OCR 14",
+  "note": "Rise 공유앨범 backfill · 55세션 · 앨범 1478장 · manual 40 + OCR 15",
   "activeFrom": "2026-06-05",
   "sessions": [
     {
@@ -7110,6 +7110,114 @@
       ],
       "source": "album-backfill",
       "coachNote": "역도 다음날 Push 라이트 준수. PP 80×3 · OHP 60×7 · 벤치 120×4×2 · 150 X. OCR: PP/OHP·벤치/페이스풀·플라이7.5 혼입 분리."
+    },
+    {
+      "id": "gym-2026-09-09",
+      "date": "2026-09-09",
+      "type": "Leg",
+      "title": "오전 운동 (스쿼트 + 힙쓰러스트)",
+      "durationMin": 52,
+      "totalSets": 19,
+      "totalVolumeKg": 5794,
+      "exercises": [
+        {
+          "name": "바벨 스쿼트",
+          "sets": [
+            {
+              "kg": 60,
+              "reps": 5
+            },
+            {
+              "kg": 100,
+              "reps": 5
+            },
+            {
+              "kg": 140,
+              "reps": 3
+            },
+            {
+              "kg": 160,
+              "reps": 2
+            },
+            {
+              "kg": 170,
+              "reps": 1
+            },
+            {
+              "kg": 180,
+              "reps": 1
+            },
+            {
+              "kg": 140,
+              "reps": 1
+            },
+            {
+              "kg": 140,
+              "reps": 2
+            },
+            {
+              "kg": 140,
+              "reps": 1
+            }
+          ],
+          "workingHighlight": "180×1"
+        },
+        {
+          "name": "머신 힙쓰러스트",
+          "sets": [
+            {
+              "kg": 20,
+              "reps": 15
+            },
+            {
+              "kg": 40,
+              "reps": 15
+            },
+            {
+              "kg": 60,
+              "reps": 11
+            },
+            {
+              "kg": 70,
+              "reps": 10
+            },
+            {
+              "kg": 80,
+              "reps": 8
+            }
+          ],
+          "workingHighlight": "70×10 · 80×8"
+        },
+        {
+          "name": "보조 (OCR 불명 · 라이트)",
+          "sets": [
+            {
+              "kg": 4,
+              "reps": 27
+            },
+            {
+              "kg": 4,
+              "reps": 24
+            },
+            {
+              "kg": 4,
+              "reps": 20
+            },
+            {
+              "kg": 4,
+              "reps": 20
+            },
+            {
+              "kg": 4,
+              "reps": 20
+            }
+          ],
+          "workingHighlight": "4×20+",
+          "note": "OCR=사이드 레터럴/레이즈 — 레그 보조일 수 있음 · 확인 시 보정"
+        }
+      ],
+      "source": "album-backfill",
+      "coachNote": "처방=스쿼트175–180+힙50–70×10–12. 스쿼트 **180×1** 유지 · 185 X. 힙 **70×10·80×8**=요청 반영·템플릿 상단. OCR 스쿼트/힙 혼입 분리."
     }
   ]
 }
