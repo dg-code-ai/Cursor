@@ -1206,6 +1206,55 @@
       "context": "격주 역도장 당일(9/6) · **오전 지엘짐 프로그램** · 저녁 런",
       "sameDayGym": "지엘짐 프로그램 (정지풀·하프/파워스내치·OHS · 용상 · 클린+FS+저크)",
       "coachNote": "역도 프로그램 데이 저녁 5.11km·7'52\"·HR151. 토와 같은 중강도 축. 당일 자극용 — 이지 아님."
+    },
+    {
+      "id": "run-2026-09-09-evening",
+      "date": "2026-09-09",
+      "type": "outdoor-run",
+      "title": "실외 달리기 (수 저녁 · Leg 후)",
+      "distanceKm": 3.02,
+      "timeSec": 1486,
+      "elapsedSec": 1487,
+      "pacePerKm": "8'12\"",
+      "paceRange": [
+        "25'35\"",
+        "5'57\""
+      ],
+      "caloriesKcal": 287,
+      "activeKcal": 287,
+      "avgHr": 142,
+      "hrRange": [
+        107,
+        164
+      ],
+      "avgPower": 229,
+      "avgCadence": 152,
+      "cadenceRange": [
+        105,
+        171
+      ],
+      "verticalOscCm": 9.9,
+      "verticalOscRange": [
+        8.6,
+        11.0
+      ],
+      "groundContactMs": 343,
+      "groundContactRange": [
+        270,
+        380
+      ],
+      "strideLengthM": 0.9,
+      "strideLengthRange": [
+        0.8,
+        1.1
+      ],
+      "location": "인천광역시 · 해안",
+      "source": "Runday → Apple Fitness",
+      "timeOfDay": "저녁",
+      "timeWindow": "21:24–21:49",
+      "sameDayGym": "Leg · 스쿼트180 · 힙70–80 · 레터럴",
+      "context": "수 바벨 Leg 당일 저녁 숏런",
+      "coachNote": "**이지에 가까운 숏**. 8'12\"·HR142(max164)·케이던스152. 최근 저녁 7'5x\"/150대보다 페이스↓·심박↓ — 스쿼트180 후 조절 잘함. 폼 지표(접지343·보폭0.9) 남음."
     }
   ],
   "monthlyMileage": {
